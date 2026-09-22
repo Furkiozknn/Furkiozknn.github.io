@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://furkiozknn.github.io/sitemap.xml

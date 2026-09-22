@@ -23,6 +23,8 @@ import urllib.request
 OWNER = "Furkiozknn"
 RAW = "https://raw.githubusercontent.com/{owner}/{repo}/{branch}/project-meta.json"
 API = "https://api.github.com/users/{owner}/repos?per_page=100&type=owner"
+RELEASES = "https://api.github.com/repos/{owner}/{repo}/releases?per_page=5"
+SITE = "https://furkiozknn.github.io/"
 HERE = os.path.dirname(os.path.abspath(__file__))
 SNAPSHOT = os.path.join(HERE, "veri", "projeler.json")
 
@@ -80,6 +82,108 @@ def collect(token=None):
             continue
         rows.append(meta)
     return rows, missing
+
+
+def collect_releases(names, token=None):
+    """Real releases, read from the GitHub API. A repository that has none, or
+    that the API will not answer for, simply contributes no entries."""
+    out = []
+    for name in names:
+        try:
+            data = json.loads(fetch(RELEASES.format(owner=OWNER, repo=name), token))
+        except Exception:
+            continue
+        for r in data:
+            if r.get("draft") or not r.get("published_at"):
+                continue
+            out.append({
+                "repo": name,
+                "tag": r.get("tag_name") or "",
+                "title": (r.get("name") or "").strip() or f'{name} {r.get("tag_name") or ""}'.strip(),
+                "url": r.get("html_url") or f"https://github.com/{OWNER}/{name}/releases",
+                "published": r["published_at"],
+                "prerelease": bool(r.get("prerelease")),
+            })
+    out.sort(key=lambda r: r["published"], reverse=True)
+    return out
+
+
+def atom(releases, when):
+    """One Atom entry per real release. Nothing is written for a release that
+    does not exist, and an entry's date is the date GitHub published it."""
+    newest = releases[0]["published"] if releases else when + "T00:00:00Z"
+    parts = ['<?xml version="1.0" encoding="utf-8"?>',
+             '<feed xmlns="http://www.w3.org/2005/Atom">',
+             f'<title>{OWNER} - releases</title>',
+             f'<subtitle>Every release across the repositories on this account.</subtitle>',
+             f'<link href="{SITE}feed.xml" rel="self"/>',
+             f'<link href="{SITE}"/>',
+             f'<id>{SITE}</id>',
+             f'<updated>{newest}</updated>',
+             f'<author><name>{OWNER}</name></author>']
+    for r in releases[:60]:
+        summary = f'{r["repo"]} {r["tag"]}'.strip()
+        if r["prerelease"]:
+            summary += " (pre-release)"
+        parts += ['<entry>',
+                  f'<title>{e(r["title"])}</title>',
+                  f'<link href="{e(r["url"])}"/>',
+                  f'<id>{e(r["url"])}</id>',
+                  f'<updated>{e(r["published"])}</updated>',
+                  f'<category term="{e(r["repo"])}"/>',
+                  f'<summary>{e(summary)}</summary>',
+                  '</entry>']
+    parts.append('</feed>')
+    return "\n".join(parts) + "\n"
+
+
+def sitemap(when):
+    return ('<?xml version="1.0" encoding="utf-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'  <url><loc>{SITE}</loc><lastmod>{when}</lastmod>'
+            '<changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
+            '</urlset>\n')
+
+
+def robots():
+    return ("User-agent: *\n"
+            "Allow: /\n"
+            f"Sitemap: {SITE}sitemap.xml\n")
+
+
+def jsonld(rows, when):
+    """A machine-readable description of the directory, in the vocabulary search
+    engines already read. Every field comes from a repository's own metadata."""
+    items = []
+    for i, m in enumerate(sorted(rows, key=lambda x: x["id"]), start=1):
+        node = {
+            "@type": "SoftwareSourceCode",
+            "name": m["id"],
+            "codeRepository": m["repository"],
+        }
+        if m.get("summary"):
+            node["description"] = m["summary"]
+        if m.get("primary_language"):
+            node["programmingLanguage"] = m["primary_language"]
+        if m.get("license"):
+            node["license"] = m["license"]
+        if m.get("version"):
+            node["version"] = m["version"]
+        if m.get("topics"):
+            node["keywords"] = ", ".join(m["topics"])
+        if m.get("homepage"):
+            node["url"] = m["homepage"]
+        items.append({"@type": "ListItem", "position": i, "item": node})
+    doc = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": f"{OWNER} - project directory",
+        "url": SITE,
+        "dateModified": when,
+        "numberOfItems": len(items),
+        "itemListElement": items,
+    }
+    return json.dumps(doc, ensure_ascii=False, indent=1)
 
 
 # --- rendering ------------------------------------------------------------
@@ -182,6 +286,7 @@ def render(rows, missing, when):
         langfilters=langfilters,
         sections="\n".join(sections),
         note=note,
+        jsonld=jsonld(rows, when),
     )
 
 
@@ -199,6 +304,11 @@ TEMPLATE = """<!DOCTYPE html>
 <meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="author" content="Furki Özkan">
+<link rel="alternate" type="application/atom+xml" title="Releases across every repository" href="https://furkiozknn.github.io/feed.xml">
+<link rel="canonical" href="https://furkiozknn.github.io/">
+<script type="application/ld+json">
+{jsonld}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230b0b0f'/><text x='8' y='12' font-size='11' text-anchor='middle' fill='%23c9a961' font-family='monospace'>F</text></svg>">
 <style>
 :root {{
@@ -292,6 +402,9 @@ footer {{ margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
   from the <code>project-meta.json</code> in every repository, and refreshed by a scheduled
   workflow. A field that is <code>null</code> in the metadata is left off the page rather than
   filled in with a guess.</p>
+  <p>Machine-readable: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> is the same data this page
+  is rendered from, and <a href="feed.xml">an Atom feed</a> carries every release across the repositories,
+  so a reader or a script can follow the whole account without polling it.</p>
   <p>Source for this page: <a href="https://github.com/{owner}/{owner}.github.io">{owner}/{owner}.github.io</a></p>
 </footer>
 </div>
@@ -356,16 +469,26 @@ def main():
     if args.yerel:
         snap = json.load(open(SNAPSHOT, encoding="utf-8"))
         rows, missing, when = snap["projects"], snap.get("missing", []), snap["generated"]
+        releases = snap.get("releases", [])
     else:
         rows, missing = collect(token)
+        releases = collect_releases([m["id"] for m in rows], token)
         when = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
         os.makedirs(os.path.dirname(SNAPSHOT), exist_ok=True)
-        json.dump({"generated": when, "missing": missing, "projects": rows},
+        json.dump({"generated": when, "missing": missing,
+                   "releases": releases, "projects": rows},
                   open(SNAPSHOT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
     page = render(rows, missing, when)
     open(args.cikti, "w", encoding="utf-8").write(page)
+
+    out = os.path.dirname(os.path.abspath(args.cikti)) or HERE
+    open(os.path.join(out, "feed.xml"), "w", encoding="utf-8").write(atom(releases, when))
+    open(os.path.join(out, "sitemap.xml"), "w", encoding="utf-8").write(sitemap(when))
+    open(os.path.join(out, "robots.txt"), "w", encoding="utf-8").write(robots())
+
     print(f"{len(rows)} projects rendered to {args.cikti}")
+    print(f"{len(releases)} releases in feed.xml; sitemap.xml and robots.txt written")
     if missing:
         print("no metadata in:", ", ".join(missing))
 

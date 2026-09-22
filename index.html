@@ -12,6 +12,416 @@
 <meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="author" content="Furki Özkan">
+<link rel="alternate" type="application/atom+xml" title="Releases across every repository" href="https://furkiozknn.github.io/feed.xml">
+<link rel="canonical" href="https://furkiozknn.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Furkiozknn - project directory",
+ "url": "https://furkiozknn.github.io/",
+ "dateModified": "2026-09-22",
+ "numberOfItems": 27,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "Furkiozknn",
+    "codeRepository": "https://github.com/Furkiozknn/Furkiozknn",
+    "description": "Source of the profile README - agent infrastructure, developer tooling and the MCP servers underneath. Every number on the page is traced to the suite run that printed it (see TESTLER.md). Hand-written SVG, no generated stat cards.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "keywords": "ai-agents, claude-code, developer-tools, github-profile, mcp, portfolio, profile-readme, readme, svg"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "Furkiozknn.github.io",
+    "codeRepository": "https://github.com/Furkiozknn/Furkiozknn.github.io",
+    "description": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "keywords": "developer-portfolio, github-pages, project-directory, static-site, zero-dependency",
+    "url": "https://furkiozknn.github.io/"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "ai-job-gateway",
+    "codeRepository": "https://github.com/Furkiozknn/ai-job-gateway",
+    "description": "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook. Idempotency keys that survive a restart, SSRF-guarded signed webhooks, and expiry as a status you can read rather than a silent 404. 156 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "api-gateway, async-jobs, backend, dead-letter-queue, fastapi, generative-ai, idempotency, job-queue, mcp-ecosystem, provider-agnostic, python, retry, ssrf-protection, webhooks",
+    "url": "https://furkiozknn.github.io/#ai-job-gateway"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "ai-workflow-engine",
+    "codeRepository": "https://github.com/Furkiozknn/ai-workflow-engine",
+    "description": "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step's result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 72 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "automation, dag, generative-ai, gitops, infrastructure-as-code, job-orchestration, orchestration, pipeline, python, validation, workflow-engine, yaml",
+    "url": "https://furkiozknn.github.io/#ai-workflow-engine"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "ajans-os",
+    "codeRepository": "https://github.com/Furkiozknn/ajans-os",
+    "description": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. Zero dependencies, 142 tests.",
+    "programmingLanguage": "JavaScript",
+    "license": "MIT",
+    "keywords": "adr, agent-infrastructure, agent-orchestration, ai-agents, architecture, architecture-decision-records, contracts, javascript, json-schema, multi-agent-systems, nodejs, research, turkce",
+    "url": "https://furkiozknn.github.io/#ajans-os"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "asset-provenance-toolkit",
+    "codeRepository": "https://github.com/Furkiozknn/asset-provenance-toolkit",
+    "description": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, everything else a sidecar. Honest about what C2PA does that this does not. 86 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "ai-transparency, audit-trail, c2pa, cli, content-authenticity, exif, generative-ai, image-metadata, metadata, provenance, python",
+    "url": "https://furkiozknn.github.io/#asset-provenance-toolkit"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "buradane",
+    "codeRepository": "https://github.com/Furkiozknn/buradane",
+    "description": "\"What do I need, and where is the nearest one?\" 167,829 real OpenStreetMap places across all 81 provinces of Türkiye - pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km. Bearing, distance and a one-tap \"still here?\" on every result. 324 tests.",
+    "programmingLanguage": "TypeScript",
+    "license": "MIT",
+    "keywords": "accessibility, civic-tech, crowdsourcing, fastapi, geospatial, maplibre, mapping, nextjs, open-data, openstreetmap, postgis, public-services, python, turkey, turkiye, typescript",
+    "url": "https://furkiozknn.github.io/#buradane"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 8,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "claude-code-intelligence",
+    "codeRepository": "https://github.com/Furkiozknn/claude-code-intelligence",
+    "description": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 261 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.0.1",
+    "keywords": "analytics, claude-code, cli, cost-tracking, developer-tools, local-first, observability, opentelemetry, otlp, privacy-first, python, quota, telemetry, token-usage",
+    "url": "https://furkiozknn.github.io/#claude-code-intelligence"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 9,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "claude-quota-monitor",
+    "codeRepository": "https://github.com/Furkiozknn/claude-quota-monitor",
+    "description": "Superseded early prototype of Claude Code quota tracking. The maintained implementation lives in claude-code-intelligence.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "keywords": "archived, claude-code, prototype, python, quota"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 10,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "derin-kazi",
+    "codeRepository": "https://github.com/Furkiozknn/derin-kazi",
+    "description": "Side-view digging and upgrade loop in Godot 4: mine ore, watch the fuel, sell, upgrade the rig, reach the core at 250 m. Turkish UI.",
+    "programmingLanguage": "GDScript",
+    "license": "MIT",
+    "version": "0.7.2",
+    "keywords": "2d-game, exploration, game-development, gdscript, godot, godot4, indie-game, mining-game, resource-management, turkce",
+    "url": "https://furkiozknn.github.io/#derin-kazi"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 11,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "godot-2d-sablon",
+    "codeRepository": "https://github.com/Furkiozknn/godot-2d-sablon",
+    "description": "Two Godot 4.7 starters that already feel right to play: top-down with 8-way accelerated movement, and side-view with coyote time, jump buffering and variable jump height. The feel is measured, not guessed - the jump curves come from running the real _physics_process at the project's 60 Hz fixed step.",
+    "programmingLanguage": "GDScript",
+    "license": "MIT",
+    "keywords": "2d, boilerplate, coyote-time, game-development, gamedev, gdscript, godot, godot4, pixel-perfect, platformer, starter-template, template, top-down, turkce",
+    "url": "https://furkiozknn.github.io/#godot-2d-sablon"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 12,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "godot-refcheck",
+    "codeRepository": "https://github.com/Furkiozknn/godot-refcheck",
+    "description": "Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.",
+    "programmingLanguage": "Rust",
+    "license": "MIT",
+    "version": "0.2.0",
+    "keywords": "ci, gamedev, godot, godot-engine, godot4, linter, rust, sarif, static-analysis, zero-dependency",
+    "url": "https://furkiozknn.github.io/#godot-refcheck"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 13,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "kanca",
+    "codeRepository": "https://github.com/Furkiozknn/kanca",
+    "description": "Hook the ceiling, swing, release at the right moment and carry the momentum - a speed-focused 2D swinging platformer in Godot 4; medal times measured on 13 of 14 levels by a scripted bot. Turkish UI.",
+    "programmingLanguage": "GDScript",
+    "license": "MIT",
+    "version": "0.5.2",
+    "keywords": "2d-game, game-development, gdscript, godot, godot4, grappling-hook, indie-game, platformer, speedrun, turkce",
+    "url": "https://furkiozknn.github.io/#kanca"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 14,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "local-notes-search-mcp",
+    "codeRepository": "https://github.com/Furkiozknn/local-notes-search-mcp",
+    "description": "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&A is opt-in. 50 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "claude-code, embeddings, fastembed, markdown, mcp, mcp-server, model-context-protocol, obsidian, offline, personal-knowledge-base, privacy-first, python, rag, semantic-search, sqlite-vec",
+    "url": "https://furkiozknn.github.io/#local-notes-search-mcp"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 15,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "masal",
+    "codeRepository": "https://github.com/Furkiozknn/masal",
+    "description": "A bedtime story written around one child's name, age and hometown, with the colouring page drawn into it as vectors that fill cleanly instead of raster art that smudges past the outline. Six themes and a branch on page three - twelve readings. Turkish suffix engine, no photo upload, no download, no API key.",
+    "programmingLanguage": "JavaScript",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": "children, coloring-book, generative-text, github-pages, kids, nlp, no-build, privacy-first, storytelling, svg, turkce, turkish, vanilla-js, web-app",
+    "url": "https://furkiozknn.github.io/masal/"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 16,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "mcp-census",
+    "codeRepository": "https://github.com/Furkiozknn/mcp-census",
+    "description": "Reproducible count of the official MCP Registry: the same question asked three ways gives three different numbers, and this measures why.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "cli, data-analysis, mcp, mcp-registry, measurement, model-context-protocol, open-data, python, reproducible-research, zero-dependency",
+    "url": "https://furkiozknn.github.io/#mcp-census"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 17,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "mcp-vet",
+    "codeRepository": "https://github.com/Furkiozknn/mcp-vet",
+    "description": "An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 31 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 289 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.5.0",
+    "keywords": "agent-skills, ai-agents, claude-code, mcp, mcp-security, mcp-server, model-context-protocol, prompt-injection, python, security, security-audit, skill, static-analysis, supply-chain-security, zero-dependency",
+    "url": "https://furkiozknn.github.io/#mcp-vet"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 18,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "mini-creative-toolkit",
+    "codeRepository": "https://github.com/Furkiozknn/mini-creative-toolkit",
+    "description": "23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim. 22 of them report \"network\": \"none\" in their own response payload rather than in a README, and a test fails if any other module ever imports an HTTP client. No GPU, no paid API. 326 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "2.0.0",
+    "keywords": "background-removal, claude-code, cpu-only, ffmpeg, image-processing, mcp, mcp-server, media-tools, model-context-protocol, no-api-key, offline-first, pillow, python, video-processing",
+    "url": "https://furkiozknn.github.io/#mini-creative-toolkit"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 19,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "model-comparison-harness",
+    "codeRepository": "https://github.com/Furkiozknn/model-comparison-harness",
+    "description": "Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 74 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "benchmarking, cli, developer-tools, evaluation, generative-ai, latency, llm, llm-evaluation, model-comparison, observability, python, routing",
+    "url": "https://furkiozknn.github.io/#model-comparison-harness"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 20,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "nova-drift",
+    "codeRepository": "https://github.com/Furkiozknn/nova-drift",
+    "description": "Endless browser space-runner with real Three.js bloom, hand-written particles and an audio engine synthesized live in Web Audio - not one sound file in the repo. Skim an obstacle without touching it and take the near-miss bonus. A daily run seeded from the UTC date deals every player the same obstacles. 0.7 MB, no build step.",
+    "programmingLanguage": "JavaScript",
+    "license": "MIT",
+    "keywords": "arcade-game, browser-game, endless-runner, game, gamedev, github-pages, html5-game, javascript, no-build, procedural-generation, threejs, threejs-game, web-audio-api, webgl, webgl-game",
+    "url": "https://furkiozknn.github.io/nova-drift/"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 21,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "nvidia-nim-mcp",
+    "codeRepository": "https://github.com/Furkiozknn/nvidia-nim-mcp",
+    "description": "Seven MCP tools on NVIDIA NIM's free tier - image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive. Two of them need no API key at all. Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired. 80 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "ai, cerebras, claude-code, fallback, free-tier, gemini, groq, image-generation, llm, mcp, mcp-server, mistral, model-context-protocol, nvidia, nvidia-nim, python",
+    "url": "https://furkiozknn.github.io/#nvidia-nim-mcp"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 22,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "prompt-template-manager",
+    "codeRepository": "https://github.com/Furkiozknn/prompt-template-manager",
+    "description": "Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja's SandboxedEnvironment with StrictUndefined so a typo'd variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 61 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "cli, developer-tools, gitops, jinja2, llm, llmops, prompt-engineering, prompt-templates, python, sandbox, version-control",
+    "url": "https://furkiozknn.github.io/#prompt-template-manager"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 23,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "repo-vet",
+    "codeRepository": "https://github.com/Furkiozknn/repo-vet",
+    "description": "Checks what a GitHub repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. Six checks over the GitHub API, no clone, zero dependencies.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "ci, cli, developer-tools, documentation, github, github-actions, link-checker, linter, python, quality-assurance, readme, release-automation",
+    "url": "https://furkiozknn.github.io/#repo-vet"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 24,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "tek-tus-kosu",
+    "codeRepository": "https://github.com/Furkiozknn/tek-tus-kosu",
+    "description": "One-button endless rooftop runner in Godot 4: a rhythm mode that lays every obstacle on the music beat grid, plus a post-run timing histogram. Turkish UI.",
+    "programmingLanguage": "GDScript",
+    "license": "MIT",
+    "version": "1.7.3",
+    "keywords": "2d-game, endless-runner, game-development, gdscript, godot, godot4, indie-game, one-button, rhythm-game, turkce",
+    "url": "https://furkiozknn.github.io/#tek-tus-kosu"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 25,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "turkce-ajanlar",
+    "codeRepository": "https://github.com/Furkiozknn/turkce-ajanlar",
+    "description": "70 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &&, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.",
+    "programmingLanguage": "HTML",
+    "license": "MIT",
+    "version": "0.3.0",
+    "keywords": "agent-skills, ai-agents, claude, claude-code, codex, cursor, developer-tools, github-copilot, opencode, prompt-engineering, subagents, turkce, turkish, windows",
+    "url": "https://furkiozknn.github.io/turkce-ajanlar/"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 26,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "voice-io-mcp",
+    "codeRepository": "https://github.com/Furkiozknn/voice-io-mcp",
+    "description": "Speech in and speech out, needing no API key at all: Groq's free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks extension and size before it ever opens the file, so \"transcribe the audio at .env\" is refused locally instead of uploaded. 4 tools, 35 tests.",
+    "programmingLanguage": "Python",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": "claude-code, groq, kokoro, local-first, mcp, mcp-server, model-context-protocol, offline-first, python, speech-to-text, stt, text-to-speech, tts, voice, whisper",
+    "url": "https://furkiozknn.github.io/#voice-io-mcp"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 27,
+   "item": {
+    "@type": "SoftwareSourceCode",
+    "name": "yercekimi-cevir",
+    "codeRepository": "https://github.com/Furkiozknn/yercekimi-cevir",
+    "description": "No jump button - one key flips gravity and you fall onto the ceiling. 20 hand-built precision platformer rooms in Godot 4. Turkish UI.",
+    "programmingLanguage": "GDScript",
+    "license": "MIT",
+    "version": "0.7.2",
+    "keywords": "2d-game, game-development, gdscript, godot, godot4, gravity, indie-game, precision-platformer, puzzle-platformer, turkce",
+    "url": "https://furkiozknn.github.io/#yercekimi-cevir"
+   }
+  }
+ ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230b0b0f'/><text x='8' y='12' font-size='11' text-anchor='middle' fill='%23c9a961' font-family='monospace'>F</text></svg>">
 <style>
 :root {
@@ -106,7 +516,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 31 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 289 tests.</p>
 <ul class="feats"><li>Reads an MCP server&#x27;s source before you install it - 31 rules across tool poisoning, exfiltration paths, install hooks and registry provenance</li><li>Every finding is quoted with file:line, so a claim can be checked rather than believed</li></ul>
 <div class="topics"><span class="topic">agent-skills</span><span class="topic">ai-agents</span><span class="topic">claude-code</span><span class="topic">mcp</span><span class="topic">mcp-security</span><span class="topic">mcp-server</span><span class="topic">model-context-protocol</span><span class="topic">prompt-injection</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/mcp-vet">Repository</a><a href="https://github.com/Furkiozknn/mcp-vet/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/mcp-vet">Repository</a><a href="https://furkiozknn.github.io/#mcp-vet">Live</a><a href="https://github.com/Furkiozknn/mcp-vet/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="developer-tool"><h2>Developer tools<span class="count">7</span></h2><div class="grid"><article class="card" id="godot-refcheck" data-search="godot-refcheck godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. it repairs the ones with a single provable answer. ci gamedev godot godot-engine godot4 linter rust sarif static-analysis zero-dependency rust (std only) zero dependencies sarif 2.1.0 github actions rust cli github-action developer-tool" data-cat="developer-tool" data-lang="Rust">
 <header>
@@ -116,7 +526,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.</p>
 <ul class="feats"><li>Ten checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats</li><li>Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken</li></ul>
 <div class="topics"><span class="topic">ci</span><span class="topic">gamedev</span><span class="topic">godot</span><span class="topic">godot-engine</span><span class="topic">godot4</span><span class="topic">linter</span><span class="topic">rust</span><span class="topic">sarif</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/godot-refcheck">Repository</a><a href="https://github.com/Furkiozknn/godot-refcheck/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/godot-refcheck">Repository</a><a href="https://furkiozknn.github.io/#godot-refcheck">Live</a><a href="https://github.com/Furkiozknn/godot-refcheck/releases">Releases</a></div>
 </article>
 <article class="card" id="repo-vet" data-search="repo-vet checks what a github repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. six checks over the github api, no clone, zero dependencies. ci cli developer-tools documentation github github-actions link-checker linter python quality-assurance readme release-automation python 3.9+ github rest api standard library only python cli github-actions developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -126,7 +536,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Checks what a GitHub repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. Six checks over the GitHub API, no clone, zero dependencies.</p>
 <ul class="feats"><li>Checks a README&#x27;s install commands against PyPI and npm, so the first command a visitor runs is one that still resolves</li><li>Only fenced code blocks count as instructions: a sentence mentioning a command is discussing it, not asking anyone to run it</li></ul>
 <div class="topics"><span class="topic">ci</span><span class="topic">cli</span><span class="topic">developer-tools</span><span class="topic">documentation</span><span class="topic">github</span><span class="topic">github-actions</span><span class="topic">link-checker</span><span class="topic">linter</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/repo-vet">Repository</a><a href="https://github.com/Furkiozknn/repo-vet/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/repo-vet">Repository</a><a href="https://furkiozknn.github.io/#repo-vet">Live</a><a href="https://github.com/Furkiozknn/repo-vet/releases">Releases</a></div>
 </article>
 <article class="card" id="turkce-ajanlar" data-search="turkce-ajanlar 70 claude code sub-agents that think in turkish rather than translate into it - they know powershell 5.1 has no &amp;&amp;, that cp1254 kills a python tool before its first line prints, and that a heredoc eats backslashes. plus 3 commands, 2 skills and an eval suite. one source, exported to cursor, opencode, copilot and codex. agent-skills ai-agents claude claude-code codex cursor developer-tools github-copilot opencode prompt-engineering subagents turkce turkish windows claude code plugin node.js markdown agent definitions html claude-code cursor opencode github-copilot codex developer-tool" data-cat="developer-tool" data-lang="HTML">
 <header>
@@ -146,7 +556,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, everything else a sidecar. Honest about what C2PA does that this does not. 86 tests.</p>
 <ul class="feats"><li>Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row</li><li>PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding</li></ul>
 <div class="topics"><span class="topic">ai-transparency</span><span class="topic">audit-trail</span><span class="topic">c2pa</span><span class="topic">cli</span><span class="topic">content-authenticity</span><span class="topic">exif</span><span class="topic">generative-ai</span><span class="topic">image-metadata</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">Repository</a><a href="https://github.com/Furkiozknn/asset-provenance-toolkit/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">Repository</a><a href="https://furkiozknn.github.io/#asset-provenance-toolkit">Live</a><a href="https://github.com/Furkiozknn/asset-provenance-toolkit/releases">Releases</a></div>
 </article>
 <article class="card" id="model-comparison-harness" data-search="model-comparison-harness fire one request at n model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. every failure carries an error_type a script can branch on. cli: mch. 74 tests. benchmarking cli developer-tools evaluation generative-ai latency llm llm-evaluation model-comparison observability python routing python 3.11+ cli: mch python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -156,7 +566,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 74 tests.</p>
 <ul class="feats"><li>Fires one request at N model backends at once and puts latency, success and output side by side</li><li>--rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so quality is compared too</li></ul>
 <div class="topics"><span class="topic">benchmarking</span><span class="topic">cli</span><span class="topic">developer-tools</span><span class="topic">evaluation</span><span class="topic">generative-ai</span><span class="topic">latency</span><span class="topic">llm</span><span class="topic">llm-evaluation</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/model-comparison-harness">Repository</a><a href="https://github.com/Furkiozknn/model-comparison-harness/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/model-comparison-harness">Repository</a><a href="https://furkiozknn.github.io/#model-comparison-harness">Live</a><a href="https://github.com/Furkiozknn/model-comparison-harness/releases">Releases</a></div>
 </article>
 <article class="card" id="ai-workflow-engine" data-search="ai-workflow-engine a pipeline is a plain yaml dag in git, not a diagram in a visual editor - and it is validated before it runs. a step that reads another step&#x27;s result without declaring the dependency is rejected at load time, typo and all. layers run concurrently, capped and backed off so width never becomes a burst. 72 tests. automation dag generative-ai gitops infrastructure-as-code job-orchestration orchestration pipeline python validation workflow-engine yaml python 3.11+ yaml dag scheduling python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -166,7 +576,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step&#x27;s result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 72 tests.</p>
 <ul class="feats"><li>A pipeline is a plain YAML DAG in git, not a diagram in a visual editor</li><li>Validated before it runs: a step reading another step&#x27;s result without declaring the dependency is rejected at load time, typo and all</li></ul>
 <div class="topics"><span class="topic">automation</span><span class="topic">dag</span><span class="topic">generative-ai</span><span class="topic">gitops</span><span class="topic">infrastructure-as-code</span><span class="topic">job-orchestration</span><span class="topic">orchestration</span><span class="topic">pipeline</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/ai-workflow-engine">Repository</a><a href="https://github.com/Furkiozknn/ai-workflow-engine/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/ai-workflow-engine">Repository</a><a href="https://furkiozknn.github.io/#ai-workflow-engine">Live</a><a href="https://github.com/Furkiozknn/ai-workflow-engine/releases">Releases</a></div>
 </article>
 <article class="card" id="prompt-template-manager" data-search="prompt-template-manager your prompts deserve git diff, not a database row. templates as plain yaml, rendered through jinja&#x27;s sandboxedenvironment with strictundefined so a typo&#x27;d variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. cli: ptm. 61 tests. cli developer-tools gitops jinja2 llm llmops prompt-engineering prompt-templates python sandbox version-control python 3.11+ jinja2 sandboxedenvironment cli: ptm python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -176,7 +586,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja&#x27;s SandboxedEnvironment with StrictUndefined so a typo&#x27;d variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 61 tests.</p>
 <ul class="feats"><li>Templates as plain YAML, so a prompt change is a diff in a pull request rather than a database row</li><li>Rendered through Jinja&#x27;s SandboxedEnvironment with StrictUndefined: a typo&#x27;d variable fails loudly instead of rendering blank</li></ul>
 <div class="topics"><span class="topic">cli</span><span class="topic">developer-tools</span><span class="topic">gitops</span><span class="topic">jinja2</span><span class="topic">llm</span><span class="topic">llmops</span><span class="topic">prompt-engineering</span><span class="topic">prompt-templates</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/prompt-template-manager">Repository</a><a href="https://github.com/Furkiozknn/prompt-template-manager/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/prompt-template-manager">Repository</a><a href="https://furkiozknn.github.io/#prompt-template-manager">Live</a><a href="https://github.com/Furkiozknn/prompt-template-manager/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="observability"><h2>Observability<span class="count">2</span></h2><div class="grid"><article class="card" id="claude-code-intelligence" data-search="claude-code-intelligence where the tokens went, what it cost, and when the limit resets. every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. no prompt, response or file content is defined in any type, so a privacy review is a grep. local-first. 261 tests. analytics claude-code cli cost-tracking developer-tools local-first observability opentelemetry otlp privacy-first python quota telemetry token-usage python opentelemetry/otlp local-first python cli local-dashboard observability" data-cat="observability" data-lang="Python">
 <header>
@@ -186,7 +596,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 261 tests.</p>
 <ul class="feats"><li>Where the tokens went, what it cost, and when the limit resets</li><li>Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all</li></ul>
 <div class="topics"><span class="topic">analytics</span><span class="topic">claude-code</span><span class="topic">cli</span><span class="topic">cost-tracking</span><span class="topic">developer-tools</span><span class="topic">local-first</span><span class="topic">observability</span><span class="topic">opentelemetry</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/claude-code-intelligence">Repository</a><a href="https://github.com/Furkiozknn/claude-code-intelligence/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/claude-code-intelligence">Repository</a><a href="https://furkiozknn.github.io/#claude-code-intelligence">Live</a><a href="https://github.com/Furkiozknn/claude-code-intelligence/releases">Releases</a></div>
 </article>
 <article class="card" id="claude-quota-monitor" data-search="claude-quota-monitor superseded early prototype of claude code quota tracking. the maintained implementation lives in claude-code-intelligence. archived claude-code prototype python quota python local web dashboard python cli local-dashboard observability" data-cat="observability" data-lang="Python">
 <header>
@@ -206,7 +616,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim. 22 of them report &quot;network&quot;: &quot;none&quot; in their own response payload rather than in a README, and a test fails if any other module ever imports an HTTP client. No GPU, no paid API. 326 tests.</p>
 <ul class="feats"><li>23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim</li><li>22 of them report &quot;network&quot;: &quot;none&quot; in their own response payload rather than in a README</li></ul>
 <div class="topics"><span class="topic">background-removal</span><span class="topic">claude-code</span><span class="topic">cpu-only</span><span class="topic">ffmpeg</span><span class="topic">image-processing</span><span class="topic">mcp</span><span class="topic">mcp-server</span><span class="topic">media-tools</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/mini-creative-toolkit">Repository</a><a href="https://github.com/Furkiozknn/mini-creative-toolkit/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/mini-creative-toolkit">Repository</a><a href="https://furkiozknn.github.io/#mini-creative-toolkit">Live</a><a href="https://github.com/Furkiozknn/mini-creative-toolkit/releases">Releases</a></div>
 </article>
 <article class="card" id="nvidia-nim-mcp" data-search="nvidia-nim-mcp seven mcp tools on nvidia nim&#x27;s free tier - image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive. two of them need no api key at all. falls through to groq, mistral, gemini or cerebras when a model is rate-limited or quietly retired. 80 tests. ai cerebras claude-code fallback free-tier gemini groq image-generation llm mcp mcp-server mistral model-context-protocol nvidia nvidia-nim python python 3.11+ nvidia nim groq mistral gemini cerebras python mcp mcp-server" data-cat="mcp-server" data-lang="Python">
 <header>
@@ -216,7 +626,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Seven MCP tools on NVIDIA NIM&#x27;s free tier - image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive. Two of them need no API key at all. Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired. 80 tests.</p>
 <ul class="feats"><li>Seven MCP tools on NVIDIA NIM&#x27;s free tier: image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive</li><li>Two of the seven need no API key at all</li></ul>
 <div class="topics"><span class="topic">ai</span><span class="topic">cerebras</span><span class="topic">claude-code</span><span class="topic">fallback</span><span class="topic">free-tier</span><span class="topic">gemini</span><span class="topic">groq</span><span class="topic">image-generation</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/nvidia-nim-mcp">Repository</a><a href="https://github.com/Furkiozknn/nvidia-nim-mcp/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/nvidia-nim-mcp">Repository</a><a href="https://furkiozknn.github.io/#nvidia-nim-mcp">Live</a><a href="https://github.com/Furkiozknn/nvidia-nim-mcp/releases">Releases</a></div>
 </article>
 <article class="card" id="local-notes-search-mcp" data-search="local-notes-search-mcp ask your own files a question in plain language instead of guessing the keyword you typed six months ago. semantic search as an mcp server: sqlite-vec + a multilingual onnx model, incremental re-indexing, answers returned as file:line. no server, no api key, no network at query time. grounded llm q&amp;a is opt-in. 50 tests. claude-code embeddings fastembed markdown mcp mcp-server model-context-protocol obsidian offline personal-knowledge-base privacy-first python rag semantic-search sqlite-vec python 3.10+ sqlite-vec multilingual onnx embeddings mcp python mcp cli mcp-server" data-cat="mcp-server" data-lang="Python">
 <header>
@@ -226,7 +636,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&amp;A is opt-in. 50 tests.</p>
 <ul class="feats"><li>Ask your own files a question in plain language instead of guessing the keyword you typed six months ago</li><li>Semantic search as an MCP server: sqlite-vec plus a multilingual ONNX model, with incremental re-indexing</li></ul>
 <div class="topics"><span class="topic">claude-code</span><span class="topic">embeddings</span><span class="topic">fastembed</span><span class="topic">markdown</span><span class="topic">mcp</span><span class="topic">mcp-server</span><span class="topic">model-context-protocol</span><span class="topic">obsidian</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/local-notes-search-mcp">Repository</a><a href="https://github.com/Furkiozknn/local-notes-search-mcp/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/local-notes-search-mcp">Repository</a><a href="https://furkiozknn.github.io/#local-notes-search-mcp">Live</a><a href="https://github.com/Furkiozknn/local-notes-search-mcp/releases">Releases</a></div>
 </article>
 <article class="card" id="voice-io-mcp" data-search="voice-io-mcp speech in and speech out, needing no api key at all: groq&#x27;s free hosted tier when a key is set, kokoro-82m and faster-whisper locally when it is not. transcription checks extension and size before it ever opens the file, so &quot;transcribe the audio at .env&quot; is refused locally instead of uploaded. 4 tools, 35 tests. claude-code groq kokoro local-first mcp mcp-server model-context-protocol offline-first python speech-to-text stt text-to-speech tts voice whisper python 3.10+ kokoro-82m faster-whisper groq python mcp mcp-server" data-cat="mcp-server" data-lang="Python">
 <header>
@@ -236,7 +646,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Speech in and speech out, needing no API key at all: Groq&#x27;s free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks extension and size before it ever opens the file, so &quot;transcribe the audio at .env&quot; is refused locally instead of uploaded. 4 tools, 35 tests.</p>
 <ul class="feats"><li>Speech in and speech out, needing no API key at all</li><li>Groq&#x27;s free hosted tier when a key is set; Kokoro-82M and faster-whisper locally when it is not</li></ul>
 <div class="topics"><span class="topic">claude-code</span><span class="topic">groq</span><span class="topic">kokoro</span><span class="topic">local-first</span><span class="topic">mcp</span><span class="topic">mcp-server</span><span class="topic">model-context-protocol</span><span class="topic">offline-first</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/voice-io-mcp">Repository</a><a href="https://github.com/Furkiozknn/voice-io-mcp/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/voice-io-mcp">Repository</a><a href="https://furkiozknn.github.io/#voice-io-mcp">Live</a><a href="https://github.com/Furkiozknn/voice-io-mcp/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="agent-infrastructure"><h2>Agent infrastructure<span class="count">1</span></h2><div class="grid"><article class="card" id="ajans-os" data-search="ajans-os an ai agency os built research-first: 40 agent projects read with file:line evidence, then 11 adrs, 6 machine-readable contracts and 13 modules. its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. zero dependencies, 142 tests. adr agent-infrastructure agent-orchestration ai-agents architecture architecture-decision-records contracts javascript json-schema multi-agent-systems nodejs research turkce node.js 22+ javascript json schema zero dependencies javascript node agent-infrastructure" data-cat="agent-infrastructure" data-lang="JavaScript">
 <header>
@@ -246,7 +656,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. Zero dependencies, 142 tests.</p>
 <ul class="feats"><li>Built research-first: 40 agent projects read with file:line evidence before a line was written</li><li>11 architecture decision records, 6 machine-readable contracts, 13 modules</li></ul>
 <div class="topics"><span class="topic">adr</span><span class="topic">agent-infrastructure</span><span class="topic">agent-orchestration</span><span class="topic">ai-agents</span><span class="topic">architecture</span><span class="topic">architecture-decision-records</span><span class="topic">contracts</span><span class="topic">javascript</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/ajans-os">Repository</a><a href="https://github.com/Furkiozknn/ajans-os/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/ajans-os">Repository</a><a href="https://furkiozknn.github.io/#ajans-os">Live</a><a href="https://github.com/Furkiozknn/ajans-os/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="backend-service"><h2>Backend services<span class="count">1</span></h2><div class="grid"><article class="card" id="ai-job-gateway" data-search="ai-job-gateway the async job contract fal.ai, black forest labs and runpod each arrived at independently, as one hardened reference server: submit, poll, webhook. idempotency keys that survive a restart, ssrf-guarded signed webhooks, and expiry as a status you can read rather than a silent 404. 156 tests. api-gateway async-jobs backend dead-letter-queue fastapi generative-ai idempotency job-queue mcp-ecosystem provider-agnostic python retry ssrf-protection webhooks python 3.11+ fastapi webhooks python http-api library backend-service" data-cat="backend-service" data-lang="Python">
 <header>
@@ -256,7 +666,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook. Idempotency keys that survive a restart, SSRF-guarded signed webhooks, and expiry as a status you can read rather than a silent 404. 156 tests.</p>
 <ul class="feats"><li>The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook</li><li>Idempotency keys that survive a restart</li></ul>
 <div class="topics"><span class="topic">api-gateway</span><span class="topic">async-jobs</span><span class="topic">backend</span><span class="topic">dead-letter-queue</span><span class="topic">fastapi</span><span class="topic">generative-ai</span><span class="topic">idempotency</span><span class="topic">job-queue</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/ai-job-gateway">Repository</a><a href="https://github.com/Furkiozknn/ai-job-gateway/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/ai-job-gateway">Repository</a><a href="https://furkiozknn.github.io/#ai-job-gateway">Live</a><a href="https://github.com/Furkiozknn/ai-job-gateway/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="web-app"><h2>Web apps<span class="count">2</span></h2><div class="grid"><article class="card" id="buradane" data-search="buradane &quot;what do i need, and where is the nearest one?&quot; 167,829 real openstreetmap places across all 81 provinces of türkiye - pulled from each province&#x27;s true boundary, not a box around its capital, so all 973 district centres have data within 15 km. bearing, distance and a one-tap &quot;still here?&quot; on every result. 324 tests. accessibility civic-tech crowdsourcing fastapi geospatial maplibre mapping nextjs open-data openstreetmap postgis public-services python turkey turkiye typescript next.js typescript maplibre fastapi postgis python typescript web http-api web-app" data-cat="web-app" data-lang="TypeScript">
 <header>
@@ -266,7 +676,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">&quot;What do I need, and where is the nearest one?&quot; 167,829 real OpenStreetMap places across all 81 provinces of Türkiye - pulled from each province&#x27;s true boundary, not a box around its capital, so all 973 district centres have data within 15 km. Bearing, distance and a one-tap &quot;still here?&quot; on every result. 324 tests.</p>
 <ul class="feats"><li>167,829 real OpenStreetMap places across all 81 provinces of Turkiye</li><li>Pulled from each province&#x27;s true boundary, not a box around its capital, so all 973 district centres have data within 15 km</li></ul>
 <div class="topics"><span class="topic">accessibility</span><span class="topic">civic-tech</span><span class="topic">crowdsourcing</span><span class="topic">fastapi</span><span class="topic">geospatial</span><span class="topic">maplibre</span><span class="topic">mapping</span><span class="topic">nextjs</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/buradane">Repository</a><a href="https://github.com/Furkiozknn/buradane/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/buradane">Repository</a><a href="https://furkiozknn.github.io/#buradane">Live</a><a href="https://github.com/Furkiozknn/buradane/releases">Releases</a></div>
 </article>
 <article class="card" id="masal" data-search="masal a bedtime story written around one child&#x27;s name, age and hometown, with the colouring page drawn into it as vectors that fill cleanly instead of raster art that smudges past the outline. six themes and a branch on page three - twelve readings. turkish suffix engine, no photo upload, no download, no api key. children coloring-book generative-text github-pages kids nlp no-build privacy-first storytelling svg turkce turkish vanilla-js web-app vanilla javascript svg no build step github pages javascript web web-app" data-cat="web-app" data-lang="JavaScript">
 <header>
@@ -286,7 +696,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">One-button endless rooftop runner in Godot 4: a rhythm mode that lays every obstacle on the music beat grid, plus a post-run timing histogram. Turkish UI.</p>
 <ul class="feats"><li>One-button endless rooftop runner: the only input is when to press</li><li>Rhythm mode lays every obstacle on the music&#x27;s beat grid instead of a random spacer</li></ul>
 <div class="topics"><span class="topic">2d-game</span><span class="topic">endless-runner</span><span class="topic">game-development</span><span class="topic">gdscript</span><span class="topic">godot</span><span class="topic">godot4</span><span class="topic">indie-game</span><span class="topic">one-button</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/tek-tus-kosu">Repository</a><a href="https://github.com/Furkiozknn/tek-tus-kosu/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/tek-tus-kosu">Repository</a><a href="https://furkiozknn.github.io/#tek-tus-kosu">Live</a><a href="https://github.com/Furkiozknn/tek-tus-kosu/releases">Releases</a></div>
 </article>
 <article class="card" id="yercekimi-cevir" data-search="yercekimi-cevir no jump button - one key flips gravity and you fall onto the ceiling. 20 hand-built precision platformer rooms in godot 4. turkish ui. 2d-game game-development gdscript godot godot4 gravity indie-game precision-platformer puzzle-platformer turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
 <header>
@@ -296,7 +706,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">No jump button - one key flips gravity and you fall onto the ceiling. 20 hand-built precision platformer rooms in Godot 4. Turkish UI.</p>
 <ul class="feats"><li>No jump button: one key flips gravity and you fall onto the ceiling</li><li>20 hand-built precision rooms, each with its own medal times</li></ul>
 <div class="topics"><span class="topic">2d-game</span><span class="topic">game-development</span><span class="topic">gdscript</span><span class="topic">godot</span><span class="topic">godot4</span><span class="topic">gravity</span><span class="topic">indie-game</span><span class="topic">precision-platformer</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/yercekimi-cevir">Repository</a><a href="https://github.com/Furkiozknn/yercekimi-cevir/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/yercekimi-cevir">Repository</a><a href="https://furkiozknn.github.io/#yercekimi-cevir">Live</a><a href="https://github.com/Furkiozknn/yercekimi-cevir/releases">Releases</a></div>
 </article>
 <article class="card" id="derin-kazi" data-search="derin-kazi side-view digging and upgrade loop in godot 4: mine ore, watch the fuel, sell, upgrade the rig, reach the core at 250 m. turkish ui. 2d-game exploration game-development gdscript godot godot4 indie-game mining-game resource-management turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
 <header>
@@ -306,7 +716,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Side-view digging and upgrade loop in Godot 4: mine ore, watch the fuel, sell, upgrade the rig, reach the core at 250 m. Turkish UI.</p>
 <ul class="feats"><li>Dig-sell-upgrade loop across five underground layers down to the core at 250 m</li><li>Fuel is the timer: every descent is a bet on getting back up before it runs out</li></ul>
 <div class="topics"><span class="topic">2d-game</span><span class="topic">exploration</span><span class="topic">game-development</span><span class="topic">gdscript</span><span class="topic">godot</span><span class="topic">godot4</span><span class="topic">indie-game</span><span class="topic">mining-game</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/derin-kazi">Repository</a><a href="https://github.com/Furkiozknn/derin-kazi/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/derin-kazi">Repository</a><a href="https://furkiozknn.github.io/#derin-kazi">Live</a><a href="https://github.com/Furkiozknn/derin-kazi/releases">Releases</a></div>
 </article>
 <article class="card" id="kanca" data-search="kanca hook the ceiling, swing, release at the right moment and carry the momentum - a speed-focused 2d swinging platformer in godot 4; medal times measured on 13 of 14 levels by a scripted bot. turkish ui. 2d-game game-development gdscript godot godot4 grappling-hook indie-game platformer speedrun turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
 <header>
@@ -316,7 +726,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Hook the ceiling, swing, release at the right moment and carry the momentum - a speed-focused 2D swinging platformer in Godot 4; medal times measured on 13 of 14 levels by a scripted bot. Turkish UI.</p>
 <ul class="feats"><li>Swing physics with no jump button: hook a ceiling anchor, swing, release at the right moment and keep the momentum</li><li>14 hand-built levels; medal times on 13 of them measured by a scripted bot rather than guessed</li></ul>
 <div class="topics"><span class="topic">2d-game</span><span class="topic">game-development</span><span class="topic">gdscript</span><span class="topic">godot</span><span class="topic">godot4</span><span class="topic">grappling-hook</span><span class="topic">indie-game</span><span class="topic">platformer</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/kanca">Repository</a><a href="https://github.com/Furkiozknn/kanca/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/kanca">Repository</a><a href="https://furkiozknn.github.io/#kanca">Live</a><a href="https://github.com/Furkiozknn/kanca/releases">Releases</a></div>
 </article>
 <article class="card" id="nova-drift" data-search="nova-drift endless browser space-runner with real three.js bloom, hand-written particles and an audio engine synthesized live in web audio - not one sound file in the repo. skim an obstacle without touching it and take the near-miss bonus. a daily run seeded from the utc date deals every player the same obstacles. 0.7 mb, no build step. arcade-game browser-game endless-runner game gamedev github-pages html5-game javascript no-build procedural-generation threejs threejs-game web-audio-api webgl webgl-game javascript three.js r160 webgl web audio api no build step javascript web game" data-cat="game" data-lang="JavaScript">
 <header>
@@ -336,7 +746,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Two Godot 4.7 starters that already feel right to play: top-down with 8-way accelerated movement, and side-view with coyote time, jump buffering and variable jump height. The feel is measured, not guessed - the jump curves come from running the real _physics_process at the project&#x27;s 60 Hz fixed step.</p>
 <ul class="feats"><li>Two starter projects that already feel right to play: top-down with 8-way accelerated movement, side-view with coyote time, jump buffering and variable jump height</li><li>The feel is measured, not guessed: jump curves come from running the real _physics_process at the project&#x27;s 60 Hz fixed step</li></ul>
 <div class="topics"><span class="topic">2d</span><span class="topic">boilerplate</span><span class="topic">coyote-time</span><span class="topic">game-development</span><span class="topic">gamedev</span><span class="topic">gdscript</span><span class="topic">godot</span><span class="topic">godot4</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/godot-2d-sablon">Repository</a><a href="https://github.com/Furkiozknn/godot-2d-sablon/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/godot-2d-sablon">Repository</a><a href="https://furkiozknn.github.io/#godot-2d-sablon">Live</a><a href="https://github.com/Furkiozknn/godot-2d-sablon/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="research"><h2>Research<span class="count">1</span></h2><div class="grid"><article class="card" id="mcp-census" data-search="mcp-census reproducible count of the official mcp registry: the same question asked three ways gives three different numbers, and this measures why. cli data-analysis mcp mcp-registry measurement model-context-protocol open-data python reproducible-research zero-dependency python 3.11+ zero runtime dependencies python cli research" data-cat="research" data-lang="Python">
 <header>
@@ -346,7 +756,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <p class="sum">Reproducible count of the official MCP Registry: the same question asked three ways gives three different numbers, and this measures why.</p>
 <ul class="feats"><li>Asks the official MCP Registry the same question three ways and shows why the three answers differ</li><li>Finds that roughly a quarter of registry entries have no source code to read</li></ul>
 <div class="topics"><span class="topic">cli</span><span class="topic">data-analysis</span><span class="topic">mcp</span><span class="topic">mcp-registry</span><span class="topic">measurement</span><span class="topic">model-context-protocol</span><span class="topic">open-data</span><span class="topic">python</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/mcp-census">Repository</a><a href="https://github.com/Furkiozknn/mcp-census/releases">Releases</a></div>
+<div class="links"><a href="https://github.com/Furkiozknn/mcp-census">Repository</a><a href="https://furkiozknn.github.io/#mcp-census">Live</a><a href="https://github.com/Furkiozknn/mcp-census/releases">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="profile"><h2>This account<span class="count">2</span></h2><div class="grid"><article class="card" id="Furkiozknn" data-search="furkiozknn source of the profile readme - agent infrastructure, developer tooling and the mcp servers underneath. every number on the page is traced to the suite run that printed it (see testler.md). hand-written svg, no generated stat cards. ai-agents claude-code developer-tools github-profile mcp portfolio profile-readme readme svg hand-written svg markdown python github profile" data-cat="profile" data-lang="Python">
 <header>
@@ -374,6 +784,9 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
   from the <code>project-meta.json</code> in every repository, and refreshed by a scheduled
   workflow. A field that is <code>null</code> in the metadata is left off the page rather than
   filled in with a guess.</p>
+  <p>Machine-readable: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> is the same data this page
+  is rendered from, and <a href="feed.xml">an Atom feed</a> carries every release across the repositories,
+  so a reader or a script can follow the whole account without polling it.</p>
   <p>Source for this page: <a href="https://github.com/Furkiozknn/Furkiozknn.github.io">Furkiozknn/Furkiozknn.github.io</a></p>
 </footer>
 </div>
