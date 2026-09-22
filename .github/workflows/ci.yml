@@ -1,0 +1,66 @@
+# The page is generated, so the generator is the thing that can break.
+#
+# Nothing here touches the live site: the suite renders from fixtures and from
+# the snapshot already in veri/, and never calls GitHub. Publishing stays in
+# yenile.yml, where it belongs.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths: ["uret.py", "tests/**", ".github/workflows/ci.yml", "veri/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: py${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest
+      - run: python -m pytest tests -q
+
+  render:
+    name: the real snapshot still renders
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # --yerel renders from the snapshot in veri/, so this proves the
+      # generator can rebuild today's page without asking GitHub anything.
+      - name: Render from the checked-in snapshot
+        run: python3 uret.py --yerel --cikti /tmp/index.html
+      - name: The output is a page, a valid feed, a valid sitemap and valid JSON-LD
+        run: |
+          python3 - <<'PY'
+          import json, re, sys, xml.dom.minidom
+          page = open('/tmp/index.html', encoding='utf-8').read()
+          cards = page.count('class="card"')
+          snap = json.load(open('veri/projeler.json', encoding='utf-8'))
+          assert cards == len(snap['projects']), f'{cards} cards for {len(snap["projects"])} projects'
+          block = re.search(r'<script type="application/ld\+json">\s*(\{.*?\})\s*</script>', page, re.S)
+          assert block, 'no JSON-LD in the page'
+          assert json.loads(block.group(1))['numberOfItems'] == cards
+          for f in ('/tmp/feed.xml', '/tmp/sitemap.xml'):
+              xml.dom.minidom.parse(f)
+          print(f'{cards} cards, feed and sitemap parse, JSON-LD agrees')
+          PY

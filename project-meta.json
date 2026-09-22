@@ -29,7 +29,8 @@
   "key_features": [
     "One searchable page over every public repository, with filters by category and language",
     "Generated from each repository's own project-meta.json, never hand-edited",
-    "A null field is left off the page rather than filled in with a guess",
+    "A null field is left off the page rather than filled in with a guess, and a test suite holds that line",
+    "An Atom feed, a sitemap and a schema.org ItemList written by the same run, so machines can follow the account too",
     "Rebuilt weekly by a workflow that commits only when the output changes"
   ],
   "media": {
@@ -38,12 +39,18 @@
     "gifs": [],
     "videos": []
   },
-  "tests": null,
+  "tests": {
+    "count": 37,
+    "framework": "pytest",
+    "command": "python3 -m pytest tests -q",
+    "evidence": "37 passed"
+  },
   "ci": {
     "workflows": [
+      "ci.yml",
       "yenile.yml"
     ],
-    "badge": null
+    "badge": "https://github.com/Furkiozknn/Furkiozknn.github.io/actions/workflows/ci.yml/badge.svg"
   },
   "docs": {
     "readme": "README.md",

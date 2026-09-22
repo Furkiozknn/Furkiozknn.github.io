@@ -44,6 +44,7 @@ GROUPS = [
 
 
 def fetch(url, token=None):
+    """One HTTP GET. A token is optional and only raises the rate limit."""
     req = urllib.request.Request(url, headers={"User-Agent": "furkiozknn-hub"})
     if token:
         req.add_header("Authorization", "Bearer " + token)
@@ -52,6 +53,7 @@ def fetch(url, token=None):
 
 
 def repo_names(token=None):
+    """Every public, non-fork repository on the account, straight from GitHub."""
     out, page = [], 1
     while True:
         try:
@@ -68,6 +70,11 @@ def repo_names(token=None):
 
 
 def collect(token=None):
+    """Read each repository's own project-meta.json, main first, then master.
+
+    A repository with no metadata is reported by name rather than guessed at:
+    the page says it is missing instead of inventing a card for it.
+    """
     rows, missing = [], []
     for name in repo_names(token):
         meta = None
@@ -138,6 +145,7 @@ def atom(releases, when):
 
 
 def sitemap(when):
+    """One URL, because the directory is one page. Valid is what matters here."""
     return ('<?xml version="1.0" encoding="utf-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             f'  <url><loc>{SITE}</loc><lastmod>{when}</lastmod>'
@@ -146,6 +154,7 @@ def sitemap(when):
 
 
 def robots():
+    """Allow everything and point at the sitemap - there is nothing here to hide."""
     return ("User-agent: *\n"
             "Allow: /\n"
             f"Sitemap: {SITE}sitemap.xml\n")
@@ -189,14 +198,22 @@ def jsonld(rows, when):
 # --- rendering ------------------------------------------------------------
 
 def e(x):
+    """Escape for HTML, attributes included. Everything on the page goes through this."""
     return html.escape(str(x), quote=True)
 
 
 def chip(text, kind=""):
+    """One small labelled pill - a language, a version, a test count."""
     return f'<span class="chip {kind}">{e(text)}</span>'
 
 
 def card(m):
+    """One project, rendered from its own metadata.
+
+    Every optional field is guarded, because a null in the metadata has to
+    leave the page shorter rather than print the word "None" as if it were a
+    fact about the project.
+    """
     pid = m["id"]
     tests = (m.get("tests") or {}).get("count")
     links = [(m["repository"], "Repository")]
@@ -206,7 +223,7 @@ def card(m):
         links.append((m["releases"], "Releases"))
     feats = (m.get("key_features") or [])[:2]
     search = " ".join(
-        [pid, m.get("summary", ""), " ".join(m.get("topics") or []),
+        [pid, m.get("summary") or "", " ".join(m.get("topics") or []),
          " ".join(m.get("technologies") or []), m.get("primary_language") or "",
          " ".join(m.get("platform") or []), m.get("category") or ""]
     ).lower()
@@ -238,6 +255,11 @@ def card(m):
 
 
 def render(rows, missing, when):
+    """The whole page: headline totals, filters, one section per category.
+
+    Archived projects keep their card but stay out of the headline, so this
+    page and TESTLER.md report the same number.
+    """
     by_cat = {}
     for m in rows:
         by_cat.setdefault(m.get("category") or "other", []).append(m)
@@ -460,6 +482,7 @@ for (const b of document.querySelectorAll('button.f')) {{
 
 
 def main():
+    """Fetch, or read the snapshot, then write the page and the machine-readable files."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--yerel", action="store_true", help="render from veri/projeler.json")
     ap.add_argument("--cikti", default=os.path.join(HERE, "index.html"))

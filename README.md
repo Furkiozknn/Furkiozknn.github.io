@@ -19,9 +19,30 @@ changes, so the page cannot quietly fall behind the repositories it describes.
 ```sh
 python3 uret.py            # fetch every repository's metadata, then render
 python3 uret.py --yerel    # render from the snapshot already in veri/
+python3 -m pytest tests -q # 37 tests over the generator
 ```
 
 No build step, no dependencies, one HTML file.
+
+## What the tests are for
+
+The page is generated, so the generator is the only thing here that can break — and
+it breaks quietly. A malformed feed, a sitemap that does not parse, a JSON-LD block
+with a trailing comma: a browser shows the page regardless and nobody notices for
+weeks.
+
+So the suite checks the two failure modes that actually happen. First, the null rule:
+a field that is `null` in a repository's metadata has to leave the page *shorter*,
+never print the word `None` where a reader would take it for a fact. Every optional
+field is tested for that individually. Second, well-formedness: the feed and the
+sitemap are parsed as XML, the JSON-LD block is parsed out of the rendered page and
+validated, and the page itself is walked for unbalanced tags. The suite also renders
+the real snapshot in [`veri/`](veri/), so a change that works on fixtures but breaks
+on the actual 27 projects fails in CI rather than on the live site.
+
+Writing them found a real one: a repository whose `summary` was `null` crashed the
+whole build, because `.get("summary", "")` returns `None` when the key is present
+and null. Every repository happened to have a summary, so nothing had failed yet.
 
 ## Following it without opening it
 
