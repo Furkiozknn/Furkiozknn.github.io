@@ -73,7 +73,7 @@
       "id": "Furkiozknn",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/Furkiozknn",
-      "homepage": null,
+      "homepage": "https://furkiozknn.github.io/",
       "releases": "https://github.com/Furkiozknn/Furkiozknn/releases",
       "status": "active",
       "category": "profile",
@@ -1397,7 +1397,8 @@
       },
       "ci": {
         "workflows": [
-          "ci.yml"
+          "ci.yml",
+          "yayinla.yml"
         ],
         "badge": "https://github.com/Furkiozknn/mcp-census/actions/workflows/ci.yml/badge.svg"
       },
