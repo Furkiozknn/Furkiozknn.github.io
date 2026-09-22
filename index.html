@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Furki Özkan — 28 projects</title>
-<meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: 28 projects, 4,864 tests across 26 suites.">
+<meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: 28 projects, 5,009 tests across 26 suites.">
 <meta property="og:title" content="Furki Özkan — 28 projects">
-<meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. 4,864 tests across 26 suites, every count traced to the run that printed it.">
+<meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. 5,009 tests across 26 suites, every count traced to the run that printed it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://furkiozknn.github.io/">
 <meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
@@ -88,7 +88,7 @@
     "@type": "SoftwareSourceCode",
     "name": "ajans-os",
     "codeRepository": "https://github.com/Furkiozknn/ajans-os",
-    "description": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. Zero dependencies, 142 tests.",
+    "description": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 142 tests.",
     "programmingLanguage": "JavaScript",
     "license": "MIT",
     "keywords": "adr, agent-infrastructure, agent-orchestration, ai-agents, architecture, architecture-decision-records, contracts, javascript, json-schema, multi-agent-systems, nodejs, research, turkce",
@@ -102,11 +102,11 @@
     "@type": "SoftwareSourceCode",
     "name": "asset-provenance-toolkit",
     "codeRepository": "https://github.com/Furkiozknn/asset-provenance-toolkit",
-    "description": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, everything else a sidecar. Honest about what C2PA does that this does not. 86 tests.",
+    "description": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 125 tests.",
     "programmingLanguage": "Python",
     "license": "MIT",
     "version": "0.1.0",
-    "keywords": "ai-transparency, audit-trail, c2pa, cli, content-authenticity, exif, generative-ai, image-metadata, metadata, provenance, python",
+    "keywords": "ai-transparency, audit-trail, c2pa, cli, content-authenticity, exif, ffmpeg, generative-ai, image-metadata, metadata, mp4, provenance, python, video",
     "url": "https://furkiozknn.github.io/#asset-provenance-toolkit"
    }
   },
@@ -508,7 +508,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
   that repository can defend.</p>
   <div class="stats">
     <div class="stat"><b>28</b><span>public repositories</span></div>
-    <div class="stat"><b>4,864</b><span>tests across 26 active suites</span></div>
+    <div class="stat"><b>5,009</b><span>tests across 26 active suites</span></div>
     <div class="stat"><b>2026-09-22</b><span>generated</span></div>
   </div>
   <p><a href="https://github.com/Furkiozknn">GitHub profile</a> &middot;
@@ -527,14 +527,44 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <section class="group" data-group="security-tool"><h2>Security<span class="count">1</span></h2><div class="grid"><article class="card" id="mcp-vet" data-search="mcp-vet an mcp tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 31 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. never executes what it audits. zero dependencies, 289 tests. agent-skills ai-agents claude-code mcp mcp-security mcp-server model-context-protocol prompt-injection python security security-audit skill static-analysis supply-chain-security zero-dependency python 3.9-3.13 zero dependencies mcp python cli claude-code-skill security-tool" data-cat="security-tool" data-lang="Python">
 <header>
 <h3><a href="https://github.com/Furkiozknn/mcp-vet">mcp-vet</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.5.0</span><span class="chip tests">289 tests</span></div>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.5.0</span><span class="chip tests">319 tests</span></div>
 </header>
 <p class="sum">An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 31 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 289 tests.</p>
 <ul class="feats"><li>Reads an MCP server&#x27;s source before you install it - 31 rules across tool poisoning, exfiltration paths, install hooks and registry provenance</li><li>Every finding is quoted with file:line, so a claim can be checked rather than believed</li></ul>
 <div class="topics"><span class="topic">agent-skills</span><span class="topic">ai-agents</span><span class="topic">claude-code</span><span class="topic">mcp</span><span class="topic">mcp-security</span><span class="topic">mcp-server</span><span class="topic">model-context-protocol</span><span class="topic">prompt-injection</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/mcp-vet">Repository</a><a href="https://furkiozknn.github.io/#mcp-vet">Live</a><a href="https://github.com/Furkiozknn/mcp-vet/releases">Releases</a></div>
 </article></div></section>
-<section class="group" data-group="developer-tool"><h2>Developer tools<span class="count">8</span></h2><div class="grid"><article class="card" id="godot-refcheck" data-search="godot-refcheck godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. it repairs the ones with a single provable answer. ci gamedev godot godot-engine godot4 linter rust sarif static-analysis zero-dependency rust (std only) zero dependencies sarif 2.1.0 github actions rust cli github-action developer-tool" data-cat="developer-tool" data-lang="Rust">
+<section class="group" data-group="developer-tool"><h2>Developer tools<span class="count">8</span></h2><div class="grid"><article class="card" id="asset-provenance-toolkit" data-search="asset-provenance-toolkit which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. png gets a lossless text chunk, jpeg a private app1 marker spliced into container bytes with no re-encoding, mp4/mov a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. honest about what c2pa does that this does not. 125 tests. ai-transparency audit-trail c2pa cli content-authenticity exif ffmpeg generative-ai image-metadata metadata mp4 provenance python video python 3.11+ png text chunks jpeg app1 markers iso base media uuid boxes ffmpeg (verification only) python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
+<header>
+<h3><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">asset-provenance-toolkit</a></h3>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">125 tests</span></div>
+</header>
+<p class="sum">Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 125 tests.</p>
+<ul class="feats"><li>Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row</li><li>PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding</li></ul>
+<div class="topics"><span class="topic">ai-transparency</span><span class="topic">audit-trail</span><span class="topic">c2pa</span><span class="topic">cli</span><span class="topic">content-authenticity</span><span class="topic">exif</span><span class="topic">ffmpeg</span><span class="topic">generative-ai</span></div>
+<div class="links"><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">Repository</a><a href="https://furkiozknn.github.io/#asset-provenance-toolkit">Live</a><a href="https://github.com/Furkiozknn/asset-provenance-toolkit/releases">Releases</a></div>
+</article>
+<article class="card" id="repo-ratchet" data-search="repo-ratchet the engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified. continuous-improvement developer-tools github repository-maintenance zero-dependency python 3.11 standard library only no runtime dependencies append-only json lines work records github rest api python linux macos windows developer-tool" data-cat="developer-tool" data-lang="Python">
+<header>
+<h3><a href="https://github.com/Furkiozknn/repo-ratchet">repo-ratchet</a></h3>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">118 tests</span></div>
+</header>
+<p class="sum">The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.</p>
+<ul class="feats"><li>Twelve signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess</li><li>Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that ran and exited zero, no-change needs a stated reason</li></ul>
+<div class="topics"><span class="topic">continuous-improvement</span><span class="topic">developer-tools</span><span class="topic">github</span><span class="topic">repository-maintenance</span><span class="topic">zero-dependency</span></div>
+<div class="links"><a href="https://github.com/Furkiozknn/repo-ratchet">Repository</a><a href="https://furkiozknn.github.io/#repo-ratchet">Live</a><a href="https://github.com/Furkiozknn/repo-ratchet/releases">Releases</a></div>
+</article>
+<article class="card" id="turkce-ajanlar" data-search="turkce-ajanlar 70 claude code sub-agents that think in turkish rather than translate into it - they know powershell 5.1 has no &amp;&amp;, that cp1254 kills a python tool before its first line prints, and that a heredoc eats backslashes. plus 3 commands, 2 skills and an eval suite. one source, exported to cursor, opencode, copilot and codex. agent-skills ai-agents claude claude-code codex cursor developer-tools github-copilot opencode prompt-engineering subagents turkce turkish windows claude code plugin node.js markdown agent definitions html claude-code cursor opencode github-copilot codex developer-tool" data-cat="developer-tool" data-lang="HTML">
+<header>
+<h3><a href="https://github.com/Furkiozknn/turkce-ajanlar">turkce-ajanlar</a></h3>
+<div class="meta"><span class="chip lang">HTML</span><span class="chip ver">v0.3.0</span><span class="chip tests">111 tests</span></div>
+</header>
+<p class="sum">70 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &amp;&amp;, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.</p>
+<ul class="feats"><li>71 sub-agents that think in Turkish rather than translate into it</li><li>Encodes the traps that actually bite on Turkish Windows: no &amp;&amp; in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes</li></ul>
+<div class="topics"><span class="topic">agent-skills</span><span class="topic">ai-agents</span><span class="topic">claude</span><span class="topic">claude-code</span><span class="topic">codex</span><span class="topic">cursor</span><span class="topic">developer-tools</span><span class="topic">github-copilot</span></div>
+<div class="links"><a href="https://github.com/Furkiozknn/turkce-ajanlar">Repository</a><a href="https://furkiozknn.github.io/turkce-ajanlar/">Live</a><a href="https://github.com/Furkiozknn/turkce-ajanlar/releases">Releases</a></div>
+</article>
+<article class="card" id="godot-refcheck" data-search="godot-refcheck godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. it repairs the ones with a single provable answer. ci gamedev godot godot-engine godot4 linter rust sarif static-analysis zero-dependency rust (std only) zero dependencies sarif 2.1.0 github actions rust cli github-action developer-tool" data-cat="developer-tool" data-lang="Rust">
 <header>
 <h3><a href="https://github.com/Furkiozknn/godot-refcheck">godot-refcheck</a></h3>
 <div class="meta"><span class="chip lang">Rust</span><span class="chip ver">v0.2.0</span><span class="chip tests">107 tests</span></div>
@@ -544,45 +574,25 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <div class="topics"><span class="topic">ci</span><span class="topic">gamedev</span><span class="topic">godot</span><span class="topic">godot-engine</span><span class="topic">godot4</span><span class="topic">linter</span><span class="topic">rust</span><span class="topic">sarif</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/godot-refcheck">Repository</a><a href="https://furkiozknn.github.io/#godot-refcheck">Live</a><a href="https://github.com/Furkiozknn/godot-refcheck/releases">Releases</a></div>
 </article>
-<article class="card" id="repo-ratchet" data-search="repo-ratchet the engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified. continuous-improvement developer-tools github repository-maintenance zero-dependency python 3.11 standard library only no runtime dependencies append-only json lines work records github rest api python linux macos windows developer-tool" data-cat="developer-tool" data-lang="Python">
-<header>
-<h3><a href="https://github.com/Furkiozknn/repo-ratchet">repo-ratchet</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">106 tests</span></div>
-</header>
-<p class="sum">The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.</p>
-<ul class="feats"><li>Twelve signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess</li><li>Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that ran and exited zero, no-change needs a stated reason</li></ul>
-<div class="topics"><span class="topic">continuous-improvement</span><span class="topic">developer-tools</span><span class="topic">github</span><span class="topic">repository-maintenance</span><span class="topic">zero-dependency</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/repo-ratchet">Repository</a><a href="https://furkiozknn.github.io/#repo-ratchet">Live</a><a href="https://github.com/Furkiozknn/repo-ratchet/releases">Releases</a></div>
-</article>
 <article class="card" id="repo-vet" data-search="repo-vet checks what a github repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. six checks over the github api, no clone, zero dependencies. ci cli developer-tools documentation github github-actions link-checker linter python quality-assurance readme release-automation python 3.9+ github rest api standard library only python cli github-actions developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
 <h3><a href="https://github.com/Furkiozknn/repo-vet">repo-vet</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">97 tests</span></div>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">103 tests</span></div>
 </header>
 <p class="sum">Checks what a GitHub repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. Six checks over the GitHub API, no clone, zero dependencies.</p>
 <ul class="feats"><li>Checks a README&#x27;s install commands against PyPI and npm, so the first command a visitor runs is one that still resolves</li><li>Only fenced code blocks count as instructions: a sentence mentioning a command is discussing it, not asking anyone to run it</li></ul>
 <div class="topics"><span class="topic">ci</span><span class="topic">cli</span><span class="topic">developer-tools</span><span class="topic">documentation</span><span class="topic">github</span><span class="topic">github-actions</span><span class="topic">link-checker</span><span class="topic">linter</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/repo-vet">Repository</a><a href="https://furkiozknn.github.io/#repo-vet">Live</a><a href="https://github.com/Furkiozknn/repo-vet/releases">Releases</a></div>
 </article>
-<article class="card" id="turkce-ajanlar" data-search="turkce-ajanlar 70 claude code sub-agents that think in turkish rather than translate into it - they know powershell 5.1 has no &amp;&amp;, that cp1254 kills a python tool before its first line prints, and that a heredoc eats backslashes. plus 3 commands, 2 skills and an eval suite. one source, exported to cursor, opencode, copilot and codex. agent-skills ai-agents claude claude-code codex cursor developer-tools github-copilot opencode prompt-engineering subagents turkce turkish windows claude code plugin node.js markdown agent definitions html claude-code cursor opencode github-copilot codex developer-tool" data-cat="developer-tool" data-lang="HTML">
+<article class="card" id="ai-workflow-engine" data-search="ai-workflow-engine a pipeline is a plain yaml dag in git, not a diagram in a visual editor - and it is validated before it runs. a step that reads another step&#x27;s result without declaring the dependency is rejected at load time, typo and all. layers run concurrently, capped and backed off so width never becomes a burst. 72 tests. automation dag generative-ai gitops infrastructure-as-code job-orchestration orchestration pipeline python validation workflow-engine yaml python 3.11+ yaml dag scheduling python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
-<h3><a href="https://github.com/Furkiozknn/turkce-ajanlar">turkce-ajanlar</a></h3>
-<div class="meta"><span class="chip lang">HTML</span><span class="chip ver">v0.3.0</span><span class="chip tests">92 tests</span></div>
+<h3><a href="https://github.com/Furkiozknn/ai-workflow-engine">ai-workflow-engine</a></h3>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">80 tests</span></div>
 </header>
-<p class="sum">70 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &amp;&amp;, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.</p>
-<ul class="feats"><li>70 sub-agents that think in Turkish rather than translate into it</li><li>Encodes the traps that actually bite on Turkish Windows: no &amp;&amp; in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes</li></ul>
-<div class="topics"><span class="topic">agent-skills</span><span class="topic">ai-agents</span><span class="topic">claude</span><span class="topic">claude-code</span><span class="topic">codex</span><span class="topic">cursor</span><span class="topic">developer-tools</span><span class="topic">github-copilot</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/turkce-ajanlar">Repository</a><a href="https://furkiozknn.github.io/turkce-ajanlar/">Live</a><a href="https://github.com/Furkiozknn/turkce-ajanlar/releases">Releases</a></div>
-</article>
-<article class="card" id="asset-provenance-toolkit" data-search="asset-provenance-toolkit which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. png gets a lossless text chunk, jpeg a private app1 marker spliced into container bytes with no re-encoding, everything else a sidecar. honest about what c2pa does that this does not. 86 tests. ai-transparency audit-trail c2pa cli content-authenticity exif generative-ai image-metadata metadata provenance python python 3.11+ png text chunks jpeg app1 markers python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
-<header>
-<h3><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">asset-provenance-toolkit</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">86 tests</span></div>
-</header>
-<p class="sum">Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, everything else a sidecar. Honest about what C2PA does that this does not. 86 tests.</p>
-<ul class="feats"><li>Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row</li><li>PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding</li></ul>
-<div class="topics"><span class="topic">ai-transparency</span><span class="topic">audit-trail</span><span class="topic">c2pa</span><span class="topic">cli</span><span class="topic">content-authenticity</span><span class="topic">exif</span><span class="topic">generative-ai</span><span class="topic">image-metadata</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">Repository</a><a href="https://furkiozknn.github.io/#asset-provenance-toolkit">Live</a><a href="https://github.com/Furkiozknn/asset-provenance-toolkit/releases">Releases</a></div>
+<p class="sum">A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step&#x27;s result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 72 tests.</p>
+<ul class="feats"><li>A pipeline is a plain YAML DAG in git, not a diagram in a visual editor</li><li>Validated before it runs: a step reading another step&#x27;s result without declaring the dependency is rejected at load time, typo and all</li></ul>
+<div class="topics"><span class="topic">automation</span><span class="topic">dag</span><span class="topic">generative-ai</span><span class="topic">gitops</span><span class="topic">infrastructure-as-code</span><span class="topic">job-orchestration</span><span class="topic">orchestration</span><span class="topic">pipeline</span></div>
+<div class="links"><a href="https://github.com/Furkiozknn/ai-workflow-engine">Repository</a><a href="https://furkiozknn.github.io/#ai-workflow-engine">Live</a><a href="https://github.com/Furkiozknn/ai-workflow-engine/releases">Releases</a></div>
 </article>
 <article class="card" id="model-comparison-harness" data-search="model-comparison-harness fire one request at n model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. every failure carries an error_type a script can branch on. cli: mch. 74 tests. benchmarking cli developer-tools evaluation generative-ai latency llm llm-evaluation model-comparison observability python routing python 3.11+ cli: mch python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -593,16 +603,6 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <ul class="feats"><li>Fires one request at N model backends at once and puts latency, success and output side by side</li><li>--rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so quality is compared too</li></ul>
 <div class="topics"><span class="topic">benchmarking</span><span class="topic">cli</span><span class="topic">developer-tools</span><span class="topic">evaluation</span><span class="topic">generative-ai</span><span class="topic">latency</span><span class="topic">llm</span><span class="topic">llm-evaluation</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/model-comparison-harness">Repository</a><a href="https://furkiozknn.github.io/#model-comparison-harness">Live</a><a href="https://github.com/Furkiozknn/model-comparison-harness/releases">Releases</a></div>
-</article>
-<article class="card" id="ai-workflow-engine" data-search="ai-workflow-engine a pipeline is a plain yaml dag in git, not a diagram in a visual editor - and it is validated before it runs. a step that reads another step&#x27;s result without declaring the dependency is rejected at load time, typo and all. layers run concurrently, capped and backed off so width never becomes a burst. 72 tests. automation dag generative-ai gitops infrastructure-as-code job-orchestration orchestration pipeline python validation workflow-engine yaml python 3.11+ yaml dag scheduling python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
-<header>
-<h3><a href="https://github.com/Furkiozknn/ai-workflow-engine">ai-workflow-engine</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">72 tests</span></div>
-</header>
-<p class="sum">A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step&#x27;s result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 72 tests.</p>
-<ul class="feats"><li>A pipeline is a plain YAML DAG in git, not a diagram in a visual editor</li><li>Validated before it runs: a step reading another step&#x27;s result without declaring the dependency is rejected at load time, typo and all</li></ul>
-<div class="topics"><span class="topic">automation</span><span class="topic">dag</span><span class="topic">generative-ai</span><span class="topic">gitops</span><span class="topic">infrastructure-as-code</span><span class="topic">job-orchestration</span><span class="topic">orchestration</span><span class="topic">pipeline</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/ai-workflow-engine">Repository</a><a href="https://furkiozknn.github.io/#ai-workflow-engine">Live</a><a href="https://github.com/Furkiozknn/ai-workflow-engine/releases">Releases</a></div>
 </article>
 <article class="card" id="prompt-template-manager" data-search="prompt-template-manager your prompts deserve git diff, not a database row. templates as plain yaml, rendered through jinja&#x27;s sandboxedenvironment with strictundefined so a typo&#x27;d variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. cli: ptm. 61 tests. cli developer-tools gitops jinja2 llm llmops prompt-engineering prompt-templates python sandbox version-control python 3.11+ jinja2 sandboxedenvironment cli: ptm python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -674,12 +674,12 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <div class="topics"><span class="topic">claude-code</span><span class="topic">groq</span><span class="topic">kokoro</span><span class="topic">local-first</span><span class="topic">mcp</span><span class="topic">mcp-server</span><span class="topic">model-context-protocol</span><span class="topic">offline-first</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/voice-io-mcp">Repository</a><a href="https://furkiozknn.github.io/#voice-io-mcp">Live</a><a href="https://github.com/Furkiozknn/voice-io-mcp/releases">Releases</a></div>
 </article></div></section>
-<section class="group" data-group="agent-infrastructure"><h2>Agent infrastructure<span class="count">1</span></h2><div class="grid"><article class="card" id="ajans-os" data-search="ajans-os an ai agency os built research-first: 40 agent projects read with file:line evidence, then 11 adrs, 6 machine-readable contracts and 13 modules. its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. zero dependencies, 142 tests. adr agent-infrastructure agent-orchestration ai-agents architecture architecture-decision-records contracts javascript json-schema multi-agent-systems nodejs research turkce node.js 22+ javascript json schema zero dependencies javascript node agent-infrastructure" data-cat="agent-infrastructure" data-lang="JavaScript">
+<section class="group" data-group="agent-infrastructure"><h2>Agent infrastructure<span class="count">1</span></h2><div class="grid"><article class="card" id="ajans-os" data-search="ajans-os an ai agency os built research-first: 40 agent projects read with file:line evidence, then 11 adrs, 6 machine-readable contracts and 13 modules. its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. the contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. zero dependencies, 142 tests. adr agent-infrastructure agent-orchestration ai-agents architecture architecture-decision-records contracts javascript json-schema multi-agent-systems nodejs research turkce node.js 22+ javascript json schema zero dependencies javascript node agent-infrastructure" data-cat="agent-infrastructure" data-lang="JavaScript">
 <header>
 <h3><a href="https://github.com/Furkiozknn/ajans-os">ajans-os</a></h3>
 <div class="meta"><span class="chip lang">JavaScript</span><span class="chip tests">142 tests</span></div>
 </header>
-<p class="sum">An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. Zero dependencies, 142 tests.</p>
+<p class="sum">An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 142 tests.</p>
 <ul class="feats"><li>Built research-first: 40 agent projects read with file:line evidence before a line was written</li><li>11 architecture decision records, 6 machine-readable contracts, 13 modules</li></ul>
 <div class="topics"><span class="topic">adr</span><span class="topic">agent-infrastructure</span><span class="topic">agent-orchestration</span><span class="topic">ai-agents</span><span class="topic">architecture</span><span class="topic">architecture-decision-records</span><span class="topic">contracts</span><span class="topic">javascript</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/ajans-os">Repository</a><a href="https://furkiozknn.github.io/#ajans-os">Live</a><a href="https://github.com/Furkiozknn/ajans-os/releases">Releases</a></div>
@@ -697,7 +697,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <section class="group" data-group="web-app"><h2>Web apps<span class="count">2</span></h2><div class="grid"><article class="card" id="buradane" data-search="buradane &quot;what do i need, and where is the nearest one?&quot; 167,829 real openstreetmap places across all 81 provinces of türkiye - pulled from each province&#x27;s true boundary, not a box around its capital, so all 973 district centres have data within 15 km. bearing, distance and a one-tap &quot;still here?&quot; on every result. 324 tests. accessibility civic-tech crowdsourcing fastapi geospatial maplibre mapping nextjs open-data openstreetmap postgis public-services python turkey turkiye typescript next.js typescript maplibre fastapi postgis python typescript web http-api web-app" data-cat="web-app" data-lang="TypeScript">
 <header>
 <h3><a href="https://github.com/Furkiozknn/buradane">buradane</a></h3>
-<div class="meta"><span class="chip lang">TypeScript</span><span class="chip tests">324 tests</span></div>
+<div class="meta"><span class="chip lang">TypeScript</span><span class="chip tests">334 tests</span></div>
 </header>
 <p class="sum">&quot;What do I need, and where is the nearest one?&quot; 167,829 real OpenStreetMap places across all 81 provinces of Türkiye - pulled from each province&#x27;s true boundary, not a box around its capital, so all 973 district centres have data within 15 km. Bearing, distance and a one-tap &quot;still here?&quot; on every result. 324 tests.</p>
 <ul class="feats"><li>167,829 real OpenStreetMap places across all 81 provinces of Turkiye</li><li>Pulled from each province&#x27;s true boundary, not a box around its capital, so all 973 district centres have data within 15 km</li></ul>
@@ -757,7 +757,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <article class="card" id="nova-drift" data-search="nova-drift endless browser space-runner with real three.js bloom, hand-written particles and an audio engine synthesized live in web audio - not one sound file in the repo. skim an obstacle without touching it and take the near-miss bonus. a daily run seeded from the utc date deals every player the same obstacles. 0.7 mb, no build step. arcade-game browser-game endless-runner game gamedev github-pages html5-game javascript no-build procedural-generation threejs threejs-game web-audio-api webgl webgl-game javascript three.js r160 webgl web audio api no build step javascript web game" data-cat="game" data-lang="JavaScript">
 <header>
 <h3><a href="https://github.com/Furkiozknn/nova-drift">nova-drift</a></h3>
-<div class="meta"><span class="chip lang">JavaScript</span><span class="chip tests">28 tests</span></div>
+<div class="meta"><span class="chip lang">JavaScript</span><span class="chip tests">38 tests</span></div>
 </header>
 <p class="sum">Endless browser space-runner with real Three.js bloom, hand-written particles and an audio engine synthesized live in Web Audio - not one sound file in the repo. Skim an obstacle without touching it and take the near-miss bonus. A daily run seeded from the UTC date deals every player the same obstacles. 0.7 MB, no build step.</p>
 <ul class="feats"><li>Endless browser space-runner with real Three.js bloom post-processing and hand-written particles</li><li>Audio engine synthesized live in Web Audio - not one sound file in the repository</li></ul>
@@ -777,7 +777,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <section class="group" data-group="research"><h2>Research<span class="count">1</span></h2><div class="grid"><article class="card" id="mcp-census" data-search="mcp-census reproducible count of the official mcp registry: the same question asked three ways gives three different numbers, and this measures why. cli data-analysis mcp mcp-registry measurement model-context-protocol open-data python reproducible-research zero-dependency python 3.11+ zero runtime dependencies python cli research" data-cat="research" data-lang="Python">
 <header>
 <h3><a href="https://github.com/Furkiozknn/mcp-census">mcp-census</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">44 tests</span></div>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">55 tests</span></div>
 </header>
 <p class="sum">Reproducible count of the official MCP Registry: the same question asked three ways gives three different numbers, and this measures why.</p>
 <ul class="feats"><li>Asks the official MCP Registry the same question three ways and shows why the three answers differ</li><li>Finds that roughly a quarter of registry entries have no source code to read</li></ul>

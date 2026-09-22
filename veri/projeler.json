@@ -362,9 +362,10 @@
         "videos": []
       },
       "tests": {
-        "count": 72,
-        "source": "`72 passed`",
-        "measured": "2026-09-15"
+        "count": 80,
+        "framework": "pytest",
+        "command": "uv run pytest -q",
+        "evidence": "80 passed"
       },
       "ci": {
         "workflows": [
@@ -434,12 +435,13 @@
         "research",
         "turkce"
       ],
-      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. Zero dependencies, 142 tests.",
+      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 142 tests.",
       "key_features": [
         "Built research-first: 40 agent projects read with file:line evidence before a line was written",
         "11 architecture decision records, 6 machine-readable contracts, 13 modules",
         "Acceptance run is killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated",
-        "The gate tests itself: a deliberate violation is planted in the tree and CI fails if the validator misses it"
+        "The gate tests itself: a deliberate violation is planted in the tree and CI fails if the validator misses it",
+        "The contract validator is mutation-measured - remove any one of its 19 enforcement points and its self-test must fail (it once could not, for 8 of them)"
       ],
       "media": {
         "hero": "assets/banner.svg",
@@ -450,7 +452,7 @@
       "tests": {
         "count": 142,
         "source": "`node --test`: `pass 142`",
-        "measured": "2026-09-15"
+        "measured": "2026-09-22"
       },
       "ci": {
         "workflows": [
@@ -500,7 +502,9 @@
       "technologies": [
         "Python 3.11+",
         "PNG text chunks",
-        "JPEG APP1 markers"
+        "JPEG APP1 markers",
+        "ISO base media uuid boxes",
+        "ffmpeg (verification only)"
       ],
       "version": "0.1.0",
       "license": "MIT",
@@ -511,16 +515,21 @@
         "cli",
         "content-authenticity",
         "exif",
+        "ffmpeg",
         "generative-ai",
         "image-metadata",
         "metadata",
+        "mp4",
         "provenance",
-        "python"
+        "python",
+        "video"
       ],
-      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, everything else a sidecar. Honest about what C2PA does that this does not. 86 tests.",
+      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 125 tests.",
       "key_features": [
         "Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row",
         "PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding",
+        "MP4/M4V/M4A/MOV get a uuid box appended after the media data - nothing stco/co64 points at ever moves, and any edit that would move it is refused",
+        "Verified against real ffmpeg-encoded clips by comparing decoded output, not just file structure",
         "Anything else gets a sidecar file rather than a silent failure",
         "Honest about what C2PA does that this does not"
       ],
@@ -533,9 +542,9 @@
         "videos": []
       },
       "tests": {
-        "count": 86,
-        "source": "`86 passed`",
-        "measured": "2026-09-15"
+        "count": 125,
+        "source": "`125 passed`",
+        "measured": "2026-09-22"
       },
       "ci": {
         "workflows": [
@@ -629,9 +638,9 @@
         "videos": []
       },
       "tests": {
-        "count": 324,
-        "source": "96 backend (CI log) + 228 frontend (vitest)",
-        "measured": "2026-09-15"
+        "count": 334,
+        "source": "106 backend (96 CI log + 10 contract-document) + 228 frontend (vitest)",
+        "measured": "2026-09-22"
       },
       "ci": {
         "workflows": [
@@ -1321,8 +1330,9 @@
       },
       "tests": {
         "count": 92,
-        "source": "`node --test`: `pass 92`",
-        "measured": "2026-09-15"
+        "framework": "node:test",
+        "command": "node --test",
+        "evidence": "92 pass, 0 fail"
       },
       "ci": {
         "workflows": [
@@ -1403,13 +1413,15 @@
         "videos": []
       },
       "tests": {
-        "count": 44,
-        "source": "CI log: `44 passed`",
-        "measured": "2026-09-21"
+        "count": 55,
+        "framework": "pytest",
+        "command": "uv run pytest -q",
+        "evidence": "55 passed"
       },
       "ci": {
         "workflows": [
           "ci.yml",
+          "sayim.yml",
           "yayinla.yml"
         ],
         "badge": "https://github.com/Furkiozknn/mcp-census/actions/workflows/ci.yml/badge.svg"
@@ -1493,9 +1505,10 @@
         "videos": []
       },
       "tests": {
-        "count": 289,
-        "source": "`289 passed`",
-        "measured": "2026-09-15"
+        "count": 319,
+        "framework": "pytest",
+        "command": "uv run pytest -q",
+        "evidence": "319 passed"
       },
       "ci": {
         "workflows": [
@@ -1747,7 +1760,8 @@
         "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
         "Audio engine synthesized live in Web Audio - not one sound file in the repository",
         "Skim an obstacle without touching it and take the near-miss bonus",
-        "A daily run seeded from the UTC date deals every player the same obstacles; 0.7 MB first load, no build step"
+        "A daily run seeded from the UTC date deals every player the same obstacles; 0.7 MB first load, no build step",
+        "Every test runs with the page sealed to its own origin, so a reintroduced CDN import breaks CI instead of passing it"
       ],
       "media": {
         "hero": "assets/banner.svg",
@@ -1758,9 +1772,9 @@
         "videos": []
       },
       "tests": {
-        "count": 28,
-        "source": "`28 passed` (Playwright)",
-        "measured": "2026-09-15"
+        "count": 38,
+        "source": "`38 passed` (Playwright)",
+        "measured": "2026-09-22"
       },
       "ci": {
         "workflows": [
@@ -2015,10 +2029,10 @@
         "videos": []
       },
       "tests": {
-        "count": 106,
+        "count": 118,
         "framework": "pytest",
         "command": "python3 -m pytest -q",
-        "evidence": "106 passed"
+        "evidence": "118 passed"
       },
       "ci": {
         "workflows": [
@@ -2102,9 +2116,10 @@
         "videos": []
       },
       "tests": {
-        "count": 97,
-        "source": "CI log: `=== 97 tests passed ===`",
-        "measured": "2026-09-22"
+        "count": 103,
+        "framework": "unittest via pytest",
+        "command": "python3 -m pytest tests -q",
+        "evidence": "103 passed"
       },
       "ci": {
         "workflows": [
@@ -2266,8 +2281,9 @@
       ],
       "summary": "70 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &&, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.",
       "key_features": [
-        "70 sub-agents that think in Turkish rather than translate into it",
+        "71 sub-agents that think in Turkish rather than translate into it",
         "Encodes the traps that actually bite on Turkish Windows: no && in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes",
+        "Four deterministic gates that cost nothing to run: field format, boundary contract, Turkish text, and trigger-phrase collisions across the whole roster",
         "3 commands, 2 skills and an eval suite alongside the agents",
         "One source of truth, exported to Cursor, OpenCode, Copilot and Codex; CI fails if the web UI drifts from the agent files"
       ],
@@ -2282,9 +2298,9 @@
         "videos": []
       },
       "tests": {
-        "count": 92,
-        "source": "27 validator + 32 export + 33 format checks",
-        "measured": "2026-09-15"
+        "count": 111,
+        "source": "27 validator + 32 export + 33 format + 19 routing checks",
+        "measured": "2026-09-22"
       },
       "ci": {
         "workflows": [
