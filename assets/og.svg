@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#17161d"/><stop offset="58%" stop-color="#0e0d12"/><stop offset="100%" stop-color="#0b0b0f"/></linearGradient>
+<linearGradient id="n" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#f2efe6"/><stop offset="60%" stop-color="#e7dcc0"/><stop offset="100%" stop-color="#c9a961"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<text x="80" y="230" font-family="'Cascadia Code','JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-weight="700" font-size="76" fill="url(#n)" letter-spacing="-2">Furki Özkan</text>
+<text x="82" y="286" font-family="'Segoe UI',Verdana,Helvetica,sans-serif" font-size="26" fill="#c7c2b6">Agent infrastructure, MCP servers and developer tooling —</text>
+<text x="82" y="322" font-family="'Segoe UI',Verdana,Helvetica,sans-serif" font-size="26" fill="#c7c2b6">and the tooling that checks whether any of it actually works.</text>
+<line x1="82" y1="366" x2="520" y2="366" stroke="#c9a961" stroke-opacity="0.45" stroke-width="2"/>
+<g font-family="'Cascadia Code','JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace">
+<rect x="80" y="410" width="250" height="96" rx="14" fill="#141419" stroke="#2a2a33"/>
+<text x="106" y="462" font-size="34" fill="#c9a961">26</text><text x="106" y="490" font-size="15" fill="#9a9aa6">public repositories</text>
+<rect x="350" y="410" width="290" height="96" rx="14" fill="#141419" stroke="#2a2a33"/>
+<text x="376" y="462" font-size="34" fill="#4ade9e">4,700</text><text x="376" y="490" font-size="15" fill="#9a9aa6">tests, each traced to a run</text>
+<rect x="660" y="410" width="300" height="96" rx="14" fill="#141419" stroke="#2a2a33"/>
+<text x="686" y="462" font-size="34" fill="#6cb6ff">1</text><text x="686" y="490" font-size="15" fill="#9a9aa6">metadata schema, audited daily</text>
+</g>
+<text x="80" y="578" font-family="'Cascadia Code','JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="19" fill="#6b6b77">furkiozknn.github.io</text>
+<rect x="0" y="622" width="1200" height="8" fill="#c9a961" opacity="0.65"/>
+</svg>

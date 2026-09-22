@@ -1,0 +1,2269 @@
+{
+  "generated": "2026-09-22",
+  "missing": [],
+  "projects": [
+    {
+      "schema_version": "1.0.0",
+      "id": "Furkiozknn",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/Furkiozknn",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/Furkiozknn/releases",
+      "status": "active",
+      "category": "profile",
+      "platform": [
+        "github"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "hand-written SVG",
+        "Markdown"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "developer-tools",
+        "github-profile",
+        "mcp",
+        "portfolio",
+        "profile-readme",
+        "readme",
+        "svg"
+      ],
+      "summary": "Source of the profile README - agent infrastructure, developer tooling and the MCP servers underneath. Every number on the page is traced to the suite run that printed it (see TESTLER.md). Hand-written SVG, no generated stat cards.",
+      "key_features": [
+        "Source of the GitHub profile README",
+        "Every number on the page is traced to the suite run that printed it (TESTLER.md)",
+        "Hand-written SVG hero, no generated stat cards"
+      ],
+      "media": {
+        "hero": "assets/hero.svg",
+        "screenshots": [
+          "assets/ecosystem.svg"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "denetim.yml",
+          "haftalik.yml",
+          "projeler.yml",
+          "yenile.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/Furkiozknn/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "A profile page where every number is checkable.",
+        "hashtags": [
+          "github",
+          "opensource"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/Furkiozknn"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "ai-job-gateway",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/ai-job-gateway",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/ai-job-gateway/releases",
+      "status": "active",
+      "category": "backend-service",
+      "platform": [
+        "http-api",
+        "library"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "FastAPI",
+        "webhooks"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "api-gateway",
+        "async-jobs",
+        "backend",
+        "dead-letter-queue",
+        "fastapi",
+        "generative-ai",
+        "idempotency",
+        "job-queue",
+        "mcp-ecosystem",
+        "provider-agnostic",
+        "python",
+        "retry",
+        "ssrf-protection",
+        "webhooks"
+      ],
+      "summary": "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook. Idempotency keys that survive a restart, SSRF-guarded signed webhooks, and expiry as a status you can read rather than a silent 404. 156 tests.",
+      "key_features": [
+        "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook",
+        "Idempotency keys that survive a restart",
+        "SSRF-guarded signed webhooks",
+        "Expiry as a status you can read rather than a silent 404"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 156,
+        "source": "CI log: `156 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/ai-job-gateway/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Submit, poll, webhook - the async job contract three providers converged on.",
+        "hashtags": [
+          "fastapi",
+          "python",
+          "backend",
+          "generativeai"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/ai-job-gateway"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "ai-workflow-engine",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/ai-workflow-engine",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/ai-workflow-engine/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "cli",
+        "library"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "YAML",
+        "DAG scheduling"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "automation",
+        "dag",
+        "generative-ai",
+        "gitops",
+        "infrastructure-as-code",
+        "job-orchestration",
+        "orchestration",
+        "pipeline",
+        "python",
+        "validation",
+        "workflow-engine",
+        "yaml"
+      ],
+      "summary": "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step's result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 72 tests.",
+      "key_features": [
+        "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor",
+        "Validated before it runs: a step reading another step's result without declaring the dependency is rejected at load time, typo and all",
+        "Layers run concurrently, capped and backed off, so width never becomes a burst",
+        "Known v1 limitations are written down in the README rather than discovered later"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 72,
+        "source": "`72 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/ai-workflow-engine/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Your pipeline is a YAML DAG in git - and it fails at load time, not at 3am.",
+        "hashtags": [
+          "python",
+          "orchestration",
+          "gitops",
+          "devtools"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/ai-workflow-engine"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "ajans-os",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/ajans-os",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/ajans-os/releases",
+      "status": "active",
+      "category": "agent-infrastructure",
+      "platform": [
+        "node"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Node.js 22+",
+        "JavaScript",
+        "JSON Schema",
+        "zero dependencies"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "adr",
+        "agent-infrastructure",
+        "agent-orchestration",
+        "ai-agents",
+        "architecture",
+        "architecture-decision-records",
+        "contracts",
+        "javascript",
+        "json-schema",
+        "multi-agent-systems",
+        "nodejs",
+        "research",
+        "turkce"
+      ],
+      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. Zero dependencies, 142 tests.",
+      "key_features": [
+        "Built research-first: 40 agent projects read with file:line evidence before a line was written",
+        "11 architecture decision records, 6 machine-readable contracts, 13 modules",
+        "Acceptance run is killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated",
+        "The gate tests itself: a deliberate violation is planted in the tree and CI fails if the validator misses it"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 142,
+        "source": "`node --test`: `pass 142`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/ajans-os/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": "YOL-HARITASI.md",
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "An agency OS whose strongest test is being killed mid-task and resumed.",
+        "hashtags": [
+          "aiagents",
+          "nodejs",
+          "architecture",
+          "opensource"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/ajans-os"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "asset-provenance-toolkit",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/asset-provenance-toolkit",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/asset-provenance-toolkit/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "cli",
+        "library"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "PNG text chunks",
+        "JPEG APP1 markers"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "ai-transparency",
+        "audit-trail",
+        "c2pa",
+        "cli",
+        "content-authenticity",
+        "exif",
+        "generative-ai",
+        "image-metadata",
+        "metadata",
+        "provenance",
+        "python"
+      ],
+      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, everything else a sidecar. Honest about what C2PA does that this does not. 86 tests.",
+      "key_features": [
+        "Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row",
+        "PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding",
+        "Anything else gets a sidecar file rather than a silent failure",
+        "Honest about what C2PA does that this does not"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 86,
+        "source": "`86 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/asset-provenance-toolkit/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Provenance that lives in the file, not in a database row you will lose.",
+        "hashtags": [
+          "provenance",
+          "c2pa",
+          "aitransparency",
+          "python"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/asset-provenance-toolkit"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "buradane",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/buradane",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/buradane/releases",
+      "status": "active",
+      "category": "web-app",
+      "platform": [
+        "web",
+        "http-api"
+      ],
+      "primary_language": "TypeScript",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "MapLibre",
+        "FastAPI",
+        "PostGIS",
+        "Python"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "accessibility",
+        "civic-tech",
+        "crowdsourcing",
+        "fastapi",
+        "geospatial",
+        "maplibre",
+        "mapping",
+        "nextjs",
+        "open-data",
+        "openstreetmap",
+        "postgis",
+        "public-services",
+        "python",
+        "turkey",
+        "turkiye",
+        "typescript"
+      ],
+      "summary": "\"What do I need, and where is the nearest one?\" 167,829 real OpenStreetMap places across all 81 provinces of Türkiye - pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km. Bearing, distance and a one-tap \"still here?\" on every result. 324 tests.",
+      "key_features": [
+        "167,829 real OpenStreetMap places across all 81 provinces of Turkiye",
+        "Pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km",
+        "Bearing, distance and a one-tap 'still here?' on every result",
+        "ODbL data and MIT code split explicitly in a NOTICE file"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [
+          "assets/harita-ekran-goruntusu.png"
+        ],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 324,
+        "source": "96 backend (CI log) + 228 frontend (vitest)",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "frontend.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/buradane/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "version_history": null,
+        "roadmap": "ROADMAP.md",
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "What do I need, and where is the nearest one? 167,829 places, all 81 provinces.",
+        "hashtags": [
+          "openstreetmap",
+          "civictech",
+          "nextjs",
+          "postgis",
+          "turkiye"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/buradane"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "claude-code-intelligence",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/claude-code-intelligence",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/claude-code-intelligence/releases",
+      "status": "active",
+      "category": "observability",
+      "platform": [
+        "cli",
+        "local-dashboard"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python",
+        "OpenTelemetry/OTLP",
+        "local-first"
+      ],
+      "version": "0.0.1",
+      "license": "MIT",
+      "topics": [
+        "analytics",
+        "claude-code",
+        "cli",
+        "cost-tracking",
+        "developer-tools",
+        "local-first",
+        "observability",
+        "opentelemetry",
+        "otlp",
+        "privacy-first",
+        "python",
+        "quota",
+        "telemetry",
+        "token-usage"
+      ],
+      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 261 tests.",
+      "key_features": [
+        "Where the tokens went, what it cost, and when the limit resets",
+        "Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all",
+        "No prompt, response or file content is defined in any type, so a privacy review is a grep",
+        "Local-first: an OTLP receiver and transcript parser that never phone home"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [
+          "assets/pano-ekran-goruntusu.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 261,
+        "source": "`261 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/claude-code-intelligence/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Where the tokens went, what it cost, when the limit resets - measured, not guessed.",
+        "hashtags": [
+          "claudecode",
+          "observability",
+          "opentelemetry",
+          "python"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/claude-code-intelligence"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "claude-quota-monitor",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/claude-quota-monitor",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/claude-quota-monitor/releases",
+      "status": "archived",
+      "category": "observability",
+      "platform": [
+        "cli",
+        "local-dashboard"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python",
+        "local web dashboard"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "archived",
+        "claude-code",
+        "prototype",
+        "python",
+        "quota"
+      ],
+      "summary": "Superseded early prototype of Claude Code quota tracking. The maintained implementation lives in claude-code-intelligence.",
+      "key_features": [
+        "Superseded early prototype of Claude Code quota tracking",
+        "The maintained implementation lives in claude-code-intelligence"
+      ],
+      "media": {
+        "hero": "docs/banner.svg",
+        "screenshots": [
+          "docs/images/pano-koyu.png",
+          "docs/images/pano-acik.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 43,
+        "source": "suite run before archiving",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Archived prototype - see claude-code-intelligence instead.",
+        "hashtags": [
+          "claudecode",
+          "archived"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/claude-quota-monitor"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "derin-kazi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/derin-kazi",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/derin-kazi/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "windows",
+        "web"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript",
+        "GL Compatibility renderer"
+      ],
+      "version": "0.7.2",
+      "license": "MIT",
+      "topics": [
+        "2d-game",
+        "exploration",
+        "game-development",
+        "gdscript",
+        "godot",
+        "godot4",
+        "indie-game",
+        "mining-game",
+        "resource-management",
+        "turkce"
+      ],
+      "summary": "Side-view digging and upgrade loop in Godot 4: mine ore, watch the fuel, sell, upgrade the rig, reach the core at 250 m. Turkish UI.",
+      "key_features": [
+        "Dig-sell-upgrade loop across five underground layers down to the core at 250 m",
+        "Fuel is the timer: every descent is a bet on getting back up before it runs out",
+        "Seeded worlds - a daily world and a Deep Mode built from the same seed code",
+        "Earthquakes, exploration fog and depth ambience that change how the layers read"
+      ],
+      "media": {
+        "hero": "yayin/banner.svg",
+        "screenshots": [
+          "yayin/ekran-2.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 460,
+        "source": "CI log: 304 unit (`== 304 sinama, 0 hata ==`) + 156 gameplay (`== 156 sinama, 0 hata ==`)",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yapi.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/derin-kazi/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": "SURUM-GECMISI.md",
+        "roadmap": "YOL-HARITASI.md",
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Mine deeper, or make it back up. The fuel gauge decides.",
+        "hashtags": [
+          "godot",
+          "godot4",
+          "indiedev",
+          "gamedev",
+          "miningame"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/derin-kazi"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "godot-2d-sablon",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/godot-2d-sablon",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/godot-2d-sablon/releases",
+      "status": "active",
+      "category": "template",
+      "platform": [
+        "godot"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript",
+        "GL Compatibility renderer"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "2d",
+        "boilerplate",
+        "coyote-time",
+        "game-development",
+        "gamedev",
+        "gdscript",
+        "godot",
+        "godot4",
+        "pixel-perfect",
+        "platformer",
+        "starter-template",
+        "template",
+        "top-down",
+        "turkce"
+      ],
+      "summary": "Two Godot 4.7 starters that already feel right to play: top-down with 8-way accelerated movement, and side-view with coyote time, jump buffering and variable jump height. The feel is measured, not guessed - the jump curves come from running the real _physics_process at the project's 60 Hz fixed step.",
+      "key_features": [
+        "Two starter projects that already feel right to play: top-down with 8-way accelerated movement, side-view with coyote time, jump buffering and variable jump height",
+        "The feel is measured, not guessed: jump curves come from running the real _physics_process at the project's 60 Hz fixed step",
+        "GL Compatibility throughout, so it runs on integrated graphics",
+        "Export settings and project layout documented, ready to fork"
+      ],
+      "media": {
+        "hero": "docs/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [
+          "ci.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/godot-2d-sablon/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Two Godot 4 starters whose jump feel was measured, not guessed.",
+        "hashtags": [
+          "godot",
+          "godot4",
+          "gamedev",
+          "template"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/godot-2d-sablon"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "godot-refcheck",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/godot-refcheck",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/godot-refcheck/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "cli",
+        "github-action"
+      ],
+      "primary_language": "Rust",
+      "technologies": [
+        "Rust (std only)",
+        "zero dependencies",
+        "SARIF 2.1.0",
+        "GitHub Actions"
+      ],
+      "version": "0.2.0",
+      "license": "MIT",
+      "topics": [
+        "ci",
+        "gamedev",
+        "godot",
+        "godot-engine",
+        "godot4",
+        "linter",
+        "rust",
+        "sarif",
+        "static-analysis",
+        "zero-dependency"
+      ],
+      "summary": "Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.",
+      "key_features": [
+        "Ten checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
+        "Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken",
+        "--fix repairs in place what the project itself settles: a moved file, a case-only difference, a uid that already resolves; two files with the same name produce no repair",
+        "Verified against a headless Godot: eight engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
+        "Calibrated on 237 projects in eleven real repositories: 41 findings, each confirmed by hand, no change proposed anywhere"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 107,
+        "source": "CI log: `=== 107 tests passed ===`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "corpus.yml",
+          "release.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/godot-refcheck/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Godot only tells you a reference is broken when that scene loads. godot-refcheck tells you at commit time.",
+        "hashtags": [
+          "godot",
+          "gamedev",
+          "rust",
+          "staticanalysis"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/godot-refcheck"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; counts taken from a run recorded in CI; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "kanca",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/kanca",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/kanca/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "windows",
+        "web"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript",
+        "GL Compatibility renderer"
+      ],
+      "version": "0.5.2",
+      "license": "MIT",
+      "topics": [
+        "2d-game",
+        "game-development",
+        "gdscript",
+        "godot",
+        "godot4",
+        "grappling-hook",
+        "indie-game",
+        "platformer",
+        "speedrun",
+        "turkce"
+      ],
+      "summary": "Hook the ceiling, swing, release at the right moment and carry the momentum - a speed-focused 2D swinging platformer in Godot 4; medal times measured on 13 of 14 levels by a scripted bot. Turkish UI.",
+      "key_features": [
+        "Swing physics with no jump button: hook a ceiling anchor, swing, release at the right moment and keep the momentum",
+        "14 hand-built levels; medal times on 13 of them measured by a scripted bot rather than guessed",
+        "All sprites generated from code (tools/sprite_uret.gd), so the art is reproducible from the repository",
+        "Single-finger control scheme for touch, documented alongside the keyboard layout"
+      ],
+      "media": {
+        "hero": "yayin/banner.svg",
+        "screenshots": [
+          "docs/ekran/menu.png",
+          "docs/ekran/bolum_13.png"
+        ],
+        "gifs": [
+          "yayin/tanitim.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 115,
+        "source": "CI log: `=== 115/115 gecti ===`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yapi.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/kanca/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": "SURUM-GECMISI.md",
+        "roadmap": "YOL-HARITASI.md",
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "One key. One rope. All the momentum you can carry.",
+        "hashtags": [
+          "godot",
+          "godot4",
+          "indiedev",
+          "gamedev",
+          "platformer"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/kanca"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "local-notes-search-mcp",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/local-notes-search-mcp",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/local-notes-search-mcp/releases",
+      "status": "active",
+      "category": "mcp-server",
+      "platform": [
+        "mcp",
+        "cli"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.10+",
+        "sqlite-vec",
+        "multilingual ONNX embeddings",
+        "MCP"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "claude-code",
+        "embeddings",
+        "fastembed",
+        "markdown",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "obsidian",
+        "offline",
+        "personal-knowledge-base",
+        "privacy-first",
+        "python",
+        "rag",
+        "semantic-search",
+        "sqlite-vec"
+      ],
+      "summary": "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&A is opt-in. 50 tests.",
+      "key_features": [
+        "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago",
+        "Semantic search as an MCP server: sqlite-vec plus a multilingual ONNX model, with incremental re-indexing",
+        "Answers returned as file:line",
+        "No server, no API key, no network at query time; grounded LLM Q&A is opt-in"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 64,
+        "source": "`64 passed, 1 warning`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/local-notes-search-mcp/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Ask your own notes a question instead of guessing the keyword.",
+        "hashtags": [
+          "mcp",
+          "semanticsearch",
+          "obsidian",
+          "privacyfirst"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/local-notes-search-mcp"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "masal",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/masal",
+      "homepage": "https://furkiozknn.github.io/masal/",
+      "releases": "https://github.com/Furkiozknn/masal/releases",
+      "status": "active",
+      "category": "web-app",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "vanilla JavaScript",
+        "SVG",
+        "no build step",
+        "GitHub Pages"
+      ],
+      "version": "1.0.0",
+      "license": "MIT",
+      "topics": [
+        "children",
+        "coloring-book",
+        "generative-text",
+        "github-pages",
+        "kids",
+        "nlp",
+        "no-build",
+        "privacy-first",
+        "storytelling",
+        "svg",
+        "turkce",
+        "turkish",
+        "vanilla-js",
+        "web-app"
+      ],
+      "summary": "A bedtime story written around one child's name, age and hometown, with the colouring page drawn into it as vectors that fill cleanly instead of raster art that smudges past the outline. Six themes and a branch on page three - twelve readings. Turkish suffix engine, no photo upload, no download, no API key.",
+      "key_features": [
+        "A bedtime story written around one child's name, age and hometown",
+        "The colouring page is drawn into the story as vectors, so it fills cleanly instead of smudging past the outline",
+        "Six themes and a branch on page three - twelve readings",
+        "Turkish suffix engine gets the name right where template substitution never could; no photo upload, no download, no API key"
+      ],
+      "media": {
+        "hero": "assets/sahneler.png",
+        "screenshots": [
+          "assets/sahneler.png",
+          "assets/ekran-goruntusu.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 92,
+        "source": "`node --test`: `pass 92`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/masal/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "A bedtime story written around your child's name - and a colouring page drawn into it.",
+        "hashtags": [
+          "javascript",
+          "svg",
+          "kids",
+          "turkce",
+          "webapp"
+        ],
+        "primary_link": "https://furkiozknn.github.io/masal/"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "mcp-census",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/mcp-census",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/mcp-census/releases",
+      "status": "active",
+      "category": "research",
+      "platform": [
+        "cli"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "zero runtime dependencies"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "cli",
+        "data-analysis",
+        "mcp",
+        "mcp-registry",
+        "measurement",
+        "model-context-protocol",
+        "open-data",
+        "python",
+        "reproducible-research",
+        "zero-dependency"
+      ],
+      "summary": "Reproducible count of the official MCP Registry: the same question asked three ways gives three different numbers, and this measures why.",
+      "key_features": [
+        "Asks the official MCP Registry the same question three ways and shows why the three answers differ",
+        "Finds that roughly a quarter of registry entries have no source code to read",
+        "Measures the count over time instead of quoting a single snapshot",
+        "Reproducible: the sample data and the fetch/analyse pipeline are both in the repository"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 44,
+        "source": "CI log: `44 passed`",
+        "measured": "2026-09-21"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/mcp-census/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "How many MCP servers are there? Ask three ways, get three numbers.",
+        "hashtags": [
+          "mcp",
+          "modelcontextprotocol",
+          "opensource",
+          "datascience"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/mcp-census"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "mcp-vet",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/mcp-vet",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/mcp-vet/releases",
+      "status": "active",
+      "category": "security-tool",
+      "platform": [
+        "cli",
+        "claude-code-skill"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.9-3.13",
+        "zero dependencies",
+        "MCP"
+      ],
+      "version": "0.5.0",
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude-code",
+        "mcp",
+        "mcp-security",
+        "mcp-server",
+        "model-context-protocol",
+        "prompt-injection",
+        "python",
+        "security",
+        "security-audit",
+        "skill",
+        "static-analysis",
+        "supply-chain-security",
+        "zero-dependency"
+      ],
+      "summary": "An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 31 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 289 tests.",
+      "key_features": [
+        "Reads an MCP server's source before you install it - 31 rules across tool poisoning, exfiltration paths, install hooks and registry provenance",
+        "Every finding is quoted with file:line, so a claim can be checked rather than believed",
+        "Never executes what it audits",
+        "JSON output and a CI mode, plus a version diff between two releases of the same server"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/audit.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 289,
+        "source": "`289 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/mcp-vet/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "An MCP tool description is read on every call. Nobody scrolls past it. mcp-vet does.",
+        "hashtags": [
+          "mcp",
+          "security",
+          "supplychain",
+          "aiagents"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/mcp-vet"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "mini-creative-toolkit",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/mini-creative-toolkit",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/mini-creative-toolkit/releases",
+      "status": "active",
+      "category": "mcp-server",
+      "platform": [
+        "mcp",
+        "cli"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "Pillow",
+        "FFmpeg",
+        "CPU-only"
+      ],
+      "version": "2.0.0",
+      "license": "MIT",
+      "topics": [
+        "background-removal",
+        "claude-code",
+        "cpu-only",
+        "ffmpeg",
+        "image-processing",
+        "mcp",
+        "mcp-server",
+        "media-tools",
+        "model-context-protocol",
+        "no-api-key",
+        "offline-first",
+        "pillow",
+        "python",
+        "video-processing"
+      ],
+      "summary": "23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim. 22 of them report \"network\": \"none\" in their own response payload rather than in a README, and a test fails if any other module ever imports an HTTP client. No GPU, no paid API. 326 tests.",
+      "key_features": [
+        "23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim",
+        "22 of them report \"network\": \"none\" in their own response payload rather than in a README",
+        "A test fails if any other module ever imports an HTTP client",
+        "No GPU and no paid API; rembg's CC-BY-NC default model is refused unless you opt in knowingly"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 327,
+        "source": "`327 passed`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/mini-creative-toolkit/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "23 media tools that prove they are offline in their own response payload.",
+        "hashtags": [
+          "mcp",
+          "ffmpeg",
+          "imageprocessing",
+          "offlinefirst"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/mini-creative-toolkit"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "model-comparison-harness",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/model-comparison-harness",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/model-comparison-harness/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "cli",
+        "library"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "CLI: mch"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "benchmarking",
+        "cli",
+        "developer-tools",
+        "evaluation",
+        "generative-ai",
+        "latency",
+        "llm",
+        "llm-evaluation",
+        "model-comparison",
+        "observability",
+        "python",
+        "routing"
+      ],
+      "summary": "Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 74 tests.",
+      "key_features": [
+        "Fires one request at N model backends at once and puts latency, success and output side by side",
+        "--rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so quality is compared too",
+        "Every failure carries an error_type a script can branch on",
+        "Usable as a library, with a documented path for writing a new backend type"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 74,
+        "source": "`74 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/model-comparison-harness/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "One prompt, N providers, one report - and a judge model scoring each answer.",
+        "hashtags": [
+          "llm",
+          "evaluation",
+          "python",
+          "devtools"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/model-comparison-harness"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "nova-drift",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/nova-drift",
+      "homepage": "https://furkiozknn.github.io/nova-drift/",
+      "releases": "https://github.com/Furkiozknn/nova-drift/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "JavaScript",
+        "Three.js r160",
+        "WebGL",
+        "Web Audio API",
+        "no build step"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "arcade-game",
+        "browser-game",
+        "endless-runner",
+        "game",
+        "gamedev",
+        "github-pages",
+        "html5-game",
+        "javascript",
+        "no-build",
+        "procedural-generation",
+        "threejs",
+        "threejs-game",
+        "web-audio-api",
+        "webgl",
+        "webgl-game"
+      ],
+      "summary": "Endless browser space-runner with real Three.js bloom, hand-written particles and an audio engine synthesized live in Web Audio - not one sound file in the repo. Skim an obstacle without touching it and take the near-miss bonus. A daily run seeded from the UTC date deals every player the same obstacles. 0.7 MB, no build step.",
+      "key_features": [
+        "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
+        "Audio engine synthesized live in Web Audio - not one sound file in the repository",
+        "Skim an obstacle without touching it and take the near-miss bonus",
+        "A daily run seeded from the UTC date deals every player the same obstacles; 0.7 MB first load, no build step"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/gameplay.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 28,
+        "source": "`28 passed` (Playwright)",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/nova-drift/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "0.7 MB, no build step, real bloom - and every sound synthesized on the fly.",
+        "hashtags": [
+          "threejs",
+          "webgl",
+          "gamedev",
+          "javascript",
+          "webaudio"
+        ],
+        "primary_link": "https://furkiozknn.github.io/nova-drift/"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "nvidia-nim-mcp",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/nvidia-nim-mcp",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/nvidia-nim-mcp/releases",
+      "status": "active",
+      "category": "mcp-server",
+      "platform": [
+        "mcp"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "NVIDIA NIM",
+        "Groq",
+        "Mistral",
+        "Gemini",
+        "Cerebras"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "ai",
+        "cerebras",
+        "claude-code",
+        "fallback",
+        "free-tier",
+        "gemini",
+        "groq",
+        "image-generation",
+        "llm",
+        "mcp",
+        "mcp-server",
+        "mistral",
+        "model-context-protocol",
+        "nvidia",
+        "nvidia-nim",
+        "python"
+      ],
+      "summary": "Seven MCP tools on NVIDIA NIM's free tier - image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive. Two of them need no API key at all. Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired. 80 tests.",
+      "key_features": [
+        "Seven MCP tools on NVIDIA NIM's free tier: image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive",
+        "Two of the seven need no API key at all",
+        "Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired",
+        "Output files land where you can find them, documented in the README"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 80,
+        "source": "`80 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/nvidia-nim-mcp/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Seven MCP tools on a free tier - and a fallback chain for when a model quietly dies.",
+        "hashtags": [
+          "mcp",
+          "nvidia",
+          "llm",
+          "freetier"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/nvidia-nim-mcp"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "prompt-template-manager",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/prompt-template-manager",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/prompt-template-manager/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "cli",
+        "library"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.11+",
+        "Jinja2 SandboxedEnvironment",
+        "CLI: ptm"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "cli",
+        "developer-tools",
+        "gitops",
+        "jinja2",
+        "llm",
+        "llmops",
+        "prompt-engineering",
+        "prompt-templates",
+        "python",
+        "sandbox",
+        "version-control"
+      ],
+      "summary": "Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja's SandboxedEnvironment with StrictUndefined so a typo'd variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 61 tests.",
+      "key_features": [
+        "Templates as plain YAML, so a prompt change is a diff in a pull request rather than a database row",
+        "Rendered through Jinja's SandboxedEnvironment with StrictUndefined: a typo'd variable fails loudly instead of rendering blank",
+        "A ${var} form that keeps an integer an integer instead of stringifying it",
+        "Works as a CLI and as a library, with the security model documented"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 61,
+        "source": "`61 passed`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/prompt-template-manager/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Your prompts deserve git diff, not a database row.",
+        "hashtags": [
+          "llmops",
+          "promptengineering",
+          "python",
+          "gitops"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/prompt-template-manager"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "repo-vet",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/repo-vet",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/repo-vet/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "cli",
+        "github-actions"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.9+",
+        "GitHub REST API",
+        "standard library only"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "ci",
+        "cli",
+        "developer-tools",
+        "documentation",
+        "github",
+        "github-actions",
+        "link-checker",
+        "linter",
+        "python",
+        "quality-assurance",
+        "readme",
+        "release-automation"
+      ],
+      "summary": "Checks what a GitHub repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. Six checks over the GitHub API, no clone, zero dependencies.",
+      "key_features": [
+        "Checks a README's install commands against PyPI and npm, so the first command a visitor runs is one that still resolves",
+        "Only fenced code blocks count as instructions: a sentence mentioning a command is discussing it, not asking anyone to run it",
+        "Says nothing when it cannot see - an unreachable registry, a rate limit or a tree GitHub truncated is reported as not checked, never as clean",
+        "Checked against 30 public repositories that disagree with each other; every false positive it produced is now a named test"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 97,
+        "source": "CI log: `=== 97 tests passed ===`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/repo-vet/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Your README is a promise. This checks whether you can still keep it.",
+        "hashtags": [
+          "python",
+          "github",
+          "devtools",
+          "opensource"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/repo-vet"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "tek-tus-kosu",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/tek-tus-kosu",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/tek-tus-kosu/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "windows",
+        "web"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript",
+        "GL Compatibility renderer"
+      ],
+      "version": "1.7.3",
+      "license": "MIT",
+      "topics": [
+        "2d-game",
+        "endless-runner",
+        "game-development",
+        "gdscript",
+        "godot",
+        "godot4",
+        "indie-game",
+        "one-button",
+        "rhythm-game",
+        "turkce"
+      ],
+      "summary": "One-button endless rooftop runner in Godot 4: a rhythm mode that lays every obstacle on the music beat grid, plus a post-run timing histogram. Turkish UI.",
+      "key_features": [
+        "One-button endless rooftop runner: the only input is when to press",
+        "Rhythm mode lays every obstacle on the music's beat grid instead of a random spacer",
+        "Post-run timing histogram shows how early or late each press landed",
+        "Daily run seeded from the date, so every player gets the same rooftops"
+      ],
+      "media": {
+        "hero": "yayin/banner.svg",
+        "screenshots": [
+          "yayin/ekran-2.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 853,
+        "source": "CI log: `=== SONUC: 853 gecti, 0 hata ===`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yapi.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/tek-tus-kosu/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": "SURUM-GECMISI.md",
+        "roadmap": "YOL-HARITASI.md",
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "One button. Every obstacle on the beat.",
+        "hashtags": [
+          "godot",
+          "godot4",
+          "indiedev",
+          "gamedev",
+          "rhythmgame"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/tek-tus-kosu"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "turkce-ajanlar",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/turkce-ajanlar",
+      "homepage": "https://furkiozknn.github.io/turkce-ajanlar/",
+      "releases": "https://github.com/Furkiozknn/turkce-ajanlar/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "claude-code",
+        "cursor",
+        "opencode",
+        "github-copilot",
+        "codex"
+      ],
+      "primary_language": "HTML",
+      "technologies": [
+        "Claude Code plugin",
+        "Node.js",
+        "Markdown agent definitions"
+      ],
+      "version": "0.3.0",
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "codex",
+        "cursor",
+        "developer-tools",
+        "github-copilot",
+        "opencode",
+        "prompt-engineering",
+        "subagents",
+        "turkce",
+        "turkish",
+        "windows"
+      ],
+      "summary": "70 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &&, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.",
+      "key_features": [
+        "70 sub-agents that think in Turkish rather than translate into it",
+        "Encodes the traps that actually bite on Turkish Windows: no && in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes",
+        "3 commands, 2 skills and an eval suite alongside the agents",
+        "One source of truth, exported to Cursor, OpenCode, Copilot and Codex; CI fails if the web UI drifts from the agent files"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [
+          "assets/ekran-goruntusu.png"
+        ],
+        "gifs": [
+          "assets/demo.gif"
+        ],
+        "videos": []
+      },
+      "tests": {
+        "count": 92,
+        "source": "27 validator + 32 export + 33 format checks",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "dogrula.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/turkce-ajanlar/actions/workflows/dogrula.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": "YOL-HARITASI.md",
+        "security": null,
+        "contributing": "KATKIDA-BULUNMA.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "70 Claude Code sub-agents that think in Turkish, not translate into it.",
+        "hashtags": [
+          "claudecode",
+          "aiagents",
+          "turkce",
+          "devtools"
+        ],
+        "primary_link": "https://furkiozknn.github.io/turkce-ajanlar/"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "voice-io-mcp",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/voice-io-mcp",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/voice-io-mcp/releases",
+      "status": "active",
+      "category": "mcp-server",
+      "platform": [
+        "mcp"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3.10+",
+        "Kokoro-82M",
+        "faster-whisper",
+        "Groq"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "claude-code",
+        "groq",
+        "kokoro",
+        "local-first",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "offline-first",
+        "python",
+        "speech-to-text",
+        "stt",
+        "text-to-speech",
+        "tts",
+        "voice",
+        "whisper"
+      ],
+      "summary": "Speech in and speech out, needing no API key at all: Groq's free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks extension and size before it ever opens the file, so \"transcribe the audio at .env\" is refused locally instead of uploaded. 4 tools, 35 tests.",
+      "key_features": [
+        "Speech in and speech out, needing no API key at all",
+        "Groq's free hosted tier when a key is set; Kokoro-82M and faster-whisper locally when it is not",
+        "Transcription checks extension and size before it ever opens the file, so 'transcribe the audio at .env' is refused locally instead of uploaded",
+        "4 tools, with known limitations and roadmap written down"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 35,
+        "source": "`35 passed, 2 skipped`",
+        "measured": "2026-09-15"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yayinla.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/voice-io-mcp/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Speech in, speech out - no API key required, and .env is refused before it opens.",
+        "hashtags": [
+          "mcp",
+          "texttospeech",
+          "whisper",
+          "localfirst"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/voice-io-mcp"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "yercekimi-cevir",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/yercekimi-cevir",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/yercekimi-cevir/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "windows",
+        "web"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript",
+        "GL Compatibility renderer"
+      ],
+      "version": "0.7.2",
+      "license": "MIT",
+      "topics": [
+        "2d-game",
+        "game-development",
+        "gdscript",
+        "godot",
+        "godot4",
+        "gravity",
+        "indie-game",
+        "precision-platformer",
+        "puzzle-platformer",
+        "turkce"
+      ],
+      "summary": "No jump button - one key flips gravity and you fall onto the ceiling. 20 hand-built precision platformer rooms in Godot 4. Turkish UI.",
+      "key_features": [
+        "No jump button: one key flips gravity and you fall onto the ceiling",
+        "20 hand-built precision rooms, each with its own medal times",
+        "Ghost race, level-of-the-day and streak tracking built on recorded runs",
+        "Left-handed layout, storm mode and readability options as first-class settings"
+      ],
+      "media": {
+        "hero": "docs/banner.svg",
+        "screenshots": [
+          "docs/01-menu.png",
+          "yayin/ekran/07-cevirme.png",
+          "docs/02-bolum-sec.png",
+          "docs/03-ayarlar.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 841,
+        "source": "CI log: `841 dogrulama, 0 hata` / `TESTLER GECTI`",
+        "measured": "2026-09-22"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "yapi.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/yercekimi-cevir/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": "YOL-HARITASI.md",
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "There is no jump button. There is only which way is down.",
+        "hashtags": [
+          "godot",
+          "godot4",
+          "indiedev",
+          "gamedev",
+          "precisionplatformer"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/yercekimi-cevir"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    }
+  ]
+}
