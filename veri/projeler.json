@@ -82,6 +82,77 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "Furkiozknn.github.io",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/Furkiozknn.github.io",
+      "homepage": "https://furkiozknn.github.io/",
+      "releases": "https://github.com/Furkiozknn/Furkiozknn.github.io/releases",
+      "status": "active",
+      "category": "profile",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "Python",
+      "technologies": [
+        "Python 3 standard library only",
+        "one static HTML file",
+        "GitHub Pages"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "developer-portfolio",
+        "github-pages",
+        "project-directory",
+        "static-site",
+        "zero-dependency"
+      ],
+      "summary": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
+      "key_features": [
+        "One searchable page over every public repository, with filters by category and language",
+        "Generated from each repository's own project-meta.json, never hand-edited",
+        "A null field is left off the page rather than filled in with a guess",
+        "Rebuilt weekly by a workflow that commits only when the output changes"
+      ],
+      "media": {
+        "hero": "assets/og.png",
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [
+          "yenile.yml"
+        ],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Every repository on the account, in one searchable page, generated from the metadata each one carries.",
+        "hashtags": [
+          "opensource",
+          "devtools",
+          "githubpages"
+        ],
+        "primary_link": "https://furkiozknn.github.io/"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "ai-job-gateway",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/ai-job-gateway",
