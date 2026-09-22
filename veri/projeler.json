@@ -712,12 +712,13 @@
         "telemetry",
         "token-usage"
       ],
-      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 261 tests.",
+      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 273 tests.",
       "key_features": [
         "Where the tokens went, what it cost, and when the limit resets",
         "Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all",
         "No prompt, response or file content is defined in any type, so a privacy review is a grep",
-        "Local-first: an OTLP receiver and transcript parser that never phone home"
+        "Local-first: an OTLP receiver and transcript parser that never phone home",
+        "Provider-agnostic in practice, not only on paper: a third-party adapter is a pip-installable package with one `cci.adapters` entry point, `cci providers` says which ones are reachable and why one is not, and CI installs an example package and fails if the product cannot see it"
       ],
       "media": {
         "hero": "assets/banner.svg",
@@ -728,9 +729,9 @@
         "videos": []
       },
       "tests": {
-        "count": 261,
-        "source": "`261 passed`",
-        "measured": "2026-09-15"
+        "count": 273,
+        "source": "`273 passed`",
+        "measured": "2026-09-22"
       },
       "ci": {
         "workflows": [
@@ -875,7 +876,8 @@
         "Dig-sell-upgrade loop across five underground layers down to the core at 250 m",
         "Fuel is the timer: every descent is a bet on getting back up before it runs out",
         "Seeded worlds - a daily world and a Deep Mode built from the same seed code",
-        "Earthquakes, exploration fog and depth ambience that change how the layers read"
+        "Earthquakes, exploration fog and depth ambience that change how the layers read",
+        "The claims the design rests on are gates, not notes: the balance, human-like and fault-line suites (core in 25 min, one upgrade per round, bot reaching the core on 12 of 12 seeds) were kept out of CI as \"simulations that take minutes\" - measured at 0s, 1s and 6s, and now run on every push"
       ],
       "media": {
         "hero": "yayin/banner.svg",
@@ -886,8 +888,8 @@
         "videos": []
       },
       "tests": {
-        "count": 460,
-        "source": "CI log: 304 unit (`== 304 sinama, 0 hata ==`) + 156 gameplay (`== 156 sinama, 0 hata ==`)",
+        "count": 477,
+        "source": "CI log: 304 unit (`== 304 sinama, 0 hata ==`) + 156 gameplay (`== 156 sinama, 0 hata ==`) + 7 balance (`== 7 sinama, 0 hata ==`) + 10 human-like (`== 10 sinama, 0 hata ==`)",
         "measured": "2026-09-22"
       },
       "ci": {
@@ -1045,11 +1047,12 @@
       ],
       "summary": "Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.",
       "key_features": [
-        "Ten checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
+        "Eleven checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
         "Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken",
+        "A script reaching for $Head/Body the scene does not contain is an error, and stays silent on the six things that made it wrong: another node's get_node, a run-time add_child, a child that carries an instanced scene's root name, a path the script guards with has_node, a unique name, a script no scene attaches",
         "--fix repairs in place what the project itself settles: a moved file, a case-only difference, a uid that already resolves; two files with the same name produce no repair",
         "Verified against a headless Godot: eight engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
-        "Calibrated on 237 projects in eleven real repositories: 41 findings, each confirmed by hand, no change proposed anywhere"
+        "Calibrated on 237 projects in eleven real repositories: 50 findings, each confirmed by hand, no change proposed anywhere"
       ],
       "media": {
         "hero": "assets/banner.svg",
@@ -1060,8 +1063,8 @@
         "videos": []
       },
       "tests": {
-        "count": 107,
-        "source": "CI log: `=== 107 tests passed ===`",
+        "count": 133,
+        "source": "CI log: `=== 133 tests passed ===`",
         "measured": "2026-09-22"
       },
       "ci": {
@@ -1135,7 +1138,8 @@
         "Swing physics with no jump button: hook a ceiling anchor, swing, release at the right moment and keep the momentum",
         "14 hand-built levels; medal times on 13 of them measured by a scripted bot rather than guessed",
         "All sprites generated from code (tools/sprite_uret.gd), so the art is reproducible from the repository",
-        "Single-finger control scheme for touch, documented alongside the keyboard layout"
+        "Single-finger control scheme for touch, documented alongside the keyboard layout",
+        "Medal thresholds come from a bot that really plays each level, and CI re-runs it on every push: every level has to still finish and the published gold has to still be a time the bot can reach - which is how level 5's gold was found to be 3.5s faster than the bot's own median"
       ],
       "media": {
         "hero": "yayin/banner.svg",
@@ -2029,10 +2033,10 @@
         "videos": []
       },
       "tests": {
-        "count": 118,
+        "count": 131,
         "framework": "pytest",
-        "command": "python3 -m pytest -q",
-        "evidence": "118 passed"
+        "command": "python3 -m pytest",
+        "evidence": "131 passed"
       },
       "ci": {
         "workflows": [
@@ -2191,7 +2195,8 @@
         "One-button endless rooftop runner: the only input is when to press",
         "Rhythm mode lays every obstacle on the music's beat grid instead of a random spacer",
         "Post-run timing histogram shows how early or late each press landed",
-        "Daily run seeded from the date, so every player gets the same rooftops"
+        "Daily run seeded from the date, so every player gets the same rooftops",
+        "Every bar pattern is bot-cleared at every song's beat spacing: obstacle geometry is in absolute pixels while the beat grid is 120 / 140.6 / 128.6 px, so an unclearable bar could have hidden in a rare pattern-song pair"
       ],
       "media": {
         "hero": "yayin/banner.svg",
@@ -2202,8 +2207,8 @@
         "videos": []
       },
       "tests": {
-        "count": 853,
-        "source": "CI log: `=== SONUC: 853 gecti, 0 hata ===`",
+        "count": 961,
+        "source": "CI log: `=== SONUC: 961 gecti, 0 hata ===`",
         "measured": "2026-09-22"
       },
       "ci": {
@@ -2460,7 +2465,8 @@
         "No jump button: one key flips gravity and you fall onto the ceiling",
         "20 hand-built precision rooms, each with its own medal times",
         "Ghost race, level-of-the-day and streak tracking built on recorded runs",
-        "Left-handed layout, storm mode and readability options as first-class settings"
+        "Left-handed layout, storm mode and readability options as first-class settings",
+        "Medal thresholds are measured by a bot that really plays the level, and CI re-runs that bot on every push: the published gold time has to still be reachable and every one of the 20 rooms has to still finish, so a map edit cannot leave a stale threshold or an unsolvable room behind a green suite"
       ],
       "media": {
         "hero": "docs/banner.svg",

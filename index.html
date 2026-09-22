@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Furki Özkan — 28 projects</title>
-<meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: 28 projects, 5,009 tests across 26 suites.">
+<meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: 28 projects, 5,185 tests across 26 suites.">
 <meta property="og:title" content="Furki Özkan — 28 projects">
-<meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. 5,009 tests across 26 suites, every count traced to the run that printed it.">
+<meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. 5,185 tests across 26 suites, every count traced to the run that printed it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://furkiozknn.github.io/">
 <meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
@@ -131,7 +131,7 @@
     "@type": "SoftwareSourceCode",
     "name": "claude-code-intelligence",
     "codeRepository": "https://github.com/Furkiozknn/claude-code-intelligence",
-    "description": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 261 tests.",
+    "description": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 273 tests.",
     "programmingLanguage": "Python",
     "license": "MIT",
     "version": "0.0.1",
@@ -508,7 +508,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
   that repository can defend.</p>
   <div class="stats">
     <div class="stat"><b>28</b><span>public repositories</span></div>
-    <div class="stat"><b>5,009</b><span>tests across 26 active suites</span></div>
+    <div class="stat"><b>5,185</b><span>tests across 26 active suites</span></div>
     <div class="stat"><b>2026-09-22</b><span>generated</span></div>
   </div>
   <p><a href="https://github.com/Furkiozknn">GitHub profile</a> &middot;
@@ -534,7 +534,27 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <div class="topics"><span class="topic">agent-skills</span><span class="topic">ai-agents</span><span class="topic">claude-code</span><span class="topic">mcp</span><span class="topic">mcp-security</span><span class="topic">mcp-server</span><span class="topic">model-context-protocol</span><span class="topic">prompt-injection</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/mcp-vet">Repository</a><a href="https://furkiozknn.github.io/#mcp-vet">Live</a><a href="https://github.com/Furkiozknn/mcp-vet/releases">Releases</a></div>
 </article></div></section>
-<section class="group" data-group="developer-tool"><h2>Developer tools<span class="count">8</span></h2><div class="grid"><article class="card" id="asset-provenance-toolkit" data-search="asset-provenance-toolkit which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. png gets a lossless text chunk, jpeg a private app1 marker spliced into container bytes with no re-encoding, mp4/mov a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. honest about what c2pa does that this does not. 125 tests. ai-transparency audit-trail c2pa cli content-authenticity exif ffmpeg generative-ai image-metadata metadata mp4 provenance python video python 3.11+ png text chunks jpeg app1 markers iso base media uuid boxes ffmpeg (verification only) python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
+<section class="group" data-group="developer-tool"><h2>Developer tools<span class="count">8</span></h2><div class="grid"><article class="card" id="godot-refcheck" data-search="godot-refcheck godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. it repairs the ones with a single provable answer. ci gamedev godot godot-engine godot4 linter rust sarif static-analysis zero-dependency rust (std only) zero dependencies sarif 2.1.0 github actions rust cli github-action developer-tool" data-cat="developer-tool" data-lang="Rust">
+<header>
+<h3><a href="https://github.com/Furkiozknn/godot-refcheck">godot-refcheck</a></h3>
+<div class="meta"><span class="chip lang">Rust</span><span class="chip ver">v0.2.0</span><span class="chip tests">133 tests</span></div>
+</header>
+<p class="sum">Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.</p>
+<ul class="feats"><li>Eleven checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats</li><li>Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken</li></ul>
+<div class="topics"><span class="topic">ci</span><span class="topic">gamedev</span><span class="topic">godot</span><span class="topic">godot-engine</span><span class="topic">godot4</span><span class="topic">linter</span><span class="topic">rust</span><span class="topic">sarif</span></div>
+<div class="links"><a href="https://github.com/Furkiozknn/godot-refcheck">Repository</a><a href="https://furkiozknn.github.io/#godot-refcheck">Live</a><a href="https://github.com/Furkiozknn/godot-refcheck/releases">Releases</a></div>
+</article>
+<article class="card" id="repo-ratchet" data-search="repo-ratchet the engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified. continuous-improvement developer-tools github repository-maintenance zero-dependency python 3.11 standard library only no runtime dependencies append-only json lines work records github rest api python linux macos windows developer-tool" data-cat="developer-tool" data-lang="Python">
+<header>
+<h3><a href="https://github.com/Furkiozknn/repo-ratchet">repo-ratchet</a></h3>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">131 tests</span></div>
+</header>
+<p class="sum">The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.</p>
+<ul class="feats"><li>Twelve signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess</li><li>Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that ran and exited zero, no-change needs a stated reason</li></ul>
+<div class="topics"><span class="topic">continuous-improvement</span><span class="topic">developer-tools</span><span class="topic">github</span><span class="topic">repository-maintenance</span><span class="topic">zero-dependency</span></div>
+<div class="links"><a href="https://github.com/Furkiozknn/repo-ratchet">Repository</a><a href="https://furkiozknn.github.io/#repo-ratchet">Live</a><a href="https://github.com/Furkiozknn/repo-ratchet/releases">Releases</a></div>
+</article>
+<article class="card" id="asset-provenance-toolkit" data-search="asset-provenance-toolkit which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. png gets a lossless text chunk, jpeg a private app1 marker spliced into container bytes with no re-encoding, mp4/mov a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. honest about what c2pa does that this does not. 125 tests. ai-transparency audit-trail c2pa cli content-authenticity exif ffmpeg generative-ai image-metadata metadata mp4 provenance python video python 3.11+ png text chunks jpeg app1 markers iso base media uuid boxes ffmpeg (verification only) python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
 <h3><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">asset-provenance-toolkit</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">125 tests</span></div>
@@ -543,16 +563,6 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <ul class="feats"><li>Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row</li><li>PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding</li></ul>
 <div class="topics"><span class="topic">ai-transparency</span><span class="topic">audit-trail</span><span class="topic">c2pa</span><span class="topic">cli</span><span class="topic">content-authenticity</span><span class="topic">exif</span><span class="topic">ffmpeg</span><span class="topic">generative-ai</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">Repository</a><a href="https://furkiozknn.github.io/#asset-provenance-toolkit">Live</a><a href="https://github.com/Furkiozknn/asset-provenance-toolkit/releases">Releases</a></div>
-</article>
-<article class="card" id="repo-ratchet" data-search="repo-ratchet the engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified. continuous-improvement developer-tools github repository-maintenance zero-dependency python 3.11 standard library only no runtime dependencies append-only json lines work records github rest api python linux macos windows developer-tool" data-cat="developer-tool" data-lang="Python">
-<header>
-<h3><a href="https://github.com/Furkiozknn/repo-ratchet">repo-ratchet</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests">118 tests</span></div>
-</header>
-<p class="sum">The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.</p>
-<ul class="feats"><li>Twelve signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess</li><li>Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that ran and exited zero, no-change needs a stated reason</li></ul>
-<div class="topics"><span class="topic">continuous-improvement</span><span class="topic">developer-tools</span><span class="topic">github</span><span class="topic">repository-maintenance</span><span class="topic">zero-dependency</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/repo-ratchet">Repository</a><a href="https://furkiozknn.github.io/#repo-ratchet">Live</a><a href="https://github.com/Furkiozknn/repo-ratchet/releases">Releases</a></div>
 </article>
 <article class="card" id="turkce-ajanlar" data-search="turkce-ajanlar 70 claude code sub-agents that think in turkish rather than translate into it - they know powershell 5.1 has no &amp;&amp;, that cp1254 kills a python tool before its first line prints, and that a heredoc eats backslashes. plus 3 commands, 2 skills and an eval suite. one source, exported to cursor, opencode, copilot and codex. agent-skills ai-agents claude claude-code codex cursor developer-tools github-copilot opencode prompt-engineering subagents turkce turkish windows claude code plugin node.js markdown agent definitions html claude-code cursor opencode github-copilot codex developer-tool" data-cat="developer-tool" data-lang="HTML">
 <header>
@@ -563,16 +573,6 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <ul class="feats"><li>71 sub-agents that think in Turkish rather than translate into it</li><li>Encodes the traps that actually bite on Turkish Windows: no &amp;&amp; in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes</li></ul>
 <div class="topics"><span class="topic">agent-skills</span><span class="topic">ai-agents</span><span class="topic">claude</span><span class="topic">claude-code</span><span class="topic">codex</span><span class="topic">cursor</span><span class="topic">developer-tools</span><span class="topic">github-copilot</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/turkce-ajanlar">Repository</a><a href="https://furkiozknn.github.io/turkce-ajanlar/">Live</a><a href="https://github.com/Furkiozknn/turkce-ajanlar/releases">Releases</a></div>
-</article>
-<article class="card" id="godot-refcheck" data-search="godot-refcheck godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. it repairs the ones with a single provable answer. ci gamedev godot godot-engine godot4 linter rust sarif static-analysis zero-dependency rust (std only) zero dependencies sarif 2.1.0 github actions rust cli github-action developer-tool" data-cat="developer-tool" data-lang="Rust">
-<header>
-<h3><a href="https://github.com/Furkiozknn/godot-refcheck">godot-refcheck</a></h3>
-<div class="meta"><span class="chip lang">Rust</span><span class="chip ver">v0.2.0</span><span class="chip tests">107 tests</span></div>
-</header>
-<p class="sum">Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.</p>
-<ul class="feats"><li>Ten checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats</li><li>Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken</li></ul>
-<div class="topics"><span class="topic">ci</span><span class="topic">gamedev</span><span class="topic">godot</span><span class="topic">godot-engine</span><span class="topic">godot4</span><span class="topic">linter</span><span class="topic">rust</span><span class="topic">sarif</span></div>
-<div class="links"><a href="https://github.com/Furkiozknn/godot-refcheck">Repository</a><a href="https://furkiozknn.github.io/#godot-refcheck">Live</a><a href="https://github.com/Furkiozknn/godot-refcheck/releases">Releases</a></div>
 </article>
 <article class="card" id="repo-vet" data-search="repo-vet checks what a github repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. six checks over the github api, no clone, zero dependencies. ci cli developer-tools documentation github github-actions link-checker linter python quality-assurance readme release-automation python 3.9+ github rest api standard library only python cli github-actions developer-tool" data-cat="developer-tool" data-lang="Python">
 <header>
@@ -614,12 +614,12 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <div class="topics"><span class="topic">cli</span><span class="topic">developer-tools</span><span class="topic">gitops</span><span class="topic">jinja2</span><span class="topic">llm</span><span class="topic">llmops</span><span class="topic">prompt-engineering</span><span class="topic">prompt-templates</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/prompt-template-manager">Repository</a><a href="https://furkiozknn.github.io/#prompt-template-manager">Live</a><a href="https://github.com/Furkiozknn/prompt-template-manager/releases">Releases</a></div>
 </article></div></section>
-<section class="group" data-group="observability"><h2>Observability<span class="count">2</span></h2><div class="grid"><article class="card" id="claude-code-intelligence" data-search="claude-code-intelligence where the tokens went, what it cost, and when the limit resets. every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. no prompt, response or file content is defined in any type, so a privacy review is a grep. local-first. 261 tests. analytics claude-code cli cost-tracking developer-tools local-first observability opentelemetry otlp privacy-first python quota telemetry token-usage python opentelemetry/otlp local-first python cli local-dashboard observability" data-cat="observability" data-lang="Python">
+<section class="group" data-group="observability"><h2>Observability<span class="count">2</span></h2><div class="grid"><article class="card" id="claude-code-intelligence" data-search="claude-code-intelligence where the tokens went, what it cost, and when the limit resets. every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. no prompt, response or file content is defined in any type, so a privacy review is a grep. local-first. 273 tests. analytics claude-code cli cost-tracking developer-tools local-first observability opentelemetry otlp privacy-first python quota telemetry token-usage python opentelemetry/otlp local-first python cli local-dashboard observability" data-cat="observability" data-lang="Python">
 <header>
 <h3><a href="https://github.com/Furkiozknn/claude-code-intelligence">claude-code-intelligence</a></h3>
-<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.0.1</span><span class="chip tests">261 tests</span></div>
+<div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.0.1</span><span class="chip tests">273 tests</span></div>
 </header>
-<p class="sum">Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 261 tests.</p>
+<p class="sum">Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 273 tests.</p>
 <ul class="feats"><li>Where the tokens went, what it cost, and when the limit resets</li><li>Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all</li></ul>
 <div class="topics"><span class="topic">analytics</span><span class="topic">claude-code</span><span class="topic">cli</span><span class="topic">cost-tracking</span><span class="topic">developer-tools</span><span class="topic">local-first</span><span class="topic">observability</span><span class="topic">opentelemetry</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/claude-code-intelligence">Repository</a><a href="https://furkiozknn.github.io/#claude-code-intelligence">Live</a><a href="https://github.com/Furkiozknn/claude-code-intelligence/releases">Releases</a></div>
@@ -717,7 +717,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <section class="group" data-group="game"><h2>Games<span class="count">5</span></h2><div class="grid"><article class="card" id="tek-tus-kosu" data-search="tek-tus-kosu one-button endless rooftop runner in godot 4: a rhythm mode that lays every obstacle on the music beat grid, plus a post-run timing histogram. turkish ui. 2d-game endless-runner game-development gdscript godot godot4 indie-game one-button rhythm-game turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
 <header>
 <h3><a href="https://github.com/Furkiozknn/tek-tus-kosu">tek-tus-kosu</a></h3>
-<div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v1.7.3</span><span class="chip tests">853 tests</span></div>
+<div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v1.7.3</span><span class="chip tests">961 tests</span></div>
 </header>
 <p class="sum">One-button endless rooftop runner in Godot 4: a rhythm mode that lays every obstacle on the music beat grid, plus a post-run timing histogram. Turkish UI.</p>
 <ul class="feats"><li>One-button endless rooftop runner: the only input is when to press</li><li>Rhythm mode lays every obstacle on the music&#x27;s beat grid instead of a random spacer</li></ul>
@@ -737,7 +737,7 @@ footer { margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
 <article class="card" id="derin-kazi" data-search="derin-kazi side-view digging and upgrade loop in godot 4: mine ore, watch the fuel, sell, upgrade the rig, reach the core at 250 m. turkish ui. 2d-game exploration game-development gdscript godot godot4 indie-game mining-game resource-management turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
 <header>
 <h3><a href="https://github.com/Furkiozknn/derin-kazi">derin-kazi</a></h3>
-<div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v0.7.2</span><span class="chip tests">460 tests</span></div>
+<div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v0.7.2</span><span class="chip tests">477 tests</span></div>
 </header>
 <p class="sum">Side-view digging and upgrade loop in Godot 4: mine ore, watch the fuel, sell, upgrade the rig, reach the core at 250 m. Turkish UI.</p>
 <ul class="feats"><li>Dig-sell-upgrade loop across five underground layers down to the core at 250 m</li><li>Fuel is the timer: every descent is a bet on getting back up before it runs out</li></ul>
