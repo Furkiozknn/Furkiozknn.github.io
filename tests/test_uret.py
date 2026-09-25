@@ -362,3 +362,114 @@ def test_the_checked_in_snapshot_still_renders():
     assert p.cards == len(d["projects"])
     assert p.stack == []
     assert "None" not in page or ">None<" not in page
+
+
+# --------------------------------------------------------------------------
+# linking to a card - every repository's homepage is one of these anchors
+# --------------------------------------------------------------------------
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def snapshot():
+    snap = ROOT / "veri" / "projeler.json"
+    if not snap.is_file():
+        pytest.skip("no snapshot checked in")
+    return json.loads(snap.read_text(encoding="utf-8"))
+
+
+def test_every_homepage_that_points_at_a_card_here_finds_that_card():
+    """A repository whose homepage is https://furkiozknn.github.io/#name sends
+    its visitors to that id; a card that renamed or vanished strands them."""
+    d = snapshot()
+    page = uret.render(d["projects"], d.get("missing", []), d["generated"])
+    ids = re.findall(r'<article class="card" id="([^"]+)"', page)
+    assert len(ids) == len(set(ids)), "two cards share an id"
+    for m in d["projects"]:
+        home = m.get("homepage") or ""
+        if home.startswith(uret.SITE + "#"):
+            assert home.split("#", 1)[1] in ids, home
+
+
+def test_a_linked_card_lands_below_the_sticky_toolbar_not_under_it():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert "scroll-margin-top:calc(var(--tools-h)" in page
+    assert "setProperty('--tools-h'" in page
+
+
+def test_a_homepage_that_is_this_directory_gets_no_live_link_to_itself():
+    assert ">Live<" not in uret.card(meta(homepage=uret.SITE + "#thing"))
+    assert ">Live<" not in uret.card(meta(homepage=uret.SITE))
+    assert ">Live<" in uret.card(meta(homepage=uret.SITE + "masal/"))
+
+
+# --------------------------------------------------------------------------
+# accessibility and reader preferences
+# --------------------------------------------------------------------------
+
+
+def test_the_page_has_a_main_landmark_and_a_labelled_search():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert '<main id="main">' in page and "</main>" in page
+    assert '<label for="q"' in page
+    assert 'role="status"' in page
+
+
+def test_every_filter_button_is_a_button_that_announces_its_state():
+    page = uret.render([meta(), meta(id="g", category="game", primary_language="Rust")], [], "2026-01-01")
+    buttons = re.findall(r'<button[^>]*class="f"[^>]*>', page)
+    assert len(buttons) == 4
+    for b in buttons:
+        assert 'type="button"' in b and 'aria-pressed="false"' in b
+
+
+def test_the_page_follows_the_readers_light_or_dark_preference():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert '<meta name="color-scheme" content="dark light">' in page
+    assert "@media (prefers-color-scheme: light)" in page
+
+
+def test_link_previews_carry_size_alt_text_and_a_twitter_image():
+    page = uret.render([meta()], [], "2026-01-01")
+    for tag in ('property="og:image:width" content="1200"', 'property="og:image:height" content="630"',
+                'property="og:image:alt"', 'name="twitter:image"', 'name="twitter:title"'):
+        assert tag in page, tag
+
+
+def test_the_social_card_states_no_number_that_could_go_stale():
+    """The card is an image nobody regenerates; it said "26 repositories,
+    4,700 tests" long after both had changed."""
+    svg = (ROOT / "assets" / "og.svg").read_text(encoding="utf-8")
+    texts = re.findall(r"<text[^>]*>([^<]*)</text>", svg)
+    assert texts
+    assert not [t for t in texts if re.search(r"\d", t)]
+
+
+# --------------------------------------------------------------------------
+# prose that disagrees with the tests chip on the same card
+# --------------------------------------------------------------------------
+
+
+def test_a_summary_that_states_an_old_test_count_is_named():
+    got = uret.stale_counts([meta(summary="Zero dependencies, 289 tests.", tests={"count": 319})])
+    assert got == ["thing: the text says 289 tests, tests.count is 319"]
+
+
+def test_a_summary_that_agrees_with_the_count_is_not_named():
+    assert uret.stale_counts([meta(summary="1,234 tests and counting.", tests={"count": 1234})]) == []
+    assert uret.stale_counts([meta(summary="12 tests", tests=None)]) == []
+
+
+# --------------------------------------------------------------------------
+# the committed output is the generator's output
+# --------------------------------------------------------------------------
+
+
+def test_the_committed_page_feed_and_sitemap_are_what_the_snapshot_renders():
+    """A hand edit to index.html would be overwritten by the next rebuild, and
+    a template change committed without re-rendering would ship the old page."""
+    d = snapshot()
+    assert (ROOT / "index.html").read_text(encoding="utf-8") == uret.render(
+        d["projects"], d.get("missing", []), d["generated"])
+    assert (ROOT / "feed.xml").read_text(encoding="utf-8") == uret.atom(d.get("releases", []), d["generated"])
+    assert (ROOT / "sitemap.xml").read_text(encoding="utf-8") == uret.sitemap(d["generated"])
