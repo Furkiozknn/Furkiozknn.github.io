@@ -24,6 +24,7 @@ jobs:
   test:
     name: py${{ matrix.python }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # olculen en uzun kosu 13 sn
     strategy:
       fail-fast: false
       matrix:
@@ -40,6 +41,7 @@ jobs:
     name: the real snapshot still renders
     needs: test
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # olculen en uzun kosu 4 sn
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

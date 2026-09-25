@@ -20,6 +20,7 @@ concurrency:
 jobs:
   yenile:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # olculen en uzun kosu 24 sn
     steps:
       - uses: actions/checkout@v7
       - name: Rebuild from every repository's project-meta.json
