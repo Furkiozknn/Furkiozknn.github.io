@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22",
+  "generated": "2026-09-28",
   "missing": [],
   "releases": [
     {
@@ -1031,7 +1031,7 @@
         "SARIF 2.1.0",
         "GitHub Actions"
       ],
-      "version": "0.2.0",
+      "version": "0.3.0",
       "license": "MIT",
       "topics": [
         "ci",
