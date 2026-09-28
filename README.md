@@ -1,5 +1,8 @@
 # furkiozknn.github.io
 
+<p align="center"><img src="docs/reel/reel.gif" alt="Furkiozknn.github.io - 15-second motion reel" width="720"></p>
+<p align="center"><sub><a href="docs/reel/reel.mp4">MP4 version with sound</a></sub></p>
+
 The project directory for [this account](https://github.com/Furkiozknn): every public
 repository, in one searchable page.
 
