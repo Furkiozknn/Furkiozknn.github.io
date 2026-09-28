@@ -175,23 +175,23 @@
       ],
       "summary": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
       "key_features": [
-        "One searchable page over every public repository, with filters by category and language",
+        "One searchable page over every public repository, with filters by category and language, in light and dark",
+        "Every card is linkable by the repository's name (#repo-name), which is what most repositories use as their homepage",
         "Generated from each repository's own project-meta.json, never hand-edited",
         "A null field is left off the page rather than filled in with a guess, and a test suite holds that line",
         "An Atom feed, a sitemap and a schema.org ItemList written by the same run, so machines can follow the account too",
         "Rebuilt weekly by a workflow that commits only when the output changes"
       ],
       "media": {
-        "hero": "assets/og.png",
+        "hero": "assets/screenshot.png",
         "screenshots": [],
         "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 37,
-        "framework": "pytest",
-        "command": "python3 -m pytest tests -q",
-        "evidence": "37 passed"
+        "count": 48,
+        "source": "`python3 -m pytest tests -q`: `48 passed`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -219,7 +219,7 @@
         "primary_link": "https://furkiozknn.github.io/"
       },
       "provenance": {
-        "generated_at": "2026-09-22",
+        "generated_at": "2026-09-25",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository; no field is generated from a guess"
       }
@@ -435,7 +435,7 @@
         "research",
         "turkce"
       ],
-      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 142 tests.",
+      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 145 tests.",
       "key_features": [
         "Built research-first: 40 agent projects read with file:line evidence before a line was written",
         "11 architecture decision records, 6 machine-readable contracts, 13 modules",
@@ -450,9 +450,9 @@
         "videos": []
       },
       "tests": {
-        "count": 142,
-        "source": "`node --test`: `pass 142`",
-        "measured": "2026-09-22"
+        "count": 145,
+        "source": "`node --test`: `pass 145`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -712,7 +712,7 @@
         "telemetry",
         "token-usage"
       ],
-      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 273 tests.",
+      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 282 tests.",
       "key_features": [
         "Where the tokens went, what it cost, and when the limit resets",
         "Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all",
@@ -729,9 +729,9 @@
         "videos": []
       },
       "tests": {
-        "count": 273,
-        "source": "`273 passed`",
-        "measured": "2026-09-22"
+        "count": 282,
+        "source": "`282 passed`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -742,7 +742,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
@@ -970,15 +970,18 @@
       ],
       "media": {
         "hero": "docs/banner.svg",
-        "screenshots": [],
+        "screenshots": [
+          "docs/ekran-yandan.png",
+          "docs/ekran-ustten.png"
+        ],
         "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 21,
+        "count": 37,
         "framework": "pytest",
         "command": "python3 -m pytest testler -q",
-        "evidence": "21 passed"
+        "evidence": "37 passed"
       },
       "ci": {
         "workflows": [
@@ -988,7 +991,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": null,
@@ -1047,11 +1050,11 @@
       ],
       "summary": "Godot reports a broken resource reference only when that scene loads, and a dead signal connection never at all. godot-refcheck reads the project files instead: missing paths, case-only breakage, uid problems, connections to nodes that are gone. It repairs the ones with a single provable answer.",
       "key_features": [
-        "Eleven checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
+        "Twelve checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
         "Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken",
         "A script reaching for $Head/Body the scene does not contain is an error, and stays silent on the six things that made it wrong: another node's get_node, a run-time add_child, a child that carries an instanced scene's root name, a path the script guards with has_node, a unique name, a script no scene attaches",
         "--fix repairs in place what the project itself settles: a moved file, a case-only difference, a uid that already resolves; two files with the same name produce no repair",
-        "Verified against a headless Godot: eight engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
+        "Verified against a headless Godot: nine engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
         "Calibrated on 237 projects in eleven real repositories: 50 findings, each confirmed by hand, no change proposed anywhere"
       ],
       "media": {
@@ -1063,9 +1066,9 @@
         "videos": []
       },
       "tests": {
-        "count": 133,
-        "source": "CI log: `=== 133 tests passed ===`",
-        "measured": "2026-09-22"
+        "count": 147,
+        "source": "CI log: `=== 147 tests passed ===`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -1080,7 +1083,7 @@
         "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
-        "security": null,
+        "security": "SECURITY.md",
         "contributing": null,
         "license_file": "LICENSE"
       },
@@ -1229,7 +1232,7 @@
         "semantic-search",
         "sqlite-vec"
       ],
-      "summary": "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&A is opt-in. 50 tests.",
+      "summary": "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&A is opt-in. 99 tests.",
       "key_features": [
         "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago",
         "Semantic search as an MCP server: sqlite-vec plus a multilingual ONNX model, with incremental re-indexing",
@@ -1243,9 +1246,9 @@
         "videos": []
       },
       "tests": {
-        "count": 64,
-        "source": "`64 passed, 1 warning`",
-        "measured": "2026-09-22"
+        "count": 99,
+        "source": "`99 passed` (CI, model required, Python 3.10-3.13)",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -1256,7 +1259,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
@@ -1759,26 +1762,27 @@
         "webgl",
         "webgl-game"
       ],
-      "summary": "Endless browser space-runner with real Three.js bloom, hand-written particles and an audio engine synthesized live in Web Audio - not one sound file in the repo. Skim an obstacle without touching it and take the near-miss bonus. A daily run seeded from the UTC date deals every player the same obstacles. 0.7 MB, no build step.",
+      "summary": "Endless browser space-runner with real Three.js bloom, hand-written particles and an audio engine synthesized live in Web Audio - not one sound file in the repo. Skim an obstacle without touching it and take the near-miss bonus. A daily run seeded from the UTC date deals every player the same obstacles. 0.8 MB, no build step.",
       "key_features": [
         "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
         "Audio engine synthesized live in Web Audio - not one sound file in the repository",
         "Skim an obstacle without touching it and take the near-miss bonus",
-        "A daily run seeded from the UTC date deals every player the same obstacles; 0.7 MB first load, no build step",
+        "A daily run seeded from the UTC date deals every player the same obstacles; 0.8 MB first load, no build step",
         "Every test runs with the page sealed to its own origin, so a reintroduced CDN import breaks CI instead of passing it"
       ],
       "media": {
         "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "assets/gameplay.gif"
+        "screenshots": [
+          "assets/gameplay.webp",
+          "assets/screenshot.webp"
         ],
+        "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 38,
-        "source": "`38 passed` (Playwright)",
-        "measured": "2026-09-22"
+        "count": 42,
+        "source": "`42 passed` (Playwright)",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -1796,7 +1800,7 @@
         "license_file": "LICENSE"
       },
       "social": {
-        "headline": "0.7 MB, no build step, real bloom - and every sound synthesized on the fly.",
+        "headline": "0.8 MB, no build step, real bloom - and every sound synthesized on the fly.",
         "hashtags": [
           "threejs",
           "webgl",
@@ -2476,7 +2480,9 @@
           "docs/02-bolum-sec.png",
           "docs/03-ayarlar.png"
         ],
-        "gifs": [],
+        "gifs": [
+          "yayin/tanitim/tanitim.gif"
+        ],
         "videos": []
       },
       "tests": {
@@ -2493,7 +2499,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": "YOL-HARITASI.md",
         "security": null,
