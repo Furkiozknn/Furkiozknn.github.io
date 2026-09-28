@@ -16,6 +16,7 @@ import datetime
 import html
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -207,6 +208,38 @@ def chip(text, kind=""):
     return f'<span class="chip {kind}">{e(text)}</span>'
 
 
+def points_here(url):
+    """True when a homepage is this directory itself - its root or a card on it.
+
+    Most repositories use their own card here (#repo-name) as their homepage;
+    a "Live" link on that card would only link the card to itself.
+    """
+    return url.split("#", 1)[0].rstrip("/") == SITE.rstrip("/")
+
+
+STATED_TESTS = re.compile(r"\b(\d[\d,]*) (?:passing )?tests\b")
+
+
+def stale_counts(rows):
+    """Prose that states a test count the tests block no longer agrees with.
+
+    The page shows a repository's summary next to its tests chip, so a summary
+    written when the suite was smaller puts two different numbers on one card.
+    The fix belongs in that repository's project-meta.json; this only names it.
+    """
+    out = []
+    for m in rows:
+        count = (m.get("tests") or {}).get("count")
+        if not count:
+            continue
+        texts = [m.get("summary") or ""] + list(m.get("key_features") or [])
+        for text in texts:
+            for n in STATED_TESTS.findall(text):
+                if int(n.replace(",", "")) != count:
+                    out.append(f'{m["id"]}: the text says {n} tests, tests.count is {count}')
+    return out
+
+
 def card(m):
     """One project, rendered from its own metadata.
 
@@ -217,7 +250,7 @@ def card(m):
     pid = m["id"]
     tests = (m.get("tests") or {}).get("count")
     links = [(m["repository"], "Repository")]
-    if m.get("homepage"):
+    if m.get("homepage") and not points_here(m["homepage"]):
         links.append((m["homepage"], "Live"))
     if m.get("releases"):
         links.append((m["releases"], "Releases"))
@@ -237,7 +270,7 @@ def card(m):
     if m.get("version"):
         meta_bits.append(chip("v" + m["version"], "ver"))
     if tests:
-        meta_bits.append(chip(f"{tests:,} tests".replace(",", " "), "tests"))
+        meta_bits.append(chip(f"{tests:,} tests", "tests"))
     if m.get("status") == "archived":
         meta_bits.append(chip("archived", "arch"))
     out.append('<div class="meta">' + "".join(meta_bits) + "</div>")
@@ -289,9 +322,11 @@ def render(rows, missing, when):
             f'<div class="grid">' + "\n".join(card(m) for m in items) + "</div></section>")
 
     filters = "".join(
-        f'<button class="f" data-cat="{e(k)}">{e(l)}</button>'
+        f'<button type="button" class="f" data-cat="{e(k)}" aria-pressed="false">{e(l)}</button>'
         for k, l in GROUPS if by_cat.get(k) is not None or any(m.get("category") == k for m in rows))
-    langfilters = "".join(f'<button class="f" data-lang="{e(l)}">{e(l)}</button>' for l in langs)
+    langfilters = "".join(
+        f'<button type="button" class="f" data-lang="{e(l)}" aria-pressed="false">{e(l)}</button>'
+        for l in langs)
 
     note = ""
     if missing:
@@ -301,7 +336,7 @@ def render(rows, missing, when):
     return TEMPLATE.format(
         owner=OWNER,
         count=len(rows),
-        tests=f"{total_tests:,}".replace(",", ","),
+        tests=f"{total_tests:,}",
         suites=suites,
         when=e(when),
         filters=filters,
@@ -317,14 +352,24 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
 <title>Furki Özkan — {count} projects</title>
 <meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: {count} projects, {tests} tests across {suites} suites.">
 <meta property="og:title" content="Furki Özkan — {count} projects">
 <meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. {tests} tests across {suites} suites, every count traced to the run that printed it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://furkiozknn.github.io/">
+<meta property="og:site_name" content="Furki Özkan">
 <meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Furki Özkan: agent infrastructure, MCP servers and developer tooling. Every card generated from the project-meta.json each repository carries.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Furki Özkan — {count} projects">
+<meta name="twitter:description" content="Agent infrastructure, MCP servers, developer tooling and games. {tests} tests across {suites} suites, every count traced to the run that printed it.">
+<meta name="twitter:image" content="https://furkiozknn.github.io/assets/og.png">
 <meta name="author" content="Furki Özkan">
 <link rel="alternate" type="application/atom+xml" title="Releases across every repository" href="https://furkiozknn.github.io/feed.xml">
 <link rel="canonical" href="https://furkiozknn.github.io/">
@@ -334,14 +379,29 @@ TEMPLATE = """<!DOCTYPE html>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230b0b0f'/><text x='8' y='12' font-size='11' text-anchor='middle' fill='%23c9a961' font-family='monospace'>F</text></svg>">
 <style>
 :root {{
+  color-scheme:dark;
   --bg:#0b0b0f; --panel:#101016; --line:#242430; --text:#d8d8e0; --dim:#8a8a97;
   --gold:#c9a961; --green:#4ade9e; --blue:#6cb6ff; --pink:#e19bd0;
+  --bar:rgba(11,11,15,.94); --topic:#15151c; --tools-h:200px;
+}}
+@media (prefers-color-scheme: light) {{
+  :root {{
+    color-scheme:light;
+    --bg:#f7f6f2; --panel:#ffffff; --line:#dcd9cf; --text:#1c1c22; --dim:#565661;
+    --gold:#7d5f16; --green:#0f6b3c; --blue:#0a58a8; --pink:#963078;
+    --bar:rgba(247,246,242,.94); --topic:#eeece5;
+  }}
 }}
 * {{ box-sizing:border-box; }}
 body {{ margin:0; background:var(--bg); color:var(--text);
   font:15px/1.6 'Segoe UI',-apple-system,Verdana,Helvetica,sans-serif; }}
 a {{ color:var(--blue); text-decoration:none; }}
 a:hover {{ text-decoration:underline; }}
+a:focus-visible, button:focus-visible {{ outline:2px solid var(--gold); outline-offset:2px; border-radius:4px; }}
+.vh {{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }}
+.skip {{ position:absolute; left:12px; top:-60px; background:var(--panel); color:var(--gold);
+  border:1px solid var(--gold); border-radius:8px; padding:8px 14px; z-index:20; }}
+.skip:focus {{ top:12px; }}
 .wrap {{ max-width:1180px; margin:0 auto; padding:0 20px 80px; }}
 header.top {{ padding:56px 0 24px; }}
 h1 {{ font:700 40px/1.1 'Cascadia Code','JetBrains Mono',Consolas,monospace;
@@ -352,7 +412,7 @@ h1 {{ font:700 40px/1.1 'Cascadia Code','JetBrains Mono',Consolas,monospace;
   padding:10px 16px; }}
 .stat b {{ display:block; font:700 21px/1.2 'Cascadia Code',monospace; color:var(--green); }}
 .stat span {{ color:var(--dim); font-size:12px; }}
-.tools {{ position:sticky; top:0; background:rgba(11,11,15,.94); backdrop-filter:blur(6px);
+.tools {{ position:sticky; top:0; background:var(--bar); backdrop-filter:blur(6px);
   padding:14px 0; border-bottom:1px solid var(--line); z-index:9; margin-bottom:8px; }}
 #q {{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--line);
   background:var(--panel); color:var(--text); font-size:15px; }}
@@ -368,30 +428,39 @@ button.f.on {{ border-color:var(--gold); color:var(--gold); }}
   text-transform:none; letter-spacing:0; }}
 .grid {{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); }}
 .card {{ background:var(--panel); border:1px solid var(--line); border-radius:14px;
-  padding:18px; display:flex; flex-direction:column; }}
+  padding:18px; display:flex; flex-direction:column;
+  scroll-margin-top:calc(var(--tools-h) + 16px); }}
+.card:target {{ border-color:var(--gold); box-shadow:0 0 0 1px var(--gold); }}
 .card h3 {{ margin:0; font:600 17px/1.2 'Cascadia Code','JetBrains Mono',monospace; }}
 .card h3 a {{ color:var(--text); }}
 .meta {{ display:flex; gap:6px; flex-wrap:wrap; margin:9px 0 2px; }}
 .chip {{ font:12px/1 'Cascadia Code',monospace; border:1px solid var(--line);
   border-radius:99px; padding:4px 9px; color:var(--dim); }}
-.chip.tests {{ color:var(--green); border-color:rgba(74,222,158,.4); }}
-.chip.lang {{ color:var(--blue); border-color:rgba(108,182,255,.35); }}
-.chip.ver {{ color:var(--gold); border-color:rgba(201,169,97,.35); }}
-.chip.arch {{ color:var(--pink); border-color:rgba(225,155,208,.35); }}
+.chip.tests {{ color:var(--green); }}
+.chip.lang {{ color:var(--blue); }}
+.chip.ver {{ color:var(--gold); }}
+.chip.arch {{ color:var(--pink); }}
+.chip.tests, .chip.lang, .chip.ver, .chip.arch {{ border-color:color-mix(in srgb, currentColor 40%, transparent); }}
 .sum {{ font-size:14px; margin:12px 0 0; }}
 .feats {{ margin:12px 0 0; padding-left:18px; color:var(--dim); font-size:13px; }}
 .feats li {{ margin-bottom:5px; }}
 .topics {{ margin-top:12px; display:flex; gap:5px; flex-wrap:wrap; }}
-.topic {{ font-size:11px; color:var(--dim); background:#15151c; border-radius:5px; padding:2px 7px; }}
+.topic {{ font-size:11px; color:var(--dim); background:var(--topic); border-radius:5px; padding:2px 7px; }}
 .links {{ margin-top:auto; padding-top:14px; display:flex; gap:14px; font-size:13px; }}
 footer {{ margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
   color:var(--dim); font-size:13px; }}
 .warn {{ color:var(--pink); }}
 .empty {{ color:var(--dim); padding:40px 0; display:none; }}
-@media (max-width:600px) {{ h1 {{ font-size:30px; }} .wrap {{ padding:0 14px 60px; }} }}
+/* On a phone the wrapped filter rows would pin a third of the screen, so the
+   toolbar scrolls away with the page there and a linked card needs no offset. */
+@media (max-width:600px) {{
+  h1 {{ font-size:30px; }} .wrap {{ padding:0 14px 60px; }}
+  .tools {{ position:static; }} :root {{ --tools-h:0px; }}
+}}
 </style>
 </head>
 <body>
+<a class="skip" href="#q">Skip to the project search</a>
 <div class="wrap">
 <header class="top">
   <h1>Furki Özkan</h1>
@@ -409,15 +478,19 @@ footer {{ margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
      <a href="https://github.com/{owner}/{owner}/blob/main/schema/README.md">The metadata schema</a></p>
 </header>
 
+<main id="main">
 <div class="tools">
-  <input id="q" type="search" placeholder="Search projects, topics, technologies&hellip;  (press / to focus)" autocomplete="off">
-  <div class="fs">{filters}</div>
-  <div class="fs">{langfilters}</div>
+  <label for="q" class="vh">Search projects</label>
+  <input id="q" type="search" placeholder="Search projects, topics, technologies&hellip;" title="Press / to jump here" aria-keyshortcuts="/" autocomplete="off">
+  <div class="fs" role="group" aria-label="Filter by category">{filters}</div>
+  <div class="fs" role="group" aria-label="Filter by language">{langfilters}</div>
 </div>
 
 {note}
+<p class="vh" id="status" role="status" aria-live="polite"></p>
 <p class="empty" id="empty">Nothing matches that.</p>
 {sections}
+</main>
 
 <footer>
   <p>This page is generated by <a href="https://github.com/{owner}/{owner}.github.io/blob/main/uret.py"><code>uret.py</code></a>
@@ -450,6 +523,21 @@ function apply() {{
     g.style.display = [...g.querySelectorAll('.card')].some(c => c.style.display !== 'none') ? '' : 'none';
   }}
   document.getElementById('empty').style.display = shown ? 'none' : 'block';
+  document.getElementById('status').textContent =
+    (t || cat || lang) ? shown + ' of ' + cards.length + ' projects shown' : '';
+}}
+// Every repository's homepage is a link to its card here (#repo-name), so a
+// linked card must land below the sticky toolbar, not underneath it.
+const tools = document.querySelector('.tools');
+function measure() {{
+  const sticky = getComputedStyle(tools).position === 'sticky';
+  document.documentElement.style.setProperty('--tools-h', sticky ? tools.offsetHeight + 'px' : '0px');
+}}
+measure();
+window.addEventListener('resize', measure);
+if (location.hash) {{
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (target) target.scrollIntoView();
 }}
 q.addEventListener('input', apply);
 q.addEventListener('keydown', ev => {{
@@ -471,6 +559,7 @@ for (const b of document.querySelectorAll('button.f')) {{
       const ov = o.dataset.cat !== undefined ? o.dataset.cat : o.dataset.lang;
       const active = (o.dataset.cat !== undefined) ? (cat === ov) : (lang === ov);
       o.classList.toggle('on', !!active);
+      o.setAttribute('aria-pressed', active ? 'true' : 'false');
     }}
     apply();
   }});
@@ -514,6 +603,10 @@ def main():
     print(f"{len(releases)} releases in feed.xml; sitemap.xml and robots.txt written")
     if missing:
         print("no metadata in:", ", ".join(missing))
+    # A GitHub Actions annotation, not a failure: the stale number lives in
+    # another repository, and the rebuild should not stop because of it.
+    for line in stale_counts(rows):
+        print(f"::warning title=stale test count::{line}")
 
 
 if __name__ == "__main__":

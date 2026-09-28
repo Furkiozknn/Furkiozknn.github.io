@@ -24,13 +24,14 @@ jobs:
   test:
     name: py${{ matrix.python }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # olculen en uzun kosu 13 sn
     strategy:
       fail-fast: false
       matrix:
         python: ["3.11", "3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
       - run: pip install pytest
@@ -40,9 +41,10 @@ jobs:
     name: the real snapshot still renders
     needs: test
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # olculen en uzun kosu 4 sn
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       # --yerel renders from the snapshot in veri/, so this proves the
