@@ -348,6 +348,7 @@ def render(rows, missing, when):
         owner=OWNER,
         count=len(rows),
         tests=f"{total_tests:,}",
+        tests_raw=total_tests,
         suites=suites,
         when=e(when),
         filters=filters,

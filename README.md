@@ -26,7 +26,7 @@ changes, so the page cannot quietly fall behind the repositories it describes.
 ```sh
 python3 uret.py            # fetch every repository's metadata, then render
 python3 uret.py --yerel    # render from the snapshot already in veri/
-python3 -m pytest tests -q # 62 tests over the generator
+python3 -m pytest tests -q # 63 tests over the generator
 ```
 
 No build step, no dependencies: `uret.py` fills the template `sablon.html` and writes one HTML file. Fonts are local files in `assets/fonts` (SIL OFL), so the page asks no other host for anything. To look at it locally, serve the folder

@@ -612,3 +612,10 @@ def test_the_focus_ring_and_skip_link_exist():
     page = uret.render([meta()], [], "2026-01-01")
     assert "a:focus-visible, button:focus-visible { outline:2px solid var(--accent)" in page
     assert 'class="skip" href="#q"' in page
+
+
+def test_the_headline_test_total_is_formatted_by_the_active_language():
+    page = uret.render([meta(id="a", tests={"count": 5339})], [], "2026-01-01")
+    assert 'data-num="5339">5,339</b>' in page  # server render stays en-US
+    # the script re-formats every [data-num] with num(), which picks tr-TR / en-US by language
+    assert "$$('[data-num]')" in page and "num(el.dataset.num)" in page

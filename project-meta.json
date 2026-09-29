@@ -44,8 +44,8 @@
     "videos": []
   },
   "tests": {
-    "count": 62,
-    "source": "`python3 -m pytest tests -q`: `62 passed`",
+    "count": 63,
+    "source": "`python3 -m pytest tests -q`: `63 passed`",
     "measured": "2026-09-29"
   },
   "ci": {

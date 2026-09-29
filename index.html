@@ -610,7 +610,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
   <p class="langnote" data-only="tr" data-i="langnote" hidden>Project descriptions are written in English in each repository's own metadata, so they are not translated here.</p>
   <div class="stats">
     <div class="stat" style="--k:0"><b>28</b><span data-i="s_repos">public repositories</span></div>
-    <div class="stat" style="--k:1"><b>5,339</b><span data-i="s_tests" data-n="26">tests across 26 active suites</span></div>
+    <div class="stat" style="--k:1"><b data-num="5339">5,339</b><span data-i="s_tests" data-n="26">tests across 26 active suites</span></div>
     <div class="stat" style="--k:2"><b>2026-09-28</b><span data-i="s_gen">generated</span></div>
   </div>
   <p class="links-top"><a href="https://github.com/Furkiozknn" data-i="l_profile">GitHub profile</a> &middot;
@@ -975,6 +975,7 @@ function setLang(l, save) {
     const n = el.dataset.n;
     el.textContent = t(el.dataset.i, { n: n === undefined ? '' : num(n) });
   }
+  for (const el of $$('[data-num]')) el.textContent = num(el.dataset.num);
   for (const el of $$('[data-h]')) el.innerHTML = t(el.dataset.h);
   for (const el of $$('[data-ph]')) el.placeholder = t(el.dataset.ph);
   for (const el of $$('[data-tt]')) el.title = t(el.dataset.tt);
