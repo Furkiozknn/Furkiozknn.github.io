@@ -27,9 +27,10 @@
   ],
   "summary": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
   "key_features": [
-    "One searchable page over every public repository, with filters by category and language, in light and dark",
+    "One searchable page over every public repository, with filters by category and language, in Turkish and English, light and dark",
     "Every card is linkable by the repository's name (#repo-name), which is what most repositories use as their homepage",
     "Generated from each repository's own project-meta.json, never hand-edited",
+    "The interface shell follows the reader's language and remembers the choice; project descriptions stay in the language their own metadata is written in",
     "A null field is left off the page rather than filled in with a guess, and a test suite holds that line",
     "An Atom feed, a sitemap and a schema.org ItemList written by the same run, so machines can follow the account too",
     "Rebuilt weekly by a workflow that commits only when the output changes"
@@ -37,13 +38,15 @@
   "media": {
     "hero": "assets/screenshot.png",
     "screenshots": [],
-    "gifs": [],
+    "gifs": [
+      "docs/demo/demo.gif"
+    ],
     "videos": []
   },
   "tests": {
-    "count": 48,
-    "source": "`python3 -m pytest tests -q`: `48 passed`",
-    "measured": "2026-09-25"
+    "count": 62,
+    "source": "`python3 -m pytest tests -q`: `62 passed`",
+    "measured": "2026-09-29"
   },
   "ci": {
     "workflows": [

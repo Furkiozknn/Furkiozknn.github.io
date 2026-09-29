@@ -198,14 +198,22 @@ def jsonld(rows, when):
 
 # --- rendering ------------------------------------------------------------
 
+def gid(key):
+    """A category key as a dictionary key the page's script can look up."""
+    return key.replace("-", "_")
+
+
 def e(x):
     """Escape for HTML, attributes included. Everything on the page goes through this."""
     return html.escape(str(x), quote=True)
 
 
-def chip(text, kind=""):
-    """One small labelled pill - a language, a version, a test count."""
-    return f'<span class="chip {kind}">{e(text)}</span>'
+def chip(text, kind="", i18n=""):
+    """One small labelled pill - a language, a version, a test count.
+
+    i18n is the interface-shell key the page's script translates; the English
+    text stays in the markup, so the page reads correctly without the script."""
+    return f'<span class="chip {kind}"{i18n}>{e(text)}</span>'
 
 
 def points_here(url):
@@ -249,11 +257,13 @@ def card(m):
     """
     pid = m["id"]
     tests = (m.get("tests") or {}).get("count")
-    links = [(m["repository"], "Repository")]
+    links = [(m["repository"], "Repository", "l_repo")]
     if m.get("homepage") and not points_here(m["homepage"]):
-        links.append((m["homepage"], "Live"))
+        # A game's homepage is the game itself, so the link says so.
+        play = m.get("category") == "game"
+        links.append((m["homepage"], "Play" if play else "Live", "l_play" if play else "l_live"))
     if m.get("releases"):
-        links.append((m["releases"], "Releases"))
+        links.append((m["releases"], "Releases", "l_rel"))
     feats = (m.get("key_features") or [])[:2]
     search = " ".join(
         [pid, m.get("summary") or "", " ".join(m.get("topics") or []),
@@ -270,9 +280,9 @@ def card(m):
     if m.get("version"):
         meta_bits.append(chip("v" + m["version"], "ver"))
     if tests:
-        meta_bits.append(chip(f"{tests:,} tests", "tests"))
+        meta_bits.append(chip(f"{tests:,} tests", "tests", f' data-i="tests" data-n="{tests}"'))
     if m.get("status") == "archived":
-        meta_bits.append(chip("archived", "arch"))
+        meta_bits.append(chip("archived", "arch", ' data-i="archived"'))
     out.append('<div class="meta">' + "".join(meta_bits) + "</div>")
     out.append("</header>")
     out.append(f'<p class="sum">{e(m.get("summary") or "")}</p>')
@@ -282,7 +292,7 @@ def card(m):
         out.append('<div class="topics">' + "".join(
             f'<span class="topic">{e(t)}</span>' for t in m["topics"][:8]) + "</div>")
     out.append('<div class="links">' + "".join(
-        f'<a href="{e(u)}">{e(t)}</a>' for u, t in links) + "</div>")
+        f'<a href="{e(u)}" data-i="{k}">{e(t)}</a>' for u, t, k in links) + "</div>")
     out.append("</article>")
     return "\n".join(out)
 
@@ -312,7 +322,7 @@ def render(rows, missing, when):
         if not items:
             continue
         sections.append(
-            f'<section class="group" data-group="{e(key)}"><h2>{e(label)}'
+            f'<section class="group" data-group="{e(key)}"><h2><span data-i="g_{gid(key)}">{e(label)}</span>'
             f'<span class="count">{len(items)}</span></h2>'
             f'<div class="grid">' + "\n".join(card(m) for m in items) + "</div></section>")
     for key, items in sorted(by_cat.items()):
@@ -322,7 +332,7 @@ def render(rows, missing, when):
             f'<div class="grid">' + "\n".join(card(m) for m in items) + "</div></section>")
 
     filters = "".join(
-        f'<button type="button" class="f" data-cat="{e(k)}" aria-pressed="false">{e(l)}</button>'
+        f'<button type="button" class="f" data-cat="{e(k)}" aria-pressed="false" data-i="g_{gid(k)}">{e(l)}</button>'
         for k, l in GROUPS if by_cat.get(k) is not None or any(m.get("category") == k for m in rows))
     langfilters = "".join(
         f'<button type="button" class="f" data-lang="{e(l)}" aria-pressed="false">{e(l)}</button>'
@@ -333,7 +343,8 @@ def render(rows, missing, when):
         note = ('<p class="warn">No project-meta.json found in: '
                 + ", ".join(e(x) for x in missing) + "</p>")
 
-    return TEMPLATE.format(
+    template = open(TEMPLATE_FILE, encoding="utf-8").read()
+    return fill(template, dict(
         owner=OWNER,
         count=len(rows),
         tests=f"{total_tests:,}",
@@ -344,230 +355,37 @@ def render(rows, missing, when):
         sections="\n".join(sections),
         note=note,
         jsonld=jsonld(rows, when),
-    )
+        groups_en=js_labels(dict(GROUPS)),
+        groups_tr=js_labels(GROUPS_TR),
+    ))
 
 
-TEMPLATE = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
-<title>Furki Özkan — {count} projects</title>
-<meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: {count} projects, {tests} tests across {suites} suites.">
-<meta property="og:title" content="Furki Özkan — {count} projects">
-<meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. {tests} tests across {suites} suites, every count traced to the run that printed it.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://furkiozknn.github.io/">
-<meta property="og:site_name" content="Furki Özkan">
-<meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Furki Özkan: agent infrastructure, MCP servers and developer tooling. Every card generated from the project-meta.json each repository carries.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Furki Özkan — {count} projects">
-<meta name="twitter:description" content="Agent infrastructure, MCP servers, developer tooling and games. {tests} tests across {suites} suites, every count traced to the run that printed it.">
-<meta name="twitter:image" content="https://furkiozknn.github.io/assets/og.png">
-<meta name="author" content="Furki Özkan">
-<link rel="alternate" type="application/atom+xml" title="Releases across every repository" href="https://furkiozknn.github.io/feed.xml">
-<link rel="canonical" href="https://furkiozknn.github.io/">
-<script type="application/ld+json">
-{jsonld}
-</script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230b0b0f'/><text x='8' y='12' font-size='11' text-anchor='middle' fill='%23c9a961' font-family='monospace'>F</text></svg>">
-<style>
-:root {{
-  color-scheme:dark;
-  --bg:#0b0b0f; --panel:#101016; --line:#242430; --text:#d8d8e0; --dim:#8a8a97;
-  --gold:#c9a961; --green:#4ade9e; --blue:#6cb6ff; --pink:#e19bd0;
-  --bar:rgba(11,11,15,.94); --topic:#15151c; --tools-h:200px;
-}}
-@media (prefers-color-scheme: light) {{
-  :root {{
-    color-scheme:light;
-    --bg:#f7f6f2; --panel:#ffffff; --line:#dcd9cf; --text:#1c1c22; --dim:#565661;
-    --gold:#7d5f16; --green:#0f6b3c; --blue:#0a58a8; --pink:#963078;
-    --bar:rgba(247,246,242,.94); --topic:#eeece5;
-  }}
-}}
-* {{ box-sizing:border-box; }}
-body {{ margin:0; background:var(--bg); color:var(--text);
-  font:15px/1.6 'Segoe UI',-apple-system,Verdana,Helvetica,sans-serif; }}
-a {{ color:var(--blue); text-decoration:none; }}
-a:hover {{ text-decoration:underline; }}
-a:focus-visible, button:focus-visible {{ outline:2px solid var(--gold); outline-offset:2px; border-radius:4px; }}
-.vh {{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }}
-.skip {{ position:absolute; left:12px; top:-60px; background:var(--panel); color:var(--gold);
-  border:1px solid var(--gold); border-radius:8px; padding:8px 14px; z-index:20; }}
-.skip:focus {{ top:12px; }}
-.wrap {{ max-width:1180px; margin:0 auto; padding:0 20px 80px; }}
-header.top {{ padding:56px 0 24px; }}
-h1 {{ font:700 40px/1.1 'Cascadia Code','JetBrains Mono',Consolas,monospace;
-  margin:0 0 10px; color:var(--gold); letter-spacing:-1px; }}
-.lede {{ color:var(--dim); max-width:70ch; margin:0 0 22px; }}
-.stats {{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:26px; }}
-.stat {{ background:var(--panel); border:1px solid var(--line); border-radius:10px;
-  padding:10px 16px; }}
-.stat b {{ display:block; font:700 21px/1.2 'Cascadia Code',monospace; color:var(--green); }}
-.stat span {{ color:var(--dim); font-size:12px; }}
-.tools {{ position:sticky; top:0; background:var(--bar); backdrop-filter:blur(6px);
-  padding:14px 0; border-bottom:1px solid var(--line); z-index:9; margin-bottom:8px; }}
-#q {{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--line);
-  background:var(--panel); color:var(--text); font-size:15px; }}
-#q:focus {{ outline:2px solid var(--gold); outline-offset:1px; }}
-.fs {{ display:flex; gap:7px; flex-wrap:wrap; margin-top:10px; }}
-button.f {{ background:var(--panel); border:1px solid var(--line); color:var(--dim);
-  border-radius:99px; padding:5px 12px; font-size:12px; cursor:pointer; }}
-button.f:hover {{ color:var(--text); }}
-button.f.on {{ border-color:var(--gold); color:var(--gold); }}
-.group h2 {{ font:600 15px/1 'Segoe UI',sans-serif; color:var(--gold);
-  text-transform:uppercase; letter-spacing:.09em; margin:36px 0 14px; }}
-.group h2 .count {{ color:var(--dim); font-weight:400; margin-left:8px;
-  text-transform:none; letter-spacing:0; }}
-.grid {{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); }}
-.card {{ background:var(--panel); border:1px solid var(--line); border-radius:14px;
-  padding:18px; display:flex; flex-direction:column;
-  scroll-margin-top:calc(var(--tools-h) + 16px); }}
-.card:target {{ border-color:var(--gold); box-shadow:0 0 0 1px var(--gold); }}
-.card h3 {{ margin:0; font:600 17px/1.2 'Cascadia Code','JetBrains Mono',monospace; }}
-.card h3 a {{ color:var(--text); }}
-.meta {{ display:flex; gap:6px; flex-wrap:wrap; margin:9px 0 2px; }}
-.chip {{ font:12px/1 'Cascadia Code',monospace; border:1px solid var(--line);
-  border-radius:99px; padding:4px 9px; color:var(--dim); }}
-.chip.tests {{ color:var(--green); }}
-.chip.lang {{ color:var(--blue); }}
-.chip.ver {{ color:var(--gold); }}
-.chip.arch {{ color:var(--pink); }}
-.chip.tests, .chip.lang, .chip.ver, .chip.arch {{ border-color:color-mix(in srgb, currentColor 40%, transparent); }}
-.sum {{ font-size:14px; margin:12px 0 0; }}
-.feats {{ margin:12px 0 0; padding-left:18px; color:var(--dim); font-size:13px; }}
-.feats li {{ margin-bottom:5px; }}
-.topics {{ margin-top:12px; display:flex; gap:5px; flex-wrap:wrap; }}
-.topic {{ font-size:11px; color:var(--dim); background:var(--topic); border-radius:5px; padding:2px 7px; }}
-.links {{ margin-top:auto; padding-top:14px; display:flex; gap:14px; font-size:13px; }}
-footer {{ margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
-  color:var(--dim); font-size:13px; }}
-.warn {{ color:var(--pink); }}
-.empty {{ color:var(--dim); padding:40px 0; display:none; }}
-/* On a phone the wrapped filter rows would pin a third of the screen, so the
-   toolbar scrolls away with the page there and a linked card needs no offset. */
-@media (max-width:600px) {{
-  h1 {{ font-size:30px; }} .wrap {{ padding:0 14px 60px; }}
-  .tools {{ position:static; }} :root {{ --tools-h:0px; }}
-}}
-</style>
-</head>
-<body>
-<a class="skip" href="#q">Skip to the project search</a>
-<div class="wrap">
-<header class="top">
-  <h1>Furki Özkan</h1>
-  <p class="lede">Agent infrastructure, MCP servers and developer tooling &mdash; and the tooling
-  that checks whether any of it actually works. Every card below is generated from the
-  <code>project-meta.json</code> file that repository carries, so a number here is a number
-  that repository can defend.</p>
-  <div class="stats">
-    <div class="stat"><b>{count}</b><span>public repositories</span></div>
-    <div class="stat"><b>{tests}</b><span>tests across {suites} active suites</span></div>
-    <div class="stat"><b>{when}</b><span>generated</span></div>
-  </div>
-  <p><a href="https://github.com/{owner}">GitHub profile</a> &middot;
-     <a href="https://github.com/{owner}/{owner}/blob/main/TESTLER.md">Where the test numbers come from</a> &middot;
-     <a href="https://github.com/{owner}/{owner}/blob/main/schema/README.md">The metadata schema</a></p>
-</header>
+GROUPS_TR = {
+    "security-tool": "Güvenlik",
+    "developer-tool": "Geliştirici araçları",
+    "observability": "Gözlemlenebilirlik",
+    "mcp-server": "MCP sunucuları",
+    "agent-infrastructure": "Ajan altyapısı",
+    "backend-service": "Arka uç servisleri",
+    "web-app": "Web uygulamaları",
+    "game": "Oyunlar",
+    "template": "Şablonlar",
+    "research": "Araştırma",
+    "profile": "Bu hesap",
+}
 
-<main id="main">
-<div class="tools">
-  <label for="q" class="vh">Search projects</label>
-  <input id="q" type="search" placeholder="Search projects, topics, technologies&hellip;" title="Press / to jump here" aria-keyshortcuts="/" autocomplete="off">
-  <div class="fs" role="group" aria-label="Filter by category">{filters}</div>
-  <div class="fs" role="group" aria-label="Filter by language">{langfilters}</div>
-</div>
+TEMPLATE_FILE = os.path.join(HERE, "sablon.html")
 
-{note}
-<p class="vh" id="status" role="status" aria-live="polite"></p>
-<p class="empty" id="empty">Nothing matches that.</p>
-{sections}
-</main>
 
-<footer>
-  <p>This page is generated by <a href="https://github.com/{owner}/{owner}.github.io/blob/main/uret.py"><code>uret.py</code></a>
-  from the <code>project-meta.json</code> in every repository, and refreshed by a scheduled
-  workflow. A field that is <code>null</code> in the metadata is left off the page rather than
-  filled in with a guess.</p>
-  <p>Machine-readable: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> is the same data this page
-  is rendered from, and <a href="feed.xml">an Atom feed</a> carries every release across the repositories,
-  so a reader or a script can follow the whole account without polling it.</p>
-  <p>Source for this page: <a href="https://github.com/{owner}/{owner}.github.io">{owner}/{owner}.github.io</a></p>
-</footer>
-</div>
-<script>
-const q = document.getElementById('q');
-const cards = [...document.querySelectorAll('.card')];
-const groups = [...document.querySelectorAll('.group')];
-let cat = null, lang = null;
-function apply() {{
-  const t = q.value.trim().toLowerCase();
-  let shown = 0;
-  for (const c of cards) {{
-    const okText = !t || c.dataset.search.includes(t);
-    const okCat = !cat || c.dataset.cat === cat;
-    const okLang = !lang || c.dataset.lang === lang;
-    const on = okText && okCat && okLang;
-    c.style.display = on ? '' : 'none';
-    if (on) shown++;
-  }}
-  for (const g of groups) {{
-    g.style.display = [...g.querySelectorAll('.card')].some(c => c.style.display !== 'none') ? '' : 'none';
-  }}
-  document.getElementById('empty').style.display = shown ? 'none' : 'block';
-  document.getElementById('status').textContent =
-    (t || cat || lang) ? shown + ' of ' + cards.length + ' projects shown' : '';
-}}
-// Every repository's homepage is a link to its card here (#repo-name), so a
-// linked card must land below the sticky toolbar, not underneath it.
-const tools = document.querySelector('.tools');
-function measure() {{
-  const sticky = getComputedStyle(tools).position === 'sticky';
-  document.documentElement.style.setProperty('--tools-h', sticky ? tools.offsetHeight + 'px' : '0px');
-}}
-measure();
-window.addEventListener('resize', measure);
-if (location.hash) {{
-  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-  if (target) target.scrollIntoView();
-}}
-q.addEventListener('input', apply);
-q.addEventListener('keydown', ev => {{
-  if (ev.key === 'Enter') {{
-    const first = cards.find(c => c.style.display !== 'none');
-    if (first) window.location.href = first.querySelector('h3 a').href;
-  }}
-  if (ev.key === 'Escape') {{ q.value = ''; apply(); }}
-}});
-document.addEventListener('keydown', ev => {{
-  if (ev.key === '/' && document.activeElement !== q) {{ ev.preventDefault(); q.focus(); }}
-}});
-for (const b of document.querySelectorAll('button.f')) {{
-  b.addEventListener('click', () => {{
-    const isCat = b.dataset.cat !== undefined;
-    const val = isCat ? b.dataset.cat : b.dataset.lang;
-    if (isCat) cat = (cat === val) ? null : val; else lang = (lang === val) ? null : val;
-    for (const o of document.querySelectorAll('button.f')) {{
-      const ov = o.dataset.cat !== undefined ? o.dataset.cat : o.dataset.lang;
-      const active = (o.dataset.cat !== undefined) ? (cat === ov) : (lang === ov);
-      o.classList.toggle('on', !!active);
-      o.setAttribute('aria-pressed', active ? 'true' : 'false');
-    }}
-    apply();
-  }});
-}}
-</script>
-</body>
-</html>
-"""
+def js_labels(labels):
+    """Group names as extra JS dictionary entries: ,g_key:'Label' ... (escaped for a JS string)."""
+    return "".join(",g_%s:%s" % (k.replace("-", "_"), json.dumps(v, ensure_ascii=False))
+                   for k, v in labels.items())
+
+
+def fill(template, values):
+    """One pass over @@name@@ tokens, so a value that happens to contain a token is left alone."""
+    return re.sub(r"@@(\w+)@@", lambda m: str(values[m.group(1)]), template)
 
 
 def main():

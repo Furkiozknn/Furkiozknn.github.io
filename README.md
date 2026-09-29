@@ -1,16 +1,16 @@
 # furkiozknn.github.io
 
-<p align="center"><img src="docs/reel/reel.gif" alt="Furkiozknn.github.io - 15-second motion reel" width="720"></p>
-<p align="center"><sub><a href="docs/reel/reel.mp4">MP4 version with sound</a></sub></p>
+<p align="center"><img src="docs/demo/demo.gif" alt="A screen recording of the directory: scrolling the hero, searching for godot, filtering to games, switching the interface to Turkish" width="720"></p>
+<p align="center"><sub>A real screen recording of the page in a browser: search, category filter, language switch.</sub></p>
 
 The project directory for [this account](https://github.com/Furkiozknn): every public
 repository, in one searchable page.
 
 **→ [furkiozknn.github.io](https://furkiozknn.github.io/)**
 
-<a href="https://furkiozknn.github.io/"><img src="assets/screenshot.png" alt="The directory at 1012 px in the dark theme: the headline totals, the search box, the category and language filters, and the first card, mcp-vet, with its language, version and test-count chips" width="100%"></a>
+<a href="https://furkiozknn.github.io/"><img src="assets/screenshot.png" alt="The directory at 1012 px in the dark theme: the FRK-OS headline in League Gothic, the totals, the search box and the category and language filters" width="100%"></a>
 
-<sub>A real render of <code>index.html</code> from the snapshot in <code>veri/</code>, taken with headless Chromium. The page also follows a light system theme.</sub>
+<sub>A real render of <code>index.html</code> from the snapshot in <code>veri/</code>, taken with headless Chromium. The page also follows a light system theme, and the interface reads in Turkish or English.</sub>
 
 Nothing on the page is written here. `uret.py` reads the `project-meta.json` that every
 repository carries — identity, version, status, platform, key features, and the test count
@@ -26,10 +26,10 @@ changes, so the page cannot quietly fall behind the repositories it describes.
 ```sh
 python3 uret.py            # fetch every repository's metadata, then render
 python3 uret.py --yerel    # render from the snapshot already in veri/
-python3 -m pytest tests -q # 48 tests over the generator
+python3 -m pytest tests -q # 62 tests over the generator
 ```
 
-No build step, no dependencies, one HTML file. To look at it locally, serve the folder
+No build step, no dependencies: `uret.py` fills the template `sablon.html` and writes one HTML file. Fonts are local files in `assets/fonts` (SIL OFL), so the page asks no other host for anything. To look at it locally, serve the folder
 (`python3 -m http.server`) and open <http://localhost:8000/>.
 
 ## Linking to a project
@@ -42,9 +42,13 @@ underneath; on a phone the bar scrolls away with the page instead of pinning a t
 screen. A card whose homepage *is* its own anchor gets no "Live" link, since that would only
 link the card to itself.
 
+The look is the one the daily videos use (black `#0e0d0b`, cream `#f1ece2`, yellow `#ffc21a`, League Gothic and JetBrains Mono); [`docs/TASARIM.md`](docs/TASARIM.md) says what was taken from where, and [`docs/DENETIM.md`](docs/DENETIM.md) has the measurements before the redesign.
+
+The interface reads in Turkish or English: it starts from the browser's language, the button in the corner switches it and the choice is remembered. Only the interface is translated; a project's summary stays in the language its own `project-meta.json` is written in, and the page says so instead of inventing a translation. A game whose homepage is its own page gets a "Play" link.
+
 The page follows the reader's light or dark system theme, the search box and the filter
 groups are labelled, each filter reports whether it is on (`aria-pressed`), a screen reader
-hears how many projects a filter leaves, and <kbd>/</kbd> jumps to the search.
+hears how many projects a filter leaves, and <kbd>/</kbd> jumps to the search. The few animations (an iris on the totals, cards rising in, a flash on the result counter) run only for a reader who has not asked for reduced motion, and no text waits for them.
 
 ## When a repository's prose disagrees with its own count
 

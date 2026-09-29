@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0e0d0b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f1ece2" media="(prefers-color-scheme: light)">
+<title>Furki Özkan — @@count@@ projects</title>
+<meta name="description" content="Every public repository on the account, generated from the project-meta.json file each one carries: @@count@@ projects, @@tests@@ tests across @@suites@@ suites.">
+<meta property="og:title" content="Furki Özkan — @@count@@ projects">
+<meta property="og:description" content="Agent infrastructure, MCP servers, developer tooling and games. @@tests@@ tests across @@suites@@ suites, every count traced to the run that printed it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://furkiozknn.github.io/">
+<meta property="og:site_name" content="Furki Özkan">
+<meta property="og:image" content="https://furkiozknn.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Furki Özkan: agent infrastructure, MCP servers and developer tooling. Every card generated from the project-meta.json each repository carries.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Furki Özkan — @@count@@ projects">
+<meta name="twitter:description" content="Agent infrastructure, MCP servers, developer tooling and games. @@tests@@ tests across @@suites@@ suites, every count traced to the run that printed it.">
+<meta name="twitter:image" content="https://furkiozknn.github.io/assets/og.png">
+<meta name="author" content="Furki Özkan">
+<link rel="alternate" type="application/atom+xml" title="Releases across every repository" href="https://furkiozknn.github.io/feed.xml">
+<link rel="canonical" href="https://furkiozknn.github.io/">
+<link rel="preload" href="assets/fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+@@jsonld@@
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230e0d0b'/><text x='8' y='12' font-size='11' text-anchor='middle' fill='%23ffc21a' font-family='monospace'>F</text></svg>">
+<style>
+/* FRK-OS: the same black, cream and yellow as the daily videos. Fonts are local
+   (assets/fonts, SIL OFL) - the page never asks another host for anything. */
+@font-face {
+  font-family:'League Gothic'; src:url(assets/fonts/league-gothic.woff2) format('woff2');
+  font-weight:400; font-display:swap;
+}
+@font-face {
+  font-family:'JetBrains Mono'; src:url(assets/fonts/jetbrains-mono.woff2) format('woff2');
+  font-weight:100 800; font-display:swap;
+}
+:root {
+  color-scheme:dark;
+  --bg:#0e0d0b; --panel:#1a1712; --line:#332e24; --text:#f1ece2; --dim:#a9a293;
+  --accent:#ffc21a; --cyan:#19d3e6; --coral:#ff6b85; --grid:rgba(241,236,226,.05);
+  --bar:rgba(14,13,11,.94); --topic:#231f18; --on-accent:#0e0d0b; --tools-h:200px;
+  --display:'League Gothic','Arial Narrow',Impact,sans-serif;
+  --mono:'JetBrains Mono','Cascadia Code',Consolas,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme:light;
+    --bg:#f1ece2; --panel:#fbf8f1; --line:#d6cdb9; --text:#0e0d0b; --dim:#524d3f;
+    --accent:#7a5600; --cyan:#00626e; --coral:#b3233f; --grid:rgba(14,13,11,.06);
+    --bar:rgba(241,236,226,.94); --topic:#e7e0d1; --on-accent:#fbf8f1;
+  }
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body { margin:0; background:var(--bg); color:var(--text);
+  font:15px/1.6 'Segoe UI',-apple-system,Verdana,Helvetica,sans-serif; }
+a { color:var(--accent); text-underline-offset:3px; }
+a:hover { color:var(--text); }
+p a, footer a { text-decoration:underline; }
+a:focus-visible, button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:4px; }
+code { font-family:var(--mono); font-size:.92em; }
+.vh { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.skip { position:absolute; left:12px; top:-60px; background:var(--accent); color:var(--on-accent);
+  border-radius:6px; padding:8px 14px; z-index:20; font:700 13px var(--mono); text-decoration:none; }
+.skip:hover { color:var(--on-accent); }
+.skip:focus { top:12px; }
+.wrap { max-width:1180px; margin:0 auto; padding:0 20px 80px; }
+.strip { display:flex; justify-content:space-between; align-items:center; padding:18px 0 0; }
+.kicker { font:700 12px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--dim); margin:0; }
+.kicker i { color:var(--accent); font-style:normal; }
+button.lang { font:700 12px/1 var(--mono); letter-spacing:.1em; background:transparent; color:var(--text);
+  border:1px solid var(--line); border-radius:6px; padding:8px 12px; cursor:pointer; min-width:44px; min-height:34px; }
+button.lang:hover { border-color:var(--accent); color:var(--accent); }
+header.top { position:relative; padding:44px 0 26px; }
+header.top::before { content:""; position:absolute; inset:0 -20px auto; height:100%; z-index:-1;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:44px 44px; -webkit-mask-image:linear-gradient(#000,transparent 90%); mask-image:linear-gradient(#000,transparent 90%); }
+h1 { font:400 clamp(72px,13vw,148px)/.86 var(--display); text-transform:uppercase; letter-spacing:.005em;
+  margin:0 0 6px; color:var(--text); }
+h1::after { content:""; display:block; width:88px; height:8px; background:var(--accent); margin-top:16px; }
+.lede { color:var(--dim); max-width:66ch; margin:22px 0 24px; font-size:16px; }
+.lede code { color:var(--text); }
+.langnote { color:var(--dim); font:12px/1.5 var(--mono); border-left:3px solid var(--accent); padding-left:10px; margin:0 0 22px; max-width:66ch; }
+.stats { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px; }
+.stat { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px 18px 12px; }
+.stat b { display:block; font:400 46px/1 var(--display); letter-spacing:.01em; color:var(--accent); }
+.stat span { color:var(--dim); font:12px/1.4 var(--mono); }
+.links-top { margin:0; font-size:14px; }
+.tools { position:sticky; top:0; background:var(--bar); backdrop-filter:blur(6px);
+  padding:14px 0; border-bottom:1px solid var(--line); z-index:9; margin-bottom:8px; }
+.sbox { position:relative; }
+#q { width:100%; padding:13px 90px 13px 14px; border-radius:8px; border:1px solid var(--line);
+  background:var(--panel); color:var(--text); font:15px var(--mono); }
+#q::placeholder { color:var(--dim); opacity:1; }
+#q:focus { outline:2px solid var(--accent); outline-offset:1px; }
+.shown { position:absolute; right:10px; top:50%; transform:translateY(-50%); font:700 12px/1 var(--mono);
+  color:var(--dim); padding:5px 8px; border-radius:5px; }
+.shown.flash { animation:flash .55s ease-out; }
+.fs { display:flex; gap:7px; flex-wrap:wrap; margin-top:10px; }
+button.f { background:var(--panel); border:1px solid var(--line); color:var(--dim);
+  border-radius:6px; padding:6px 12px; font:12px/1.2 var(--mono); cursor:pointer; }
+button.f:hover { color:var(--text); border-color:var(--dim); }
+button.f.on { background:var(--accent); border-color:var(--accent); color:var(--on-accent); font-weight:700; }
+.group h2 { font:400 36px/1 var(--display); color:var(--text); text-transform:uppercase; letter-spacing:.03em;
+  margin:40px 0 16px; display:flex; align-items:baseline; gap:12px; }
+.group h2::before { content:""; width:14px; height:14px; background:var(--accent); align-self:center; }
+.group h2 .count { color:var(--dim); font:700 13px var(--mono); letter-spacing:0; }
+.grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+  padding:18px; display:flex; flex-direction:column;
+  scroll-margin-top:calc(var(--tools-h) + 16px); }
+.card:hover { border-color:color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.card:target { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.card h3 { margin:0; font:700 16px/1.25 var(--mono); overflow-wrap:anywhere; }
+.card h3 a { color:var(--text); text-decoration:none; }
+.card h3 a:hover { color:var(--accent); text-decoration:underline; }
+.meta { display:flex; gap:6px; flex-wrap:wrap; margin:10px 0 2px; }
+.chip { font:12px/1 var(--mono); border:1px solid var(--line); border-radius:4px; padding:5px 8px; color:var(--dim); }
+.chip.tests { color:var(--cyan); }
+.chip.lang { color:var(--text); }
+.chip.ver { color:var(--accent); }
+.chip.arch { color:var(--coral); }
+.chip.tests, .chip.ver, .chip.arch { border-color:color-mix(in srgb, currentColor 40%, transparent); }
+.sum { font-size:14px; margin:12px 0 0; }
+.feats { margin:12px 0 0; padding-left:18px; color:var(--dim); font-size:13px; }
+.feats li { margin-bottom:5px; }
+.topics { margin-top:12px; display:flex; gap:5px; flex-wrap:wrap; }
+.topic { font:11px var(--mono); color:var(--dim); background:var(--topic); border-radius:4px; padding:3px 7px; }
+.links { margin-top:auto; padding-top:14px; display:flex; gap:16px; font:700 12px var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+.links a { text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); color:var(--dim); font-size:13px; }
+.sig { font:400 30px/1 var(--display); letter-spacing:.06em; color:var(--text); text-transform:uppercase; margin:0 0 12px; }
+.sig i { color:var(--accent); font-style:normal; }
+.warn { color:var(--coral); }
+.empty { color:var(--dim); padding:40px 0; display:none; font-family:var(--mono); }
+/* Motion is borrowed from the video system (sosyal/uret/sahne.js): the iris that
+   opens a scene, the push that brings the next one in, the flash on a beat and the
+   zoom-in cut. It is decoration only: content never waits for it, and none of it
+   runs for a reader who asks for reduced motion. */
+@keyframes iris { from { clip-path:circle(0% at 50% 50%); } to { clip-path:circle(150% at 50% 50%); } }
+@keyframes rise { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+@keyframes zoomin { from { opacity:.3; transform:scale(.96); } to { opacity:1; transform:none; } }
+@keyframes flash { 0% { background:var(--accent); color:var(--on-accent); } 100% { background:transparent; } }
+@media (prefers-reduced-motion: no-preference) {
+  .stat { animation:iris .6s cubic-bezier(.45,0,.2,1) backwards; animation-delay:calc(var(--k) * 80ms); }
+  h1::after { animation:bar .5s var(--ease) .1s both; transform-origin:left; }
+  @keyframes bar { from { transform:scaleX(0); } to { transform:none; } }
+  .card.pre { opacity:0; transform:translateY(22px); }
+  .card.in { animation:rise .38s var(--ease) both; }
+  .card.zoom { animation:zoomin .3s var(--ease) both; }
+}
+@media (prefers-reduced-motion: reduce) { .shown.flash { animation:none; } }
+@media print { .card.pre { opacity:1; transform:none; } }
+/* On a phone the wrapped filter rows would pin a third of the screen, so the
+   toolbar scrolls away with the page there and a linked card needs no offset. */
+@media (max-width:600px) {
+  .wrap { padding:0 14px 60px; }
+  header.top::before { inset:0 -14px auto; }
+  .tools { position:static; } :root { --tools-h:0px; }
+  .grid { grid-template-columns:1fr; }
+  header.top { padding:30px 0 18px; }
+  .lede { font-size:15px; margin:18px 0 18px; }
+  .stats { gap:8px; margin-bottom:18px; }
+  .stat { padding:8px 12px 10px; } .stat b { font-size:34px; } .stat span { font-size:11px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#q" data-i="skip">Skip to the project search</a>
+<div class="wrap">
+<div class="strip">
+  <p class="kicker"><i>FRK-OS</i> // <span data-i="kicker">project directory</span></p>
+  <button type="button" class="lang" id="lang" lang="tr" aria-label="Türkçe'ye geç">TR</button>
+</div>
+<header class="top">
+  <h1>Furki Özkan</h1>
+  <p class="lede" data-h="lede">Agent infrastructure, MCP servers and developer tooling &mdash; and the tooling
+  that checks whether any of it actually works. Every card below is generated from the
+  <code>project-meta.json</code> file that repository carries, so a number here is a number
+  that repository can defend.</p>
+  <p class="langnote" data-only="tr" data-i="langnote" hidden>Project descriptions are written in English in each repository's own metadata, so they are not translated here.</p>
+  <div class="stats">
+    <div class="stat" style="--k:0"><b>@@count@@</b><span data-i="s_repos">public repositories</span></div>
+    <div class="stat" style="--k:1"><b>@@tests@@</b><span data-i="s_tests" data-n="@@suites@@">tests across @@suites@@ active suites</span></div>
+    <div class="stat" style="--k:2"><b>@@when@@</b><span data-i="s_gen">generated</span></div>
+  </div>
+  <p class="links-top"><a href="https://github.com/@@owner@@" data-i="l_profile">GitHub profile</a> &middot;
+     <a href="https://github.com/@@owner@@/@@owner@@/blob/main/TESTLER.md" data-i="l_tests">Where the test numbers come from</a> &middot;
+     <a href="https://github.com/@@owner@@/@@owner@@/blob/main/schema/README.md" data-i="l_schema">The metadata schema</a></p>
+</header>
+
+<main id="main">
+<div class="tools">
+  <label for="q" class="vh" data-i="search_label">Search projects</label>
+  <div class="sbox">
+    <input id="q" type="search" placeholder="Search projects, topics&hellip;" data-ph="search_ph" title="Press / to jump here" data-tt="search_tt" aria-keyshortcuts="/" autocomplete="off">
+    <span class="shown" id="shown" aria-hidden="true">@@count@@ / @@count@@</span>
+  </div>
+  <div class="fs" role="group" aria-label="Filter by category" data-al="f_cat">@@filters@@</div>
+  <div class="fs" role="group" aria-label="Filter by language" data-al="f_lang">@@langfilters@@</div>
+</div>
+
+@@note@@
+<p class="vh" id="status" role="status" aria-live="polite"></p>
+<p class="empty" id="empty" data-i="empty">Nothing matches that.</p>
+@@sections@@
+</main>
+
+<footer>
+  <p class="sig"><i>FRK</i>-OS &middot; Furki Özkan</p>
+  <p data-h="f1">This page is generated by <a href="https://github.com/@@owner@@/@@owner@@.github.io/blob/main/uret.py"><code>uret.py</code></a>
+  from the <code>project-meta.json</code> in every repository, and refreshed by a scheduled
+  workflow. A field that is <code>null</code> in the metadata is left off the page rather than
+  filled in with a guess.</p>
+  <p data-h="f2">Machine-readable: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> is the same data this page
+  is rendered from, and <a href="feed.xml">an Atom feed</a> carries every release across the repositories,
+  so a reader or a script can follow the whole account without polling it.</p>
+  <p data-h="f3">Source for this page: <a href="https://github.com/@@owner@@/@@owner@@.github.io">@@owner@@/@@owner@@.github.io</a></p>
+</footer>
+</div>
+<script>
+const I18N = {
+  en: {
+    skip:'Skip to the project search', kicker:'project directory',
+    lede:'Agent infrastructure, MCP servers and developer tooling &mdash; and the tooling that checks whether any of it actually works. Every card below is generated from the <code>project-meta.json</code> file that repository carries, so a number here is a number that repository can defend.',
+    langnote:"Project descriptions are written in English in each repository's own metadata, so they are not translated here.",
+    s_repos:'public repositories', s_tests:'tests across {n} active suites', s_gen:'generated',
+    l_profile:'GitHub profile', l_tests:'Where the test numbers come from', l_schema:'The metadata schema',
+    search_label:'Search projects', search_ph:'Search projects, topics…', search_tt:'Press / to jump here',
+    f_cat:'Filter by category', f_lang:'Filter by language', empty:'Nothing matches that.',
+    shown:'{a} of {b} projects shown',
+    tests:'{n} tests', archived:'archived', l_repo:'Repository', l_live:'Live', l_play:'Play', l_rel:'Releases',
+    lang_label:'Switch to Turkish', lang_btn:'TR', lang_lang:'tr',
+    f1:'This page is generated by <a href="https://github.com/@@owner@@/@@owner@@.github.io/blob/main/uret.py"><code>uret.py</code></a> from the <code>project-meta.json</code> in every repository, and refreshed by a scheduled workflow. A field that is <code>null</code> in the metadata is left off the page rather than filled in with a guess.',
+    f2:'Machine-readable: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> is the same data this page is rendered from, and <a href="feed.xml">an Atom feed</a> carries every release across the repositories, so a reader or a script can follow the whole account without polling it.',
+    f3:'Source for this page: <a href="https://github.com/@@owner@@/@@owner@@.github.io">@@owner@@/@@owner@@.github.io</a>',
+    title:'Furki Özkan — @@count@@ projects'@@groups_en@@
+  },
+  tr: {
+    skip:'Proje aramasına geç', kicker:'proje dizini',
+    lede:'Ajan altyapısı, MCP sunucuları ve geliştirici araçları &mdash; bir de bunların gerçekten çalışıp çalışmadığını denetleyen araçlar. Aşağıdaki her kart, o deponun kendi taşıdığı <code>project-meta.json</code> dosyasından üretilir; yani buradaki bir sayıyı o depo savunabilir.',
+    langnote:'Proje açıklamaları depoların kendi metadata dosyasında İngilizce yazıldığı için burada çevrilmedi; arayüz Türkçe.',
+    s_repos:'herkese açık depo', s_tests:'{n} aktif test takımında toplam test', s_gen:'üretildi',
+    l_profile:'GitHub profili', l_tests:'Test sayıları nereden geliyor', l_schema:'Metadata şeması',
+    search_label:'Projelerde ara', search_ph:'Proje veya konu ara…', search_tt:'Buraya gitmek için / tuşuna bas',
+    f_cat:'Kategoriye göre süz', f_lang:'Dile göre süz', empty:'Eşleşen bir şey yok.',
+    shown:'{b} projeden {a} tanesi gösteriliyor',
+    tests:'{n} test', archived:'arşivlendi', l_repo:'Depo', l_live:'Canlı', l_play:'Oyna', l_rel:'Sürümler',
+    lang_label:'Switch to English', lang_btn:'EN', lang_lang:'en',
+    f1:'Bu sayfa, her depodaki <code>project-meta.json</code> dosyasından <a href="https://github.com/@@owner@@/@@owner@@.github.io/blob/main/uret.py"><code>uret.py</code></a> ile üretilir ve zamanlanmış bir iş akışıyla yenilenir. Metadata\'da <code>null</code> olan bir alan tahminle doldurulmaz, sayfada hiç yer almaz.',
+    f2:'Makine tarafından okunabilir: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> bu sayfanın üretildiği veridir; <a href="feed.xml">Atom akışı</a> bütün depoların sürümlerini taşır, böylece bir okuyucu ya da betik hesabı yoklamadan izleyebilir.',
+    f3:'Bu sayfanın kaynağı: <a href="https://github.com/@@owner@@/@@owner@@.github.io">@@owner@@/@@owner@@.github.io</a>',
+    title:'Furki Özkan — @@count@@ proje'@@groups_tr@@
+  }
+};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const q = $('#q'), shownEl = $('#shown');
+const cards = $$('.card'), groups = $$('.group');
+let cat = null, lang = null, L = 'en';
+const motion = matchMedia('(prefers-reduced-motion: no-preference)').matches;
+function fmt(s, vars) { return s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? ''); }
+function num(n) { return Number(n).toLocaleString(L === 'tr' ? 'tr-TR' : 'en-US'); }
+function t(k, vars) { return fmt(I18N[L][k] ?? I18N.en[k] ?? k, vars || {}); }
+function setLang(l, save) {
+  L = l; document.documentElement.lang = l;
+  for (const el of $$('[data-i]')) {
+    const n = el.dataset.n;
+    el.textContent = t(el.dataset.i, { n: n === undefined ? '' : num(n) });
+  }
+  for (const el of $$('[data-h]')) el.innerHTML = t(el.dataset.h);
+  for (const el of $$('[data-ph]')) el.placeholder = t(el.dataset.ph);
+  for (const el of $$('[data-tt]')) el.title = t(el.dataset.tt);
+  for (const el of $$('[data-al]')) el.setAttribute('aria-label', t(el.dataset.al));
+  for (const el of $$('[data-only]')) el.hidden = el.dataset.only !== l;
+  const b = $('#lang'); b.textContent = t('lang_btn'); b.setAttribute('aria-label', t('lang_label')); b.lang = t('lang_lang');
+  document.title = t('title');
+  if (save) { try { localStorage.setItem('lang', l); } catch (e) {} }
+  apply(false);
+}
+function apply(animate) {
+  const s = q.value.trim().toLowerCase();
+  let shown = 0;
+  for (const c of cards) {
+    const on = (!s || c.dataset.search.includes(s)) && (!cat || c.dataset.cat === cat) && (!lang || c.dataset.lang === lang);
+    c.style.display = on ? '' : 'none';
+    if (on) { shown++; if (animate && motion) { c.classList.remove('pre', 'in', 'zoom'); void c.offsetWidth; c.classList.add('zoom'); } }
+  }
+  for (const g of groups) {
+    g.style.display = [...g.querySelectorAll('.card')].some(c => c.style.display !== 'none') ? '' : 'none';
+  }
+  $('#empty').style.display = shown ? 'none' : 'block';
+  $('#status').textContent = (s || cat || lang) ? t('shown', { a: shown, b: cards.length }) : '';
+  shownEl.textContent = shown + ' / ' + cards.length;
+  if (animate && motion) { shownEl.classList.remove('flash'); void shownEl.offsetWidth; shownEl.classList.add('flash'); }
+}
+// Every repository's homepage is a link to its card here (#repo-name), so a
+// linked card must land below the sticky toolbar, not underneath it.
+const tools = $('.tools');
+function measure() {
+  const sticky = getComputedStyle(tools).position === 'sticky';
+  document.documentElement.style.setProperty('--tools-h', sticky ? tools.offsetHeight + 'px' : '0px');
+}
+measure();
+window.addEventListener('resize', measure);
+if (location.hash) {
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (target) target.scrollIntoView();
+}
+// Cards below the first screen rise into place as they arrive; the ones already
+// on screen, and every card for a reader who asked for less motion, just are there.
+if (motion && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => {
+    for (const e of es) if (e.isIntersecting) { e.target.classList.replace('pre', 'in'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -8% 0px' });
+  for (const c of cards) if (c.getBoundingClientRect().top > innerHeight) { c.classList.add('pre'); io.observe(c); }
+  // A card the reader never scrolls to (find-in-page, a screenshot tool) must not stay hidden.
+  setTimeout(() => { for (const c of $$('.card.pre')) c.classList.replace('pre', 'in'); }, 2500);
+}
+q.addEventListener('input', () => apply(true));
+q.addEventListener('keydown', ev => {
+  if (ev.key === 'Enter') {
+    const first = cards.find(c => c.style.display !== 'none');
+    if (first) window.location.href = first.querySelector('h3 a').href;
+  }
+  if (ev.key === 'Escape') { q.value = ''; apply(true); }
+});
+document.addEventListener('keydown', ev => {
+  if (ev.key === '/' && document.activeElement !== q) { ev.preventDefault(); q.focus(); }
+});
+for (const b of $$('button.f')) {
+  b.addEventListener('click', () => {
+    const isCat = b.dataset.cat !== undefined;
+    const val = isCat ? b.dataset.cat : b.dataset.lang;
+    if (isCat) cat = (cat === val) ? null : val; else lang = (lang === val) ? null : val;
+    for (const o of $$('button.f')) {
+      const active = o.dataset.cat !== undefined ? cat === o.dataset.cat : lang === o.dataset.lang;
+      o.classList.toggle('on', !!active);
+      o.setAttribute('aria-pressed', active ? 'true' : 'false');
+    }
+    apply(true);
+  });
+}
+$('#lang').addEventListener('click', () => setLang(L === 'tr' ? 'en' : 'tr', true));
+let saved = null;
+try { saved = localStorage.getItem('lang'); } catch (e) {}
+const start = saved === 'tr' || saved === 'en' ? saved : ((navigator.language || 'en').toLowerCase().startsWith('tr') ? 'tr' : 'en');
+if (start === 'tr') setLang('tr', false); else { $('#lang').lang = 'tr'; apply(false); }
+</script>
+</body>
+</html>

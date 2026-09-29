@@ -473,3 +473,142 @@ def test_the_committed_page_feed_and_sitemap_are_what_the_snapshot_renders():
         d["projects"], d.get("missing", []), d["generated"])
     assert (ROOT / "feed.xml").read_text(encoding="utf-8") == uret.atom(d.get("releases", []), d["generated"])
     assert (ROOT / "sitemap.xml").read_text(encoding="utf-8") == uret.sitemap(d["generated"])
+
+
+# --------------------------------------------------------------------------
+# the interface shell: Turkish and English, reader preferences, contrast
+# --------------------------------------------------------------------------
+
+
+def real_page():
+    d = snapshot()
+    return uret.render(d["projects"], d.get("missing", []), d["generated"])
+
+
+def dictionary(page, lang):
+    """The keys of one language's block of the page's I18N table."""
+    block = re.search(r"\n  %s: \{(.*?)\n  \}" % lang, page, re.S).group(1)
+    return set(re.findall(r"""(?:^|,)\s*(\w+):['"]""", block, re.M))
+
+
+def test_both_languages_have_the_same_keys():
+    page = real_page()
+    en, tr = dictionary(page, "en"), dictionary(page, "tr")
+    assert en == tr, (en ^ tr)
+
+
+def test_every_translatable_element_has_a_key_in_both_languages():
+    page = real_page()
+    en = dictionary(page, "en")
+    used = set(re.findall(r'data-(?:i|h|ph|tt|al)="(\w+)"', page))
+    assert used, "no translatable elements at all"
+    assert used <= en, used - en
+
+
+def test_every_category_has_a_turkish_name_and_an_english_one():
+    page = real_page()
+    en = dictionary(page, "en")
+    for key, _label in uret.GROUPS:
+        assert key in uret.GROUPS_TR
+        assert "g_" + uret.gid(key) in en
+
+
+def test_the_shell_is_english_in_the_markup_so_it_reads_without_the_script():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert '<html lang="en">' in page
+    assert ">Repository<" in page and "Skip to the project search" in page
+
+
+def test_the_language_is_chosen_from_the_saved_choice_then_the_browser():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert "localStorage.getItem('lang')" in page and "localStorage.setItem('lang'" in page
+    assert "startsWith('tr')" in page and "navigator.language" in page
+    assert 'id="lang"' in page
+
+
+def test_translating_the_shell_never_touches_project_prose():
+    """A project's summary comes from its own metadata, in that metadata's language;
+    inventing a translation would put words in the repository's mouth."""
+    html_out = uret.card(meta(summary="Does a thing."))
+    assert re.search(r'<p class="sum">Does a thing\.</p>', html_out)
+    assert "data-i" not in re.search(r'<p class="sum">.*?</p>', html_out).group(0)
+
+
+def test_a_game_with_its_own_page_gets_a_play_link_and_one_on_an_anchor_gets_none():
+    assert ">Play<" in uret.card(meta(category="game", homepage=uret.SITE + "nova-drift/"))
+    assert ">Live<" not in uret.card(meta(category="game", homepage=uret.SITE + "nova-drift/"))
+    for home in (uret.SITE + "#thing", None):
+        out = uret.card(meta(category="game", homepage=home))
+        assert ">Play<" not in out and ">Live<" not in out
+
+
+def test_the_test_chip_carries_its_number_for_the_translated_label():
+    out = uret.card(meta(tests={"count": 1234}))
+    assert 'data-i="tests" data-n="1234"' in out and "1,234 tests" in out
+
+
+def test_all_motion_is_behind_the_reduced_motion_preference():
+    page = uret.render([meta()], [], "2026-01-01")
+    css = page.split("<style>")[1].split("</style>")[0]
+    # every animation: declaration and every reveal state sits inside the no-preference block
+    outside = css.replace(css[css.index("@media (prefers-reduced-motion: no-preference)"):
+                              css.index("@media (prefers-reduced-motion: reduce)")], "")
+    decl = [l for l in outside.splitlines() if re.search(r"\banimation:", l) and "@keyframes" not in l]
+    assert all(".shown.flash" in l for l in decl), decl
+    assert "@media (prefers-reduced-motion: reduce) { .shown.flash { animation:none; } }" in page
+    assert "matchMedia('(prefers-reduced-motion: no-preference)')" in page
+
+
+def test_a_card_hidden_for_its_entrance_is_revealed_even_if_never_scrolled_to():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert "setTimeout(" in page and "classList.replace('pre', 'in')" in page
+    assert "@media print" in page
+
+
+def test_fonts_are_local_files_that_exist_with_their_licence():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert "googleapis" not in page and "gstatic" not in page
+    for f in ("league-gothic.woff2", "jetbrains-mono.woff2", "OFL.txt"):
+        assert (ROOT / "assets" / "fonts" / f).is_file(), f
+        if f.endswith(".woff2"):
+            assert "assets/fonts/" + f in page
+    assert (ROOT / "assets" / "fonts" / "jetbrains-mono.woff2").read_bytes()[:4] == b"wOF2"
+    assert "SIL OPEN FONT LICENSE" in (ROOT / "assets" / "fonts" / "OFL.txt").read_text(encoding="utf-8")
+
+
+def _lum(hexcolor):
+    r, g, b = (int(hexcolor[i:i + 2], 16) / 255 for i in (1, 3, 5))
+    f = lambda c: c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b)
+
+
+def _ratio(a, b):
+    x, y = sorted((_lum(a), _lum(b)), reverse=True)
+    return (x + 0.05) / (y + 0.05)
+
+
+def _tokens(css_block):
+    return dict(re.findall(r"--([\w-]+):(#[0-9a-fA-F]{6})", css_block))
+
+
+def test_every_text_colour_reaches_4_5_to_1_on_its_surface_in_both_themes():
+    css = uret.render([meta()], [], "2026-01-01").split("<style>")[1]
+    dark = _tokens(css.split(":root {", 1)[1].split("}", 1)[0])
+    light_block = css.split("@media (prefers-color-scheme: light) {", 1)[1].split("}", 1)[0]
+    light = {**dark, **_tokens(light_block)}
+    for theme, t in (("dark", dark), ("light", light)):
+        for text in ("text", "dim", "accent", "cyan", "coral"):
+            for surface in ("bg", "panel", "topic"):
+                assert _ratio(t[text], t[surface]) >= 4.5, (theme, text, surface, _ratio(t[text], t[surface]))
+        assert _ratio(t["on-accent"], t["accent"]) >= 4.5, theme
+
+
+def test_links_inside_running_text_are_underlined_not_only_coloured():
+    css = uret.render([meta()], [], "2026-01-01").split("<style>")[1]
+    assert re.search(r"p a, footer a \{ text-decoration:underline", css)
+
+
+def test_the_focus_ring_and_skip_link_exist():
+    page = uret.render([meta()], [], "2026-01-01")
+    assert "a:focus-visible, button:focus-visible { outline:2px solid var(--accent)" in page
+    assert 'class="skip" href="#q"' in page
