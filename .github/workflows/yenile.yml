@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["uret.py", ".github/workflows/yenile.yml"]
+    paths: ["uret.py", "sablon.html", ".github/workflows/yenile.yml"]
 
 permissions:
   contents: write

@@ -9,7 +9,7 @@ name: CI
 on:
   push:
     branches: [main]
-    paths: ["uret.py", "tests/**", ".github/workflows/ci.yml", "veri/**"]
+    paths: ["uret.py", "sablon.html", "tests/**", ".github/workflows/ci.yml", "veri/**", "assets/fonts/**"]
   pull_request:
   workflow_dispatch:
 
