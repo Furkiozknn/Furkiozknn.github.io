@@ -1,7 +1,15 @@
 {
-  "generated": "2026-09-28",
+  "generated": "2026-09-29",
   "missing": [],
   "releases": [
+    {
+      "repo": "turkce-ajanlar",
+      "tag": "v0.4.1",
+      "title": "turkce-ajanlar v0.4.1",
+      "url": "https://github.com/Furkiozknn/turkce-ajanlar/releases/tag/v0.4.1",
+      "published": "2026-09-29T04:10:40Z",
+      "prerelease": false
+    },
     {
       "repo": "repo-vet",
       "tag": "v0.1.0",
@@ -115,8 +123,10 @@
       "tests": null,
       "ci": {
         "workflows": [
+          "baglanti.yml",
           "ci.yml",
           "denetim.yml",
+          "guvenlik.yml",
           "haftalik.yml",
           "projeler.yml",
           "yenile.yml"
@@ -175,9 +185,10 @@
       ],
       "summary": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
       "key_features": [
-        "One searchable page over every public repository, with filters by category and language, in light and dark",
+        "One searchable page over every public repository, with filters by category and language, in Turkish and English, light and dark",
         "Every card is linkable by the repository's name (#repo-name), which is what most repositories use as their homepage",
         "Generated from each repository's own project-meta.json, never hand-edited",
+        "The interface shell follows the reader's language and remembers the choice; project descriptions stay in the language their own metadata is written in",
         "A null field is left off the page rather than filled in with a guess, and a test suite holds that line",
         "An Atom feed, a sitemap and a schema.org ItemList written by the same run, so machines can follow the account too",
         "Rebuilt weekly by a workflow that commits only when the output changes"
@@ -185,13 +196,15 @@
       "media": {
         "hero": "assets/screenshot.png",
         "screenshots": [],
-        "gifs": [],
+        "gifs": [
+          "docs/demo/demo.gif"
+        ],
         "videos": []
       },
       "tests": {
-        "count": 48,
-        "source": "`python3 -m pytest tests -q`: `48 passed`",
-        "measured": "2026-09-25"
+        "count": 63,
+        "source": "`python3 -m pytest tests -q`: `63 passed`",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -261,7 +274,7 @@
         "ssrf-protection",
         "webhooks"
       ],
-      "summary": "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook. Idempotency keys that survive a restart, SSRF-guarded signed webhooks, and expiry as a status you can read rather than a silent 404. 156 tests.",
+      "summary": "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook. Idempotency keys that survive a restart, SSRF-guarded signed webhooks, and expiry as a status you can read rather than a silent 404. 204 tests.",
       "key_features": [
         "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook",
         "Idempotency keys that survive a restart",
@@ -275,9 +288,9 @@
         "videos": []
       },
       "tests": {
-        "count": 156,
-        "source": "CI log: `156 passed`",
-        "measured": "2026-09-15"
+        "count": 204,
+        "source": "local run with the media extra: `204 passed`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -288,7 +301,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
@@ -346,7 +359,7 @@
         "workflow-engine",
         "yaml"
       ],
-      "summary": "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step's result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 72 tests.",
+      "summary": "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step's result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 91 tests.",
       "key_features": [
         "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor",
         "Validated before it runs: a step reading another step's result without declaring the dependency is rejected at load time, typo and all",
@@ -362,10 +375,9 @@
         "videos": []
       },
       "tests": {
-        "count": 80,
-        "framework": "pytest",
-        "command": "uv run pytest -q",
-        "evidence": "80 passed"
+        "count": 92,
+        "source": "CI log: 84 suite (`84 passed, 1 skipped`) + 8 cross-repo contract job (`8 passed`); CI splits them, so no single line prints 92",
+        "measured": "2026-09-28"
       },
       "ci": {
         "workflows": [
@@ -376,7 +388,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
@@ -524,7 +536,7 @@
         "python",
         "video"
       ],
-      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 125 tests.",
+      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 164 tests.",
       "key_features": [
         "Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row",
         "PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding",
@@ -542,9 +554,9 @@
         "videos": []
       },
       "tests": {
-        "count": 125,
-        "source": "`125 passed`",
-        "measured": "2026-09-22"
+        "count": 164,
+        "source": "`164 passed`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -979,9 +991,8 @@
       },
       "tests": {
         "count": 37,
-        "framework": "pytest",
-        "command": "python3 -m pytest testler -q",
-        "evidence": "37 passed"
+        "source": "CI log: `37 passed`",
+        "measured": "2026-09-28"
       },
       "ci": {
         "workflows": [
@@ -1336,10 +1347,9 @@
         "videos": []
       },
       "tests": {
-        "count": 92,
-        "framework": "node:test",
-        "command": "node --test",
-        "evidence": "92 pass, 0 fail"
+        "count": 125,
+        "source": "CI log (`node --test`): `pass 125`",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -1390,7 +1400,7 @@
         "Python 3.11+",
         "zero runtime dependencies"
       ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "license": "MIT",
       "topics": [
         "cli",
@@ -1420,10 +1430,9 @@
         "videos": []
       },
       "tests": {
-        "count": 55,
-        "framework": "pytest",
-        "command": "uv run pytest -q",
-        "evidence": "55 passed"
+        "count": 104,
+        "source": "CI log: `104 passed`",
+        "measured": "2026-09-28"
       },
       "ci": {
         "workflows": [
@@ -1435,11 +1444,11 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
-        "security": null,
-        "contributing": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
         "license_file": "LICENSE"
       },
       "social": {
@@ -1477,7 +1486,7 @@
         "zero dependencies",
         "MCP"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -1496,9 +1505,9 @@
         "supply-chain-security",
         "zero-dependency"
       ],
-      "summary": "An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 31 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 289 tests.",
+      "summary": "An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 32 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 482 tests.",
       "key_features": [
-        "Reads an MCP server's source before you install it - 31 rules across tool poisoning, exfiltration paths, install hooks and registry provenance",
+        "Reads an MCP server's source before you install it - 32 rules across tool poisoning, exfiltration paths, install hooks and registry provenance",
         "Every finding is quoted with file:line, so a claim can be checked rather than believed",
         "Never executes what it audits",
         "JSON output and a CI mode, plus a version diff between two releases of the same server"
@@ -1512,10 +1521,9 @@
         "videos": []
       },
       "tests": {
-        "count": 319,
-        "framework": "pytest",
-        "command": "uv run pytest -q",
-        "evidence": "319 passed"
+        "count": 482,
+        "source": "CI log: `482 passed`",
+        "measured": "2026-09-28"
       },
       "ci": {
         "workflows": [
@@ -1673,7 +1681,7 @@
         "python",
         "routing"
       ],
-      "summary": "Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 74 tests.",
+      "summary": "Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 144 tests.",
       "key_features": [
         "Fires one request at N model backends at once and puts latency, success and output side by side",
         "--rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so quality is compared too",
@@ -1682,14 +1690,16 @@
       ],
       "media": {
         "hero": "assets/banner.svg",
-        "screenshots": [],
+        "screenshots": [
+          "assets/terminal-run.svg"
+        ],
         "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 74,
-        "source": "`74 passed`",
-        "measured": "2026-09-15"
+        "count": 144,
+        "source": "`144 passed`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -1700,7 +1710,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
@@ -1941,7 +1951,7 @@
         "sandbox",
         "version-control"
       ],
-      "summary": "Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja's SandboxedEnvironment with StrictUndefined so a typo'd variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 61 tests.",
+      "summary": "Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja's SandboxedEnvironment with StrictUndefined so a typo'd variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 150 tests.",
       "key_features": [
         "Templates as plain YAML, so a prompt change is a diff in a pull request rather than a database row",
         "Rendered through Jinja's SandboxedEnvironment with StrictUndefined: a typo'd variable fails loudly instead of rendering blank",
@@ -1950,16 +1960,18 @@
       ],
       "media": {
         "hero": "assets/banner.svg",
-        "screenshots": [],
+        "screenshots": [
+          "assets/fails-loudly.svg"
+        ],
         "gifs": [
           "assets/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 61,
-        "source": "`61 passed`",
-        "measured": "2026-09-15"
+        "count": 150,
+        "source": "`150 passed`",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -1970,7 +1982,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
@@ -2009,12 +2021,12 @@
       ],
       "primary_language": "Python",
       "technologies": [
-        "Python 3.11 standard library only",
+        "Python 3.11+ standard library only",
         "no runtime dependencies",
         "append-only JSON Lines work records",
         "GitHub REST API"
       ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "license": "MIT",
       "topics": [
         "continuous-improvement",
@@ -2026,21 +2038,22 @@
       "summary": "The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.",
       "key_features": [
         "Twelve signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess",
-        "Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that ran and exited zero, no-change needs a stated reason",
-        "A fenced check runner with allowlisted verbs, no shell, a scrubbed environment and a timeout, so a command cannot grow a second half it did not declare",
+        "Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that had to succeed and did, no-change and blocked need a stated reason",
+        "A fenced check runner with allowlisted verbs, no shell (bash -c included), a scrubbed environment, closed stdin and a timeout, so a command cannot grow a second half it did not declare",
         "Rounds that cover every repository once before anything is revisited, with unchanged repositories sinking to the back of the queue"
       ],
       "media": {
-        "hero": null,
-        "screenshots": [],
+        "hero": "assets/banner.svg",
+        "screenshots": [
+          "assets/queue.svg"
+        ],
         "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 131,
-        "framework": "pytest",
-        "command": "python3 -m pytest",
-        "evidence": "131 passed"
+        "count": 163,
+        "source": "CI log: `163 passed`",
+        "measured": "2026-09-28"
       },
       "ci": {
         "workflows": [
@@ -2054,7 +2067,7 @@
         "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
-        "security": null,
+        "security": "SECURITY.md",
         "contributing": null,
         "license_file": "LICENSE"
       },
@@ -2068,7 +2081,7 @@
         "primary_link": "https://github.com/Furkiozknn/repo-ratchet"
       },
       "provenance": {
-        "generated_at": "2026-09-22",
+        "generated_at": "2026-09-25",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository; the test count is the number the runner printed"
       }
@@ -2090,9 +2103,10 @@
       "technologies": [
         "Python 3.9+",
         "GitHub REST API",
-        "standard library only"
+        "standard library only",
+        "GitHub Actions (composite action)"
       ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "license": "MIT",
       "topics": [
         "ci",
@@ -2112,8 +2126,9 @@
       "key_features": [
         "Checks a README's install commands against PyPI and npm, so the first command a visitor runs is one that still resolves",
         "Only fenced code blocks count as instructions: a sentence mentioning a command is discussing it, not asking anyone to run it",
-        "Says nothing when it cannot see - an unreachable registry, a rate limit or a tree GitHub truncated is reported as not checked, never as clean",
-        "Checked against 30 public repositories that disagree with each other; every false positive it produced is now a named test"
+        "Says nothing when it cannot see - an unreachable registry, a rate limit, an unreadable README or tag list, or a tree GitHub truncated is reported as not checked, never as clean (exit 3 when nothing could be read)",
+        "Checked against 29 public repositories that disagree with each other; every false positive it produced is now a named test",
+        "As a GitHub Action it vets the commit under test, so a pull request that breaks its own README fails that pull request"
       ],
       "media": {
         "hero": "assets/banner.svg",
@@ -2124,10 +2139,9 @@
         "videos": []
       },
       "tests": {
-        "count": 103,
-        "framework": "unittest via pytest",
-        "command": "python3 -m pytest tests -q",
-        "evidence": "103 passed"
+        "count": 157,
+        "source": "CI log: `Ran 157 tests in 1.691s`",
+        "measured": "2026-09-28"
       },
       "ci": {
         "workflows": [
@@ -2141,8 +2155,8 @@
         "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
-        "security": null,
-        "contributing": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
         "license_file": "LICENSE"
       },
       "social": {
@@ -2270,7 +2284,7 @@
         "Node.js",
         "Markdown agent definitions"
       ],
-      "version": "0.3.0",
+      "version": "0.4.0",
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -2288,7 +2302,7 @@
         "turkish",
         "windows"
       ],
-      "summary": "70 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &&, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.",
+      "summary": "71 Claude Code sub-agents that think in Turkish rather than translate into it - they know PowerShell 5.1 has no &&, that cp1254 kills a Python tool before its first line prints, and that a heredoc eats backslashes. Plus 3 commands, 2 skills and an eval suite. One source, exported to Cursor, OpenCode, Copilot and Codex.",
       "key_features": [
         "71 sub-agents that think in Turkish rather than translate into it",
         "Encodes the traps that actually bite on Turkish Windows: no && in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes",
@@ -2307,9 +2321,9 @@
         "videos": []
       },
       "tests": {
-        "count": 160,
-        "source": "27 validator + 33 format + 43 browser + 20 team-runner + 19 trigger-collision + 14 boundary + 4 module-type, each from its own printed line",
-        "measured": "2026-09-22"
+        "count": 198,
+        "source": "27 validator + 33 format + 45 browser + 23 team-runner + 19 trigger-collision + 14 boundary + 4 module-type + 11 local-server + 22 banner, each from its own printed line",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -2320,7 +2334,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": "YOL-HARITASI.md",
         "security": null,
@@ -2328,7 +2342,7 @@
         "license_file": "LICENSE"
       },
       "social": {
-        "headline": "70 Claude Code sub-agents that think in Turkish, not translate into it.",
+        "headline": "71 Claude Code sub-agents that think in Turkish, not translate into it.",
         "hashtags": [
           "claudecode",
           "aiagents",
@@ -2357,7 +2371,7 @@
       ],
       "primary_language": "Python",
       "technologies": [
-        "Python 3.10+",
+        "Python 3.11+",
         "Kokoro-82M",
         "faster-whisper",
         "Groq"
@@ -2381,11 +2395,11 @@
         "voice",
         "whisper"
       ],
-      "summary": "Speech in and speech out, needing no API key at all: Groq's free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks extension and size before it ever opens the file, so \"transcribe the audio at .env\" is refused locally instead of uploaded. 4 tools, 35 tests.",
+      "summary": "Speech in and speech out, needing no API key at all: Groq's free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks the extension (a symlink's target too), file type and size before a byte is uploaded, so \"transcribe the audio at .env\" is refused locally instead of uploaded. 4 tools, 60 tests.",
       "key_features": [
         "Speech in and speech out, needing no API key at all",
         "Groq's free hosted tier when a key is set; Kokoro-82M and faster-whisper locally when it is not",
-        "Transcription checks extension and size before it ever opens the file, so 'transcribe the audio at .env' is refused locally instead of uploaded",
+        "Transcription checks the extension (a symlink's target too), file type and size before a byte is uploaded, so 'transcribe the audio at .env' is refused locally instead of uploaded",
         "4 tools, with known limitations and roadmap written down"
       ],
       "media": {
@@ -2395,9 +2409,9 @@
         "videos": []
       },
       "tests": {
-        "count": 35,
-        "source": "`35 passed, 2 skipped`",
-        "measured": "2026-09-15"
+        "count": 60,
+        "source": "`60 passed, 3 skipped` (the 3 real-model tests run in CI's `yerel` job)",
+        "measured": "2026-09-25"
       },
       "ci": {
         "workflows": [
@@ -2408,7 +2422,7 @@
       },
       "docs": {
         "readme": "README.md",
-        "changelog": null,
+        "changelog": "CHANGELOG.md",
         "version_history": null,
         "roadmap": null,
         "security": "SECURITY.md",
