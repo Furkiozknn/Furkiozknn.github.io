@@ -1,7 +1,39 @@
 {
-  "generated": "2026-09-29",
+  "generated": "2026-10-05",
   "missing": [],
   "releases": [
+    {
+      "repo": "nova-drift",
+      "tag": "v1.0.0",
+      "title": "nova-drift v1.0.0",
+      "url": "https://github.com/Furkiozknn/nova-drift/releases/tag/v1.0.0",
+      "published": "2026-09-30T10:40:45Z",
+      "prerelease": false
+    },
+    {
+      "repo": "ajans-os",
+      "tag": "v0.1.0",
+      "title": "ajans-os v0.1.0",
+      "url": "https://github.com/Furkiozknn/ajans-os/releases/tag/v0.1.0",
+      "published": "2026-09-30T10:40:40Z",
+      "prerelease": false
+    },
+    {
+      "repo": "buradane",
+      "tag": "v1.1.0",
+      "title": "buradane v1.1.0",
+      "url": "https://github.com/Furkiozknn/buradane/releases/tag/v1.1.0",
+      "published": "2026-09-30T10:40:34Z",
+      "prerelease": false
+    },
+    {
+      "repo": "masal",
+      "tag": "v1.0.0",
+      "title": "masal v1.0.0",
+      "url": "https://github.com/Furkiozknn/masal/releases/tag/v1.0.0",
+      "published": "2026-09-30T10:40:27Z",
+      "prerelease": false
+    },
     {
       "repo": "turkce-ajanlar",
       "tag": "v0.4.1",
@@ -359,7 +391,7 @@
         "workflow-engine",
         "yaml"
       ],
-      "summary": "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step's result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 91 tests.",
+      "summary": "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor - and it is validated before it runs. A step that reads another step's result without declaring the dependency is rejected at load time, typo and all. Layers run concurrently, capped and backed off so width never becomes a burst. 106 tests.",
       "key_features": [
         "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor",
         "Validated before it runs: a step reading another step's result without declaring the dependency is rejected at load time, typo and all",
@@ -369,15 +401,13 @@
       "media": {
         "hero": "assets/banner.svg",
         "screenshots": [],
-        "gifs": [
-          "assets/demo.gif"
-        ],
+        "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 92,
-        "source": "CI log: 84 suite (`84 passed, 1 skipped`) + 8 cross-repo contract job (`8 passed`); CI splits them, so no single line prints 92",
-        "measured": "2026-09-28"
+        "count": 106,
+        "source": "local run 2026-09-30: `97 passed, 1 skipped` without ai-job-gateway; `106 passed` with ai-job-gateway main installed (97 + 9 contract tests)",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -447,7 +477,7 @@
         "research",
         "turkce"
       ],
-      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 145 tests.",
+      "summary": "An AI agency OS built research-first: 40 agent projects read with file:line evidence, then 11 ADRs, 6 machine-readable contracts and 13 modules. Its strongest proof is an acceptance run killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated. The contract validator is mutation-measured: disable any one of its 19 enforcement points and its own self-test has to notice. Zero dependencies, 179 tests.",
       "key_features": [
         "Built research-first: 40 agent projects read with file:line evidence before a line was written",
         "11 architecture decision records, 6 machine-readable contracts, 13 modules",
@@ -458,13 +488,15 @@
       "media": {
         "hero": "assets/banner.svg",
         "screenshots": [],
-        "gifs": [],
+        "gifs": [
+          "docs/demo/demo.gif"
+        ],
         "videos": []
       },
       "tests": {
-        "count": 145,
-        "source": "`node --test`: `pass 145`",
-        "measured": "2026-09-25"
+        "count": 179,
+        "source": "`node --test`: `pass 179`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -536,7 +568,7 @@
         "python",
         "video"
       ],
-      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 164 tests.",
+      "summary": "Which model, provider, params and job made this file - written into the file itself, so the record outlives the database row. PNG gets a lossless text chunk, JPEG a private APP1 marker spliced into container bytes with no re-encoding, MP4/MOV a uuid box appended after the media data so the absolute chunk offsets in moov stay valid, everything else a sidecar. Honest about what C2PA does that this does not. 196 tests.",
       "key_features": [
         "Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row",
         "PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding",
@@ -549,14 +581,14 @@
         "hero": "assets/banner.svg",
         "screenshots": [],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 164,
-        "source": "`164 passed`",
-        "measured": "2026-09-25"
+        "count": 196,
+        "source": "`196 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -632,7 +664,7 @@
         "turkiye",
         "typescript"
       ],
-      "summary": "\"What do I need, and where is the nearest one?\" 167,829 real OpenStreetMap places across all 81 provinces of Türkiye - pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km. Bearing, distance and a one-tap \"still here?\" on every result. 324 tests.",
+      "summary": "\"What do I need, and where is the nearest one?\" 167,829 real OpenStreetMap places across all 81 provinces of Türkiye - pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km. Bearing, distance and a one-tap \"still here?\" on every result. 395 tests.",
       "key_features": [
         "167,829 real OpenStreetMap places across all 81 provinces of Turkiye",
         "Pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km",
@@ -650,9 +682,9 @@
         "videos": []
       },
       "tests": {
-        "count": 347,
-        "source": "119 backend (CI log: `119 passed`) + 228 frontend (vitest)",
-        "measured": "2026-09-22"
+        "count": 395,
+        "source": "119 backend (CI log: `119 passed`) + 276 frontend (vitest)",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -724,7 +756,7 @@
         "telemetry",
         "token-usage"
       ],
-      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 282 tests.",
+      "summary": "Where the tokens went, what it cost, and when the limit resets. Every number carries an evidence class - observed, derived, estimated - and one that fails the reconciliation gate is not printed at all. No prompt, response or file content is defined in any type, so a privacy review is a grep. Local-first. 287 tests.",
       "key_features": [
         "Where the tokens went, what it cost, and when the limit resets",
         "Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all",
@@ -737,13 +769,15 @@
         "screenshots": [
           "assets/pano-ekran-goruntusu.png"
         ],
-        "gifs": [],
+        "gifs": [
+          "docs/demo/demo.gif"
+        ],
         "videos": []
       },
       "tests": {
-        "count": 282,
-        "source": "`282 passed`",
-        "measured": "2026-09-25"
+        "count": 287,
+        "source": "`287 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -855,7 +889,7 @@
       "id": "derin-kazi",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/derin-kazi",
-      "homepage": "https://furkiozknn.github.io/#derin-kazi",
+      "homepage": "https://furkiozknn.github.io/derin-kazi/",
       "releases": "https://github.com/Furkiozknn/derin-kazi/releases",
       "status": "active",
       "category": "game",
@@ -900,9 +934,9 @@
         "videos": []
       },
       "tests": {
-        "count": 477,
-        "source": "CI log: 304 unit (`== 304 sinama, 0 hata ==`) + 156 gameplay (`== 156 sinama, 0 hata ==`) + 7 balance (`== 7 sinama, 0 hata ==`) + 10 human-like (`== 10 sinama, 0 hata ==`)",
-        "measured": "2026-09-22"
+        "count": 613,
+        "source": "CI log: 358 unit (`== 358 sınama, 0 hata ==`) + 238 gameplay (`== 238 sınama, 0 hata ==`) + 7 balance (`== 7 sınama, 0 hata ==`) + 10 human-like (`== 10 sınama, 0 hata ==`)",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -929,7 +963,7 @@
           "gamedev",
           "miningame"
         ],
-        "primary_link": "https://github.com/Furkiozknn/derin-kazi"
+        "primary_link": "https://furkiozknn.github.io/derin-kazi/"
       },
       "provenance": {
         "generated_at": "2026-09-22",
@@ -1072,14 +1106,14 @@
         "hero": "assets/banner.svg",
         "screenshots": [],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 147,
-        "source": "CI log: `=== 147 tests passed ===`",
-        "measured": "2026-09-25"
+        "count": 152,
+        "source": "CI log: `=== 152 tests passed ===`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -1119,7 +1153,7 @@
       "id": "kanca",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/kanca",
-      "homepage": "https://furkiozknn.github.io/#kanca",
+      "homepage": "https://furkiozknn.github.io/kanca/",
       "releases": "https://github.com/Furkiozknn/kanca/releases",
       "status": "active",
       "category": "game",
@@ -1158,7 +1192,7 @@
       "media": {
         "hero": "yayin/banner.svg",
         "screenshots": [
-          "docs/ekran/menu.png",
+          "docs/ekran/menu_tr.png",
           "docs/ekran/bolum_13.png"
         ],
         "gifs": [
@@ -1167,9 +1201,9 @@
         "videos": []
       },
       "tests": {
-        "count": 115,
-        "source": "CI log: `=== 115/115 gecti ===`",
-        "measured": "2026-09-22"
+        "count": 216,
+        "source": "CI log: `=== 216/216 gecti ===`",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -1196,7 +1230,7 @@
           "gamedev",
           "platformer"
         ],
-        "primary_link": "https://github.com/Furkiozknn/kanca"
+        "primary_link": "https://furkiozknn.github.io/kanca/"
       },
       "provenance": {
         "generated_at": "2026-09-22",
@@ -1243,7 +1277,7 @@
         "semantic-search",
         "sqlite-vec"
       ],
-      "summary": "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&A is opt-in. 99 tests.",
+      "summary": "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago. Semantic search as an MCP server: sqlite-vec + a multilingual ONNX model, incremental re-indexing, answers returned as file:line. No server, no API key, no network at query time. Grounded LLM Q&A is opt-in. 107 tests.",
       "key_features": [
         "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago",
         "Semantic search as an MCP server: sqlite-vec plus a multilingual ONNX model, with incremental re-indexing",
@@ -1253,13 +1287,17 @@
       "media": {
         "hero": "assets/banner.svg",
         "screenshots": [],
-        "gifs": [],
-        "videos": []
+        "gifs": [
+          "docs/demo/demo.gif"
+        ],
+        "videos": [
+          "docs/demo/demo.mp4"
+        ]
       },
       "tests": {
-        "count": 99,
-        "source": "`99 passed` (CI, model required, Python 3.10-3.13)",
-        "measured": "2026-09-25"
+        "count": 107,
+        "source": "`107 passed` (CI, model required, Python 3.10-3.13)",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -1425,14 +1463,16 @@
         "hero": "assets/banner.svg",
         "screenshots": [],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
-        "videos": []
+        "videos": [
+          "docs/demo/demo.mp4"
+        ]
       },
       "tests": {
-        "count": 104,
-        "source": "CI log: `104 passed`",
-        "measured": "2026-09-28"
+        "count": 148,
+        "source": "CI log: `148 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -1505,7 +1545,7 @@
         "supply-chain-security",
         "zero-dependency"
       ],
-      "summary": "An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 32 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 482 tests.",
+      "summary": "An MCP tool description is read by the model on every single call, and nobody scrolls past it. mcp-vet reads the source before you install: 32 rules covering tool poisoning, exfiltration paths, install hooks and registry provenance, every finding quoted with file:line. Never executes what it audits. Zero dependencies, 552 tests.",
       "key_features": [
         "Reads an MCP server's source before you install it - 32 rules across tool poisoning, exfiltration paths, install hooks and registry provenance",
         "Every finding is quoted with file:line, so a claim can be checked rather than believed",
@@ -1516,14 +1556,14 @@
         "hero": "assets/banner.svg",
         "screenshots": [],
         "gifs": [
-          "assets/audit.gif"
+          "docs/demo/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 482,
-        "source": "CI log: `482 passed`",
-        "measured": "2026-09-28"
+        "count": 552,
+        "source": "CI log: `552 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -1606,14 +1646,14 @@
         "hero": "assets/banner.svg",
         "screenshots": [],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 327,
-        "source": "`327 passed`",
-        "measured": "2026-09-22"
+        "count": 347,
+        "source": "`347 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -1681,7 +1721,7 @@
         "python",
         "routing"
       ],
-      "summary": "Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 144 tests.",
+      "summary": "Fire one request at N model backends at once and read latency, success and output side by side. --rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so you compare quality too, not just who answered first. Every failure carries an error_type a script can branch on. CLI: mch. 150 tests.",
       "key_features": [
         "Fires one request at N model backends at once and puts latency, success and output side by side",
         "--rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so quality is compared too",
@@ -1690,15 +1730,15 @@
       ],
       "media": {
         "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/terminal-run.svg"
+        "screenshots": [],
+        "gifs": [
+          "docs/demo/demo.gif"
         ],
-        "gifs": [],
         "videos": []
       },
       "tests": {
-        "count": 144,
-        "source": "`144 passed`",
+        "count": 150,
+        "source": "`150 passed`",
         "measured": "2026-09-25"
       },
       "ci": {
@@ -1790,9 +1830,9 @@
         "videos": []
       },
       "tests": {
-        "count": 42,
-        "source": "`42 passed` (Playwright)",
-        "measured": "2026-09-25"
+        "count": 61,
+        "source": "`61 passed` (Playwright)",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -1867,7 +1907,7 @@
         "nvidia-nim",
         "python"
       ],
-      "summary": "Seven MCP tools on NVIDIA NIM's free tier - image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive. Two of them need no API key at all. Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired. 80 tests.",
+      "summary": "Seven MCP tools on NVIDIA NIM's free tier - image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive. Two of them need no API key at all. Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired. 102 tests.",
       "key_features": [
         "Seven MCP tools on NVIDIA NIM's free tier: image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive",
         "Two of the seven need no API key at all",
@@ -1877,13 +1917,15 @@
       "media": {
         "hero": "assets/banner.svg",
         "screenshots": [],
-        "gifs": [],
+        "gifs": [
+          "docs/demo/demo.gif"
+        ],
         "videos": []
       },
       "tests": {
-        "count": 80,
-        "source": "`80 passed`",
-        "measured": "2026-09-15"
+        "count": 102,
+        "source": "`102 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -1951,7 +1993,7 @@
         "sandbox",
         "version-control"
       ],
-      "summary": "Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja's SandboxedEnvironment with StrictUndefined so a typo'd variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 150 tests.",
+      "summary": "Your prompts deserve git diff, not a database row. Templates as plain YAML, rendered through Jinja's SandboxedEnvironment with StrictUndefined so a typo'd variable fails loudly instead of rendering blank - plus a ${var} form that keeps an integer an integer instead of stringifying it. CLI: ptm. 156 tests.",
       "key_features": [
         "Templates as plain YAML, so a prompt change is a diff in a pull request rather than a database row",
         "Rendered through Jinja's SandboxedEnvironment with StrictUndefined: a typo'd variable fails loudly instead of rendering blank",
@@ -1964,14 +2006,14 @@
           "assets/fails-loudly.svg"
         ],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 150,
-        "source": "`150 passed`",
-        "measured": "2026-09-25"
+        "count": 156,
+        "source": "`156 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -2051,9 +2093,9 @@
         "videos": []
       },
       "tests": {
-        "count": 163,
-        "source": "CI log: `163 passed`",
-        "measured": "2026-09-28"
+        "count": 167,
+        "source": "CI log: `167 passed`",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -2134,14 +2176,16 @@
         "hero": "assets/banner.svg",
         "screenshots": [],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
-        "videos": []
+        "videos": [
+          "docs/demo/demo.mp4"
+        ]
       },
       "tests": {
-        "count": 157,
-        "source": "CI log: `Ran 157 tests in 1.691s`",
-        "measured": "2026-09-28"
+        "count": 173,
+        "source": "unittest: `Ran 173 tests` (local run, 2026-09-30)",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -2180,7 +2224,7 @@
       "id": "tek-tus-kosu",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/tek-tus-kosu",
-      "homepage": "https://furkiozknn.github.io/#tek-tus-kosu",
+      "homepage": "https://furkiozknn.github.io/tek-tus-kosu/",
       "releases": "https://github.com/Furkiozknn/tek-tus-kosu/releases",
       "status": "active",
       "category": "game",
@@ -2225,9 +2269,9 @@
         "videos": []
       },
       "tests": {
-        "count": 961,
-        "source": "CI log: `=== SONUC: 961 gecti, 0 hata ===`",
-        "measured": "2026-09-22"
+        "count": 1148,
+        "source": "CI log: `=== SONUÇ: 1148 geçti, 0 hata ===`",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -2254,7 +2298,7 @@
           "gamedev",
           "rhythmgame"
         ],
-        "primary_link": "https://github.com/Furkiozknn/tek-tus-kosu"
+        "primary_link": "https://furkiozknn.github.io/tek-tus-kosu/"
       },
       "provenance": {
         "generated_at": "2026-09-22",
@@ -2316,14 +2360,14 @@
           "assets/ekran-goruntusu.png"
         ],
         "gifs": [
-          "assets/demo.gif"
+          "docs/demo/demo.gif"
         ],
         "videos": []
       },
       "tests": {
-        "count": 198,
-        "source": "27 validator + 33 format + 45 browser + 23 team-runner + 19 trigger-collision + 14 boundary + 4 module-type + 11 local-server + 22 banner, each from its own printed line",
-        "measured": "2026-09-25"
+        "count": 252,
+        "source": "27 validator + 33 format + 99 browser + 23 team-runner + 19 trigger-collision + 14 boundary + 4 module-type + 11 local-server + 22 banner, each from its own printed line",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -2395,7 +2439,7 @@
         "voice",
         "whisper"
       ],
-      "summary": "Speech in and speech out, needing no API key at all: Groq's free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks the extension (a symlink's target too), file type and size before a byte is uploaded, so \"transcribe the audio at .env\" is refused locally instead of uploaded. 4 tools, 60 tests.",
+      "summary": "Speech in and speech out, needing no API key at all: Groq's free hosted tier when a key is set, Kokoro-82M and faster-whisper locally when it is not. Transcription checks the extension (a symlink's target too), file type and size before a byte is uploaded, so \"transcribe the audio at .env\" is refused locally instead of uploaded. 4 tools, 69 tests.",
       "key_features": [
         "Speech in and speech out, needing no API key at all",
         "Groq's free hosted tier when a key is set; Kokoro-82M and faster-whisper locally when it is not",
@@ -2405,13 +2449,17 @@
       "media": {
         "hero": "assets/banner.svg",
         "screenshots": [],
-        "gifs": [],
-        "videos": []
+        "gifs": [
+          "docs/demo/demo.gif"
+        ],
+        "videos": [
+          "docs/demo/demo.mp4"
+        ]
       },
       "tests": {
-        "count": 60,
-        "source": "`60 passed, 3 skipped` (the 3 real-model tests run in CI's `yerel` job)",
-        "measured": "2026-09-25"
+        "count": 69,
+        "source": "`69 passed, 3 skipped` on Linux CI (the 3 real-model tests run in CI's `yerel` job)",
+        "measured": "2026-09-30"
       },
       "ci": {
         "workflows": [
@@ -2450,7 +2498,7 @@
       "id": "yercekimi-cevir",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/yercekimi-cevir",
-      "homepage": "https://furkiozknn.github.io/#yercekimi-cevir",
+      "homepage": "https://furkiozknn.github.io/yercekimi-cevir/",
       "releases": "https://github.com/Furkiozknn/yercekimi-cevir/releases",
       "status": "active",
       "category": "game",
@@ -2500,9 +2548,9 @@
         "videos": []
       },
       "tests": {
-        "count": 841,
-        "source": "CI log: `841 dogrulama, 0 hata` / `TESTLER GECTI`",
-        "measured": "2026-09-22"
+        "count": 963,
+        "source": "CI log: `963 dogrulama, 0 hata` / `TESTLER GECTI`",
+        "measured": "2026-09-29"
       },
       "ci": {
         "workflows": [
@@ -2529,7 +2577,7 @@
           "gamedev",
           "precisionplatformer"
         ],
-        "primary_link": "https://github.com/Furkiozknn/yercekimi-cevir"
+        "primary_link": "https://furkiozknn.github.io/yercekimi-cevir/"
       },
       "provenance": {
         "generated_at": "2026-09-22",

@@ -5,8 +5,40 @@
 <link href="https://furkiozknn.github.io/feed.xml" rel="self"/>
 <link href="https://furkiozknn.github.io/"/>
 <id>https://furkiozknn.github.io/</id>
-<updated>2026-09-29T04:10:40Z</updated>
+<updated>2026-09-30T10:40:45Z</updated>
 <author><name>Furkiozknn</name></author>
+<entry>
+<title>nova-drift v1.0.0</title>
+<link href="https://github.com/Furkiozknn/nova-drift/releases/tag/v1.0.0"/>
+<id>https://github.com/Furkiozknn/nova-drift/releases/tag/v1.0.0</id>
+<updated>2026-09-30T10:40:45Z</updated>
+<category term="nova-drift"/>
+<summary>nova-drift v1.0.0</summary>
+</entry>
+<entry>
+<title>ajans-os v0.1.0</title>
+<link href="https://github.com/Furkiozknn/ajans-os/releases/tag/v0.1.0"/>
+<id>https://github.com/Furkiozknn/ajans-os/releases/tag/v0.1.0</id>
+<updated>2026-09-30T10:40:40Z</updated>
+<category term="ajans-os"/>
+<summary>ajans-os v0.1.0</summary>
+</entry>
+<entry>
+<title>buradane v1.1.0</title>
+<link href="https://github.com/Furkiozknn/buradane/releases/tag/v1.1.0"/>
+<id>https://github.com/Furkiozknn/buradane/releases/tag/v1.1.0</id>
+<updated>2026-09-30T10:40:34Z</updated>
+<category term="buradane"/>
+<summary>buradane v1.1.0</summary>
+</entry>
+<entry>
+<title>masal v1.0.0</title>
+<link href="https://github.com/Furkiozknn/masal/releases/tag/v1.0.0"/>
+<id>https://github.com/Furkiozknn/masal/releases/tag/v1.0.0</id>
+<updated>2026-09-30T10:40:27Z</updated>
+<category term="masal"/>
+<summary>masal v1.0.0</summary>
+</entry>
 <entry>
 <title>turkce-ajanlar v0.4.1</title>
 <link href="https://github.com/Furkiozknn/turkce-ajanlar/releases/tag/v0.4.1"/>
