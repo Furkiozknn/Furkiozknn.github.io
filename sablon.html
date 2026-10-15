@@ -118,6 +118,12 @@ button.f.on { background:var(--accent); border-color:var(--accent); color:var(--
   scroll-margin-top:calc(var(--tools-h) + 16px); }
 .card:hover { border-color:color-mix(in srgb, var(--accent) 45%, var(--line)); }
 .card:target { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+/* A preview is a local copy of an image the repository's own media block lists.
+   The box keeps its 16:9 shape before the image arrives, so nothing jumps. */
+.thumb { display:block; margin:-18px -18px 14px; border-bottom:1px solid var(--line);
+  border-radius:10px 10px 0 0; overflow:hidden; background:var(--topic); aspect-ratio:16/9; }
+.thumb img { display:block; width:100%; height:100%; object-fit:cover; object-position:top center; }
+.thumb.contain img { object-fit:contain; padding:10px; }
 .card h3 { margin:0; font:700 16px/1.25 var(--mono); overflow-wrap:anywhere; }
 .card h3 a { color:var(--text); text-decoration:none; }
 .card h3 a:hover { color:var(--accent); text-decoration:underline; }

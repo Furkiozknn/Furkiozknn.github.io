@@ -7,8 +7,9 @@ metadata over the GitHub raw endpoint, writes the snapshot to veri/projeler.json
 and renders index.html from it. A field that is null in the metadata is left out
 of the page rather than filled in.
 
-    python3 uret.py            # fetch, then render
-    python3 uret.py --yerel    # render from the snapshot already in veri/
+    python3 uret.py              # fetch, then render
+    python3 uret.py --yerel      # render from the snapshot already in veri/
+    python3 uret.py --onizleme   # refresh only the card previews, then render
 """
 
 import argparse
@@ -28,6 +29,14 @@ RELEASES = "https://api.github.com/repos/{owner}/{repo}/releases?per_page=5"
 SITE = "https://furkiozknn.github.io/"
 HERE = os.path.dirname(os.path.abspath(__file__))
 SNAPSHOT = os.path.join(HERE, "veri", "projeler.json")
+RAW_FILE = "https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}"
+# Card previews are local copies, so the page still asks no other host for anything.
+PREVIEW_DIR = os.path.join(HERE, "assets", "onizleme")
+PREVIEW_URL = "assets/onizleme/"
+MAX_PREVIEW_BYTES = 400_000
+PREVIEW_EXT = (".png", ".jpg", ".jpeg", ".webp", ".svg")
+# A screenshot says more than a banner for something a visitor can look at.
+VISUAL_CATEGORIES = {"game", "web-app", "template"}
 
 GROUPS = [
     ("security-tool", "Security"),
@@ -114,6 +123,98 @@ def collect_releases(names, token=None):
             })
     out.sort(key=lambda r: r["published"], reverse=True)
     return out
+
+
+# --- card previews ----------------------------------------------------------
+
+SAFE_PATH = re.compile(r"^[\w][\w./-]*$")
+SVG_ACTIVE = re.compile(rb"<script|<foreignobject|javascript:|\son\w+\s*=|<!entity", re.I)
+
+
+def preview_candidates(m):
+    """The images a card may show, in order: only what the repository's own
+    media block lists, never a guess. Something a visitor can look at (a game,
+    a web app, a template) leads with a screenshot; a tool leads with its hero."""
+    media = m.get("media") or {}
+    hero = [media["hero"]] if media.get("hero") else []
+    shots = list(media.get("screenshots") or [])
+    order = shots + hero if m.get("category") in VISUAL_CATEGORIES else hero + shots
+    out = []
+    for p in order:
+        if (isinstance(p, str) and SAFE_PATH.match(p) and ".." not in p
+                and p.lower().endswith(PREVIEW_EXT) and p not in out):
+            out.append(p)
+    return out
+
+
+def image_kind(data):
+    """The extension the bytes really are, or None. The file name is not trusted:
+    a preview is written only if its content is a raster image, or an SVG with
+    nothing in it that could run when the file is opened on this origin."""
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return ".png"
+    if data[:3] == b"\xff\xd8\xff":
+        return ".jpg"
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return ".webp"
+    head = data[:2048].lstrip().lower()
+    if (head.startswith(b"<svg") or head.startswith(b"<?xml")) and b"<svg" in data[:4096].lower():
+        return None if SVG_ACTIVE.search(data) else ".svg"
+    return None
+
+
+def fetch_bytes(url, token=None):
+    req = urllib.request.Request(url, headers={"User-Agent": "furkiozknn-hub"})
+    if token:
+        req.add_header("Authorization", "Bearer " + token)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read(MAX_PREVIEW_BYTES + 1)
+
+
+def collect_previews(rows, token=None, get=None):
+    """Copy one preview per project into assets/onizleme/<id>.<ext>.
+
+    The first candidate that downloads, is small enough and is really an image
+    wins. A project with none keeps a card without a picture - the page is
+    shorter rather than decorated with something the repository never showed.
+    Returns the provenance map written into the snapshot."""
+    get = get or (lambda url: fetch_bytes(url, token))
+    os.makedirs(PREVIEW_DIR, exist_ok=True)
+    found = {}
+    for m in rows:
+        for path in preview_candidates(m):
+            data = None
+            for branch in ("main", "master"):
+                url = RAW_FILE.format(owner=OWNER, repo=m["id"], branch=branch, path=path)
+                try:
+                    data = get(url)
+                    break
+                except Exception:
+                    continue
+            if not data or len(data) > MAX_PREVIEW_BYTES:
+                continue
+            kind = image_kind(data)
+            if not kind:
+                continue
+            name = m["id"] + kind
+            with open(os.path.join(PREVIEW_DIR, name), "wb") as f:
+                f.write(data)
+            found[m["id"]] = {"file": PREVIEW_URL + name, "source": url, "bytes": len(data)}
+            break
+    # A preview whose project is gone, or that changed type, must not linger.
+    keep = {os.path.basename(v["file"]) for v in found.values()}
+    for name in os.listdir(PREVIEW_DIR):
+        if name not in keep and name.lower().endswith(PREVIEW_EXT):
+            os.remove(os.path.join(PREVIEW_DIR, name))
+    return dict(sorted(found.items()))
+
+
+def preview_file(pid):
+    """The local preview of a project, if one was copied; the page links nothing else."""
+    for ext in PREVIEW_EXT:
+        if os.path.isfile(os.path.join(PREVIEW_DIR, pid + ext)):
+            return PREVIEW_URL + pid + ext
+    return None
 
 
 def atom(releases, when):
@@ -272,6 +373,13 @@ def card(m):
     ).lower()
     out = [f'<article class="card" id="{e(pid)}" data-search="{e(search)}" '
            f'data-cat="{e(m.get("category") or "")}" data-lang="{e(m.get("primary_language") or "")}">']
+    thumb = preview_file(pid)
+    if thumb:
+        # Decorative: the name, summary and links below say everything the
+        # picture does, so it is hidden from screen readers and from the tab order.
+        fit = " contain" if thumb.endswith(".svg") else ""
+        out.append(f'<a class="thumb{fit}" href="{e(m["repository"])}" tabindex="-1" aria-hidden="true">'
+                   f'<img src="{e(thumb)}" alt="" width="640" height="360" loading="lazy" decoding="async"></a>')
     out.append('<header>')
     out.append(f'<h3><a href="{e(m["repository"])}">{e(pid)}</a></h3>')
     meta_bits = []
@@ -389,34 +497,48 @@ def fill(template, values):
     return re.sub(r"@@(\w+)@@", lambda m: str(values[m.group(1)]), template)
 
 
+def write_snapshot(snap):
+    """One key order whichever path wrote it, so a rebuild diff shows data, not reshuffling."""
+    order = ("generated", "missing", "releases", "previews", "projects")
+    snap = {k: snap[k] for k in order if k in snap}
+    os.makedirs(os.path.dirname(SNAPSHOT), exist_ok=True)
+    with open(SNAPSHOT, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(snap, f, indent=2, ensure_ascii=False)
+
+
 def main():
     """Fetch, or read the snapshot, then write the page and the machine-readable files."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--yerel", action="store_true", help="render from veri/projeler.json")
+    ap.add_argument("--onizleme", action="store_true",
+                    help="refresh only the card previews for the snapshot's projects, then render")
     ap.add_argument("--cikti", default=os.path.join(HERE, "index.html"))
     args = ap.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN")
-    if args.yerel:
+    if args.yerel or args.onizleme:
         snap = json.load(open(SNAPSHOT, encoding="utf-8"))
         rows, missing, when = snap["projects"], snap.get("missing", []), snap["generated"]
         releases = snap.get("releases", [])
+        if args.onizleme:
+            # Raw file downloads only - no API call, so no rate limit to spend.
+            snap["previews"] = collect_previews(rows, token)
+            write_snapshot(snap)
     else:
         rows, missing = collect(token)
         releases = collect_releases([m["id"] for m in rows], token)
         when = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
-        os.makedirs(os.path.dirname(SNAPSHOT), exist_ok=True)
-        json.dump({"generated": when, "missing": missing,
-                   "releases": releases, "projects": rows},
-                  open(SNAPSHOT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+        write_snapshot({"generated": when, "missing": missing, "releases": releases,
+                        "previews": collect_previews(rows, token), "projects": rows})
 
     page = render(rows, missing, when)
-    open(args.cikti, "w", encoding="utf-8").write(page)
+    # newline="\n": the same bytes on every OS, so a Windows rebuild is not a diff.
+    open(args.cikti, "w", encoding="utf-8", newline="\n").write(page)
 
     out = os.path.dirname(os.path.abspath(args.cikti)) or HERE
-    open(os.path.join(out, "feed.xml"), "w", encoding="utf-8").write(atom(releases, when))
-    open(os.path.join(out, "sitemap.xml"), "w", encoding="utf-8").write(sitemap(when))
-    open(os.path.join(out, "robots.txt"), "w", encoding="utf-8").write(robots())
+    open(os.path.join(out, "feed.xml"), "w", encoding="utf-8", newline="\n").write(atom(releases, when))
+    open(os.path.join(out, "sitemap.xml"), "w", encoding="utf-8", newline="\n").write(sitemap(when))
+    open(os.path.join(out, "robots.txt"), "w", encoding="utf-8", newline="\n").write(robots())
 
     print(f"{len(rows)} projects rendered to {args.cikti}")
     print(f"{len(releases)} releases in feed.xml; sitemap.xml and robots.txt written")
