@@ -26,11 +26,21 @@ changes, so the page cannot quietly fall behind the repositories it describes.
 ```sh
 python3 uret.py            # fetch every repository's metadata, then render
 python3 uret.py --yerel    # render from the snapshot already in veri/
-python3 -m pytest tests -q # 63 tests over the generator
+python3 -m pytest tests -q # 69 tests over the generator
 ```
 
 No build step, no dependencies: `uret.py` fills the template `sablon.html` and writes one HTML file. Fonts are local files in `assets/fonts` (SIL OFL), so the page asks no other host for anything. To look at it locally, serve the folder
 (`python3 -m http.server`) and open <http://localhost:8000/>.
+
+## Try it now
+
+Under the headline, before the search, the page lists what a visitor can use this minute: every
+project whose homepage is a page of its own — a game, a web app, a catalogue — rather than an
+anchor on this directory. Games come first with a "Play" link, the rest say "Open"; an archived
+project is never offered. The list is read from the same `homepage` field as the cards, so it
+cannot name something the repository does not link, and with nothing to offer the heading is not
+drawn at all. Inside each category, archived projects now come last whatever their test count, with
+a dashed border next to their "archived" chip, so the first card a visitor meets is maintained.
 
 ## Linking to a project
 
