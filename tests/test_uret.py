@@ -632,3 +632,64 @@ def test_the_headline_test_total_is_formatted_by_the_active_language():
     assert 'data-num="5339">5,339</b>' in page  # server render stays en-US
     # the script re-formats every [data-num] with num(), which picks tr-TR / en-US by language
     assert "$$('[data-num]')" in page and "num(el.dataset.num)" in page
+
+
+# --------------------------------------------------------------------------
+# what a visitor can try right now, and archived projects last
+# --------------------------------------------------------------------------
+
+
+def test_the_try_strip_lists_only_projects_with_a_page_of_their_own():
+    rows = [
+        meta(id="kanca", category="game", homepage="https://furkiozknn.github.io/kanca/"),
+        meta(id="masal", category="web-app", homepage="https://furkiozknn.github.io/masal/"),
+        meta(id="tool", homepage="https://furkiozknn.github.io/#tool"),       # its own card: not a page
+        meta(id="root", homepage="https://furkiozknn.github.io/"),            # this directory
+        meta(id="none", homepage=None),
+        meta(id="old", category="game", status="archived", homepage="https://example.invalid/old"),
+    ]
+    assert [m["id"] for m in uret.try_now(rows)] == ["kanca", "masal"]
+    strip = uret.try_strip(rows)
+    assert '<a class="try-item" href="https://furkiozknn.github.io/kanca/">' in strip
+    assert 'data-i="l_play">Play<' in strip and 'data-i="l_open">Open<' in strip
+    assert '<span class="count">2</span>' in strip
+    assert "old" not in strip, "an archived project is not something to try"
+
+
+def test_games_lead_the_try_strip_then_everything_else_by_name():
+    rows = [meta(id="z-app", category="web-app", homepage="https://example.invalid/z"),
+            meta(id="b-game", category="game", homepage="https://example.invalid/b"),
+            meta(id="a-app", category="web-app", homepage="https://example.invalid/a")]
+    assert [m["id"] for m in uret.try_now(rows)] == ["b-game", "a-app", "z-app"]
+
+
+def test_with_nothing_to_try_there_is_no_heading_over_nothing():
+    assert uret.try_strip([meta(homepage=None)]) == ""
+    page = uret.render([meta(homepage=None)], [], "2026-01-01")
+    assert 'class="try"' not in page and "@@trynow@@" not in page
+
+
+def test_a_homepage_in_the_try_strip_is_escaped():
+    strip = uret.try_strip([meta(id="x", homepage='https://example.invalid/?a=1&b="2"')])
+    assert 'href="https://example.invalid/?a=1&amp;b=&quot;2&quot;"' in strip
+
+
+def test_the_try_strip_sits_in_the_header_above_the_search_and_every_item_has_a_card():
+    d = snapshot()
+    page = real_page()
+    assert page.index('class="try"') < page.index('id="q"')
+    picks = uret.try_now(d["projects"])
+    assert picks, "the snapshot has playable projects; the strip must not be empty"
+    for m in picks:
+        assert f'id="{m["id"]}"' in page, m["id"]
+    assert page.count('class="try-item"') == len(picks)
+
+
+def test_an_archived_project_goes_last_in_its_group_whatever_its_test_count():
+    rows = [meta(id="old", status="archived", tests={"count": 9999}),
+            meta(id="new", tests={"count": 1})]
+    page = uret.render(rows, [], "2026-01-01")
+    assert page.index('id="new"') < page.index('id="old"')
+    assert 'id="old"' in page and 'data-status="archived"' in page
+    # class stays exactly "card": the CI render check counts that string
+    assert page.count('class="card"') == 2
