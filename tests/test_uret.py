@@ -224,6 +224,19 @@ def test_the_jsonld_block_embedded_in_the_page_still_parses():
     assert json.loads(m.group(1))["numberOfItems"] == 1
 
 
+def test_a_field_with_a_closing_script_tag_cannot_break_out_of_the_jsonld_block():
+    hostile = '</script><script>alert(1)</script> & <!--'
+    page = uret.render([meta(id="a", summary=hostile, topics=["</SCRIPT>", "x&y"])], [], "2026-01-01")
+    start = page.index('<script type="application/ld+json">')
+    end = page.index("</script>", start)
+    block = page[start + len('<script type="application/ld+json">'):end]
+    for ch in "<>&":
+        assert ch not in block, f"{ch!r} reached the JSON-LD block unescaped"
+    node = json.loads(block)["itemListElement"][0]["item"]
+    assert node["description"] == hostile
+    assert node["keywords"] == "</SCRIPT>, x&y"
+
+
 def test_the_jsonld_is_sorted_so_the_diff_is_stable():
     d = json.loads(uret.jsonld([meta(id="z"), meta(id="a")], "2026-01-01"))
     assert [i["item"]["name"] for i in d["itemListElement"]] == ["a", "z"]

@@ -294,7 +294,12 @@ def jsonld(rows, when):
         "numberOfItems": len(items),
         "itemListElement": items,
     }
-    return json.dumps(doc, ensure_ascii=False, indent=1)
+    # The block is inlined into a <script> element, and the HTML parser ends
+    # that element at the first "</script" whatever JSON thinks of it. Every
+    # field here comes from another repository, so <, > and & are written as
+    # JSON unicode escapes: same data to a JSON reader, inert to the HTML one.
+    out = json.dumps(doc, ensure_ascii=False, indent=1)
+    return out.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
 
 
 # --- rendering ------------------------------------------------------------
