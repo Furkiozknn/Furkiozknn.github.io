@@ -1,12 +1,31 @@
 {
   "generated": "2026-10-19",
-  "missing": [],
+  "missing": [
+    "canli-dunyalar",
+    "social-videos"
+  ],
   "releases": [
     {
-      "repo": "nova-drift",
+      "repo": "repo-vet",
+      "tag": "v0.2.0",
+      "title": "v0.2.0",
+      "url": "https://github.com/Furkiozknn/repo-vet/releases/tag/v0.2.0",
+      "published": "2026-10-19T03:42:59Z",
+      "prerelease": false
+    },
+    {
+      "repo": "godot-refcheck",
+      "tag": "v0.3.0",
+      "title": "v0.3.0",
+      "url": "https://github.com/Furkiozknn/godot-refcheck/releases/tag/v0.3.0",
+      "published": "2026-10-19T03:42:57Z",
+      "prerelease": false
+    },
+    {
+      "repo": "isik-tuneli",
       "tag": "v1.0.0",
       "title": "nova-drift v1.0.0",
-      "url": "https://github.com/Furkiozknn/nova-drift/releases/tag/v1.0.0",
+      "url": "https://github.com/Furkiozknn/isik-tuneli/releases/tag/v1.0.0",
       "published": "2026-09-30T10:40:45Z",
       "prerelease": false
     },
@@ -168,6 +187,11 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/godot-refcheck/main/assets/banner.svg",
       "bytes": 3488
     },
+    "isik-tuneli": {
+      "file": "assets/onizleme/isik-tuneli.webp",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/isik-tuneli/master/assets/screenshot.webp",
+      "bytes": 36776
+    },
     "kanca": {
       "file": "assets/onizleme/kanca.svg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kanca/main/yayin/banner.svg",
@@ -202,11 +226,6 @@
       "file": "assets/onizleme/model-comparison-harness.svg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/model-comparison-harness/main/assets/banner.svg",
       "bytes": 3527
-    },
-    "nova-drift": {
-      "file": "assets/onizleme/nova-drift.webp",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/nova-drift/master/assets/screenshot.webp",
-      "bytes": 36776
     },
     "nvidia-nim-mcp": {
       "file": "assets/onizleme/nvidia-nim-mcp.svg",
@@ -1294,6 +1313,99 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "isik-tuneli",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/isik-tuneli",
+      "homepage": "https://furkiozknn.github.io/isik-tuneli/",
+      "releases": "https://github.com/Furkiozknn/isik-tuneli/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "JavaScript",
+        "Three.js r160",
+        "WebGL",
+        "Web Audio API",
+        "no build step"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "arcade-game",
+        "browser-game",
+        "endless-runner",
+        "game",
+        "gamedev",
+        "github-pages",
+        "html5-game",
+        "javascript",
+        "no-build",
+        "procedural-generation",
+        "threejs",
+        "threejs-game",
+        "web-audio-api",
+        "webgl",
+        "webgl-game"
+      ],
+      "summary": "Endless browser space-runner with Three.js bloom and a Web Audio engine synthesized live - no sound files, no build step. Near-miss bonuses and a daily seeded run everyone plays the same.",
+      "key_features": [
+        "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
+        "Audio engine synthesized live in Web Audio - not one sound file in the repository",
+        "Skim an obstacle without touching it and take the near-miss bonus",
+        "A daily run seeded from the UTC date deals every player the same obstacles; 0.8 MB first load, no build step",
+        "Every test runs with the page sealed to its own origin, so a reintroduced CDN import breaks CI instead of passing it"
+      ],
+      "media": {
+        "hero": "assets/banner.svg",
+        "screenshots": [
+          "assets/gameplay.webp",
+          "assets/screenshot.webp"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 61,
+        "source": "`61 passed` (Playwright)",
+        "measured": "2026-09-29"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/isik-tuneli/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": "SECURITY.md",
+        "contributing": "CONTRIBUTING.md",
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "0.8 MB, no build step, real bloom - and every sound synthesized on the fly.",
+        "hashtags": [
+          "threejs",
+          "webgl",
+          "gamedev",
+          "javascript",
+          "webaudio"
+        ],
+        "primary_link": "https://furkiozknn.github.io/isik-tuneli/"
+      },
+      "provenance": {
+        "generated_at": "2026-09-22",
+        "generator": "schema/uret.py",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "kanca",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/kanca",
@@ -1705,8 +1817,8 @@
         "videos": []
       },
       "tests": {
-        "count": 563,
-        "source": "CI log: `563 passed`",
+        "count": 611,
+        "source": "CI log: `611 passed`",
         "measured": "2026-09-30"
       },
       "ci": {
@@ -1910,99 +2022,6 @@
           "devtools"
         ],
         "primary_link": "https://github.com/Furkiozknn/model-comparison-harness"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "nova-drift",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/nova-drift",
-      "homepage": "https://furkiozknn.github.io/nova-drift/",
-      "releases": "https://github.com/Furkiozknn/nova-drift/releases",
-      "status": "active",
-      "category": "game",
-      "platform": [
-        "web"
-      ],
-      "primary_language": "JavaScript",
-      "technologies": [
-        "JavaScript",
-        "Three.js r160",
-        "WebGL",
-        "Web Audio API",
-        "no build step"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "arcade-game",
-        "browser-game",
-        "endless-runner",
-        "game",
-        "gamedev",
-        "github-pages",
-        "html5-game",
-        "javascript",
-        "no-build",
-        "procedural-generation",
-        "threejs",
-        "threejs-game",
-        "web-audio-api",
-        "webgl",
-        "webgl-game"
-      ],
-      "summary": "Endless browser space-runner with Three.js bloom and a Web Audio engine synthesized live - no sound files, no build step. Near-miss bonuses and a daily seeded run everyone plays the same.",
-      "key_features": [
-        "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
-        "Audio engine synthesized live in Web Audio - not one sound file in the repository",
-        "Skim an obstacle without touching it and take the near-miss bonus",
-        "A daily run seeded from the UTC date deals every player the same obstacles; 0.8 MB first load, no build step",
-        "Every test runs with the page sealed to its own origin, so a reintroduced CDN import breaks CI instead of passing it"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/gameplay.webp",
-          "assets/screenshot.webp"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 61,
-        "source": "`61 passed` (Playwright)",
-        "measured": "2026-09-29"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/nova-drift/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "0.8 MB, no build step, real bloom - and every sound synthesized on the fly.",
-        "hashtags": [
-          "threejs",
-          "webgl",
-          "gamedev",
-          "javascript",
-          "webaudio"
-        ],
-        "primary_link": "https://furkiozknn.github.io/nova-drift/"
       },
       "provenance": {
         "generated_at": "2026-09-22",
