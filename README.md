@@ -26,7 +26,8 @@ changes, so the page cannot quietly fall behind the repositories it describes.
 ```sh
 python3 uret.py            # fetch every repository's metadata, then render
 python3 uret.py --yerel    # render from the snapshot already in veri/
-python3 -m pytest tests -q # 69 tests over the generator
+python3 uret.py --onizleme # refresh only the card previews (raw downloads, no API call)
+python3 -m pytest tests -q # 89 tests over the generator
 ```
 
 No build step, no dependencies: `uret.py` fills the template `sablon.html` and writes one HTML file. Fonts are local files in `assets/fonts` (SIL OFL), so the page asks no other host for anything. To look at it locally, serve the folder
@@ -41,6 +42,24 @@ project is never offered. The list is read from the same `homepage` field as the
 cannot name something the repository does not link, and with nothing to offer the heading is not
 drawn at all. Inside each category, archived projects now come last whatever their test count, with
 a dashed border next to their "archived" chip, so the first card a visitor meets is maintained.
+
+## Card previews
+
+Each card carries one picture, and it is one the repository already shows: `uret.py` reads the
+`media` block of that repository's `project-meta.json` (its `hero` and `screenshots`), downloads
+the first one that is really a still image under 400 KB, and keeps a copy in
+[`assets/onizleme/`](assets/onizleme/). Something a visitor can look at — a game, a web app, a
+template — leads with a screenshot; a tool leads with its banner. The page links only the local
+copy, so it still asks no other host for anything, and the snapshot records where each copy came
+from (`previews` in [`veri/projeler.json`](veri/projeler.json): source URL and size). A project
+with no usable image gets no picture rather than a placeholder.
+
+The file name is not trusted: the bytes decide what a file is (PNG, JPEG, WebP or SVG), and an SVG
+with a script, an event handler, a `javascript:` link, `foreignObject` or an entity declaration is
+refused, because the copy is also served at its own URL on this origin, where opening it directly
+would run it. The picture is decorative — the card's name, summary and links say everything it
+does — so it is hidden from screen readers and from the tab order, lazy-loaded, and boxed at 16:9
+so nothing jumps while it arrives.
 
 ## Linking to a project
 
