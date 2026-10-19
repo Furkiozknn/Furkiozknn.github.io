@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-19",
   "missing": [],
   "releases": [
     {
@@ -359,7 +359,7 @@
       ],
       "summary": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
       "key_features": [
-        "One searchable page over every public repository, with filters by category and language, in Turkish and English, light and dark",
+        "One searchable page over every public repository, with filters by category and language, in Turkish and English, light and dark, each card with a preview copied from the repository's own media block",
         "Every card is linkable by the repository's name (#repo-name), which is what most repositories use as their homepage",
         "Generated from each repository's own project-meta.json, never hand-edited",
         "The interface shell follows the reader's language and remembers the choice; project descriptions stay in the language their own metadata is written in",
@@ -376,9 +376,9 @@
         "videos": []
       },
       "tests": {
-        "count": 63,
-        "source": "`python3 -m pytest tests -q`: `63 passed`",
-        "measured": "2026-09-29"
+        "count": 82,
+        "source": "`python3 -m pytest tests -q`: `82 passed`",
+        "measured": "2026-10-15"
       },
       "ci": {
         "workflows": [
@@ -636,8 +636,8 @@
         "videos": []
       },
       "tests": {
-        "count": 183,
-        "source": "`node --test`: `pass 183`",
+        "count": 194,
+        "source": "`node --test`: `pass 194`",
         "measured": "2026-10-15"
       },
       "ci": {
@@ -1154,6 +1154,7 @@
         "Two starter projects that already feel right to play: top-down with 8-way accelerated movement, side-view with coyote time, jump buffering and variable jump height",
         "The feel is measured, not guessed: jump curves come from running the real _physics_process at the project's 60 Hz fixed step",
         "GL Compatibility throughout, so it runs on integrated graphics",
+        "A pause menu with key remapping in both starters: rebinding survives restarts, keeps gamepad bindings, and is tested in real Godot",
         "Export settings and project layout documented, ready to fork"
       ],
       "media": {
@@ -1166,9 +1167,9 @@
         "videos": []
       },
       "tests": {
-        "count": 37,
-        "source": "CI log: `37 passed`",
-        "measured": "2026-09-28"
+        "count": 50,
+        "source": "CI log: `50 passed`",
+        "measured": "2026-10-15"
       },
       "ci": {
         "workflows": [
@@ -1237,11 +1238,12 @@
       ],
       "summary": "Finds broken resource references, uid problems and dead signal connections in Godot projects without opening the editor, and repairs those with a single provable answer. Rust CLI and GitHub Action.",
       "key_features": [
-        "Twelve checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
+        "Thirteen checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
         "Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken",
         "A script reaching for $Head/Body the scene does not contain is an error, and stays silent on the six things that made it wrong: another node's get_node, a run-time add_child, a child that carries an instanced scene's root name, a path the script guards with has_node, a unique name, a script no scene attaches",
+        "An Input Map action a script asks for by name and the project never defines is an error that names the action it most likely meant; actions added or tested for at run time count as present",
         "--fix repairs in place what the project itself settles: a moved file, a case-only difference, a uid that already resolves; two files with the same name produce no repair",
-        "Verified against a headless Godot: nine engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
+        "Verified against a headless Godot: ten engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
         "Calibrated on 237 projects in eleven real repositories: 50 findings, each confirmed by hand, no change proposed anywhere"
       ],
       "media": {
@@ -1253,9 +1255,9 @@
         "videos": []
       },
       "tests": {
-        "count": 152,
-        "source": "CI log: `=== 152 tests passed ===`",
-        "measured": "2026-09-30"
+        "count": 169,
+        "source": "CI log: `=== 169 tests passed ===`",
+        "measured": "2026-10-15"
       },
       "ci": {
         "workflows": [
@@ -1612,7 +1614,7 @@
         ]
       },
       "tests": {
-        "count": 148,
+        "count": 163,
         "source": "CI log: `148 passed`",
         "measured": "2026-09-30"
       },
@@ -1703,8 +1705,8 @@
         "videos": []
       },
       "tests": {
-        "count": 552,
-        "source": "CI log: `552 passed`",
+        "count": 563,
+        "source": "CI log: `563 passed`",
         "measured": "2026-09-30"
       },
       "ci": {
@@ -2065,9 +2067,9 @@
         "videos": []
       },
       "tests": {
-        "count": 102,
-        "source": "`102 passed`",
-        "measured": "2026-09-30"
+        "count": 113,
+        "source": "`113 passed`",
+        "measured": "2026-10-15"
       },
       "ci": {
         "workflows": [
@@ -2221,7 +2223,7 @@
       ],
       "summary": "The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.",
       "key_features": [
-        "Twelve signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess",
+        "Thirteen signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess",
         "Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that had to succeed and did, no-change and blocked need a stated reason",
         "A fenced check runner with allowlisted verbs, no shell (bash -c included), a scrubbed environment, closed stdin and a timeout, so a command cannot grow a second half it did not declare",
         "Rounds that cover every repository once before anything is revisited, with unchanged repositories sinking to the back of the queue"
@@ -2235,8 +2237,8 @@
         "videos": []
       },
       "tests": {
-        "count": 167,
-        "source": "CI log: `167 passed`",
+        "count": 172,
+        "source": "CI log: `172 passed`",
         "measured": "2026-09-30"
       },
       "ci": {
@@ -2599,8 +2601,8 @@
         ]
       },
       "tests": {
-        "count": 69,
-        "source": "`69 passed, 3 skipped` on Linux CI (the 3 real-model tests run in CI's `yerel` job)",
+        "count": 79,
+        "source": "`79 passed, 3 skipped` on Linux CI (the 3 real-model tests run in CI's `yerel` job)",
         "measured": "2026-09-30"
       },
       "ci": {
