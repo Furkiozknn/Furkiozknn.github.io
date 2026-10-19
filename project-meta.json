@@ -27,7 +27,7 @@
   ],
   "summary": "The searchable project directory for this account. Every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week.",
   "key_features": [
-    "One searchable page over every public repository, with filters by category and language, in Turkish and English, light and dark",
+    "One searchable page over every public repository, with filters by category and language, in Turkish and English, light and dark, each card with a preview copied from the repository's own media block",
     "Every card is linkable by the repository's name (#repo-name), which is what most repositories use as their homepage",
     "Generated from each repository's own project-meta.json, never hand-edited",
     "The interface shell follows the reader's language and remembers the choice; project descriptions stay in the language their own metadata is written in",
@@ -44,9 +44,9 @@
     "videos": []
   },
   "tests": {
-    "count": 63,
-    "source": "`python3 -m pytest tests -q`: `63 passed`",
-    "measured": "2026-09-29"
+    "count": 82,
+    "source": "`python3 -m pytest tests -q`: `82 passed`",
+    "measured": "2026-10-15"
   },
   "ci": {
     "workflows": [

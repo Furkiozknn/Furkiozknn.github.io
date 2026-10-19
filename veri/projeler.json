@@ -107,6 +107,148 @@
       "prerelease": false
     }
   ],
+  "previews": {
+    "Furkiozknn": {
+      "file": "assets/onizleme/Furkiozknn.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn/main/assets/hero.svg",
+      "bytes": 3988
+    },
+    "Furkiozknn.github.io": {
+      "file": "assets/onizleme/Furkiozknn.github.io.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn.github.io/main/assets/screenshot.png",
+      "bytes": 64217
+    },
+    "ai-job-gateway": {
+      "file": "assets/onizleme/ai-job-gateway.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/ai-job-gateway/main/assets/banner.svg",
+      "bytes": 3296
+    },
+    "ai-workflow-engine": {
+      "file": "assets/onizleme/ai-workflow-engine.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/ai-workflow-engine/main/assets/banner.svg",
+      "bytes": 3427
+    },
+    "ajans-os": {
+      "file": "assets/onizleme/ajans-os.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/ajans-os/master/assets/banner.svg",
+      "bytes": 3473
+    },
+    "asset-provenance-toolkit": {
+      "file": "assets/onizleme/asset-provenance-toolkit.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/asset-provenance-toolkit/main/assets/banner.svg",
+      "bytes": 3510
+    },
+    "buradane": {
+      "file": "assets/onizleme/buradane.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/buradane/main/assets/banner.svg",
+      "bytes": 4416
+    },
+    "claude-code-intelligence": {
+      "file": "assets/onizleme/claude-code-intelligence.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/claude-code-intelligence/master/assets/banner.svg",
+      "bytes": 3538
+    },
+    "claude-quota-monitor": {
+      "file": "assets/onizleme/claude-quota-monitor.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/claude-quota-monitor/master/docs/banner.svg",
+      "bytes": 1951
+    },
+    "derin-kazi": {
+      "file": "assets/onizleme/derin-kazi.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/derin-kazi/main/yayin/banner.svg",
+      "bytes": 3381
+    },
+    "godot-2d-sablon": {
+      "file": "assets/onizleme/godot-2d-sablon.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/godot-2d-sablon/main/docs/ekran-yandan.png",
+      "bytes": 6165
+    },
+    "godot-refcheck": {
+      "file": "assets/onizleme/godot-refcheck.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/godot-refcheck/main/assets/banner.svg",
+      "bytes": 3488
+    },
+    "kanca": {
+      "file": "assets/onizleme/kanca.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/kanca/main/yayin/banner.svg",
+      "bytes": 3415
+    },
+    "local-notes-search-mcp": {
+      "file": "assets/onizleme/local-notes-search-mcp.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/local-notes-search-mcp/main/assets/banner.svg",
+      "bytes": 3498
+    },
+    "masal": {
+      "file": "assets/onizleme/masal.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/masal/master/assets/sahneler.png",
+      "bytes": 103366
+    },
+    "mcp-census": {
+      "file": "assets/onizleme/mcp-census.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/mcp-census/master/assets/banner.svg",
+      "bytes": 3455
+    },
+    "mcp-vet": {
+      "file": "assets/onizleme/mcp-vet.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/mcp-vet/master/assets/banner.svg",
+      "bytes": 3469
+    },
+    "mini-creative-toolkit": {
+      "file": "assets/onizleme/mini-creative-toolkit.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/mini-creative-toolkit/master/assets/banner.svg",
+      "bytes": 3547
+    },
+    "model-comparison-harness": {
+      "file": "assets/onizleme/model-comparison-harness.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/model-comparison-harness/main/assets/banner.svg",
+      "bytes": 3527
+    },
+    "nova-drift": {
+      "file": "assets/onizleme/nova-drift.webp",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/nova-drift/master/assets/screenshot.webp",
+      "bytes": 36776
+    },
+    "nvidia-nim-mcp": {
+      "file": "assets/onizleme/nvidia-nim-mcp.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/nvidia-nim-mcp/master/assets/banner.svg",
+      "bytes": 45723
+    },
+    "prompt-template-manager": {
+      "file": "assets/onizleme/prompt-template-manager.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/prompt-template-manager/main/assets/banner.svg",
+      "bytes": 3512
+    },
+    "repo-ratchet": {
+      "file": "assets/onizleme/repo-ratchet.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/repo-ratchet/main/assets/banner.svg",
+      "bytes": 3521
+    },
+    "repo-vet": {
+      "file": "assets/onizleme/repo-vet.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/repo-vet/main/assets/banner.svg",
+      "bytes": 3432
+    },
+    "tek-tus-kosu": {
+      "file": "assets/onizleme/tek-tus-kosu.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/tek-tus-kosu/main/yayin/banner.svg",
+      "bytes": 3426
+    },
+    "turkce-ajanlar": {
+      "file": "assets/onizleme/turkce-ajanlar.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/turkce-ajanlar/master/assets/banner.svg",
+      "bytes": 2192
+    },
+    "voice-io-mcp": {
+      "file": "assets/onizleme/voice-io-mcp.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/voice-io-mcp/main/assets/banner.svg",
+      "bytes": 3452
+    },
+    "yercekimi-cevir": {
+      "file": "assets/onizleme/yercekimi-cevir.svg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/yercekimi-cevir/main/docs/banner.svg",
+      "bytes": 3426
+    }
+  },
   "projects": [
     {
       "schema_version": "1.0.0",

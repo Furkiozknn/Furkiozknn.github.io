@@ -539,6 +539,12 @@ button.f.on { background:var(--accent); border-color:var(--accent); color:var(--
   scroll-margin-top:calc(var(--tools-h) + 16px); }
 .card:hover { border-color:color-mix(in srgb, var(--accent) 45%, var(--line)); }
 .card:target { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+/* A preview is a local copy of an image the repository's own media block lists.
+   The box keeps its 16:9 shape before the image arrives, so nothing jumps. */
+.thumb { display:block; margin:-18px -18px 14px; border-bottom:1px solid var(--line);
+  border-radius:10px 10px 0 0; overflow:hidden; background:var(--topic); aspect-ratio:16/9; }
+.thumb img { display:block; width:100%; height:100%; object-fit:cover; object-position:top center; }
+.thumb.contain img { object-fit:contain; padding:10px; }
 .card h3 { margin:0; font:700 16px/1.25 var(--mono); overflow-wrap:anywhere; }
 .card h3 a { color:var(--text); text-decoration:none; }
 .card h3 a:hover { color:var(--accent); text-decoration:underline; }
@@ -633,6 +639,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <p class="vh" id="status" role="status" aria-live="polite"></p>
 <p class="empty" id="empty" data-i="empty">Nothing matches that.</p>
 <section class="group" data-group="security-tool"><h2><span data-i="g_security_tool">Security</span><span class="count">1</span></h2><div class="grid"><article class="card" id="mcp-vet" data-search="mcp-vet static security auditor for mcp servers: reads the source before you install and quotes every finding - tool poisoning, exfiltration paths, install hooks - with file:line. never runs what it audits. agent-skills ai-agents claude-code mcp mcp-security mcp-server model-context-protocol prompt-injection python security security-audit skill static-analysis supply-chain-security zero-dependency python 3.9-3.13 zero dependencies mcp python cli claude-code-skill security-tool" data-cat="security-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/mcp-vet" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/mcp-vet.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/mcp-vet">mcp-vet</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.6.0</span><span class="chip tests" data-i="tests" data-n="552">552 tests</span></div>
@@ -643,6 +650,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/mcp-vet" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/mcp-vet/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="developer-tool"><h2><span data-i="g_developer_tool">Developer tools</span><span class="count">8</span></h2><div class="grid"><article class="card" id="turkce-ajanlar" data-search="turkce-ajanlar claude code sub-agents that write in turkish and know the traps of turkish windows (powershell 5.1, cp1254), plus commands, skills and an eval suite. exported to cursor, opencode, copilot and codex. agent-skills ai-agents claude claude-code codex cursor developer-tools github-copilot opencode prompt-engineering subagents turkce turkish windows claude code plugin node.js markdown agent definitions html claude-code cursor opencode github-copilot codex developer-tool" data-cat="developer-tool" data-lang="HTML">
+<a class="thumb contain" href="https://github.com/Furkiozknn/turkce-ajanlar" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/turkce-ajanlar.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/turkce-ajanlar">turkce-ajanlar</a></h3>
 <div class="meta"><span class="chip lang">HTML</span><span class="chip ver">v0.4.0</span><span class="chip tests" data-i="tests" data-n="252">252 tests</span></div>
@@ -653,6 +661,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/turkce-ajanlar" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/turkce-ajanlar/" data-i="l_live">Live</a><a href="https://github.com/Furkiozknn/turkce-ajanlar/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="asset-provenance-toolkit" data-search="asset-provenance-toolkit writes which model, provider and parameters made a file into the file itself - png text chunks, jpeg app1, mp4/mov uuid boxes, no re-encoding - or a sidecar for anything else. cli: aprov. ai-transparency audit-trail c2pa cli content-authenticity exif ffmpeg generative-ai image-metadata metadata mp4 provenance python video python 3.11+ png text chunks jpeg app1 markers iso base media uuid boxes ffmpeg (verification only) python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/asset-provenance-toolkit" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/asset-provenance-toolkit.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/asset-provenance-toolkit">asset-provenance-toolkit</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="196">196 tests</span></div>
@@ -663,6 +672,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/asset-provenance-toolkit" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/asset-provenance-toolkit/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="repo-vet" data-search="repo-vet checks what a github repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. six checks over the github api, no clone, zero dependencies. ci cli developer-tools documentation github github-actions link-checker linter python quality-assurance readme release-automation python 3.9+ github rest api standard library only github actions (composite action) python cli github-actions developer-tool" data-cat="developer-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/repo-vet" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/repo-vet.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/repo-vet">repo-vet</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.2.0</span><span class="chip tests" data-i="tests" data-n="173">173 tests</span></div>
@@ -673,6 +683,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/repo-vet" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/repo-vet/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="repo-ratchet" data-search="repo-ratchet the engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified. continuous-improvement developer-tools github repository-maintenance zero-dependency python 3.11+ standard library only no runtime dependencies append-only json lines work records github rest api python linux macos windows developer-tool" data-cat="developer-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/repo-ratchet" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/repo-ratchet.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/repo-ratchet">repo-ratchet</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.2.0</span><span class="chip tests" data-i="tests" data-n="167">167 tests</span></div>
@@ -683,6 +694,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/repo-ratchet" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/repo-ratchet/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="prompt-template-manager" data-search="prompt-template-manager prompt templates as plain yaml in git, rendered through a sandboxed, strict jinja environment so a typo&#x27;d variable fails loudly instead of rendering blank. python cli and library: ptm. cli developer-tools gitops jinja2 llm llmops prompt-engineering prompt-templates python sandbox version-control python 3.11+ jinja2 sandboxedenvironment cli: ptm python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/prompt-template-manager" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/prompt-template-manager.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/prompt-template-manager">prompt-template-manager</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="156">156 tests</span></div>
@@ -693,6 +705,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/prompt-template-manager" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/prompt-template-manager/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="godot-refcheck" data-search="godot-refcheck finds broken resource references, uid problems and dead signal connections in godot projects without opening the editor, and repairs those with a single provable answer. rust cli and github action. ci gamedev godot godot-engine godot4 linter rust sarif static-analysis zero-dependency rust (std only) zero dependencies sarif 2.1.0 github actions rust cli github-action developer-tool" data-cat="developer-tool" data-lang="Rust">
+<a class="thumb contain" href="https://github.com/Furkiozknn/godot-refcheck" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/godot-refcheck.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/godot-refcheck">godot-refcheck</a></h3>
 <div class="meta"><span class="chip lang">Rust</span><span class="chip ver">v0.3.0</span><span class="chip tests" data-i="tests" data-n="152">152 tests</span></div>
@@ -703,6 +716,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/godot-refcheck" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/godot-refcheck/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="model-comparison-harness" data-search="model-comparison-harness send one request to several model backends at once and compare latency, success and output side by side, with optional judge-model scoring and typed errors. python cli: mch. benchmarking cli developer-tools evaluation generative-ai latency llm llm-evaluation model-comparison observability python routing python 3.11+ cli: mch python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/model-comparison-harness" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/model-comparison-harness.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/model-comparison-harness">model-comparison-harness</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="150">150 tests</span></div>
@@ -713,6 +727,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/model-comparison-harness" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/model-comparison-harness/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="ai-workflow-engine" data-search="ai-workflow-engine ai generation pipelines as plain yaml dags in git, validated before the first job runs: a step that reads an undeclared dependency is rejected at load time. python cli: awe. automation dag generative-ai gitops infrastructure-as-code job-orchestration orchestration pipeline python validation workflow-engine yaml python 3.11+ yaml dag scheduling python cli library developer-tool" data-cat="developer-tool" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/ai-workflow-engine" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/ai-workflow-engine.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/ai-workflow-engine">ai-workflow-engine</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="106">106 tests</span></div>
@@ -723,6 +738,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/ai-workflow-engine" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/ai-workflow-engine/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="observability"><h2><span data-i="g_observability">Observability</span><span class="count">2</span></h2><div class="grid"><article class="card" id="claude-code-intelligence" data-search="claude-code-intelligence local-first usage intelligence for claude code: where the tokens went, what they cost and when the quota resets. every number carries an evidence class; prompts and file contents are never recorded. analytics claude-code cli cost-tracking developer-tools local-first observability opentelemetry otlp privacy-first python quota telemetry token-usage python opentelemetry/otlp local-first python cli local-dashboard observability" data-cat="observability" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/claude-code-intelligence" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/claude-code-intelligence.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/claude-code-intelligence">claude-code-intelligence</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.0.1</span><span class="chip tests" data-i="tests" data-n="287">287 tests</span></div>
@@ -733,6 +749,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/claude-code-intelligence" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/claude-code-intelligence/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="claude-quota-monitor" data-search="claude-quota-monitor superseded early prototype of claude code quota tracking. the maintained implementation lives in claude-code-intelligence. archived claude-code prototype python quota python local web dashboard python cli local-dashboard observability" data-cat="observability" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/claude-quota-monitor" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/claude-quota-monitor.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/claude-quota-monitor">claude-quota-monitor</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip tests" data-i="tests" data-n="43">43 tests</span><span class="chip arch" data-i="archived">archived</span></div>
@@ -743,6 +760,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/claude-quota-monitor" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/claude-quota-monitor/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="mcp-server"><h2><span data-i="g_mcp_server">MCP servers</span><span class="count">4</span></h2><div class="grid"><article class="card" id="mini-creative-toolkit" data-search="mini-creative-toolkit 23 cpu-first media tools as an mcp server and cli: background removal, exif/gps stripping, resize, gifs, video trim. 20 of them report &quot;network&quot;: &quot;none&quot; in their own reply. no gpu required. 382 tests. background-removal claude-code cpu-only ffmpeg image-processing mcp mcp-server media-tools model-context-protocol no-api-key offline-first pillow python video-processing python 3.11+ pillow ffmpeg cpu-only python mcp cli mcp-server" data-cat="mcp-server" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/mini-creative-toolkit" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/mini-creative-toolkit.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/mini-creative-toolkit">mini-creative-toolkit</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v2.1.0</span><span class="chip tests" data-i="tests" data-n="382">382 tests</span></div>
@@ -753,6 +771,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/mini-creative-toolkit" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/mini-creative-toolkit/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="local-notes-search-mcp" data-search="local-notes-search-mcp semantic search over your own notes and files as an mcp server: sqlite-vec with a multilingual onnx model, answers cited as file:line. no api key and no network at query time. claude-code embeddings fastembed markdown mcp mcp-server model-context-protocol obsidian offline personal-knowledge-base privacy-first python rag semantic-search sqlite-vec python 3.10+ sqlite-vec multilingual onnx embeddings mcp python mcp cli mcp-server" data-cat="mcp-server" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/local-notes-search-mcp" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/local-notes-search-mcp.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/local-notes-search-mcp">local-notes-search-mcp</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="107">107 tests</span></div>
@@ -763,6 +782,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/local-notes-search-mcp" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/local-notes-search-mcp/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="nvidia-nim-mcp" data-search="nvidia-nim-mcp mcp server for nvidia nim&#x27;s free tier - image, vision, translation, chat, content safety, embeddings - that falls back to groq, mistral, gemini or cerebras when a model is rate-limited or retired. ai cerebras claude-code fallback free-tier gemini groq image-generation llm mcp mcp-server mistral model-context-protocol nvidia nvidia-nim python python 3.11+ nvidia nim groq mistral gemini cerebras python mcp mcp-server" data-cat="mcp-server" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/nvidia-nim-mcp" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/nvidia-nim-mcp.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/nvidia-nim-mcp">nvidia-nim-mcp</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="102">102 tests</span></div>
@@ -773,6 +793,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/nvidia-nim-mcp" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/nvidia-nim-mcp/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="voice-io-mcp" data-search="voice-io-mcp text-to-speech and speech-to-text mcp server for claude code: groq&#x27;s free tier when a key is set, local kokoro-82m and faster-whisper when not. disallowed files are refused before any upload. claude-code groq kokoro local-first mcp mcp-server model-context-protocol offline-first python speech-to-text stt text-to-speech tts voice whisper python 3.11+ kokoro-82m faster-whisper groq python mcp mcp-server" data-cat="mcp-server" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/voice-io-mcp" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/voice-io-mcp.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/voice-io-mcp">voice-io-mcp</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="69">69 tests</span></div>
@@ -783,6 +804,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/voice-io-mcp" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/voice-io-mcp/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="agent-infrastructure"><h2><span data-i="g_agent_infrastructure">Agent infrastructure</span><span class="count">1</span></h2><div class="grid"><article class="card" id="ajans-os" data-search="ajans-os research-first ai agency os core in zero-dependency node.js: 11 adrs, machine-readable contracts, and an acceptance run killed mid-task and resumed from disk with no side effect repeated. adr agent-infrastructure agent-orchestration ai-agents architecture architecture-decision-records contracts javascript json-schema multi-agent-systems nodejs research turkce node.js 22+ javascript json schema zero dependencies javascript node agent-infrastructure" data-cat="agent-infrastructure" data-lang="JavaScript">
+<a class="thumb contain" href="https://github.com/Furkiozknn/ajans-os" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/ajans-os.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/ajans-os">ajans-os</a></h3>
 <div class="meta"><span class="chip lang">JavaScript</span><span class="chip tests" data-i="tests" data-n="183">183 tests</span></div>
@@ -793,6 +815,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/ajans-os" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/ajans-os/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="backend-service"><h2><span data-i="g_backend_service">Backend services</span><span class="count">1</span></h2><div class="grid"><article class="card" id="ai-job-gateway" data-search="ai-job-gateway provider-agnostic reference server and python client for the async ai job contract - submit, poll, webhook - with restart-safe idempotency keys and ssrf-guarded signed webhooks. api-gateway async-jobs backend dead-letter-queue fastapi generative-ai idempotency job-queue mcp-ecosystem provider-agnostic python retry ssrf-protection webhooks python 3.11+ fastapi webhooks python http-api library backend-service" data-cat="backend-service" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/ai-job-gateway" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/ai-job-gateway.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/ai-job-gateway">ai-job-gateway</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.1.0</span><span class="chip tests" data-i="tests" data-n="204">204 tests</span></div>
@@ -803,6 +826,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/ai-job-gateway" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/ai-job-gateway/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="web-app"><h2><span data-i="g_web_app">Web apps</span><span class="count">2</span></h2><div class="grid"><article class="card" id="buradane" data-search="buradane need-first finder for public places in türkiye - toilets, parks, drinking water, mosques and more - over 167,829 openstreetmap places in all 81 provinces, with direction, distance and freshness. accessibility civic-tech crowdsourcing fastapi geospatial maplibre mapping nextjs open-data openstreetmap postgis public-services python turkey turkiye typescript next.js typescript maplibre fastapi postgis python typescript web http-api web-app" data-cat="web-app" data-lang="TypeScript">
+<a class="thumb contain" href="https://github.com/Furkiozknn/buradane" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/buradane.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/buradane">buradane</a></h3>
 <div class="meta"><span class="chip lang">TypeScript</span><span class="chip tests" data-i="tests" data-n="405">405 tests</span></div>
@@ -813,6 +837,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/buradane" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/buradane/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="masal" data-search="masal personalised turkish bedtime stories built around a child&#x27;s name, age and hometown, with vector colouring pages drawn into the story. runs in the browser: no photo upload, no download, no api key. children coloring-book generative-text github-pages kids nlp no-build privacy-first storytelling svg turkce turkish vanilla-js web-app vanilla javascript svg no build step github pages javascript web web-app" data-cat="web-app" data-lang="JavaScript">
+<a class="thumb" href="https://github.com/Furkiozknn/masal" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/masal.png" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/masal">masal</a></h3>
 <div class="meta"><span class="chip lang">JavaScript</span><span class="chip ver">v1.0.0</span><span class="chip tests" data-i="tests" data-n="125">125 tests</span></div>
@@ -823,6 +848,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/masal" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/masal/" data-i="l_live">Live</a><a href="https://github.com/Furkiozknn/masal/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="game"><h2><span data-i="g_game">Games</span><span class="count">5</span></h2><div class="grid"><article class="card" id="tek-tus-kosu" data-search="tek-tus-kosu one-button endless rooftop runner in godot 4 with a rhythm mode that lays obstacles on the music&#x27;s beat grid and a post-run timing histogram. turkish and english ui, playable in the browser. 2d-game endless-runner game-development gdscript godot godot4 indie-game one-button rhythm-game turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
+<a class="thumb contain" href="https://github.com/Furkiozknn/tek-tus-kosu" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/tek-tus-kosu.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/tek-tus-kosu">tek-tus-kosu</a></h3>
 <div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v1.7.3</span><span class="chip tests" data-i="tests" data-n="1148">1,148 tests</span></div>
@@ -833,6 +859,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/tek-tus-kosu" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/tek-tus-kosu/" data-i="l_play">Play</a><a href="https://github.com/Furkiozknn/tek-tus-kosu/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="yercekimi-cevir" data-search="yercekimi-cevir precision platformer in godot 4 with no jump button: one key flips gravity across 20 hand-built rooms with bot-measured medal times. turkish and english ui, playable in the browser. 2d-game game-development gdscript godot godot4 gravity indie-game precision-platformer puzzle-platformer turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
+<a class="thumb contain" href="https://github.com/Furkiozknn/yercekimi-cevir" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/yercekimi-cevir.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/yercekimi-cevir">yercekimi-cevir</a></h3>
 <div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v0.7.2</span><span class="chip tests" data-i="tests" data-n="963">963 tests</span></div>
@@ -843,6 +870,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/yercekimi-cevir" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/yercekimi-cevir/" data-i="l_play">Play</a><a href="https://github.com/Furkiozknn/yercekimi-cevir/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="derin-kazi" data-search="derin-kazi side-view dig-sell-upgrade game in godot 4: mine ore, watch the fuel, upgrade the rig and reach the core at 250 m. seeded daily worlds, turkish and english ui, playable in the browser. 2d-game exploration game-development gdscript godot godot4 indie-game mining-game resource-management turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
+<a class="thumb contain" href="https://github.com/Furkiozknn/derin-kazi" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/derin-kazi.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/derin-kazi">derin-kazi</a></h3>
 <div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v0.7.2</span><span class="chip tests" data-i="tests" data-n="613">613 tests</span></div>
@@ -853,6 +881,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/derin-kazi" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/derin-kazi/" data-i="l_play">Play</a><a href="https://github.com/Furkiozknn/derin-kazi/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="kanca" data-search="kanca speed-focused 2d swinging platformer in godot 4: hook the ceiling, swing and release to carry momentum through 14 levels with bot-measured medal times. turkish and english ui, playable in the browser. 2d-game game-development gdscript godot godot4 grappling-hook indie-game platformer speedrun turkce godot 4.7 gdscript gl compatibility renderer gdscript windows web game" data-cat="game" data-lang="GDScript">
+<a class="thumb contain" href="https://github.com/Furkiozknn/kanca" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/kanca.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/kanca">kanca</a></h3>
 <div class="meta"><span class="chip lang">GDScript</span><span class="chip ver">v0.5.2</span><span class="chip tests" data-i="tests" data-n="216">216 tests</span></div>
@@ -863,6 +892,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/kanca" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/kanca/" data-i="l_play">Play</a><a href="https://github.com/Furkiozknn/kanca/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="nova-drift" data-search="nova-drift endless browser space-runner with three.js bloom and a web audio engine synthesized live - no sound files, no build step. near-miss bonuses and a daily seeded run everyone plays the same. arcade-game browser-game endless-runner game gamedev github-pages html5-game javascript no-build procedural-generation threejs threejs-game web-audio-api webgl webgl-game javascript three.js r160 webgl web audio api no build step javascript web game" data-cat="game" data-lang="JavaScript">
+<a class="thumb" href="https://github.com/Furkiozknn/nova-drift" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/nova-drift.webp" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/nova-drift">nova-drift</a></h3>
 <div class="meta"><span class="chip lang">JavaScript</span><span class="chip tests" data-i="tests" data-n="61">61 tests</span></div>
@@ -873,6 +903,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/nova-drift" data-i="l_repo">Repository</a><a href="https://furkiozknn.github.io/nova-drift/" data-i="l_play">Play</a><a href="https://github.com/Furkiozknn/nova-drift/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="template"><h2><span data-i="g_template">Templates</span><span class="count">1</span></h2><div class="grid"><article class="card" id="godot-2d-sablon" data-search="godot-2d-sablon two ready-to-run godot 4.7 2d starters - top-down with accelerated 8-way movement, side-view with coyote time and jump buffering - with jump curves measured from the real physics step. 2d boilerplate coyote-time game-development gamedev gdscript godot godot4 pixel-perfect platformer starter-template template top-down turkce godot 4.7 gdscript gl compatibility renderer gdscript godot template" data-cat="template" data-lang="GDScript">
+<a class="thumb" href="https://github.com/Furkiozknn/godot-2d-sablon" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/godot-2d-sablon.png" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/godot-2d-sablon">godot-2d-sablon</a></h3>
 <div class="meta"><span class="chip lang">GDScript</span><span class="chip tests" data-i="tests" data-n="37">37 tests</span></div>
@@ -883,6 +914,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/godot-2d-sablon" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/godot-2d-sablon/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="research"><h2><span data-i="g_research">Research</span><span class="count">1</span></h2><div class="grid"><article class="card" id="mcp-census" data-search="mcp-census reproducible count of the official mcp registry: the same question asked three ways gives three different numbers, and this measures why. cli data-analysis mcp mcp-registry measurement model-context-protocol open-data python reproducible-research zero-dependency python 3.11+ zero runtime dependencies python cli research" data-cat="research" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/mcp-census" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/mcp-census.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/mcp-census">mcp-census</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip ver">v0.2.0</span><span class="chip tests" data-i="tests" data-n="148">148 tests</span></div>
@@ -893,6 +925,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/mcp-census" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/mcp-census/releases" data-i="l_rel">Releases</a></div>
 </article></div></section>
 <section class="group" data-group="profile"><h2><span data-i="g_profile">This account</span><span class="count">2</span></h2><div class="grid"><article class="card" id="Furkiozknn.github.io" data-search="furkiozknn.github.io the searchable project directory for this account. every card is rendered from the project-meta.json a repository carries, so the page cannot claim anything the repository does not; a scheduled workflow rebuilds it from the live metadata every week. developer-portfolio github-pages project-directory static-site zero-dependency python 3 standard library only one static html file github pages python web profile" data-cat="profile" data-lang="Python">
+<a class="thumb" href="https://github.com/Furkiozknn/Furkiozknn.github.io" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/Furkiozknn.github.io.png" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/Furkiozknn.github.io">Furkiozknn.github.io</a></h3>
 <div class="meta"><span class="chip lang">Python</span><span class="chip tests" data-i="tests" data-n="63">63 tests</span></div>
@@ -903,6 +936,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="links"><a href="https://github.com/Furkiozknn/Furkiozknn.github.io" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/Furkiozknn.github.io/releases" data-i="l_rel">Releases</a></div>
 </article>
 <article class="card" id="Furkiozknn" data-search="furkiozknn source of the profile readme - agent infrastructure, developer tooling and the mcp servers underneath. every number on the page is traced to the suite run that printed it (see testler.md). hand-written svg, no generated stat cards. ai-agents claude-code developer-tools github-profile mcp portfolio profile-readme readme svg hand-written svg markdown python github profile" data-cat="profile" data-lang="Python">
+<a class="thumb contain" href="https://github.com/Furkiozknn/Furkiozknn" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/Furkiozknn.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/Furkiozknn">Furkiozknn</a></h3>
 <div class="meta"><span class="chip lang">Python</span></div>

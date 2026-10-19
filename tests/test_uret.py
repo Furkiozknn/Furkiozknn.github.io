@@ -632,3 +632,114 @@ def test_the_headline_test_total_is_formatted_by_the_active_language():
     assert 'data-num="5339">5,339</b>' in page  # server render stays en-US
     # the script re-formats every [data-num] with num(), which picks tr-TR / en-US by language
     assert "$$('[data-num]')" in page and "num(el.dataset.num)" in page
+
+
+# --------------------------------------------------------------------------
+# card previews - a local copy of an image the repository itself lists
+# --------------------------------------------------------------------------
+
+PNG = b"\x89PNG\r\n\x1a\n" + b"\x00" * 32
+SVG = b'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect width="10" height="10"/></svg>'
+
+
+def test_a_card_shows_a_preview_only_when_a_local_copy_exists(tmp_path, monkeypatch):
+    monkeypatch.setattr(uret, "PREVIEW_DIR", str(tmp_path))
+    bare = uret.card(meta())
+    assert 'class="thumb' not in bare and "<img" not in bare, "no copy, no picture - and no placeholder"
+
+    (tmp_path / "thing.png").write_bytes(PNG)
+    shown = uret.card(meta())
+    assert '<img src="assets/onizleme/thing.png" alt="" width="640" height="360" loading="lazy" decoding="async">' in shown
+    # decorative: the card's own text says it all, so readers and the tab order skip it
+    assert 'tabindex="-1" aria-hidden="true"' in shown
+    assert shown.index('class="thumb') < shown.index("<header>")
+
+
+def test_an_svg_preview_is_contained_not_cropped(tmp_path, monkeypatch):
+    monkeypatch.setattr(uret, "PREVIEW_DIR", str(tmp_path))
+    (tmp_path / "thing.svg").write_bytes(SVG)
+    assert 'class="thumb contain"' in uret.card(meta())
+
+
+def test_preview_candidates_come_only_from_the_media_block_in_a_sensible_order():
+    media = {"hero": "assets/banner.svg", "screenshots": ["docs/shot.png", "docs/two.webp"],
+             "gifs": ["docs/demo.gif"], "videos": ["docs/demo.mp4"]}
+    tool = uret.preview_candidates(meta(category="developer-tool", media=media))
+    game = uret.preview_candidates(meta(category="game", media=media))
+    assert tool == ["assets/banner.svg", "docs/shot.png", "docs/two.webp"]
+    assert game == ["docs/shot.png", "docs/two.webp", "assets/banner.svg"]
+    assert uret.preview_candidates(meta()) == [], "no media block, no guessed path"
+    assert uret.preview_candidates(meta(media=None)) == []
+
+
+@pytest.mark.parametrize("path", ["../secret.png", "/etc/x.png", "https://evil.example/x.png",
+                                  "docs/demo.gif", "docs/demo.mp4", "a b.png", ".hidden.png"])
+def test_a_preview_path_that_could_escape_or_is_not_a_still_image_is_ignored(path):
+    assert uret.preview_candidates(meta(media={"hero": path, "screenshots": []})) == []
+
+
+def test_the_bytes_decide_what_an_image_is_not_the_file_name():
+    assert uret.image_kind(PNG) == ".png"
+    assert uret.image_kind(b"\xff\xd8\xff\xe0" + b"\x00" * 16) == ".jpg"
+    assert uret.image_kind(b"RIFF\x00\x00\x00\x00WEBPVP8 ") == ".webp"
+    assert uret.image_kind(SVG) == ".svg"
+    assert uret.image_kind(b'<?xml version="1.0"?>\n' + SVG) == ".svg"
+    assert uret.image_kind(b"<!DOCTYPE html><html><body>404</body></html>") is None
+    assert uret.image_kind(b"GIF89a") is None
+
+
+@pytest.mark.parametrize("bad", [b"<script>alert(1)</script>", b'<rect onload="x()"/>',
+                                 b"<foreignObject><div/></foreignObject>",
+                                 b'<a href="javascript:x()"/>', b'<!ENTITY x "y">'])
+def test_an_svg_that_could_run_code_on_this_origin_is_refused(bad):
+    """An <img> never runs an SVG's script, but the copy is also served at its own
+    URL on this origin, where opening it directly would."""
+    svg = b'<svg xmlns="http://www.w3.org/2000/svg">' + bad + b"</svg>"
+    assert uret.image_kind(svg) is None
+
+
+def test_collect_previews_takes_the_first_candidate_that_is_really_a_small_image(tmp_path, monkeypatch):
+    monkeypatch.setattr(uret, "PREVIEW_DIR", str(tmp_path))
+    (tmp_path / "gone.png").write_bytes(PNG)  # a project that left the account
+    media = {"hero": "h.svg", "screenshots": ["big.png", "html.png", "ok.png"]}
+    served = {
+        "https://raw.githubusercontent.com/Furkiozknn/thing/master/big.png": PNG + b"\x00" * uret.MAX_PREVIEW_BYTES,
+        "https://raw.githubusercontent.com/Furkiozknn/thing/main/html.png": b"<html>not found</html>",
+        "https://raw.githubusercontent.com/Furkiozknn/thing/master/ok.png": PNG,
+    }
+
+    def get(url):
+        if url not in served:
+            raise uret.urllib.error.HTTPError(url, 404, "nf", None, None)
+        return served[url]
+
+    found = uret.collect_previews([meta(category="game", media=media), meta(id="plain")], get=get)
+    assert found == {"thing": {"file": "assets/onizleme/thing.png",
+                               "source": "https://raw.githubusercontent.com/Furkiozknn/thing/master/ok.png",
+                               "bytes": len(PNG)}}
+    assert (tmp_path / "thing.png").read_bytes() == PNG
+    assert not (tmp_path / "gone.png").exists(), "a stale preview must not linger"
+
+
+def test_every_preview_in_the_snapshot_is_a_committed_local_file_and_the_page_asks_no_other_host():
+    d = snapshot()
+    previews = d.get("previews") or {}
+    ids = {m["id"] for m in d["projects"]}
+    for pid, p in previews.items():
+        assert pid in ids, pid
+        f = ROOT / p["file"]
+        assert f.is_file(), p["file"]
+        assert f.stat().st_size == p["bytes"] <= uret.MAX_PREVIEW_BYTES, p["file"]
+        assert uret.image_kind(f.read_bytes()) == f.suffix, p["file"]
+        assert p["source"].startswith(f"https://raw.githubusercontent.com/{uret.OWNER}/{pid}/"), p["source"]
+    page = real_page()
+    assert page.count('class="thumb') == len(previews)
+    assert "raw.githubusercontent.com" not in page
+
+
+def test_the_snapshot_keeps_one_key_order_whichever_path_wrote_it(tmp_path, monkeypatch):
+    target = tmp_path / "veri" / "projeler.json"
+    monkeypatch.setattr(uret, "SNAPSHOT", str(target))
+    uret.write_snapshot({"projects": [], "previews": {}, "generated": "2026-01-01", "missing": [], "releases": []})
+    assert list(json.loads(target.read_text(encoding="utf-8"))) == ["generated", "missing", "releases", "previews", "projects"]
+    assert b"\r\n" not in target.read_bytes()
