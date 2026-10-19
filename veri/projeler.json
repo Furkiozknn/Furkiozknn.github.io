@@ -376,8 +376,8 @@
         "videos": []
       },
       "tests": {
-        "count": 82,
-        "source": "`python3 -m pytest tests -q`: `82 passed`",
+        "count": 89,
+        "source": "`python3 -m pytest tests -q`: `89 passed`",
         "measured": "2026-10-15"
       },
       "ci": {
@@ -636,8 +636,8 @@
         "videos": []
       },
       "tests": {
-        "count": 194,
-        "source": "`node --test`: `pass 194`",
+        "count": 203,
+        "source": "`node --test`: `pass 203`",
         "measured": "2026-10-15"
       },
       "ci": {
