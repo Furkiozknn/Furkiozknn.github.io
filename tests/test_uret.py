@@ -548,8 +548,8 @@ def test_translating_the_shell_never_touches_project_prose():
 
 
 def test_a_game_with_its_own_page_gets_a_play_link_and_one_on_an_anchor_gets_none():
-    assert ">Play<" in uret.card(meta(category="game", homepage=uret.SITE + "nova-drift/"))
-    assert ">Live<" not in uret.card(meta(category="game", homepage=uret.SITE + "nova-drift/"))
+    assert ">Play<" in uret.card(meta(category="game", homepage=uret.SITE + "isik-tuneli/"))
+    assert ">Live<" not in uret.card(meta(category="game", homepage=uret.SITE + "isik-tuneli/"))
     for home in (uret.SITE + "#thing", None):
         out = uret.card(meta(category="game", homepage=home))
         assert ">Play<" not in out and ">Live<" not in out
