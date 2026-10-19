@@ -5,8 +5,16 @@
 <link href="https://furkiozknn.github.io/feed.xml" rel="self"/>
 <link href="https://furkiozknn.github.io/"/>
 <id>https://furkiozknn.github.io/</id>
-<updated>2026-10-19T03:42:59Z</updated>
+<updated>2026-10-19T07:52:49Z</updated>
 <author><name>Furkiozknn</name></author>
+<entry>
+<title>Episodes 28+ (v3)</title>
+<link href="https://github.com/Furkiozknn/social-videos/releases/tag/ep28-plus"/>
+<id>https://github.com/Furkiozknn/social-videos/releases/tag/ep28-plus</id>
+<updated>2026-10-19T07:52:49Z</updated>
+<category term="social-videos"/>
+<summary>social-videos ep28-plus</summary>
+</entry>
 <entry>
 <title>v0.2.0</title>
 <link href="https://github.com/Furkiozknn/repo-vet/releases/tag/v0.2.0"/>

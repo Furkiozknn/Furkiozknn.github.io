@@ -1,75 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 176" width="1200" height="176" role="img" aria-label="Furki Ozkan - agent systems, MCP and developer tooling. 28 public repositories, 5,247 tests, 1096 commits.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Furki Özkan - agent infrastructure, MCP and developer tooling. 28 public repositories, 5,247 tests.">
+  <!-- Koyu tema. Acik tema: hero-light.svg; ikisi ayni cizim.
+       Sayilarin id'si var (sayi-repos, sayi-tests) ve
+       "N with suites" etiketi: schema/testler.py iki hero'yu da oradan
+       gunceller; kontrol modu ikisine de bakar. Metin sistem fontlariyla
+       ciziliyor: GitHub SVG icindeki dis fontlari yuklemez. -->
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#17161d"/>
-      <stop offset="60%" stop-color="#0e0d12"/>
+      <stop offset="0%" stop-color="#18171e"/>
       <stop offset="100%" stop-color="#0b0b0f"/>
     </linearGradient>
     <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f2efe6"/>
-      <stop offset="60%" stop-color="#e7dcc0"/>
+      <stop offset="0%" stop-color="#f4f1e8"/>
       <stop offset="100%" stop-color="#c9a961"/>
     </linearGradient>
     <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c9a961" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#c9a961" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#c9a961" stop-opacity="0"/>
     </linearGradient>
-    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <style>
+      .pulse { transform-origin: 1000px 186px; animation: p 3.2s ease-in-out infinite; }
+      .flow  { stroke-dasharray: 4 7; animation: f 2.4s linear infinite; }
+      @keyframes p { 0%,100% { opacity: .35; transform: scale(1); } 50% { opacity: 0; transform: scale(2.4); } }
+      @keyframes f { to { stroke-dashoffset: -22; } }
+      @media (prefers-reduced-motion: reduce) { .pulse, .flow { animation: none; } }
+    </style>
   </defs>
 
-  <rect width="1200" height="176" fill="url(#bg)"/>
+  <rect width="1200" height="240" rx="14" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="239" rx="14" fill="none" stroke="#24232c"/>
 
   <!-- one coordinator, calls in one direction: the shape of the work -->
-  <g opacity="0.42">
-    <g stroke="#33333f" stroke-width="1" fill="none">
-      <path d="M690 88 L604 34"/><path d="M690 88 L580 92"/><path d="M690 88 L612 142"/>
-      <path d="M690 88 L1108 30"/><path d="M690 88 L1150 96"/><path d="M690 88 L1096 146"/>
-    </g>
-    <g fill="#5a5a68">
-      <circle cx="580" cy="92" r="3"/><circle cx="612" cy="142" r="3"/>
-      <circle cx="1150" cy="96" r="3"/><circle cx="1096" cy="146" r="3"/>
-    </g>
+  <g stroke="#3a3a47" stroke-width="1" fill="none">
+    <path class="flow" d="M1000 186 L862 170"/><path class="flow" d="M1000 186 L1138 170"/>
+    <path d="M1000 186 L930 222"/><path d="M1000 186 L1072 222"/>
   </g>
-  <g filter="url(#glow)">
-    <circle cx="604" cy="34" r="3.5" fill="#6cb6ff"/>
-    <circle cx="1108" cy="30" r="3.5" fill="#e857c3"/>
-    <circle cx="690" cy="88" r="5" fill="#c9a961"/>
+  <g fill="#5a5a68">
+    <circle cx="930" cy="222" r="2.6"/><circle cx="1072" cy="222" r="2.6"/>
+  </g>
+  <circle cx="862" cy="170" r="3.4" fill="#6cb6ff"/>
+  <circle cx="1138" cy="170" r="3.4" fill="#e857c3"/>
+  <circle class="pulse" cx="1000" cy="186" r="6" fill="#c9a961"/>
+  <circle cx="1000" cy="186" r="4.6" fill="#c9a961"/>
+
+  <text x="56" y="58" font-family="'Segoe UI', -apple-system, Verdana, sans-serif" font-weight="600" font-size="12.5" letter-spacing="4.2" fill="#c9a961">AGENT INFRASTRUCTURE · MCP · DEVELOPER TOOLING</text>
+
+  <text x="53" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="url(#nameGrad)" letter-spacing="0.5">Furki Özkan</text>
+
+  <text x="56" y="152" font-family="'Segoe UI', -apple-system, Verdana, sans-serif" font-size="17" fill="#cfcabe">I build what AI agents run on — and the tools that check it actually works.</text>
+
+  <!-- the one call to action, inside the first thing anyone sees -->
+  <g font-family="'Segoe UI', -apple-system, Verdana, sans-serif" font-size="13">
+    <rect x="56" y="178" width="332" height="30" rx="15" fill="#12261b" stroke="#1f4a31"/>
+    <circle cx="76" cy="193" r="4.5" fill="#4ade9e"/>
+    <text x="90" y="197.5" fill="#b9e8cf">Available for remote contract work · UTC+3</text>
   </g>
 
-  <text x="56" y="44" font-family="'Segoe UI', Verdana, sans-serif" font-weight="600" font-size="12.5" letter-spacing="4.5" fill="#c9a961" opacity="0.9">AGENT SYSTEMS · MCP · DEVELOPER TOOLING</text>
-
-  <text x="54" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="url(#nameGrad)" letter-spacing="0.5">Furki Özkan</text>
-
-  <text x="56" y="130" font-family="'Segoe UI', Verdana, sans-serif" font-size="15.5" fill="#c7c2b6" opacity="0.9">I build what agents run on — and the tooling that checks it actually works.</text>
-
-  <line x1="56" y1="150" x2="330" y2="150" stroke="url(#hair)" stroke-width="1.5"/>
-
-  <g font-family="'Cascadia Code','Consolas',monospace">
-    <!-- Sayi hucreleri: etiket, sayinin hemen ardindan `tspan dx` ile
-         akiyor; eskiden her etiketin x'i elle yazilmisti ve "1,019" ile
-         "commits" ust uste biniyordu (cairosvg'de de, Chromium'da da).
-         Bir basamak eklendiginde yine binerdi. Sayilarin id'si var:
-         schema/testler.py onlari oradan gunceller. -->
+  <g font-family="'Cascadia Code', 'SF Mono', Consolas, monospace">
     <g>
-      <rect x="726" y="58" width="122" height="60" rx="9" fill="#141419" stroke="#2a2a33"/>
-      <text x="746" y="88" fill="#c9a961" font-size="21" id="sayi-repos">28<tspan
+      <rect x="878" y="40" width="120" height="64" rx="10" fill="#141419" stroke="#2a2a33"/>
+      <text x="896" y="72" fill="#c9a961" font-size="22" id="sayi-repos">28<tspan
         fill="#9a9aa6" font-size="13" dx="7">repos</tspan></text>
-      <text x="746" y="106" fill="#6b6b77" font-size="11">26 with suites</text>
+      <text x="896" y="91" fill="#6f6f7b" font-size="11">26 with suites</text>
     </g>
     <g>
-      <rect x="860" y="58" width="146" height="60" rx="9" fill="#141419" stroke="#2a2a33"/>
-      <text x="880" y="88" fill="#4ade9e" font-size="21" id="sayi-tests">5,247<tspan
+      <rect x="1008" y="40" width="150" height="64" rx="10" fill="#141419" stroke="#2a2a33"/>
+      <text x="1026" y="72" fill="#4ade9e" font-size="22" id="sayi-tests">5,247<tspan
         fill="#9a9aa6" font-size="13" dx="7">tests</tspan></text>
-      <text x="880" y="106" fill="#6b6b77" font-size="11">each count traced</text>
-    </g>
-    <g>
-      <rect x="1018" y="58" width="160" height="60" rx="9" fill="#141419" stroke="#2a2a33"/>
-      <text x="1038" y="88" fill="#6cb6ff" font-size="21" id="sayi-commits">1,096<tspan
-        fill="#9a9aa6" font-size="13" dx="7">commits</tspan></text>
-      <text x="1038" y="106" fill="#6b6b77" font-size="11">22 Sep 2026</text>
+      <text x="1026" y="91" fill="#6f6f7b" font-size="11">each count traced</text>
     </g>
   </g>
 </svg>

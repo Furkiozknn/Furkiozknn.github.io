@@ -3,6 +3,14 @@
   "missing": [],
   "releases": [
     {
+      "repo": "social-videos",
+      "tag": "ep28-plus",
+      "title": "Episodes 28+ (v3)",
+      "url": "https://github.com/Furkiozknn/social-videos/releases/tag/ep28-plus",
+      "published": "2026-10-19T07:52:49Z",
+      "prerelease": false
+    },
+    {
       "repo": "repo-vet",
       "tag": "v0.2.0",
       "title": "v0.2.0",
@@ -135,7 +143,7 @@
     "Furkiozknn": {
       "file": "assets/onizleme/Furkiozknn.svg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn/main/assets/hero.svg",
-      "bytes": 3988
+      "bytes": 4091
     },
     "Furkiozknn.github.io": {
       "file": "assets/onizleme/Furkiozknn.github.io.png",
@@ -858,9 +866,9 @@
         "videos": []
       },
       "tests": {
-        "count": 412,
-        "source": "119 backend (CI log: `119 passed`) + 293 frontend (vitest)",
-        "measured": "2026-09-29"
+        "count": 431,
+        "source": "132 backend (119 + 13 in tests/test_query_validation.py) + 299 frontend (vitest, 6 in tests/basemap.test.ts)",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
@@ -2669,7 +2677,7 @@
       ],
       "summary": "Checks what a GitHub repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. Six checks over the GitHub API, no clone, zero dependencies.",
       "key_features": [
-        "Checks a README's install commands against PyPI and npm, so the first command a visitor runs is one that still resolves",
+        "Checks a README's install commands against PyPI, npm and crates.io, so the first command a visitor runs is one that still resolves",
         "Only fenced code blocks count as instructions: a sentence mentioning a command is discussing it, not asking anyone to run it",
         "Says nothing when it cannot see - an unreachable registry, a rate limit, an unreadable README or tag list, or a tree GitHub truncated is reported as not checked, never as clean (exit 3 when nothing could be read)",
         "Checked against 29 public repositories that disagree with each other; every false positive it produced is now a named test",
@@ -2686,9 +2694,9 @@
         ]
       },
       "tests": {
-        "count": 173,
-        "source": "unittest: `Ran 173 tests` (local run, 2026-09-30)",
-        "measured": "2026-09-30"
+        "count": 215,
+        "source": "unittest: `Ran 215 tests` (local run, 2026-10-19, with -Werror::ResourceWarning)",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
