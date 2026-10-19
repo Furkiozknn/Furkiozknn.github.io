@@ -376,8 +376,11 @@ def card(m):
          " ".join(m.get("technologies") or []), m.get("primary_language") or "",
          " ".join(m.get("platform") or []), m.get("category") or ""]
     ).lower()
+    # The status goes in a data attribute, not the class: class="card" is what
+    # the CI render check counts.
+    status = ' data-status="archived"' if m.get("status") == "archived" else ""
     out = [f'<article class="card" id="{e(pid)}" data-search="{e(search)}" '
-           f'data-cat="{e(m.get("category") or "")}" data-lang="{e(m.get("primary_language") or "")}">']
+           f'data-cat="{e(m.get("category") or "")}" data-lang="{e(m.get("primary_language") or "")}"{status}>']
     thumb = preview_file(pid)
     if thumb:
         # Decorative: the name, summary and links below say everything the
@@ -410,6 +413,37 @@ def card(m):
     return "\n".join(out)
 
 
+def try_now(rows):
+    """Projects a visitor can use this minute: a homepage that is a page of its own
+    (a game, a web app, a catalogue), not an anchor on this directory, and not
+    archived. Games first, then by name, so the strip is stable between rebuilds."""
+    picks = [m for m in rows
+             if m.get("homepage") and not points_here(m["homepage"]) and m.get("status") != "archived"]
+    picks.sort(key=lambda m: (m.get("category") != "game", m["id"]))
+    return picks
+
+
+def try_strip(rows):
+    """The "Try it now" row under the headline; empty when nothing qualifies, so the
+    page never shows a heading over nothing."""
+    picks = try_now(rows)
+    if not picks:
+        return ""
+    items = []
+    for m in picks:
+        play = m.get("category") == "game"
+        items.append(
+            f'<li><a class="try-item" href="{e(m["homepage"])}">'
+            f'<span class="try-name">{e(m["id"])}</span>'
+            f'<span class="try-act" data-i="{"l_play" if play else "l_open"}">{"Play" if play else "Open"}</span>'
+            f'</a></li>')
+    return ('<section class="try" aria-labelledby="try-h">'
+            '<h2 id="try-h"><span data-i="try_h">Try it now</span>'
+            f'<span class="count">{len(picks)}</span></h2>'
+            '<p class="try-note" data-i="try_note">Opens in the browser &mdash; nothing to install.</p>'
+            '<ul class="try-list">' + "".join(items) + "</ul></section>")
+
+
 def render(rows, missing, when):
     """The whole page: headline totals, filters, one section per category.
 
@@ -419,8 +453,11 @@ def render(rows, missing, when):
     by_cat = {}
     for m in rows:
         by_cat.setdefault(m.get("category") or "other", []).append(m)
+    # Archived projects go last in their group: they keep their card, but a
+    # visitor should meet what is maintained first, whatever its test count.
     for v in by_cat.values():
-        v.sort(key=lambda m: (-((m.get("tests") or {}).get("count") or 0), m["id"]))
+        v.sort(key=lambda m: (m.get("status") == "archived",
+                              -((m.get("tests") or {}).get("count") or 0), m["id"]))
 
     # Archived projects keep their own card and their own count, but they are
     # left out of the headline so this page and TESTLER.md say the same number.
@@ -468,6 +505,7 @@ def render(rows, missing, when):
         langfilters=langfilters,
         sections="\n".join(sections),
         note=note,
+        trynow=try_strip(rows),
         jsonld=jsonld(rows, when),
         groups_en=js_labels(dict(GROUPS)),
         groups_tr=js_labels(GROUPS_TR),

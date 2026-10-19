@@ -514,6 +514,18 @@ h1::after { content:""; display:block; width:88px; height:8px; background:var(--
 .stat b { display:block; font:400 46px/1 var(--display); letter-spacing:.01em; color:var(--accent); }
 .stat span { color:var(--dim); font:12px/1.4 var(--mono); }
 .links-top { margin:0; font-size:14px; }
+/* "Try it now": what runs in a browser this minute, above everything that needs a clone. */
+.try { margin:26px 0 0; }
+.try h2 { font:400 28px/1 var(--display); text-transform:uppercase; letter-spacing:.03em; margin:0 0 4px;
+  display:flex; align-items:baseline; gap:10px; }
+.try h2 .count { color:var(--dim); font:700 13px var(--mono); letter-spacing:0; }
+.try-note { margin:0 0 10px; color:var(--dim); font:12px/1.5 var(--mono); }
+.try-list { list-style:none; margin:0; padding:0; display:flex; gap:8px; flex-wrap:wrap; }
+a.try-item { display:flex; align-items:center; gap:10px; min-height:44px; padding:8px 12px;
+  background:var(--panel); border:1px solid var(--line); border-radius:8px; text-decoration:none; color:var(--text); }
+a.try-item:hover { border-color:var(--accent); color:var(--text); }
+.try-name { font:700 14px/1.2 var(--mono); }
+.try-act { font:700 11px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--accent); }
 .tools { position:sticky; top:0; background:var(--bar); backdrop-filter:blur(6px);
   padding:14px 0; border-bottom:1px solid var(--line); z-index:9; margin-bottom:8px; }
 .sbox { position:relative; }
@@ -539,6 +551,7 @@ button.f.on { background:var(--accent); border-color:var(--accent); color:var(--
   scroll-margin-top:calc(var(--tools-h) + 16px); }
 .card:hover { border-color:color-mix(in srgb, var(--accent) 45%, var(--line)); }
 .card:target { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.card[data-status="archived"] { border-style:dashed; }
 /* A preview is a local copy of an image the repository's own media block lists.
    The box keeps its 16:9 shape before the image arrives, so nothing jumps. */
 .thumb { display:block; margin:-18px -18px 14px; border-bottom:1px solid var(--line);
@@ -622,6 +635,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
   <p class="links-top"><a href="https://github.com/Furkiozknn" data-i="l_profile">GitHub profile</a> &middot;
      <a href="https://github.com/Furkiozknn/Furkiozknn/blob/main/TESTLER.md" data-i="l_tests">Where the test numbers come from</a> &middot;
      <a href="https://github.com/Furkiozknn/Furkiozknn/blob/main/schema/README.md" data-i="l_schema">The metadata schema</a></p>
+<section class="try" aria-labelledby="try-h"><h2 id="try-h"><span data-i="try_h">Try it now</span><span class="count">7</span></h2><p class="try-note" data-i="try_note">Opens in the browser &mdash; nothing to install.</p><ul class="try-list"><li><a class="try-item" href="https://furkiozknn.github.io/derin-kazi/"><span class="try-name">derin-kazi</span><span class="try-act" data-i="l_play">Play</span></a></li><li><a class="try-item" href="https://furkiozknn.github.io/kanca/"><span class="try-name">kanca</span><span class="try-act" data-i="l_play">Play</span></a></li><li><a class="try-item" href="https://furkiozknn.github.io/nova-drift/"><span class="try-name">nova-drift</span><span class="try-act" data-i="l_play">Play</span></a></li><li><a class="try-item" href="https://furkiozknn.github.io/tek-tus-kosu/"><span class="try-name">tek-tus-kosu</span><span class="try-act" data-i="l_play">Play</span></a></li><li><a class="try-item" href="https://furkiozknn.github.io/yercekimi-cevir/"><span class="try-name">yercekimi-cevir</span><span class="try-act" data-i="l_play">Play</span></a></li><li><a class="try-item" href="https://furkiozknn.github.io/masal/"><span class="try-name">masal</span><span class="try-act" data-i="l_open">Open</span></a></li><li><a class="try-item" href="https://furkiozknn.github.io/turkce-ajanlar/"><span class="try-name">turkce-ajanlar</span><span class="try-act" data-i="l_open">Open</span></a></li></ul></section>
 </header>
 
 <main id="main">
@@ -748,7 +762,7 @@ footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--line); co
 <div class="topics"><span class="topic">analytics</span><span class="topic">claude-code</span><span class="topic">cli</span><span class="topic">cost-tracking</span><span class="topic">developer-tools</span><span class="topic">local-first</span><span class="topic">observability</span><span class="topic">opentelemetry</span></div>
 <div class="links"><a href="https://github.com/Furkiozknn/claude-code-intelligence" data-i="l_repo">Repository</a><a href="https://github.com/Furkiozknn/claude-code-intelligence/releases" data-i="l_rel">Releases</a></div>
 </article>
-<article class="card" id="claude-quota-monitor" data-search="claude-quota-monitor superseded early prototype of claude code quota tracking. the maintained implementation lives in claude-code-intelligence. archived claude-code prototype python quota python local web dashboard python cli local-dashboard observability" data-cat="observability" data-lang="Python">
+<article class="card" id="claude-quota-monitor" data-search="claude-quota-monitor superseded early prototype of claude code quota tracking. the maintained implementation lives in claude-code-intelligence. archived claude-code prototype python quota python local web dashboard python cli local-dashboard observability" data-cat="observability" data-lang="Python" data-status="archived">
 <a class="thumb contain" href="https://github.com/Furkiozknn/claude-quota-monitor" tabindex="-1" aria-hidden="true"><img src="assets/onizleme/claude-quota-monitor.svg" alt="" width="640" height="360" loading="lazy" decoding="async"></a>
 <header>
 <h3><a href="https://github.com/Furkiozknn/claude-quota-monitor">claude-quota-monitor</a></h3>
@@ -972,6 +986,7 @@ const I18N = {
     f_cat:'Filter by category', f_lang:'Filter by language', empty:'Nothing matches that.',
     shown:'{a} of {b} projects shown',
     tests:'{n} tests', archived:'archived', l_repo:'Repository', l_live:'Live', l_play:'Play', l_rel:'Releases',
+    l_open:'Open', try_h:'Try it now', try_note:'Opens in the browser — nothing to install.',
     lang_label:'Switch to Turkish', lang_btn:'TR', lang_lang:'tr',
     f1:'This page is generated by <a href="https://github.com/Furkiozknn/Furkiozknn.github.io/blob/main/uret.py"><code>uret.py</code></a> from the <code>project-meta.json</code> in every repository, and refreshed by a scheduled workflow. A field that is <code>null</code> in the metadata is left off the page rather than filled in with a guess.',
     f2:'Machine-readable: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> is the same data this page is rendered from, and <a href="feed.xml">an Atom feed</a> carries every release across the repositories, so a reader or a script can follow the whole account without polling it.',
@@ -988,6 +1003,7 @@ const I18N = {
     f_cat:'Kategoriye göre süz', f_lang:'Dile göre süz', empty:'Eşleşen bir şey yok.',
     shown:'{b} projeden {a} tanesi gösteriliyor',
     tests:'{n} test', archived:'arşivlendi', l_repo:'Depo', l_live:'Canlı', l_play:'Oyna', l_rel:'Sürümler',
+    l_open:'Aç', try_h:'Hemen dene', try_note:'Tarayıcıda açılır — kurulacak bir şey yok.',
     lang_label:'Switch to English', lang_btn:'EN', lang_lang:'en',
     f1:'Bu sayfa, her depodaki <code>project-meta.json</code> dosyasından <a href="https://github.com/Furkiozknn/Furkiozknn.github.io/blob/main/uret.py"><code>uret.py</code></a> ile üretilir ve zamanlanmış bir iş akışıyla yenilenir. Metadata\'da <code>null</code> olan bir alan tahminle doldurulmaz, sayfada hiç yer almaz.',
     f2:'Makine tarafından okunabilir: <a href="veri/projeler.json"><code>veri/projeler.json</code></a> bu sayfanın üretildiği veridir; <a href="feed.xml">Atom akışı</a> bütün depoların sürümlerini taşır, böylece bir okuyucu ya da betik hesabı yoklamadan izleyebilir.',
