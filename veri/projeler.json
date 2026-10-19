@@ -1,8 +1,10 @@
 {
   "generated": "2026-10-19",
   "missing": [
-    "canli-dunyalar",
-    "social-videos"
+    "frk-components",
+    "kor",
+    "lodeworks",
+    "nova-drift"
   ],
   "releases": [
     {
@@ -19,6 +21,14 @@
       "title": "v0.3.0",
       "url": "https://github.com/Furkiozknn/godot-refcheck/releases/tag/v0.3.0",
       "published": "2026-10-19T03:42:57Z",
+      "prerelease": false
+    },
+    {
+      "repo": "social-videos",
+      "tag": "ep21-27",
+      "title": "Episodes 21-27 (v3)",
+      "url": "https://github.com/Furkiozknn/social-videos/releases/tag/ep21-27",
+      "published": "2026-10-19T03:19:20Z",
       "prerelease": false
     },
     {
@@ -161,6 +171,11 @@
       "file": "assets/onizleme/buradane.svg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/buradane/main/assets/banner.svg",
       "bytes": 4416
+    },
+    "canli-dunyalar": {
+      "file": "assets/onizleme/canli-dunyalar.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/canli-dunyalar/master/worlds/vapur/shots/02-selected-ferry.jpg",
+      "bytes": 57418
     },
     "claude-code-intelligence": {
       "file": "assets/onizleme/claude-code-intelligence.svg",
@@ -843,8 +858,8 @@
         "videos": []
       },
       "tests": {
-        "count": 405,
-        "source": "119 backend (CI log: `119 passed`) + 286 frontend (vitest)",
+        "count": 412,
+        "source": "119 backend (CI log: `119 passed`) + 293 frontend (vitest)",
         "measured": "2026-09-29"
       },
       "ci": {
@@ -878,6 +893,80 @@
         "generated_at": "2026-09-22",
         "generator": "schema/uret.py",
         "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "canli-dunyalar",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/canli-dunyalar",
+      "homepage": "https://furkiozknn.github.io/canli-dunyalar/worlds/vapur/",
+      "releases": "https://github.com/Furkiozknn/canli-dunyalar/releases",
+      "status": "active",
+      "category": "web-app",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "HTML",
+      "technologies": [
+        "Three.js r170",
+        "WebGL",
+        "single HTML file per world",
+        "no build step",
+        "GitHub Pages"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "claude-code",
+        "simulation",
+        "single-file",
+        "threejs",
+        "webgl"
+      ],
+      "summary": "Single-file living 3D worlds in Three.js, tuned for laptop iGPUs · Laptop ekran kartına uygun, tek dosyalık canlı 3D Three.js dünyaları",
+      "key_features": [
+        "Vapur (https://furkiozknn.github.io/canli-dunyalar/worlds/vapur/): an Istanbul-style strait where timetabled ferries give way to a tanker, with poyraz, lodos and fog weather and a night mode",
+        "Balon (https://furkiozknn.github.io/canli-dunyalar/worlds/balon/): a Cappadocia-style valley where 12 hot-air balloons keep altitude separation and chase trucks follow the predicted landing",
+        "Each world is one index.html with no build step, written from one prompt in prompts/ using a six-block template with a dedicated Performance block",
+        "Tuned for laptop iGPUs: pixel ratio capped at 1.5, one shadow map, instanced meshes; ?low drops shadows and particles, ?record hides the UI for screen capture"
+      ],
+      "media": {
+        "hero": null,
+        "screenshots": [
+          "worlds/vapur/shots/02-selected-ferry.jpg",
+          "worlds/balon/shots/01-dawn-overview.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Two living 3D worlds, each a single HTML file, that run on a laptop's built-in graphics.",
+        "hashtags": [
+          "threejs",
+          "webgl",
+          "claudecode"
+        ],
+        "primary_link": "https://furkiozknn.github.io/canli-dunyalar/worlds/vapur/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-19",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
       }
     },
     {
@@ -1263,6 +1352,7 @@
         "An Input Map action a script asks for by name and the project never defines is an error that names the action it most likely meant; actions added or tested for at run time count as present",
         "--fix repairs in place what the project itself settles: a moved file, a case-only difference, a uid that already resolves; two files with the same name produce no repair",
         "Verified against a headless Godot: ten engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
+        "Findings reach a pull request as GitHub annotations by default, and SARIF locations are relative to the checkout, so code scanning places them on the right file",
         "Calibrated on 237 projects in eleven real repositories: 50 findings, each confirmed by hand, no change proposed anywhere"
       ],
       "media": {
@@ -1274,8 +1364,8 @@
         "videos": []
       },
       "tests": {
-        "count": 169,
-        "source": "CI log: `=== 169 tests passed ===`",
+        "count": 176,
+        "source": "CI log: `=== 176 tests passed ===`",
         "measured": "2026-10-15"
       },
       "ci": {
@@ -1326,7 +1416,7 @@
       "primary_language": "JavaScript",
       "technologies": [
         "JavaScript",
-        "Three.js r160",
+        "Three.js r186",
         "WebGL",
         "Web Audio API",
         "no build step"
@@ -1355,7 +1445,7 @@
         "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
         "Audio engine synthesized live in Web Audio - not one sound file in the repository",
         "Skim an obstacle without touching it and take the near-miss bonus",
-        "A daily run seeded from the UTC date deals every player the same obstacles; 0.8 MB first load, no build step",
+        "A daily run seeded from the UTC date deals every player the same obstacles; 1 MB first load, no build step",
         "Every test runs with the page sealed to its own origin, so a reintroduced CDN import breaks CI instead of passing it"
       ],
       "media": {
@@ -1368,9 +1458,9 @@
         "videos": []
       },
       "tests": {
-        "count": 61,
-        "source": "`61 passed` (Playwright)",
-        "measured": "2026-09-29"
+        "count": 81,
+        "source": "`81 passed` (Playwright)",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
@@ -1388,7 +1478,7 @@
         "license_file": "LICENSE"
       },
       "social": {
-        "headline": "0.8 MB, no build step, real bloom - and every sound synthesized on the fly.",
+        "headline": "1 MB, no build step, real bloom - and every sound synthesized on the fly.",
         "hashtags": [
           "threejs",
           "webgl",
@@ -1726,7 +1816,7 @@
         ]
       },
       "tests": {
-        "count": 163,
+        "count": 214,
         "source": "CI log: `148 passed`",
         "measured": "2026-09-30"
       },
@@ -1817,8 +1907,8 @@
         "videos": []
       },
       "tests": {
-        "count": 611,
-        "source": "CI log: `611 passed`",
+        "count": 641,
+        "source": "CI log: `641 passed`",
         "measured": "2026-09-30"
       },
       "ci": {
@@ -2256,8 +2346,8 @@
         "videos": []
       },
       "tests": {
-        "count": 172,
-        "source": "CI log: `172 passed`",
+        "count": 177,
+        "source": "CI log: `177 passed`",
         "measured": "2026-09-30"
       },
       "ci": {
@@ -2380,6 +2470,71 @@
         "generated_at": "2026-09-22",
         "generator": "schema/uret.py",
         "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "social-videos",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/social-videos",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/social-videos/releases",
+      "status": "active",
+      "category": "profile",
+      "platform": [
+        "github-releases"
+      ],
+      "primary_language": null,
+      "technologies": [
+        "Remotion",
+        "GitHub Releases"
+      ],
+      "version": null,
+      "license": null,
+      "topics": [
+        "claude-code",
+        "remotion",
+        "shorts",
+        "social-media"
+      ],
+      "summary": "Video hosting for the Built with Claude Code series (Shorts, Reels, Stories) · Built with Claude Code serisinin kısa videoları için barındırma",
+      "key_features": [
+        "Short videos of the Built with Claude Code series for YouTube Shorts, Instagram Reels and Stories, and X",
+        "Video files live in GitHub Releases, one release per batch of episodes, so the scheduler gets stable public download URLs",
+        "The voiceover is AI-generated (Supertonic 3) and says so in the README; the videos are made with Remotion"
+      ],
+      "media": {
+        "hero": null,
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": null
+      },
+      "social": {
+        "headline": "Where the Built with Claude Code short videos are hosted, one release per batch of episodes.",
+        "hashtags": [
+          "claudecode",
+          "remotion"
+        ],
+        "primary_link": "https://github.com/Furkiozknn/social-videos/releases"
+      },
+      "provenance": {
+        "generated_at": "2026-10-19",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
       }
     },
     {
