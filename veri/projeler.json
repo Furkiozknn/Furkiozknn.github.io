@@ -1,11 +1,6 @@
 {
   "generated": "2026-10-19",
-  "missing": [
-    "frk-components",
-    "kor",
-    "lodeworks",
-    "nova-drift"
-  ],
+  "missing": [],
   "releases": [
     {
       "repo": "repo-vet",
@@ -191,6 +186,11 @@
       "file": "assets/onizleme/derin-kazi.svg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/derin-kazi/main/yayin/banner.svg",
       "bytes": 3381
+    },
+    "frk-components": {
+      "file": "assets/onizleme/frk-components.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/frk-components/main/assets/galeri/odometer-390.png",
+      "bytes": 79416
     },
     "godot-2d-sablon": {
       "file": "assets/onizleme/godot-2d-sablon.png",
@@ -1223,6 +1223,73 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "frk-components",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/frk-components",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/frk-components/releases",
+      "status": "active",
+      "category": "developer-tool",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "vanilla JavaScript",
+        "Canvas",
+        "HyperFrames",
+        "no dependencies"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "accessibility",
+        "animation",
+        "canvas",
+        "claude-code",
+        "deterministic",
+        "hyperframes",
+        "javascript",
+        "ui-components",
+        "zero-dependency"
+      ],
+      "summary": "Single-file, dependency-free UI components that animate frame by frame; each one is a live demo, a HyperFrames video scene and copyable code, with real measurements · Tek dosyalık, kütüphanesiz, kare kare oynatılabilen arayüz parçaları; her biri canlı demo, HyperFrames video sahnesi ve kopyalanabilir kod",
+      "key_features": [
+        "Seven single-file UI parts (odometer, prompt terminal, rope swing, status orb, contribution heat, code diff, progress ring), each with a live demo",
+        "One shared contract: mount, a pure seek(t), play, pause, destroy; randomness only from a seed, checked by a source scan",
+        "Each part is also a HyperFrames video scene with generated, schema-validated catalogue manifests",
+        "Real measurements in OLCUM.md; real phones and iOS Safari are stated as not measured"
+      ],
+      "media": {
+        "hero": null,
+        "screenshots": [
+          "assets/galeri/odometer-390.png",
+          "assets/galeri/status-orb-390.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "provenance": {
+        "generated_at": "2026-10-19",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "godot-2d-sablon",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/godot-2d-sablon",
@@ -1586,6 +1653,70 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "kor",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/kor",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/kor/releases",
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "windows",
+        "web"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "2d-game",
+        "game",
+        "gdscript",
+        "godot",
+        "godot4",
+        "indie-game",
+        "pixel-art",
+        "roguelite",
+        "survivors-like",
+        "turkish"
+      ],
+      "summary": "Top-down roguelite in Godot 4 set in a dark foundry where heat is vision, not ammo: shooting warms you and widens your sight, dashing vents heat and leaves you blind · Karanlık bir dökümhanede geçen Godot 4 roguelite: ısı mermi değil görüş; ateş ettikçe görüşün açılır, dalış ısıyı boşaltır ve seni kör bırakır",
+      "key_features": [
+        "Heat is vision, not ammo: the arena is dark and your sight radius comes from your heat alone, from 40 px cold to 336 px locked",
+        "Firing heats the gun; at the ceiling it locks for two seconds and a dash cannot break the lock",
+        "Dashing dumps heat and leaves you nearly blind, so safety is paid for with sight",
+        "Third-party art and audio credited in KUNYE.md and on an in-game credits screen"
+      ],
+      "media": {
+        "hero": null,
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "provenance": {
+        "generated_at": "2026-10-19",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "local-notes-search-mcp",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/local-notes-search-mcp",
@@ -1675,6 +1806,77 @@
         "generated_at": "2026-09-22",
         "generator": "schema/uret.py",
         "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "lodeworks",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/lodeworks",
+      "homepage": null,
+      "releases": "https://github.com/Furkiozknn/lodeworks/releases",
+      "status": "prototype",
+      "category": "game",
+      "platform": [
+        "android"
+      ],
+      "primary_language": "GDScript",
+      "technologies": [
+        "Godot 4.7",
+        "GDScript",
+        "Android"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "android",
+        "factory-game",
+        "game",
+        "gdscript",
+        "godot",
+        "godot4",
+        "idle-game",
+        "mobile-game",
+        "simulation"
+      ],
+      "summary": "Idle machine-grid builder for Android in Godot 4.7: place machines that feed each other by adjacency, manage heat and descend the strata · Godot 4.7 ile Android için idle makine ızgarası oyunu: komşuluğa göre birbirini besleyen makineler kur, ısıyı yönet, katmanlara in",
+      "key_features": [
+        "Machines feed each other by adjacency; manage heat and descend the strata",
+        "An eight-step first chapter taught on your real board, then no more tutorial windows",
+        "Codex pages run a real two-to-five tile Simulation instead of describing the rule",
+        "Not published on Google Play; the README says so"
+      ],
+      "media": {
+        "hero": null,
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": {
+        "count": 255,
+        "source": "CI log (ci.yml, main, 2026-10-19): `=== 255 tests passed (2082 assertions) ===`",
+        "measured": "2026-10-19"
+      },
+      "ci": {
+        "workflows": [
+          "ci.yml",
+          "android.yml"
+        ],
+        "badge": "https://github.com/Furkiozknn/lodeworks/actions/workflows/ci.yml/badge.svg"
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "provenance": {
+        "generated_at": "2026-10-19",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
       }
     },
     {
@@ -2117,6 +2319,54 @@
         "generated_at": "2026-09-22",
         "generator": "schema/uret.py",
         "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "nova-drift",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/nova-drift",
+      "homepage": "https://furkiozknn.github.io/isik-tuneli/",
+      "releases": "https://github.com/Furkiozknn/nova-drift/releases",
+      "status": "archived",
+      "category": "profile",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "HTML",
+      "technologies": [
+        "static redirect page"
+      ],
+      "version": null,
+      "license": null,
+      "topics": [],
+      "summary": "Redirect: Nova Drift is now Işık Tüneli · Yönlendirme: Nova Drift'in yeni adı Işık Tüneli",
+      "key_features": [
+        "Only forwards the old Pages address https://furkiozknn.github.io/nova-drift/ to https://furkiozknn.github.io/isik-tuneli/, keeping path, query and hash; the game lives in Furkiozknn/isik-tuneli"
+      ],
+      "media": {
+        "hero": null,
+        "screenshots": [],
+        "gifs": [],
+        "videos": []
+      },
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": null
+      },
+      "provenance": {
+        "generated_at": "2026-10-19",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
       }
     },
     {
