@@ -1,6 +1,16 @@
 {
-  "generated": "2026-10-19",
-  "missing": [],
+  "generated": "2026-10-26",
+  "missing": [
+    "cay-ocagi",
+    "cay-ocagi-godot",
+    "cini-ustasi",
+    "cini-ustasi-godot",
+    "claude-game-arena",
+    "hisar-godot",
+    "kale-savunmasi",
+    "marti",
+    "marti-godot"
+  ],
   "releases": [
     {
       "repo": "social-videos",
@@ -1192,9 +1202,9 @@
         "videos": []
       },
       "tests": {
-        "count": 613,
-        "source": "CI log: 358 unit (`== 358 sınama, 0 hata ==`) + 238 gameplay (`== 238 sınama, 0 hata ==`) + 7 balance (`== 7 sınama, 0 hata ==`) + 10 human-like (`== 10 sınama, 0 hata ==`)",
-        "measured": "2026-09-29"
+        "count": 658,
+        "source": "CI log: 395 unit (`== 395 sınama, 0 hata ==`) + 246 gameplay (`== 246 sınama, 0 hata ==`) + 7 balance (`== 7 sınama, 0 hata ==`) + 10 human-like (`== 10 sınama, 0 hata ==`)",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
@@ -1622,9 +1632,9 @@
         "videos": []
       },
       "tests": {
-        "count": 216,
-        "source": "CI log: `=== 216/216 gecti ===`",
-        "measured": "2026-09-29"
+        "count": 244,
+        "source": "CI log: `=== 244/244 gecti ===`",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
@@ -2191,7 +2201,7 @@
         "python",
         "video-processing"
       ],
-      "summary": "23 CPU-first media tools as an MCP server and CLI: background removal, EXIF/GPS stripping, resize, GIFs, video trim. 20 of them report \"network\": \"none\" in their own reply. No GPU required. 382 tests.",
+      "summary": "23 CPU-first media tools as an MCP server and CLI: background removal, EXIF/GPS stripping, resize, GIFs, video trim. 20 of them report \"network\": \"none\" in their own reply. No GPU required. 405 tests.",
       "key_features": [
         "23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim",
         "20 of them report \"network\": \"none\" in their own response payload rather than in a README (remove_background, alone or inside batch_process, fetches its model weights once)",
@@ -2207,9 +2217,9 @@
         "videos": []
       },
       "tests": {
-        "count": 382,
-        "source": "`382 passed`",
-        "measured": "2026-10-12"
+        "count": 405,
+        "source": "`405 passed`",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
@@ -2845,9 +2855,9 @@
         "videos": []
       },
       "tests": {
-        "count": 1148,
-        "source": "CI log: `=== SONUÇ: 1148 geçti, 0 hata ===`",
-        "measured": "2026-09-29"
+        "count": 1189,
+        "source": "CI log: `=== SONUÇ: 1189 geçti, 0 hata ===`",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
@@ -3124,9 +3134,9 @@
         "videos": []
       },
       "tests": {
-        "count": 963,
-        "source": "CI log: `963 dogrulama, 0 hata` / `TESTLER GECTI`",
-        "measured": "2026-09-29"
+        "count": 1010,
+        "source": "CI log: `1010 dogrulama, 0 hata` / `TESTLER GECTI`",
+        "measured": "2026-10-19"
       },
       "ci": {
         "workflows": [
