@@ -39,44 +39,44 @@
       "bytes": 64217
     },
     "bogaz-vapuru": {
-      "file": "assets/onizleme/bogaz-vapuru.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/03-dusk.png",
-      "bytes": 396097
+      "file": "assets/onizleme/bogaz-vapuru.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/card.jpg",
+      "bytes": 62870
     },
     "dolmus": {
-      "file": "assets/onizleme/dolmus.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/dolmus/main/docs/02-gameplay-day.png",
-      "bytes": 343333
+      "file": "assets/onizleme/dolmus.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/dolmus/main/docs/card.jpg",
+      "bytes": 76248
     },
     "karagoz": {
-      "file": "assets/onizleme/karagoz.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/karagoz/main/docs/01-title.png",
-      "bytes": 213212
+      "file": "assets/onizleme/karagoz.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/karagoz/main/docs/card.jpg",
+      "bytes": 59705
     },
     "kervan": {
-      "file": "assets/onizleme/kervan.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/kervan/main/docs/market.png",
-      "bytes": 391383
+      "file": "assets/onizleme/kervan.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/kervan/main/docs/card.jpg",
+      "bytes": 83137
     },
     "lale-bahcesi": {
-      "file": "assets/onizleme/lale-bahcesi.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/gameplay.png",
-      "bytes": 166995
+      "file": "assets/onizleme/lale-bahcesi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/card.jpg",
+      "bytes": 67536
     },
     "mehter": {
-      "file": "assets/onizleme/mehter.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/mehter/main/docs/title.png",
-      "bytes": 273611
+      "file": "assets/onizleme/mehter.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/mehter/main/docs/card.jpg",
+      "bytes": 86224
     },
     "peri-golf": {
-      "file": "assets/onizleme/peri-golf.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/peri-golf/main/docs/assets-after-title.png",
-      "bytes": 183447
+      "file": "assets/onizleme/peri-golf.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/peri-golf/main/docs/card.jpg",
+      "bytes": 40928
     },
     "simit-firini": {
-      "file": "assets/onizleme/simit-firini.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/simit-firini/main/docs/gameplay.png",
-      "bytes": 391670
+      "file": "assets/onizleme/simit-firini.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/simit-firini/main/docs/card.jpg",
+      "bytes": 78944
     }
   },
   "projects": [
@@ -279,6 +279,7 @@
       "media": {
         "hero": "docs/03-dusk.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/03-dusk.png",
           "docs/01-title.png",
           "docs/02-docking.png",
@@ -360,6 +361,7 @@
       "media": {
         "hero": "docs/02-gameplay-day.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/02-gameplay-day.png",
           "docs/01-title.png",
           "docs/03-rain-van.png",
@@ -443,6 +445,7 @@
       "media": {
         "hero": "docs/02-backstage.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/02-backstage.png",
           "docs/01-title.png",
           "docs/03-audience.png",
@@ -524,6 +527,7 @@
       "media": {
         "hero": "docs/map.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/map.png",
           "docs/title.png",
           "docs/market.png",
@@ -605,6 +609,7 @@
       "media": {
         "hero": "docs/gameplay.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/gameplay.png",
           "docs/title.png",
           "docs/festival.png",
@@ -684,6 +689,7 @@
       "media": {
         "hero": "docs/assets-after-gameplay-r2.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/assets-after-gameplay-r2.png",
           "docs/title.png",
           "docs/song-select.png",
@@ -768,6 +774,7 @@
       "media": {
         "hero": "docs/assets-after-hole4-wheel.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/assets-after-hole4-wheel.png",
           "docs/assets-after-title.png",
           "docs/assets-after-hole2.png",
@@ -851,6 +858,7 @@
       "media": {
         "hero": "docs/gameplay.png",
         "screenshots": [
+          "docs/card.jpg",
           "docs/gameplay.png",
           "docs/title.png",
           "docs/plan.png",
