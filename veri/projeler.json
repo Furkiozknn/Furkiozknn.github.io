@@ -68,6 +68,11 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/ebru/main/docs/card.jpg",
       "bytes": 112643
     },
+    "hamsi": {
+      "file": "assets/onizleme/hamsi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/hamsi/main/docs/card.jpg",
+      "bytes": 60085
+    },
     "kale-savunmasi": {
       "file": "assets/onizleme/kale-savunmasi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kale-savunmasi/main/docs/card.jpg",
@@ -108,6 +113,16 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/mehter/main/docs/card.jpg",
       "bytes": 86224
     },
+    "mimar-sinan": {
+      "file": "assets/onizleme/mimar-sinan.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/mimar-sinan/main/docs/card.jpg",
+      "bytes": 97612
+    },
+    "pamukkale": {
+      "file": "assets/onizleme/pamukkale.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/pamukkale/main/docs/card.jpg",
+      "bytes": 48670
+    },
     "peri-golf": {
       "file": "assets/onizleme/peri-golf.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/peri-golf/main/docs/card.jpg",
@@ -117,6 +132,11 @@
       "file": "assets/onizleme/simit-firini.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/simit-firini/main/docs/card.jpg",
       "bytes": 78944
+    },
+    "topkapi-gecesi": {
+      "file": "assets/onizleme/topkapi-gecesi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/topkapi-gecesi/main/docs/card.jpg",
+      "bytes": 91329
     }
   },
   "projects": [
@@ -770,6 +790,89 @@
           "indiegame"
         ],
         "primary_link": "https://furkiozknn.github.io/ebru/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "hamsi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/hamsi",
+      "homepage": "https://furkiozknn.github.io/hamsi/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "fishing-game",
+        "simulation",
+        "black-sea",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D Black Sea fishing and boat-management game, built by Claude Sonnet 5.5 · Karadeniz'de 3D balıkçılık ve tekne yönetimi oyunu, Claude Sonnet 5.5 yaptı",
+      "key_features": [
+        "A boat that handles like one: slow engine, a rudder that bites only when moving, waves and wind",
+        "Schools of boids on the sonar; circle a purse-seine net around them and haul",
+        "Four species with different speed, nerve and price; deeper fish escape under the net",
+        "Fog, forecast storms, a fish market with seasonal prices and upgrades for net, sonar, engine, hold, ice box and crew",
+        "The ?auto bot finished the 30-day season as reis with the loan paid on day 26-27; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/04-net.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/04-net.png",
+          "docs/01-title.png",
+          "docs/02-harbour.png",
+          "docs/03-sailing.png",
+          "docs/05-storm.png",
+          "docs/06-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Net the schools, beat the storm and pay off the boat in 30 days · Sürüleri ağla, fırtınayı atlat, tekne kredisini 30 günde öde",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/hamsi/"
       },
       "provenance": {
         "generated_at": "2026-10-27",
@@ -1435,6 +1538,172 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "mimar-sinan",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/mimar-sinan",
+      "homepage": "https://furkiozknn.github.io/mimar-sinan/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "puzzle-game",
+        "physics-game",
+        "architecture",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D construction-physics puzzle about building Ottoman mosques, built by Claude Fable 5.1 · Osmanlı camileri inşa ettiğin 3D yapı fiziği bulmacası, Claude Fable 5.1 yaptı",
+      "key_features": [
+        "A masonry simulation written from scratch: thrust vectors, self-weight and the middle-third rule decide whether each pier stands",
+        "Sinan's lessons as real solutions: half-domes, weight towers, hidden and stepped buttresses, an octagon of eight piers",
+        "15 commissions in 3 periods, up to Süleymaniye and Selimiye, with stone budgets, open windows, minarets and earthquake tests",
+        "Live stress colours, thrust-line view, hints from each commission's reference solution and collapses you can watch",
+        "The ?auto bot cleared 15/15 commissions with 45/45 stars; node test-levels.js verifies all 15 reference solutions; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/02-gameplay.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/02-gameplay.png",
+          "docs/01-title.png",
+          "docs/03-earthquake.png",
+          "docs/04-result.png",
+          "docs/05-collapse.png",
+          "docs/06-sunset.png",
+          "docs/07-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Build Sinan's mosques, pull the scaffolding and let the thrust lines decide · Sinan'ın camilerini kur, iskeleyi kaldır, itki çizgileri karar versin",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/mimar-sinan/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "pamukkale",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/pamukkale",
+      "homepage": "https://furkiozknn.github.io/pamukkale/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "puzzle-game",
+        "water-simulation",
+        "pamukkale",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "Calm 3D water-flow puzzle on the travertine terraces of Pamukkale, built by Claude Haiku 5.5 · Pamukkale travertenlerinde sakin 3D su akışı bulmacası, Claude Haiku 5.5 yaptı",
+      "key_features": [
+        "Guide spring water into target pools with a limited set of stones, dams and splitters",
+        "Still water builds calcium, so the terraces rise and change while the water runs",
+        "20 levels in 4 areas with three stars each: all pools full, no water spilled, tool saving",
+        "Every level checked offline against the same simulation code (tools/solve-levels.mjs)",
+        "The ?auto bot cleared 20/20 levels with 46/60 stars; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/02-gameplay-level9.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/02-gameplay-level9.png",
+          "docs/01-title.png",
+          "docs/03-gameplay-level1.png",
+          "docs/04-ending.png",
+          "docs/05-phone-500x900.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Guide warm spring water into the white travertine pools · Ilık kaynak suyunu beyaz traverten havuzlarına yönlendir",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/pamukkale/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "peri-golf",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/peri-golf",
@@ -1663,6 +1932,89 @@
         "generated_at": "2026-10-19",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "topkapi-gecesi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/topkapi-gecesi",
+      "homepage": "https://furkiozknn.github.io/topkapi-gecesi/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "stealth-game",
+        "ottoman",
+        "topkapi-palace",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D night stealth game in an Ottoman palace, built by Claude Opus 5.5 · Gece Osmanlı sarayında 3D gizlilik oyunu, Claude Opus 5.5 yaptı",
+      "key_features": [
+        "Guards with patrol routes and vision cones drawn on the ground; lantern light and moon shadows decide who sees you",
+        "Noise rings, pebbles to lure guards, snuffable lanterns, curtains and chests to hide in",
+        "9 night missions in 3 parts (the Courts, the Harem, the Treasury), each with an optional objective; 27 stars",
+        "A night score in makam Hicaz (ney over kanun) that speeds up and adds a darbuka when a guard grows suspicious",
+        "The ?auto bot plans timed routes with a space-time A* search: 9/9 missions, 27/27 stars, 0 alarms; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/02-gameplay.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/02-gameplay.png",
+          "docs/01-title.png",
+          "docs/03-map.png",
+          "docs/04-result.png",
+          "docs/05-ending.png",
+          "docs/06-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Sneak through Topkapı Palace at night and put the real diamond back before dawn · Gece Topkapı Sarayı'nda gizlice ilerle, gerçek elması şafaktan önce yerine koy",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/topkapi-gecesi/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
       }
     }
   ]
