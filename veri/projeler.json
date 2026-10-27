@@ -40,8 +40,8 @@
     },
     "bogaz-vapuru": {
       "file": "assets/onizleme/bogaz-vapuru.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/02-docking.png",
-      "bytes": 397284
+      "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/03-dusk.png",
+      "bytes": 396097
     },
     "dolmus": {
       "file": "assets/onizleme/dolmus.png",
@@ -60,8 +60,8 @@
     },
     "lale-bahcesi": {
       "file": "assets/onizleme/lale-bahcesi.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/title.png",
-      "bytes": 90361
+      "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/gameplay.png",
+      "bytes": 166995
     },
     "mehter": {
       "file": "assets/onizleme/mehter.png",
@@ -279,9 +279,9 @@
       "media": {
         "hero": "docs/03-dusk.png",
         "screenshots": [
+          "docs/03-dusk.png",
           "docs/01-title.png",
           "docs/02-docking.png",
-          "docs/03-dusk.png",
           "docs/04-night.png",
           "docs/05-storm.png",
           "docs/06-phone-portrait.png"
@@ -360,8 +360,8 @@
       "media": {
         "hero": "docs/02-gameplay-day.png",
         "screenshots": [
-          "docs/01-title.png",
           "docs/02-gameplay-day.png",
+          "docs/01-title.png",
           "docs/03-rain-van.png",
           "docs/04-night.png",
           "docs/05-phone-portrait.png",
@@ -443,8 +443,8 @@
       "media": {
         "hero": "docs/02-backstage.png",
         "screenshots": [
-          "docs/01-title.png",
           "docs/02-backstage.png",
+          "docs/01-title.png",
           "docs/03-audience.png",
           "docs/04-colour-lamps.png",
           "docs/05-act-map.png",
@@ -524,8 +524,8 @@
       "media": {
         "hero": "docs/map.png",
         "screenshots": [
-          "docs/title.png",
           "docs/map.png",
+          "docs/title.png",
           "docs/market.png",
           "docs/caravan.png",
           "docs/phone.png"
@@ -605,8 +605,8 @@
       "media": {
         "hero": "docs/gameplay.png",
         "screenshots": [
-          "docs/title.png",
           "docs/gameplay.png",
+          "docs/title.png",
           "docs/festival.png",
           "docs/phone-gameplay.png"
         ],
@@ -684,10 +684,10 @@
       "media": {
         "hero": "docs/assets-after-gameplay-r2.png",
         "screenshots": [
+          "docs/assets-after-gameplay-r2.png",
           "docs/title.png",
           "docs/song-select.png",
           "docs/gameplay.png",
-          "docs/assets-after-gameplay-r2.png",
           "docs/results.png",
           "docs/settings.png",
           "docs/phone.png"
@@ -768,9 +768,9 @@
       "media": {
         "hero": "docs/assets-after-hole4-wheel.png",
         "screenshots": [
+          "docs/assets-after-hole4-wheel.png",
           "docs/assets-after-title.png",
           "docs/assets-after-hole2.png",
-          "docs/assets-after-hole4-wheel.png",
           "docs/assets-after-hole8-donkey.png",
           "docs/assets-after-hole12-ridge.png",
           "docs/05-hole-result.png",
@@ -851,8 +851,8 @@
       "media": {
         "hero": "docs/gameplay.png",
         "screenshots": [
-          "docs/title.png",
           "docs/gameplay.png",
+          "docs/title.png",
           "docs/plan.png",
           "docs/panels.png",
           "docs/summary.png",
