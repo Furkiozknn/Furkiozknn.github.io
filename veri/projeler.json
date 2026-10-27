@@ -43,10 +43,25 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/card.jpg",
       "bytes": 62870
     },
+    "cay-ocagi": {
+      "file": "assets/onizleme/cay-ocagi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/cay-ocagi/main/docs/card.jpg",
+      "bytes": 145477
+    },
+    "cini-ustasi": {
+      "file": "assets/onizleme/cini-ustasi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/cini-ustasi/main/docs/card.jpg",
+      "bytes": 146294
+    },
     "dolmus": {
       "file": "assets/onizleme/dolmus.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/dolmus/main/docs/card.jpg",
       "bytes": 76248
+    },
+    "kale-savunmasi": {
+      "file": "assets/onizleme/kale-savunmasi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/kale-savunmasi/main/docs/card.jpg",
+      "bytes": 85659
     },
     "karagoz": {
       "file": "assets/onizleme/karagoz.jpg",
@@ -62,6 +77,11 @@
       "file": "assets/onizleme/lale-bahcesi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/card.jpg",
       "bytes": 67536
+    },
+    "marti": {
+      "file": "assets/onizleme/marti.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/marti/main/docs/card.jpg",
+      "bytes": 65300
     },
     "mehter": {
       "file": "assets/onizleme/mehter.jpg",
@@ -324,6 +344,170 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "cay-ocagi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/cay-ocagi",
+      "homepage": "https://furkiozknn.github.io/cay-ocagi/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Web Audio API",
+        "Higgsfield (Tripo text-to-3D, GPT Image)",
+        "glTF-Transform"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "time-management-game",
+        "cooking-game",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D tea house time-management game on an Istanbul quay, built by Claude Sonnet 5.5 · İstanbul rıhtımında 3D çay ocağı zaman yönetimi oyunu, Claude Sonnet 5.5 yaptı",
+      "key_features": [
+        "Four items on five stations: tea brews in the semaver, simit warms in the oven, coffee boils over if left, dirty glasses go to the sink",
+        "Seven 3-minute days with a coin target and 1-3 stars, new items and customer types each day, then an endless shift",
+        "A shop between days: second semaver, bigger tray (3 to 5 items), faster oven, extra tables, an apprentice, comfy stools",
+        "The ?auto bot plays with the same actions as a player and won 84 of 90 seeded games",
+        "60 fps on an Intel UHD GPU at 1280x720 on a busy day 6 with 31 draw calls; generated models with a procedural fallback"
+      ],
+      "media": {
+        "hero": "docs/card.jpg",
+        "screenshots": [
+          "docs/card.jpg"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Run a tiny Istanbul tea house: brew tea, warm simit, serve every table in time · Küçük bir çay ocağı işlet: çay demle, simit ısıt, her masaya yetiş",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/cay-ocagi/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "cini-ustasi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/cini-ustasi",
+      "homepage": "https://furkiozknn.github.io/cini-ustasi/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API",
+        "Node.js (tests)",
+        "Higgsfield (Tripo text-to-3D, GPT Image)",
+        "glTF-Transform"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "puzzle-game",
+        "tile-matching",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "Calm 3D Iznik tile edge-matching puzzle, built by Claude Fable 5.1 · Sakin bir 3D İznik çinisi kenar eşleştirme bulmacası, Claude Fable 5.1 yaptı",
+      "key_features": [
+        "30 levels in 3 chapters: rotate tiles, then swap them, then fixed and double-sided tiles; boards grow from 3x3 to 6x6",
+        "Every level is generated solved and scrambled; the built-in solver solves all 30 levels and the daily boards",
+        "Moves against par for 1-3 stars, undo, three hints per level, a matched-edge counter and a daily board",
+        "A solved panel glazes, fires in the kiln and goes on the collection wall of the workshop",
+        "Puzzle-core tests under Node with no dependencies: node tests/core.test.mjs passes 345 of 345 checks"
+      ],
+      "media": {
+        "hero": "docs/card.jpg",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/settings.png",
+          "docs/pause.png",
+          "docs/phone-390.png",
+          "docs/phone-kiln.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": {
+        "count": 345,
+        "source": "`node tests/core.test.mjs`: `TESTS PASSED 345/345`",
+        "measured": "2026-10-27"
+      },
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Rotate, swap and flip Iznik tiles until every motif connects, then fire the panel · İznik çinilerini çevir, desenleri birleştir, panoyu fırında pişir",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/cini-ustasi/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, tests/ and docs/assets.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "dolmus",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/dolmus",
@@ -404,6 +588,84 @@
         "generated_at": "2026-10-27",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "kale-savunmasi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/kale-savunmasi",
+      "homepage": "https://furkiozknn.github.io/kale-savunmasi/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Web Audio API",
+        "Higgsfield (Tripo text-to-3D, GPT Image)",
+        "glTF-Transform"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "tower-defense",
+        "strategy-game",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "Low-poly 3D tower defense at a seaside fortress, built by Claude Opus 5.5 · Sahil kalesinde alçak poligon 3D kule savunması, Claude Opus 5.5 yaptı",
+      "key_features": [
+        "Three towers with three levels each: Archer Tower, Cannon Bastion with splash damage, Tar Cauldron that slows and burns",
+        "Four enemy types, including armoured Shieldbearers and a Battering Ram boss every 5th wave that costs 6 lives",
+        "Hold 20 lives for 15 waves, then endless mode; target modes, 70 % refund on sell, early-call bonus, 1x/2x/3x speed",
+        "The ?auto bot builds and upgrades on its own and falls on wave 15 in the measured run, with 0 JS errors",
+        "60 fps on an Intel UHD GPU at 1280x720 with 37-42 draw calls; generated models with a procedural fallback"
+      ],
+      "media": {
+        "hero": "docs/card.jpg",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/remaster-closeup.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Hold a seaside fortress for 15 waves with archers, cannons and boiling tar · Okçu, top ve katranla sahil kalesini 15 dalga boyunca savun",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/kale-savunmasi/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
       }
     },
     {
@@ -648,6 +910,89 @@
         "generated_at": "2026-10-27",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "marti",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/marti",
+      "homepage": "https://furkiozknn.github.io/marti/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Web Audio API",
+        "Higgsfield (Tripo text-to-3D, GPT Image)",
+        "glTF-Transform"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "endless-runner",
+        "arcade-game",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "Endless 3D seagull run over the Istanbul strait, built by Claude Haiku 5.5 · İstanbul Boğazı üstünde sonsuz 3D martı uçuşu, Claude Haiku 5.5 yaptı",
+      "key_features": [
+        "Endless run that speeds up after the first 30 seconds; stamina refilled only by simit and fish, three feathers per run",
+        "Bridge decks and cables, ships, kites, storm clouds and a rival gull flock that steals your simit",
+        "Tailwind (x1.5), golden simit (x2) and shield feather power-ups; combo multiplier up to x5",
+        "Afternoon to sunset to a night of fireworks past mosques, the Galata tower, the Maiden's tower and yalı mansions",
+        "Three daily missions and a local top-5 score table; generated models with a procedural fallback"
+      ],
+      "media": {
+        "hero": "docs/card.jpg",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/bridge.png",
+          "docs/day.png",
+          "docs/sunset.png",
+          "docs/night.png",
+          "docs/close.png",
+          "docs/phone_run.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Fly a seagull over the Bosphorus: snatch simit from ferries, dodge the bridge · Boğaz üstünde uç, vapurdan simit kap, köprüden kaç",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/marti/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
       }
     },
     {
@@ -931,7 +1276,7 @@
       "key_features": [
         "Short videos of the Built with Claude Code series for YouTube Shorts, Instagram Reels and Stories, and X",
         "Video files live in GitHub Releases, one release per batch of episodes, so the scheduler gets stable public download URLs",
-        "The voiceover is AI-generated (Supertonic 3) and says so in the README; the videos are made with Remotion"
+        "The voiceover is AI-generated (Google Gemini TTS for the game promos, Supertonic 3 for the older episodes) and says so in the README and every post; the videos are made with Remotion"
       ],
       "media": {
         "hero": null,
