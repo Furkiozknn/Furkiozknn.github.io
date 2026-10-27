@@ -43,6 +43,11 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/card.jpg",
       "bytes": 62870
     },
+    "carsi-kacisi": {
+      "file": "assets/onizleme/carsi-kacisi.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/carsi-kacisi/main/docs/card.jpg",
+      "bytes": 99114
+    },
     "cay-ocagi": {
       "file": "assets/onizleme/cay-ocagi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/cay-ocagi/main/docs/card.jpg",
@@ -58,10 +63,20 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/dolmus/main/docs/card.jpg",
       "bytes": 76248
     },
+    "ebru": {
+      "file": "assets/onizleme/ebru.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/ebru/main/docs/card.jpg",
+      "bytes": 112643
+    },
     "kale-savunmasi": {
       "file": "assets/onizleme/kale-savunmasi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kale-savunmasi/main/docs/card.jpg",
       "bytes": 85659
+    },
+    "kapadokya-balonu": {
+      "file": "assets/onizleme/kapadokya-balonu.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/kapadokya-balonu/main/docs/card.jpg",
+      "bytes": 87601
     },
     "karagoz": {
       "file": "assets/onizleme/karagoz.jpg",
@@ -72,6 +87,11 @@
       "file": "assets/onizleme/kervan.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kervan/main/docs/card.jpg",
       "bytes": 83137
+    },
+    "kirkpinar": {
+      "file": "assets/onizleme/kirkpinar.jpg",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/kirkpinar/main/docs/card.jpg",
+      "bytes": 103769
     },
     "lale-bahcesi": {
       "file": "assets/onizleme/lale-bahcesi.jpg",
@@ -344,6 +364,89 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "carsi-kacisi",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/carsi-kacisi",
+      "homepage": "https://furkiozknn.github.io/carsi-kacisi/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "platformer",
+        "runner",
+        "istanbul",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D rooftop runner over an Istanbul covered bazaar, built by Claude Haiku 5.5 · İstanbul kapalı çarşısının kubbeleri üzerinde 3D çatı koşusu, Claude Haiku 5.5 yaptı",
+      "key_features": [
+        "Rooftop parkour: double jump, slide down domes, ride laundry lines and step up low ledges",
+        "Ten hand-built levels from layout strings: roofs, gaps, domes, sliding planks, breaking tiles, gusts and checkpoints",
+        "Chase the cat that stole the jeweller's ring and collect lokum on the way",
+        "Three stars per level: target time, 80 % of the lokum and no fall; night levels with pigeons",
+        "The ?auto bot cleared 10/10 levels with 0 falls; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/02-gameplay.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/02-gameplay.png",
+          "docs/01-title.png",
+          "docs/03-result.png",
+          "docs/04-roof-map.png",
+          "docs/05-phone.png",
+          "docs/06-night.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Chase the ring thief across the domes of the bazaar · Yüzük hırsızı kediyi çarşının kubbeleri üzerinde kovala",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/carsi-kacisi/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "cay-ocagi",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/cay-ocagi",
@@ -592,6 +695,90 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "ebru",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/ebru",
+      "homepage": "https://furkiozknn.github.io/ebru/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "WebGL 2",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "puzzle-game",
+        "paper-marbling",
+        "ebru",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D paper-marbling art puzzle: sprinkle, comb and shape paint on the water, then lay the paper, built by Claude Fable 5.1 · Kitreli suda boya serp, tara, lale aç ve kâğıdı yatır: 3D ebru bulmacası, Claude Fable 5.1 yaptı",
+      "key_features": [
+        "Deterministic mathematical-marbling simulation: drops push older paint outward, the awl leaves a chevron wake, the comb pulls 25 tines; colours never mix",
+        "18 lessons in 3 chapters (basic, combed, flower ebru) with TR / EN notes from the master; every target is a replayed stroke recipe, so every lesson is solvable",
+        "Live match %, ghost hint of the next stroke, up to 3 stars per lesson (54 in all), free tray with a 12-sheet gallery",
+        "Paint rasterised on the GPU with a stencil pass into a multisampled render target; 60 fps on an Intel UHD 620",
+        "The ?auto bot solved 18/18 lessons with 48/54 stars through the same stroke API as a player; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/02-gameplay.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/02-gameplay.png",
+          "docs/01-title.png",
+          "docs/03-lesson.png",
+          "docs/04-result.png",
+          "docs/05-lessons.png",
+          "docs/06-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Marble the water: sprinkle, comb and shape paint until the tray matches the master's pattern, then lay the paper · Suyu ebrula: boya serp, tara, şekil ver; tekne ustanın desenine uyunca kâğıdı yatır",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/ebru/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "kale-savunmasi",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/kale-savunmasi",
@@ -666,6 +853,89 @@
         "generated_at": "2026-10-27",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "kapadokya-balonu",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/kapadokya-balonu",
+      "homepage": "https://furkiozknn.github.io/kapadokya-balonu/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "puzzle-game",
+        "hot-air-balloon",
+        "cappadocia",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D hot-air balloon wind puzzle over Cappadocia at sunrise, built by Claude Opus 5.5 · Gün doğumunda Kapadokya'da 3D sıcak hava balonu rüzgâr bulmacası, Claude Opus 5.5 yaptı",
+      "key_features": [
+        "No rudder: burn to climb, vent to sink, and ride the wind layer that blows towards the goal",
+        "A balloon with lag: lift follows the envelope temperature seconds later; propane is limited and passengers add weight",
+        "12 flights in 3 regions (Göreme, Uçhisar, an Ihlara-like canyon) with gusts, morning fog and noon thermals",
+        "Five goal types: low pass, marker drop, photo from a given height, passenger pickup and a scored landing; 36 stars",
+        "The ?auto bot flew 12/12 flights with 36/36 stars using only burner, vent, photo and drop; one index.html, everything generated in code"
+      ],
+      "media": {
+        "hero": "docs/02-flight.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/02-flight.png",
+          "docs/01-title.png",
+          "docs/03-region-map.png",
+          "docs/04-landing.png",
+          "docs/05-group-photo.png",
+          "docs/06-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Steer a balloon with no rudder: pick the wind layer that blows your way · Dümensiz balonu yönet: gitmek istediğin yöne esen rüzgâr katmanını seç",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/kapadokya-balonu/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
       }
     },
     {
@@ -831,6 +1101,89 @@
         "generated_at": "2026-10-27",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "kirkpinar",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/kirkpinar",
+      "homepage": "https://furkiozknn.github.io/kirkpinar/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "sports-game",
+        "wrestling",
+        "physics",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D physics oil-wrestling game inspired by Kırkpınar, built by Claude Sonnet 5.5 · Kırkpınar'dan esinlenen 3D fizikli yağlı güreş oyunu, Claude Sonnet 5.5 yaptı",
+      "key_features": [
+        "Oiled grips slip: grip strength decays with hold time, oil and sweat, effort and stamina",
+        "Readable balance: a centre-of-mass lean over the feet decides steps and falls onto the back, side or front",
+        "Classic finishing moves as context moves: paça kazık, çaprast, künde, lift and carry, yere çal and a leg hook",
+        "Career through five weight classes to the golden belt, quick match and 2 players on one keyboard; touch and gamepad",
+        "The AI uses the same inputs as a player; the ?auto bot played a 26-bout career with 18 wins to the golden belt"
+      ],
+      "media": {
+        "hero": "docs/03-kunde.png",
+        "screenshots": [
+          "docs/card.jpg",
+          "docs/03-kunde.png",
+          "docs/01-title.png",
+          "docs/02-gameplay.png",
+          "docs/04-ladder.png",
+          "docs/05-phone.png",
+          "docs/06-ending.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Grip, pull and throw on the oiled grass until your rival's back touches the ground · Yağlı çimende tut, çek, at: rakibin sırtını yere getir",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/kirkpinar/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
       }
     },
     {
