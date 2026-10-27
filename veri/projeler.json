@@ -1,17 +1,15 @@
 {
-  "generated": "2026-10-26",
-  "missing": [
-    "cay-ocagi",
-    "cay-ocagi-godot",
-    "cini-ustasi",
-    "cini-ustasi-godot",
-    "claude-game-arena",
-    "hisar-godot",
-    "kale-savunmasi",
-    "marti",
-    "marti-godot"
-  ],
+  "generated": "2026-10-27",
+  "missing": [],
   "releases": [
+    {
+      "repo": "social-videos",
+      "tag": "promo-2026-10",
+      "title": "Promo videos 2026-10",
+      "url": "https://github.com/Furkiozknn/social-videos/releases/tag/promo-2026-10",
+      "published": "2026-10-26T17:39:07Z",
+      "prerelease": false
+    },
     {
       "repo": "social-videos",
       "tag": "ep28-plus",
@@ -21,131 +19,11 @@
       "prerelease": false
     },
     {
-      "repo": "repo-vet",
-      "tag": "v0.2.0",
-      "title": "v0.2.0",
-      "url": "https://github.com/Furkiozknn/repo-vet/releases/tag/v0.2.0",
-      "published": "2026-10-19T03:42:59Z",
-      "prerelease": false
-    },
-    {
-      "repo": "godot-refcheck",
-      "tag": "v0.3.0",
-      "title": "v0.3.0",
-      "url": "https://github.com/Furkiozknn/godot-refcheck/releases/tag/v0.3.0",
-      "published": "2026-10-19T03:42:57Z",
-      "prerelease": false
-    },
-    {
       "repo": "social-videos",
       "tag": "ep21-27",
       "title": "Episodes 21-27 (v3)",
       "url": "https://github.com/Furkiozknn/social-videos/releases/tag/ep21-27",
       "published": "2026-10-19T03:19:20Z",
-      "prerelease": false
-    },
-    {
-      "repo": "isik-tuneli",
-      "tag": "v1.0.0",
-      "title": "nova-drift v1.0.0",
-      "url": "https://github.com/Furkiozknn/isik-tuneli/releases/tag/v1.0.0",
-      "published": "2026-09-30T10:40:45Z",
-      "prerelease": false
-    },
-    {
-      "repo": "ajans-os",
-      "tag": "v0.1.0",
-      "title": "ajans-os v0.1.0",
-      "url": "https://github.com/Furkiozknn/ajans-os/releases/tag/v0.1.0",
-      "published": "2026-09-30T10:40:40Z",
-      "prerelease": false
-    },
-    {
-      "repo": "buradane",
-      "tag": "v1.1.0",
-      "title": "buradane v1.1.0",
-      "url": "https://github.com/Furkiozknn/buradane/releases/tag/v1.1.0",
-      "published": "2026-09-30T10:40:34Z",
-      "prerelease": false
-    },
-    {
-      "repo": "masal",
-      "tag": "v1.0.0",
-      "title": "masal v1.0.0",
-      "url": "https://github.com/Furkiozknn/masal/releases/tag/v1.0.0",
-      "published": "2026-09-30T10:40:27Z",
-      "prerelease": false
-    },
-    {
-      "repo": "turkce-ajanlar",
-      "tag": "v0.4.1",
-      "title": "turkce-ajanlar v0.4.1",
-      "url": "https://github.com/Furkiozknn/turkce-ajanlar/releases/tag/v0.4.1",
-      "published": "2026-09-29T04:10:40Z",
-      "prerelease": false
-    },
-    {
-      "repo": "repo-vet",
-      "tag": "v0.1.0",
-      "title": "v0.1.0",
-      "url": "https://github.com/Furkiozknn/repo-vet/releases/tag/v0.1.0",
-      "published": "2026-09-22T14:26:06Z",
-      "prerelease": false
-    },
-    {
-      "repo": "godot-refcheck",
-      "tag": "v0.2.0",
-      "title": "v0.2.0",
-      "url": "https://github.com/Furkiozknn/godot-refcheck/releases/tag/v0.2.0",
-      "published": "2026-09-22T13:51:15Z",
-      "prerelease": false
-    },
-    {
-      "repo": "godot-refcheck",
-      "tag": "v0.1.0",
-      "title": "v0.1.0",
-      "url": "https://github.com/Furkiozknn/godot-refcheck/releases/tag/v0.1.0",
-      "published": "2026-09-22T12:33:17Z",
-      "prerelease": false
-    },
-    {
-      "repo": "mcp-census",
-      "tag": "v0.1.0",
-      "title": "mcp-census v0.1.0",
-      "url": "https://github.com/Furkiozknn/mcp-census/releases/tag/v0.1.0",
-      "published": "2026-09-22T05:05:49Z",
-      "prerelease": false
-    },
-    {
-      "repo": "kanca",
-      "tag": "v0.5.2",
-      "title": "kanca v0.5.2",
-      "url": "https://github.com/Furkiozknn/kanca/releases/tag/v0.5.2",
-      "published": "2026-09-22T03:17:06Z",
-      "prerelease": false
-    },
-    {
-      "repo": "derin-kazi",
-      "tag": "v0.7.2",
-      "title": "derin-kazi v0.7.2",
-      "url": "https://github.com/Furkiozknn/derin-kazi/releases/tag/v0.7.2",
-      "published": "2026-09-22T03:17:00Z",
-      "prerelease": false
-    },
-    {
-      "repo": "yercekimi-cevir",
-      "tag": "v0.7.2",
-      "title": "yercekimi-cevir v0.7.2",
-      "url": "https://github.com/Furkiozknn/yercekimi-cevir/releases/tag/v0.7.2",
-      "published": "2026-09-22T03:16:55Z",
-      "prerelease": false
-    },
-    {
-      "repo": "tek-tus-kosu",
-      "tag": "v1.7.3",
-      "title": "tek-tus-kosu v1.7.3",
-      "url": "https://github.com/Furkiozknn/tek-tus-kosu/releases/tag/v1.7.3",
-      "published": "2026-09-22T03:16:50Z",
       "prerelease": false
     }
   ],
@@ -160,145 +38,45 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn.github.io/main/assets/screenshot.png",
       "bytes": 64217
     },
-    "ai-job-gateway": {
-      "file": "assets/onizleme/ai-job-gateway.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/ai-job-gateway/main/assets/banner.svg",
-      "bytes": 3296
+    "bogaz-vapuru": {
+      "file": "assets/onizleme/bogaz-vapuru.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/02-docking.png",
+      "bytes": 397284
     },
-    "ai-workflow-engine": {
-      "file": "assets/onizleme/ai-workflow-engine.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/ai-workflow-engine/main/assets/banner.svg",
-      "bytes": 3427
+    "dolmus": {
+      "file": "assets/onizleme/dolmus.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/dolmus/main/docs/02-gameplay-day.png",
+      "bytes": 343333
     },
-    "ajans-os": {
-      "file": "assets/onizleme/ajans-os.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/ajans-os/master/assets/banner.svg",
-      "bytes": 3473
+    "karagoz": {
+      "file": "assets/onizleme/karagoz.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/karagoz/main/docs/01-title.png",
+      "bytes": 213212
     },
-    "asset-provenance-toolkit": {
-      "file": "assets/onizleme/asset-provenance-toolkit.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/asset-provenance-toolkit/main/assets/banner.svg",
-      "bytes": 3510
+    "kervan": {
+      "file": "assets/onizleme/kervan.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/kervan/main/docs/market.png",
+      "bytes": 391383
     },
-    "buradane": {
-      "file": "assets/onizleme/buradane.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/buradane/main/assets/banner.svg",
-      "bytes": 4416
+    "lale-bahcesi": {
+      "file": "assets/onizleme/lale-bahcesi.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/title.png",
+      "bytes": 90361
     },
-    "canli-dunyalar": {
-      "file": "assets/onizleme/canli-dunyalar.jpg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/canli-dunyalar/master/worlds/vapur/shots/02-selected-ferry.jpg",
-      "bytes": 57418
+    "mehter": {
+      "file": "assets/onizleme/mehter.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/mehter/main/docs/title.png",
+      "bytes": 273611
     },
-    "claude-code-intelligence": {
-      "file": "assets/onizleme/claude-code-intelligence.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/claude-code-intelligence/master/assets/banner.svg",
-      "bytes": 3538
+    "peri-golf": {
+      "file": "assets/onizleme/peri-golf.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/peri-golf/main/docs/assets-after-title.png",
+      "bytes": 183447
     },
-    "claude-quota-monitor": {
-      "file": "assets/onizleme/claude-quota-monitor.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/claude-quota-monitor/master/docs/banner.svg",
-      "bytes": 1951
-    },
-    "derin-kazi": {
-      "file": "assets/onizleme/derin-kazi.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/derin-kazi/main/yayin/banner.svg",
-      "bytes": 3381
-    },
-    "frk-components": {
-      "file": "assets/onizleme/frk-components.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/frk-components/main/assets/galeri/odometer-390.png",
-      "bytes": 79416
-    },
-    "godot-2d-sablon": {
-      "file": "assets/onizleme/godot-2d-sablon.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/godot-2d-sablon/main/docs/ekran-yandan.png",
-      "bytes": 6165
-    },
-    "godot-refcheck": {
-      "file": "assets/onizleme/godot-refcheck.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/godot-refcheck/main/assets/banner.svg",
-      "bytes": 3488
-    },
-    "isik-tuneli": {
-      "file": "assets/onizleme/isik-tuneli.webp",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/isik-tuneli/master/assets/screenshot.webp",
-      "bytes": 36776
-    },
-    "kanca": {
-      "file": "assets/onizleme/kanca.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/kanca/main/yayin/banner.svg",
-      "bytes": 3415
-    },
-    "local-notes-search-mcp": {
-      "file": "assets/onizleme/local-notes-search-mcp.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/local-notes-search-mcp/main/assets/banner.svg",
-      "bytes": 3498
-    },
-    "masal": {
-      "file": "assets/onizleme/masal.png",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/masal/master/assets/sahneler.png",
-      "bytes": 103366
-    },
-    "mcp-census": {
-      "file": "assets/onizleme/mcp-census.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/mcp-census/master/assets/banner.svg",
-      "bytes": 3455
-    },
-    "mcp-vet": {
-      "file": "assets/onizleme/mcp-vet.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/mcp-vet/master/assets/banner.svg",
-      "bytes": 3469
-    },
-    "mini-creative-toolkit": {
-      "file": "assets/onizleme/mini-creative-toolkit.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/mini-creative-toolkit/master/assets/banner.svg",
-      "bytes": 3547
-    },
-    "model-comparison-harness": {
-      "file": "assets/onizleme/model-comparison-harness.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/model-comparison-harness/main/assets/banner.svg",
-      "bytes": 3527
-    },
-    "nvidia-nim-mcp": {
-      "file": "assets/onizleme/nvidia-nim-mcp.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/nvidia-nim-mcp/master/assets/banner.svg",
-      "bytes": 45723
-    },
-    "prompt-template-manager": {
-      "file": "assets/onizleme/prompt-template-manager.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/prompt-template-manager/main/assets/banner.svg",
-      "bytes": 3512
-    },
-    "repo-ratchet": {
-      "file": "assets/onizleme/repo-ratchet.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/repo-ratchet/main/assets/banner.svg",
-      "bytes": 3521
-    },
-    "repo-vet": {
-      "file": "assets/onizleme/repo-vet.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/repo-vet/main/assets/banner.svg",
-      "bytes": 3432
-    },
-    "tek-tus-kosu": {
-      "file": "assets/onizleme/tek-tus-kosu.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/tek-tus-kosu/main/yayin/banner.svg",
-      "bytes": 3426
-    },
-    "turkce-ajanlar": {
-      "file": "assets/onizleme/turkce-ajanlar.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/turkce-ajanlar/master/assets/banner.svg",
-      "bytes": 2192
-    },
-    "voice-io-mcp": {
-      "file": "assets/onizleme/voice-io-mcp.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/voice-io-mcp/main/assets/banner.svg",
-      "bytes": 3452
-    },
-    "yercekimi-cevir": {
-      "file": "assets/onizleme/yercekimi-cevir.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/yercekimi-cevir/main/docs/banner.svg",
-      "bytes": 3426
+    "simit-firini": {
+      "file": "assets/onizleme/simit-firini.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/simit-firini/main/docs/gameplay.png",
+      "bytes": 391670
     }
   },
   "projects": [
@@ -465,498 +243,55 @@
     },
     {
       "schema_version": "1.0.0",
-      "id": "ai-job-gateway",
+      "id": "bogaz-vapuru",
       "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/ai-job-gateway",
-      "homepage": "https://furkiozknn.github.io/#ai-job-gateway",
-      "releases": "https://github.com/Furkiozknn/ai-job-gateway/releases",
+      "repository": "https://github.com/Furkiozknn/bogaz-vapuru",
+      "homepage": "https://furkiozknn.github.io/bogaz-vapuru/",
+      "releases": null,
       "status": "active",
-      "category": "backend-service",
-      "platform": [
-        "http-api",
-        "library"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "FastAPI",
-        "webhooks"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "api-gateway",
-        "async-jobs",
-        "backend",
-        "dead-letter-queue",
-        "fastapi",
-        "generative-ai",
-        "idempotency",
-        "job-queue",
-        "mcp-ecosystem",
-        "provider-agnostic",
-        "python",
-        "retry",
-        "ssrf-protection",
-        "webhooks"
-      ],
-      "summary": "Provider-agnostic reference server and Python client for the async AI job contract - submit, poll, webhook - with restart-safe idempotency keys and SSRF-guarded signed webhooks.",
-      "key_features": [
-        "The async job contract fal.ai, Black Forest Labs and RunPod each arrived at independently, as one hardened reference server: submit, poll, webhook",
-        "Idempotency keys that survive a restart",
-        "SSRF-guarded signed webhooks",
-        "Expiry as a status you can read rather than a silent 404"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 204,
-        "source": "local run with the media extra: `204 passed`",
-        "measured": "2026-09-25"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/ai-job-gateway/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Submit, poll, webhook - the async job contract three providers converged on.",
-        "hashtags": [
-          "fastapi",
-          "python",
-          "backend",
-          "generativeai"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/ai-job-gateway"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "ai-workflow-engine",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/ai-workflow-engine",
-      "homepage": "https://furkiozknn.github.io/#ai-workflow-engine",
-      "releases": "https://github.com/Furkiozknn/ai-workflow-engine/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "cli",
-        "library"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "YAML",
-        "DAG scheduling"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "automation",
-        "dag",
-        "generative-ai",
-        "gitops",
-        "infrastructure-as-code",
-        "job-orchestration",
-        "orchestration",
-        "pipeline",
-        "python",
-        "validation",
-        "workflow-engine",
-        "yaml"
-      ],
-      "summary": "AI generation pipelines as plain YAML DAGs in git, validated before the first job runs: a step that reads an undeclared dependency is rejected at load time. Python CLI: awe.",
-      "key_features": [
-        "A pipeline is a plain YAML DAG in git, not a diagram in a visual editor",
-        "Validated before it runs: a step reading another step's result without declaring the dependency is rejected at load time, typo and all",
-        "Layers run concurrently, capped and backed off, so width never becomes a burst",
-        "Known v1 limitations are written down in the README rather than discovered later"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 106,
-        "source": "local run 2026-09-30: `97 passed, 1 skipped` without ai-job-gateway; `106 passed` with ai-job-gateway main installed (97 + 9 contract tests)",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/ai-workflow-engine/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Your pipeline is a YAML DAG in git - and it fails at load time, not at 3am.",
-        "hashtags": [
-          "python",
-          "orchestration",
-          "gitops",
-          "devtools"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/ai-workflow-engine"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "ajans-os",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/ajans-os",
-      "homepage": "https://furkiozknn.github.io/#ajans-os",
-      "releases": "https://github.com/Furkiozknn/ajans-os/releases",
-      "status": "active",
-      "category": "agent-infrastructure",
-      "platform": [
-        "node"
-      ],
-      "primary_language": "JavaScript",
-      "technologies": [
-        "Node.js 22+",
-        "JavaScript",
-        "JSON Schema",
-        "zero dependencies"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "adr",
-        "agent-infrastructure",
-        "agent-orchestration",
-        "ai-agents",
-        "architecture",
-        "architecture-decision-records",
-        "contracts",
-        "javascript",
-        "json-schema",
-        "multi-agent-systems",
-        "nodejs",
-        "research",
-        "turkce"
-      ],
-      "summary": "Research-first AI agency OS core in zero-dependency Node.js: 11 ADRs, machine-readable contracts, and an acceptance run killed mid-task and resumed from disk with no side effect repeated.",
-      "key_features": [
-        "Built research-first: 40 agent projects read with file:line evidence before a line was written",
-        "11 architecture decision records, 6 machine-readable contracts, 13 modules",
-        "Acceptance run is killed mid-task, reloaded from disk and resumed - then checked that no side effect repeated",
-        "The gate tests itself: a deliberate violation is planted in the tree and CI fails if the validator misses it",
-        "The contract validator is mutation-measured - remove any one of its 19 enforcement points and its self-test must fail (it once could not, for 8 of them)"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 203,
-        "source": "`node --test`: `pass 203`",
-        "measured": "2026-10-15"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/ajans-os/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": "YOL-HARITASI.md",
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "An agency OS whose strongest test is being killed mid-task and resumed.",
-        "hashtags": [
-          "aiagents",
-          "nodejs",
-          "architecture",
-          "opensource"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/ajans-os"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "asset-provenance-toolkit",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/asset-provenance-toolkit",
-      "homepage": "https://furkiozknn.github.io/#asset-provenance-toolkit",
-      "releases": "https://github.com/Furkiozknn/asset-provenance-toolkit/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "cli",
-        "library"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "PNG text chunks",
-        "JPEG APP1 markers",
-        "ISO base media uuid boxes",
-        "ffmpeg (verification only)"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "ai-transparency",
-        "audit-trail",
-        "c2pa",
-        "cli",
-        "content-authenticity",
-        "exif",
-        "ffmpeg",
-        "generative-ai",
-        "image-metadata",
-        "metadata",
-        "mp4",
-        "provenance",
-        "python",
-        "video"
-      ],
-      "summary": "Writes which model, provider and parameters made a file into the file itself - PNG text chunks, JPEG APP1, MP4/MOV uuid boxes, no re-encoding - or a sidecar for anything else. CLI: aprov.",
-      "key_features": [
-        "Which model, provider, parameters and job made this file - written into the file itself, so the record outlives the database row",
-        "PNG gets a lossless text chunk; JPEG gets a private APP1 marker spliced into container bytes with no re-encoding",
-        "MP4/M4V/M4A/MOV get a uuid box appended after the media data - nothing stco/co64 points at ever moves, and any edit that would move it is refused",
-        "Verified against real ffmpeg-encoded clips by comparing decoded output, not just file structure",
-        "Anything else gets a sidecar file rather than a silent failure",
-        "Honest about what C2PA does that this does not"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 196,
-        "source": "`196 passed`",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/asset-provenance-toolkit/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Provenance that lives in the file, not in a database row you will lose.",
-        "hashtags": [
-          "provenance",
-          "c2pa",
-          "aitransparency",
-          "python"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/asset-provenance-toolkit"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "buradane",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/buradane",
-      "homepage": "https://furkiozknn.github.io/#buradane",
-      "releases": "https://github.com/Furkiozknn/buradane/releases",
-      "status": "active",
-      "category": "web-app",
-      "platform": [
-        "web",
-        "http-api"
-      ],
-      "primary_language": "TypeScript",
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "MapLibre",
-        "FastAPI",
-        "PostGIS",
-        "Python"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "accessibility",
-        "civic-tech",
-        "crowdsourcing",
-        "fastapi",
-        "geospatial",
-        "maplibre",
-        "mapping",
-        "nextjs",
-        "open-data",
-        "openstreetmap",
-        "postgis",
-        "public-services",
-        "python",
-        "turkey",
-        "turkiye",
-        "typescript"
-      ],
-      "summary": "Need-first finder for public places in Türkiye - toilets, parks, drinking water, mosques and more - over 167,829 OpenStreetMap places in all 81 provinces, with direction, distance and freshness.",
-      "key_features": [
-        "167,829 real OpenStreetMap places across all 81 provinces of Turkiye",
-        "Pulled from each province's true boundary, not a box around its capital, so all 973 district centres have data within 15 km",
-        "Bearing, distance and a one-tap 'still here?' on every result",
-        "ODbL data and MIT code split explicitly in a NOTICE file"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/harita-ekran-goruntusu.png"
-        ],
-        "gifs": [
-          "assets/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 431,
-        "source": "132 backend (119 + 13 in tests/test_query_validation.py) + 299 frontend (vitest, 6 in tests/basemap.test.ts)",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "frontend.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/buradane/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": "ROADMAP.md",
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "What do I need, and where is the nearest one? 167,829 places, all 81 provinces.",
-        "hashtags": [
-          "openstreetmap",
-          "civictech",
-          "nextjs",
-          "postgis",
-          "turkiye"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/buradane"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "canli-dunyalar",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/canli-dunyalar",
-      "homepage": "https://furkiozknn.github.io/canli-dunyalar/worlds/vapur/",
-      "releases": "https://github.com/Furkiozknn/canli-dunyalar/releases",
-      "status": "active",
-      "category": "web-app",
+      "category": "game",
       "platform": [
         "web"
       ],
-      "primary_language": "HTML",
+      "primary_language": "JavaScript",
       "technologies": [
         "Three.js r170",
-        "WebGL",
-        "single HTML file per world",
-        "no build step",
-        "GitHub Pages"
+        "Web Audio API"
       ],
       "version": null,
       "license": "MIT",
       "topics": [
-        "claude-code",
-        "simulation",
-        "single-file",
+        "browser-game",
         "threejs",
-        "webgl"
+        "simulation-game",
+        "boat-game",
+        "claude-code",
+        "claude-game-arena"
       ],
-      "summary": "Single-file living 3D worlds in Three.js, tuned for laptop iGPUs · Laptop ekran kartına uygun, tek dosyalık canlı 3D Three.js dünyaları",
+      "summary": "3D ferry-captain game on a low-poly Bosphorus, built by Claude Fable 5.1 · Alçak poligon İstanbul Boğazı'nda 3D şehir hatları vapuru kaptanlığı, Claude Fable 5.1 yaptı",
       "key_features": [
-        "Vapur (https://furkiozknn.github.io/canli-dunyalar/worlds/vapur/): an Istanbul-style strait where timetabled ferries give way to a tanker, with poyraz, lodos and fog weather and a night mode",
-        "Balon (https://furkiozknn.github.io/canli-dunyalar/worlds/balon/): a Cappadocia-style valley where 12 hot-air balloons keep altitude separation and chase trucks follow the predicted landing",
-        "Each world is one index.html with no build step, written from one prompt in prompts/ using a six-block template with a dedicated Performance block",
-        "Tuned for laptop iGPUs: pixel ratio capped at 1.5, one shadow map, instanced meshes; ?low drops shadows and particles, ?record hides the UI for screen capture"
+        "Six piers from Eminönü to Kanlıca with a timetable; late arrivals cost points and passengers",
+        "Docking guide for distance, speed and angle; dock slowly, parallel and close to throw the ropes",
+        "A current towards the Marmara and wind drift that grow over the campaign; tankers cannot stop quickly",
+        "Eight shifts (dusk, fog, night, strong current, storm, tanker convoy) and an endless mode",
+        "The ?auto captain finishes the campaign with 3 stars on every shift; 21-27 draw calls, 57 fps (vsync) on Intel UHD at 1280x720"
       ],
       "media": {
-        "hero": null,
+        "hero": "docs/03-dusk.png",
         "screenshots": [
-          "worlds/vapur/shots/02-selected-ferry.jpg",
-          "worlds/balon/shots/01-dawn-overview.png"
+          "docs/01-title.png",
+          "docs/02-docking.png",
+          "docs/03-dusk.png",
+          "docs/04-night.png",
+          "docs/05-storm.png",
+          "docs/06-phone-portrait.png"
         ],
-        "gifs": [],
-        "videos": []
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
       },
       "tests": null,
       "ci": {
@@ -973,526 +308,26 @@
         "license_file": "LICENSE"
       },
       "social": {
-        "headline": "Two living 3D worlds, each a single HTML file, that run on a laptop's built-in graphics.",
-        "hashtags": [
-          "threejs",
-          "webgl",
-          "claudecode"
-        ],
-        "primary_link": "https://furkiozknn.github.io/canli-dunyalar/worlds/vapur/"
-      },
-      "provenance": {
-        "generated_at": "2026-10-19",
-        "generator": "hand-written",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "claude-code-intelligence",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/claude-code-intelligence",
-      "homepage": "https://furkiozknn.github.io/#claude-code-intelligence",
-      "releases": "https://github.com/Furkiozknn/claude-code-intelligence/releases",
-      "status": "active",
-      "category": "observability",
-      "platform": [
-        "cli",
-        "local-dashboard"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python",
-        "OpenTelemetry/OTLP",
-        "local-first"
-      ],
-      "version": "0.0.1",
-      "license": "MIT",
-      "topics": [
-        "analytics",
-        "claude-code",
-        "cli",
-        "cost-tracking",
-        "developer-tools",
-        "local-first",
-        "observability",
-        "opentelemetry",
-        "otlp",
-        "privacy-first",
-        "python",
-        "quota",
-        "telemetry",
-        "token-usage"
-      ],
-      "summary": "Local-first usage intelligence for Claude Code: where the tokens went, what they cost and when the quota resets. Every number carries an evidence class; prompts and file contents are never recorded.",
-      "key_features": [
-        "Where the tokens went, what it cost, and when the limit resets",
-        "Every number carries an evidence class - observed, derived or estimated - and one that fails the reconciliation gate is not printed at all",
-        "No prompt, response or file content is defined in any type, so a privacy review is a grep",
-        "Local-first: an OTLP receiver and transcript parser that never phone home",
-        "Provider-agnostic in practice, not only on paper: a third-party adapter is a pip-installable package with one `cci.adapters` entry point, `cci providers` says which ones are reachable and why one is not, and CI installs an example package and fails if the product cannot see it"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/pano-ekran-goruntusu.png"
-        ],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 287,
-        "source": "`287 passed`",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/claude-code-intelligence/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Where the tokens went, what it cost, when the limit resets - measured, not guessed.",
+        "headline": "Captain an Istanbul ferry on the Bosphorus: keep the timetable and dock against the current · Boğaz'da vapur kaptanı ol: tarifeye uy, akıntıya karşı iskeleye yanaş",
         "hashtags": [
           "claudecode",
-          "observability",
-          "opentelemetry",
-          "python"
+          "indiegame"
         ],
-        "primary_link": "https://github.com/Furkiozknn/claude-code-intelligence"
+        "primary_link": "https://furkiozknn.github.io/bogaz-vapuru/"
       },
       "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "claude-quota-monitor",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/claude-quota-monitor",
-      "homepage": null,
-      "releases": "https://github.com/Furkiozknn/claude-quota-monitor/releases",
-      "status": "archived",
-      "category": "observability",
-      "platform": [
-        "cli",
-        "local-dashboard"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python",
-        "local web dashboard"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "archived",
-        "claude-code",
-        "prototype",
-        "python",
-        "quota"
-      ],
-      "summary": "Superseded early prototype of Claude Code quota tracking. The maintained implementation lives in claude-code-intelligence.",
-      "key_features": [
-        "Superseded early prototype of Claude Code quota tracking",
-        "The maintained implementation lives in claude-code-intelligence"
-      ],
-      "media": {
-        "hero": "docs/banner.svg",
-        "screenshots": [
-          "docs/images/pano-koyu.png",
-          "docs/images/pano-acik.png"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 43,
-        "source": "suite run before archiving",
-        "measured": "2026-09-15"
-      },
-      "ci": {
-        "workflows": [],
-        "badge": null
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Archived prototype - see claude-code-intelligence instead.",
-        "hashtags": [
-          "claudecode",
-          "archived"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/claude-quota-monitor"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "derin-kazi",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/derin-kazi",
-      "homepage": "https://furkiozknn.github.io/derin-kazi/",
-      "releases": "https://github.com/Furkiozknn/derin-kazi/releases",
-      "status": "active",
-      "category": "game",
-      "platform": [
-        "windows",
-        "web"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript",
-        "GL Compatibility renderer"
-      ],
-      "version": "0.7.2",
-      "license": "MIT",
-      "topics": [
-        "2d-game",
-        "exploration",
-        "game-development",
-        "gdscript",
-        "godot",
-        "godot4",
-        "indie-game",
-        "mining-game",
-        "resource-management",
-        "turkce"
-      ],
-      "summary": "Side-view dig-sell-upgrade game in Godot 4: mine ore, watch the fuel, upgrade the rig and reach the core at 250 m. Seeded daily worlds, Turkish and English UI, playable in the browser.",
-      "key_features": [
-        "Dig-sell-upgrade loop across five underground layers down to the core at 250 m",
-        "Fuel is the timer: every descent is a bet on getting back up before it runs out",
-        "Seeded worlds - a daily world and a Deep Mode built from the same seed code",
-        "Earthquakes, exploration fog and depth ambience that change how the layers read",
-        "The claims the design rests on are gates, not notes: the balance, human-like and fault-line suites (core in 25 min, one upgrade per round, bot reaching the core on 12 of 12 seeds) were kept out of CI as \"simulations that take minutes\" - measured at 0s, 1s and 6s, and now run on every push"
-      ],
-      "media": {
-        "hero": "yayin/banner.svg",
-        "screenshots": [
-          "yayin/ekran-2.png"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 658,
-        "source": "CI log: 395 unit (`== 395 sınama, 0 hata ==`) + 246 gameplay (`== 246 sınama, 0 hata ==`) + 7 balance (`== 7 sınama, 0 hata ==`) + 10 human-like (`== 10 sınama, 0 hata ==`)",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yapi.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/derin-kazi/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": "SURUM-GECMISI.md",
-        "roadmap": "YOL-HARITASI.md",
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Mine deeper, or make it back up. The fuel gauge decides.",
-        "hashtags": [
-          "godot",
-          "godot4",
-          "indiedev",
-          "gamedev",
-          "miningame"
-        ],
-        "primary_link": "https://furkiozknn.github.io/derin-kazi/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "frk-components",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/frk-components",
-      "homepage": null,
-      "releases": "https://github.com/Furkiozknn/frk-components/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "web"
-      ],
-      "primary_language": "JavaScript",
-      "technologies": [
-        "vanilla JavaScript",
-        "Canvas",
-        "HyperFrames",
-        "no dependencies"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "accessibility",
-        "animation",
-        "canvas",
-        "claude-code",
-        "deterministic",
-        "hyperframes",
-        "javascript",
-        "ui-components",
-        "zero-dependency"
-      ],
-      "summary": "Single-file, dependency-free UI components that animate frame by frame; each one is a live demo, a HyperFrames video scene and copyable code, with real measurements · Tek dosyalık, kütüphanesiz, kare kare oynatılabilen arayüz parçaları; her biri canlı demo, HyperFrames video sahnesi ve kopyalanabilir kod",
-      "key_features": [
-        "Seven single-file UI parts (odometer, prompt terminal, rope swing, status orb, contribution heat, code diff, progress ring), each with a live demo",
-        "One shared contract: mount, a pure seek(t), play, pause, destroy; randomness only from a seed, checked by a source scan",
-        "Each part is also a HyperFrames video scene with generated, schema-validated catalogue manifests",
-        "Real measurements in OLCUM.md; real phones and iOS Safari are stated as not measured"
-      ],
-      "media": {
-        "hero": null,
-        "screenshots": [
-          "assets/galeri/odometer-390.png",
-          "assets/galeri/status-orb-390.png"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "ci": {
-        "workflows": [],
-        "badge": null
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "provenance": {
-        "generated_at": "2026-10-19",
+        "generated_at": "2026-10-27",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
       }
     },
     {
       "schema_version": "1.0.0",
-      "id": "godot-2d-sablon",
+      "id": "dolmus",
       "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/godot-2d-sablon",
-      "homepage": "https://furkiozknn.github.io/#godot-2d-sablon",
-      "releases": "https://github.com/Furkiozknn/godot-2d-sablon/releases",
-      "status": "active",
-      "category": "template",
-      "platform": [
-        "godot"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript",
-        "GL Compatibility renderer"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "2d",
-        "boilerplate",
-        "coyote-time",
-        "game-development",
-        "gamedev",
-        "gdscript",
-        "godot",
-        "godot4",
-        "pixel-perfect",
-        "platformer",
-        "starter-template",
-        "template",
-        "top-down",
-        "turkce"
-      ],
-      "summary": "Two ready-to-run Godot 4.7 2D starters - top-down with accelerated 8-way movement, side-view with coyote time and jump buffering - with jump curves measured from the real physics step.",
-      "key_features": [
-        "Two starter projects that already feel right to play: top-down with 8-way accelerated movement, side-view with coyote time, jump buffering and variable jump height",
-        "The feel is measured, not guessed: jump curves come from running the real _physics_process at the project's 60 Hz fixed step",
-        "GL Compatibility throughout, so it runs on integrated graphics",
-        "A pause menu with key remapping in both starters: rebinding survives restarts, keeps gamepad bindings, and is tested in real Godot",
-        "Export settings and project layout documented, ready to fork"
-      ],
-      "media": {
-        "hero": "docs/banner.svg",
-        "screenshots": [
-          "docs/ekran-yandan.png",
-          "docs/ekran-ustten.png"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 50,
-        "source": "CI log: `50 passed`",
-        "measured": "2026-10-15"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/godot-2d-sablon/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Two Godot 4 starters whose jump feel was measured, not guessed.",
-        "hashtags": [
-          "godot",
-          "godot4",
-          "gamedev",
-          "template"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/godot-2d-sablon"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "godot-refcheck",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/godot-refcheck",
-      "homepage": "https://furkiozknn.github.io/#godot-refcheck",
-      "releases": "https://github.com/Furkiozknn/godot-refcheck/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "cli",
-        "github-action"
-      ],
-      "primary_language": "Rust",
-      "technologies": [
-        "Rust (std only)",
-        "zero dependencies",
-        "SARIF 2.1.0",
-        "GitHub Actions"
-      ],
-      "version": "0.3.0",
-      "license": "MIT",
-      "topics": [
-        "ci",
-        "gamedev",
-        "godot",
-        "godot-engine",
-        "godot4",
-        "linter",
-        "rust",
-        "sarif",
-        "static-analysis",
-        "zero-dependency"
-      ],
-      "summary": "Finds broken resource references, uid problems and dead signal connections in Godot projects without opening the editor, and repairs those with a single provable answer. Rust CLI and GitHub Action.",
-      "key_features": [
-        "Thirteen checks over .tscn, .tres, project.godot, .import, plugin.cfg, GDScript and shaders, in both the Godot 3 and Godot 4 formats",
-        "Node paths resolve through instanced, inherited and placeholder scenes, so a dead signal connection is found without ever calling a healthy one broken",
-        "A script reaching for $Head/Body the scene does not contain is an error, and stays silent on the six things that made it wrong: another node's get_node, a run-time add_child, a child that carries an instanced scene's root name, a path the script guards with has_node, a unique name, a script no scene attaches",
-        "An Input Map action a script asks for by name and the project never defines is an error that names the action it most likely meant; actions added or tested for at run time count as present",
-        "--fix repairs in place what the project itself settles: a moved file, a case-only difference, a uid that already resolves; two files with the same name produce no repair",
-        "Verified against a headless Godot: ten engine-confirmed cases and two repair round trips where the engine errors before --fix and is silent after",
-        "Findings reach a pull request as GitHub annotations by default, and SARIF locations are relative to the checkout, so code scanning places them on the right file",
-        "Calibrated on 237 projects in eleven real repositories: 50 findings, each confirmed by hand, no change proposed anywhere"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 176,
-        "source": "CI log: `=== 176 tests passed ===`",
-        "measured": "2026-10-15"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "corpus.yml",
-          "release.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/godot-refcheck/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Godot only tells you a reference is broken when that scene loads. godot-refcheck tells you at commit time.",
-        "hashtags": [
-          "godot",
-          "gamedev",
-          "rust",
-          "staticanalysis"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/godot-refcheck"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; counts taken from a run recorded in CI; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "isik-tuneli",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/isik-tuneli",
-      "homepage": "https://furkiozknn.github.io/isik-tuneli/",
-      "releases": "https://github.com/Furkiozknn/isik-tuneli/releases",
+      "repository": "https://github.com/Furkiozknn/dolmus",
+      "homepage": "https://furkiozknn.github.io/dolmus/",
+      "releases": null,
       "status": "active",
       "category": "game",
       "platform": [
@@ -1500,220 +335,48 @@
       ],
       "primary_language": "JavaScript",
       "technologies": [
-        "JavaScript",
-        "Three.js r186",
-        "WebGL",
+        "Three.js r170",
         "Web Audio API",
-        "no build step"
+        "Blender"
       ],
       "version": null,
       "license": "MIT",
       "topics": [
-        "arcade-game",
         "browser-game",
-        "endless-runner",
-        "game",
-        "gamedev",
-        "github-pages",
-        "html5-game",
-        "javascript",
-        "no-build",
-        "procedural-generation",
         "threejs",
-        "threejs-game",
-        "web-audio-api",
-        "webgl",
-        "webgl-game"
+        "driving-game",
+        "arcade-game",
+        "claude-code",
+        "claude-game-arena"
       ],
-      "summary": "Endless browser space-runner with Three.js bloom and a Web Audio engine synthesized live - no sound files, no build step. Near-miss bonuses and a daily seeded run everyone plays the same.",
+      "summary": "3D arcade driving game with a yellow shared minibus in a low-poly Istanbul neighbourhood, built by Claude Sonnet 5.5 · Alçak poligon bir İstanbul mahallesinde sarı dolmuşla 3D arcade sürüş, Claude Sonnet 5.5 yaptı",
       "key_features": [
-        "Endless browser space-runner with real Three.js bloom post-processing and hand-written particles",
-        "Audio engine synthesized live in Web Audio - not one sound file in the repository",
-        "Skim an obstacle without touching it and take the near-miss bonus",
-        "A daily run seeded from the UTC date deals every player the same obstacles; 1 MB first load, no build step",
-        "Every test runs with the page sealed to its own origin, so a reintroduced CDN import breaks CI instead of passing it"
+        "Stop, open the door and pick up waving passengers; each one names their stop in a chat bubble, 12 seats",
+        "Tips for fast and smooth rides; red lights, crashes, hard braking and skipped passengers cost money",
+        "Eight shifts and an endless mode with a tram, rain, a VIP passenger, a traffic jam and a night shift",
+        "The ?auto bot finished all 8 levels with the same controls and rules as a player",
+        "About 60 fps (vsync cap) on an Intel UHD 630 laptop at 1280x720 with 42 draw calls; one index.html, optional CC0 asset pass"
       ],
       "media": {
-        "hero": "assets/banner.svg",
+        "hero": "docs/02-gameplay-day.png",
         "screenshots": [
-          "assets/gameplay.webp",
-          "assets/screenshot.webp"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 81,
-        "source": "`81 passed` (Playwright)",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/isik-tuneli/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "1 MB, no build step, real bloom - and every sound synthesized on the fly.",
-        "hashtags": [
-          "threejs",
-          "webgl",
-          "gamedev",
-          "javascript",
-          "webaudio"
-        ],
-        "primary_link": "https://furkiozknn.github.io/isik-tuneli/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "kanca",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/kanca",
-      "homepage": "https://furkiozknn.github.io/kanca/",
-      "releases": "https://github.com/Furkiozknn/kanca/releases",
-      "status": "active",
-      "category": "game",
-      "platform": [
-        "windows",
-        "web"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript",
-        "GL Compatibility renderer"
-      ],
-      "version": "0.5.2",
-      "license": "MIT",
-      "topics": [
-        "2d-game",
-        "game-development",
-        "gdscript",
-        "godot",
-        "godot4",
-        "grappling-hook",
-        "indie-game",
-        "platformer",
-        "speedrun",
-        "turkce"
-      ],
-      "summary": "Speed-focused 2D swinging platformer in Godot 4: hook the ceiling, swing and release to carry momentum through 14 levels with bot-measured medal times. Turkish and English UI, playable in the browser.",
-      "key_features": [
-        "Swing physics with no jump button: hook a ceiling anchor, swing, release at the right moment and keep the momentum",
-        "14 hand-built levels; medal times on 13 of them measured by a scripted bot rather than guessed",
-        "All sprites generated from code (tools/sprite_uret.gd), so the art is reproducible from the repository",
-        "Single-finger control scheme for touch, documented alongside the keyboard layout",
-        "Medal thresholds come from a bot that really plays each level, and CI re-runs it on every push: every level has to still finish and the published gold has to still be a time the bot can reach - which is how level 5's gold was found to be 3.5s faster than the bot's own median"
-      ],
-      "media": {
-        "hero": "yayin/banner.svg",
-        "screenshots": [
-          "docs/ekran/menu_tr.png",
-          "docs/ekran/bolum_13.png"
+          "docs/01-title.png",
+          "docs/02-gameplay-day.png",
+          "docs/03-rain-van.png",
+          "docs/04-night.png",
+          "docs/05-phone-portrait.png",
+          "docs/06-shift-summary.png"
         ],
         "gifs": [
-          "yayin/tanitim.gif"
+          "docs/gameplay.gif"
         ],
-        "videos": []
+        "videos": [
+          "docs/gameplay.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-28-dolmus-en.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-28-dolmus-tr.mp4"
+        ]
       },
-      "tests": {
-        "count": 244,
-        "source": "CI log: `=== 244/244 gecti ===`",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yapi.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/kanca/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": "SURUM-GECMISI.md",
-        "roadmap": "YOL-HARITASI.md",
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "One key. One rope. All the momentum you can carry.",
-        "hashtags": [
-          "godot",
-          "godot4",
-          "indiedev",
-          "gamedev",
-          "platformer"
-        ],
-        "primary_link": "https://furkiozknn.github.io/kanca/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "kor",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/kor",
-      "homepage": null,
-      "releases": "https://github.com/Furkiozknn/kor/releases",
-      "status": "active",
-      "category": "game",
-      "platform": [
-        "windows",
-        "web"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "2d-game",
-        "game",
-        "gdscript",
-        "godot",
-        "godot4",
-        "indie-game",
-        "pixel-art",
-        "roguelite",
-        "survivors-like",
-        "turkish"
-      ],
-      "summary": "Top-down roguelite in Godot 4 set in a dark foundry where heat is vision, not ammo: shooting warms you and widens your sight, dashing vents heat and leaves you blind · Karanlık bir dökümhanede geçen Godot 4 roguelite: ısı mermi değil görüş; ateş ettikçe görüşün açılır, dalış ısıyı boşaltır ve seni kör bırakır",
-      "key_features": [
-        "Heat is vision, not ammo: the arena is dark and your sight radius comes from your heat alone, from 40 px cold to 336 px locked",
-        "Firing heats the gun; at the ceiling it locks for two seconds and a dash cannot break the lock",
-        "Dashing dumps heat and leaves you nearly blind, so safety is paid for with sight",
-        "Third-party art and audio credited in KUNYE.md and on an in-game credits screen"
-      ],
-      "media": {
-        "hero": null,
-        "screenshots": [],
-        "gifs": [],
-        "videos": []
-      },
+      "tests": null,
       "ci": {
         "workflows": [],
         "badge": null
@@ -1727,647 +390,74 @@
         "contributing": null,
         "license_file": "LICENSE"
       },
-      "provenance": {
-        "generated_at": "2026-10-19",
-        "generator": "hand-written",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "local-notes-search-mcp",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/local-notes-search-mcp",
-      "homepage": "https://furkiozknn.github.io/#local-notes-search-mcp",
-      "releases": "https://github.com/Furkiozknn/local-notes-search-mcp/releases",
-      "status": "active",
-      "category": "mcp-server",
-      "platform": [
-        "mcp",
-        "cli"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.10+",
-        "sqlite-vec",
-        "multilingual ONNX embeddings",
-        "MCP"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "claude-code",
-        "embeddings",
-        "fastembed",
-        "markdown",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol",
-        "obsidian",
-        "offline",
-        "personal-knowledge-base",
-        "privacy-first",
-        "python",
-        "rag",
-        "semantic-search",
-        "sqlite-vec"
-      ],
-      "summary": "Semantic search over your own notes and files as an MCP server: sqlite-vec with a multilingual ONNX model, answers cited as file:line. No API key and no network at query time.",
-      "key_features": [
-        "Ask your own files a question in plain language instead of guessing the keyword you typed six months ago",
-        "Semantic search as an MCP server: sqlite-vec plus a multilingual ONNX model, with incremental re-indexing",
-        "Answers returned as file:line",
-        "No server, no API key, no network at query time; grounded LLM Q&A is opt-in"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": [
-          "docs/demo/demo.mp4"
-        ]
-      },
-      "tests": {
-        "count": 107,
-        "source": "`107 passed` (CI, model required, Python 3.10-3.13)",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/local-notes-search-mcp/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
       "social": {
-        "headline": "Ask your own notes a question instead of guessing the keyword.",
+        "headline": "Drive a yellow dolmuş through Istanbul: pick up passengers, learn their stops, earn fares and tips · Sarı dolmuşla İstanbul'da yolcu al, durağını öğren, ücret ve bahşiş topla",
         "hashtags": [
-          "mcp",
-          "semanticsearch",
-          "obsidian",
-          "privacyfirst"
+          "claudecode",
+          "indiegame"
         ],
-        "primary_link": "https://github.com/Furkiozknn/local-notes-search-mcp"
+        "primary_link": "https://furkiozknn.github.io/dolmus/"
       },
       "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "lodeworks",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/lodeworks",
-      "homepage": null,
-      "releases": "https://github.com/Furkiozknn/lodeworks/releases",
-      "status": "prototype",
-      "category": "game",
-      "platform": [
-        "android"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript",
-        "Android"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "android",
-        "factory-game",
-        "game",
-        "gdscript",
-        "godot",
-        "godot4",
-        "idle-game",
-        "mobile-game",
-        "simulation"
-      ],
-      "summary": "Idle machine-grid builder for Android in Godot 4.7: place machines that feed each other by adjacency, manage heat and descend the strata · Godot 4.7 ile Android için idle makine ızgarası oyunu: komşuluğa göre birbirini besleyen makineler kur, ısıyı yönet, katmanlara in",
-      "key_features": [
-        "Machines feed each other by adjacency; manage heat and descend the strata",
-        "An eight-step first chapter taught on your real board, then no more tutorial windows",
-        "Codex pages run a real two-to-five tile Simulation instead of describing the rule",
-        "Not published on Google Play; the README says so"
-      ],
-      "media": {
-        "hero": null,
-        "screenshots": [],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 255,
-        "source": "CI log (ci.yml, main, 2026-10-19): `=== 255 tests passed (2082 assertions) ===`",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "android.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/lodeworks/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "provenance": {
-        "generated_at": "2026-10-19",
+        "generated_at": "2026-10-27",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
       }
     },
     {
       "schema_version": "1.0.0",
-      "id": "masal",
+      "id": "karagoz",
       "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/masal",
-      "homepage": "https://furkiozknn.github.io/masal/",
-      "releases": "https://github.com/Furkiozknn/masal/releases",
+      "repository": "https://github.com/Furkiozknn/karagoz",
+      "homepage": "https://furkiozknn.github.io/karagoz/",
+      "releases": null,
       "status": "active",
-      "category": "web-app",
+      "category": "game",
       "platform": [
         "web"
       ],
       "primary_language": "JavaScript",
       "technologies": [
-        "vanilla JavaScript",
-        "SVG",
-        "no build step",
-        "GitHub Pages"
-      ],
-      "version": "1.0.0",
-      "license": "MIT",
-      "topics": [
-        "children",
-        "coloring-book",
-        "generative-text",
-        "github-pages",
-        "kids",
-        "nlp",
-        "no-build",
-        "privacy-first",
-        "storytelling",
-        "svg",
-        "turkce",
-        "turkish",
-        "vanilla-js",
-        "web-app"
-      ],
-      "summary": "Personalised Turkish bedtime stories built around a child's name, age and hometown, with vector colouring pages drawn into the story. Runs in the browser: no photo upload, no download, no API key.",
-      "key_features": [
-        "A bedtime story written around one child's name, age and hometown",
-        "The colouring page is drawn into the story as vectors, so it fills cleanly instead of smudging past the outline",
-        "Six themes and a branch on page three - twelve readings",
-        "Turkish suffix engine gets the name right where template substitution never could; no photo upload, no download, no API key"
-      ],
-      "media": {
-        "hero": "assets/sahneler.png",
-        "screenshots": [
-          "assets/sahneler.png",
-          "assets/ekran-goruntusu.png"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 125,
-        "source": "CI log (`node --test`): `pass 125`",
-        "measured": "2026-09-29"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/masal/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "A bedtime story written around your child's name - and a colouring page drawn into it.",
-        "hashtags": [
-          "javascript",
-          "svg",
-          "kids",
-          "turkce",
-          "webapp"
-        ],
-        "primary_link": "https://furkiozknn.github.io/masal/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "mcp-census",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/mcp-census",
-      "homepage": "https://furkiozknn.github.io/#mcp-census",
-      "releases": "https://github.com/Furkiozknn/mcp-census/releases",
-      "status": "active",
-      "category": "research",
-      "platform": [
-        "cli"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "zero runtime dependencies"
-      ],
-      "version": "0.2.0",
-      "license": "MIT",
-      "topics": [
-        "cli",
-        "data-analysis",
-        "mcp",
-        "mcp-registry",
-        "measurement",
-        "model-context-protocol",
-        "open-data",
-        "python",
-        "reproducible-research",
-        "zero-dependency"
-      ],
-      "summary": "Reproducible count of the official MCP Registry: the same question asked three ways gives three different numbers, and this measures why.",
-      "key_features": [
-        "Asks the official MCP Registry the same question three ways and shows why the three answers differ",
-        "Finds that roughly a quarter of registry entries have no source code to read",
-        "Measures the count over time instead of quoting a single snapshot",
-        "Reproducible: the sample data and the fetch/analyse pipeline are both in the repository"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": [
-          "docs/demo/demo.mp4"
-        ]
-      },
-      "tests": {
-        "count": 214,
-        "source": "CI log: `148 passed`",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "sayim.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/mcp-census/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "How many MCP servers are there? Ask three ways, get three numbers.",
-        "hashtags": [
-          "mcp",
-          "modelcontextprotocol",
-          "opensource",
-          "datascience"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/mcp-census"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "mcp-vet",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/mcp-vet",
-      "homepage": "https://furkiozknn.github.io/#mcp-vet",
-      "releases": "https://github.com/Furkiozknn/mcp-vet/releases",
-      "status": "active",
-      "category": "security-tool",
-      "platform": [
-        "cli",
-        "claude-code-skill"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.9-3.13",
-        "zero dependencies",
-        "MCP"
-      ],
-      "version": "0.6.0",
-      "license": "MIT",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "claude-code",
-        "mcp",
-        "mcp-security",
-        "mcp-server",
-        "model-context-protocol",
-        "prompt-injection",
-        "python",
-        "security",
-        "security-audit",
-        "skill",
-        "static-analysis",
-        "supply-chain-security",
-        "zero-dependency"
-      ],
-      "summary": "Static security auditor for MCP servers: reads the source before you install and quotes every finding - tool poisoning, exfiltration paths, install hooks - with file:line. Never runs what it audits.",
-      "key_features": [
-        "Reads an MCP server's source before you install it - 32 rules across tool poisoning, exfiltration paths, install hooks and registry provenance",
-        "Every finding is quoted with file:line, so a claim can be checked rather than believed",
-        "Never executes what it audits",
-        "JSON output and a CI mode, plus a version diff between two releases of the same server"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 641,
-        "source": "CI log: `641 passed`",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/mcp-vet/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "An MCP tool description is read on every call. Nobody scrolls past it. mcp-vet does.",
-        "hashtags": [
-          "mcp",
-          "security",
-          "supplychain",
-          "aiagents"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/mcp-vet"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "mini-creative-toolkit",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/mini-creative-toolkit",
-      "homepage": "https://furkiozknn.github.io/#mini-creative-toolkit",
-      "releases": "https://github.com/Furkiozknn/mini-creative-toolkit/releases",
-      "status": "active",
-      "category": "mcp-server",
-      "platform": [
-        "mcp",
-        "cli"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "Pillow",
-        "FFmpeg",
-        "CPU-only"
-      ],
-      "version": "2.1.0",
-      "license": "MIT",
-      "topics": [
-        "background-removal",
-        "claude-code",
-        "cpu-only",
-        "ffmpeg",
-        "image-processing",
-        "mcp",
-        "mcp-server",
-        "media-tools",
-        "model-context-protocol",
-        "no-api-key",
-        "offline-first",
-        "pillow",
-        "python",
-        "video-processing"
-      ],
-      "summary": "23 CPU-first media tools as an MCP server and CLI: background removal, EXIF/GPS stripping, resize, GIFs, video trim. 20 of them report \"network\": \"none\" in their own reply. No GPU required. 405 tests.",
-      "key_features": [
-        "23 CPU-first media tools behind one MCP server: background removal, EXIF/GPS stripping, resize, thumbnails, GIFs, video trim",
-        "20 of them report \"network\": \"none\" in their own response payload rather than in a README (remove_background, alone or inside batch_process, fetches its model weights once)",
-        "A test fails if any other module ever imports an HTTP client",
-        "GPU only for the optional Real-ESRGAN upscaler, no paid API; rembg's CC-BY-NC default model is refused unless you opt in knowingly"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 405,
-        "source": "`405 passed`",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/mini-creative-toolkit/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "23 media tools that state their network use in their own response payload.",
-        "hashtags": [
-          "mcp",
-          "ffmpeg",
-          "imageprocessing",
-          "offlinefirst"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/mini-creative-toolkit"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "model-comparison-harness",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/model-comparison-harness",
-      "homepage": "https://furkiozknn.github.io/#model-comparison-harness",
-      "releases": "https://github.com/Furkiozknn/model-comparison-harness/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "cli",
-        "library"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "CLI: mch"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "benchmarking",
-        "cli",
-        "developer-tools",
-        "evaluation",
-        "generative-ai",
-        "latency",
-        "llm",
-        "llm-evaluation",
-        "model-comparison",
-        "observability",
-        "python",
-        "routing"
-      ],
-      "summary": "Send one request to several model backends at once and compare latency, success and output side by side, with optional judge-model scoring and typed errors. Python CLI: mch.",
-      "key_features": [
-        "Fires one request at N model backends at once and puts latency, success and output side by side",
-        "--rubric adds a judge model returning pass/fail, a 0-1 score and a reason, so quality is compared too",
-        "Every failure carries an error_type a script can branch on",
-        "Usable as a library, with a documented path for writing a new backend type"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 150,
-        "source": "`150 passed`",
-        "measured": "2026-09-25"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/model-comparison-harness/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "One prompt, N providers, one report - and a judge model scoring each answer.",
-        "hashtags": [
-          "llm",
-          "evaluation",
-          "python",
-          "devtools"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/model-comparison-harness"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "nova-drift",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/nova-drift",
-      "homepage": "https://furkiozknn.github.io/isik-tuneli/",
-      "releases": "https://github.com/Furkiozknn/nova-drift/releases",
-      "status": "archived",
-      "category": "profile",
-      "platform": [
-        "web"
-      ],
-      "primary_language": "HTML",
-      "technologies": [
-        "static redirect page"
+        "Three.js r170",
+        "Canvas 2D",
+        "Web Audio API"
       ],
       "version": null,
-      "license": null,
-      "topics": [],
-      "summary": "Redirect: Nova Drift is now Işık Tüneli · Yönlendirme: Nova Drift'in yeni adı Işık Tüneli",
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "puzzle-game",
+        "shadow-theatre",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D shadow-theatre light puzzle with Karagöz and Hacivat, built by Claude Opus 5.5 · Karagöz ve Hacivat'lı 3D gölge oyunu ışık bulmacası, Claude Opus 5.5 yaptı",
       "key_features": [
-        "Only forwards the old Pages address https://furkiozknn.github.io/nova-drift/ to https://furkiozknn.github.io/isik-tuneli/, keeping path, query and hash; the game lives in Furkiozknn/isik-tuneli"
+        "Point-light shadow optics: near the lamp a big soft shadow, near the cloth a small sharp one",
+        "Coloured leather mixes colours; red and blue glass lamps cast shadows in each other's colour",
+        "24 scenes in 4 acts; match the gold target to 90 % and the puppets act out a TR / EN dialogue",
+        "Up to 3 stars per scene (72 in all): solve, par moves, no hint; act IV adds timed moving pieces",
+        "The ?auto bot plays all 24 scenes reading the same match % a player sees; one index.html, everything generated in code"
       ],
       "media": {
-        "hero": null,
-        "screenshots": [],
-        "gifs": [],
-        "videos": []
+        "hero": "docs/02-backstage.png",
+        "screenshots": [
+          "docs/01-title.png",
+          "docs/02-backstage.png",
+          "docs/03-audience.png",
+          "docs/04-colour-lamps.png",
+          "docs/05-act-map.png",
+          "docs/06-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
       },
+      "tests": null,
       "ci": {
         "workflows": [],
         "badge": null
@@ -2379,365 +469,429 @@
         "roadmap": null,
         "security": null,
         "contributing": null,
-        "license_file": null
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Light the shadow theatre: move puppets and lamps until Karagöz and Hacivat match the picture · Gölge oyununu aydınlat: tasvirleri ve kandilleri oynat, Karagöz ile Hacivat sahneye çıksın",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/karagoz/"
       },
       "provenance": {
-        "generated_at": "2026-10-19",
+        "generated_at": "2026-10-27",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
       }
     },
     {
       "schema_version": "1.0.0",
-      "id": "nvidia-nim-mcp",
+      "id": "kervan",
       "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/nvidia-nim-mcp",
-      "homepage": "https://furkiozknn.github.io/#nvidia-nim-mcp",
-      "releases": "https://github.com/Furkiozknn/nvidia-nim-mcp/releases",
+      "repository": "https://github.com/Furkiozknn/kervan",
+      "homepage": "https://furkiozknn.github.io/kervan/",
+      "releases": null,
       "status": "active",
-      "category": "mcp-server",
+      "category": "game",
       "platform": [
-        "mcp"
+        "web"
       ],
-      "primary_language": "Python",
+      "primary_language": "JavaScript",
       "technologies": [
-        "Python 3.11+",
-        "NVIDIA NIM",
-        "Groq",
-        "Mistral",
-        "Gemini",
-        "Cerebras"
+        "Three.js r170",
+        "Web Audio API",
+        "Blender"
       ],
-      "version": "0.1.0",
+      "version": null,
       "license": "MIT",
       "topics": [
-        "ai",
-        "cerebras",
+        "browser-game",
+        "threejs",
+        "strategy-game",
+        "trading-game",
         "claude-code",
-        "fallback",
-        "free-tier",
-        "gemini",
-        "groq",
-        "image-generation",
-        "llm",
-        "mcp",
-        "mcp-server",
-        "mistral",
-        "model-context-protocol",
-        "nvidia",
-        "nvidia-nim",
-        "python"
+        "claude-game-arena"
       ],
-      "summary": "MCP server for NVIDIA NIM's free tier - image, vision, translation, chat, content safety, embeddings - that falls back to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or retired.",
+      "summary": "3D Silk Road trade strategy on a low-poly map of Anatolia, built by Claude Opus 5.5 · Anadolu haritasında 3D İpek Yolu ticaret stratejisi, Claude Opus 5.5 yaptı",
       "key_features": [
-        "Seven MCP tools on NVIDIA NIM's free tier: image, vision, translation, chat, content safety, embeddings, plus a health probe that tells you which models are still alive",
-        "Two of the seven need no API key at all",
-        "Falls through to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or quietly retired",
-        "Output files land where you can find them, documented in the README"
+        "Seven cities with their own supply and demand; prices react to your trades and to three rival merchants",
+        "Camel caravans follow the roads, stop at caravanserais at night, and need guards against bandits on neglected roads",
+        "Goal: 10,000 akçe and 3 caravanserais before the end of year 5; seasons, contracts, plague and festivals change the market",
+        "The ?auto bot won 12 of 12 seeded runs between day 158 and day 211; a careless bot went bankrupt in the first season every time",
+        "About 60 fps (vsync cap) on Intel UHD 620 at 1280x720 with 20-29 draw calls; one index.html, optional CC0 asset pass"
       ],
       "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
+        "hero": "docs/map.png",
+        "screenshots": [
+          "docs/title.png",
+          "docs/map.png",
+          "docs/market.png",
+          "docs/caravan.png",
+          "docs/phone.png"
+        ],
         "gifs": [
-          "docs/demo/demo.gif"
+          "docs/gameplay.gif"
         ],
-        "videos": []
+        "videos": [
+          "docs/gameplay.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-27-kervan-en.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-27-kervan-tr.mp4"
+        ]
       },
-      "tests": {
-        "count": 113,
-        "source": "`113 passed`",
-        "measured": "2026-10-15"
-      },
+      "tests": null,
       "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/nvidia-nim-mcp/actions/workflows/ci.yml/badge.svg"
+        "workflows": [],
+        "badge": null
       },
       "docs": {
         "readme": "README.md",
         "changelog": null,
         "version_history": null,
         "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Seven MCP tools on a free tier - and a fallback chain for when a model quietly dies.",
-        "hashtags": [
-          "mcp",
-          "nvidia",
-          "llm",
-          "freetier"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/nvidia-nim-mcp"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "prompt-template-manager",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/prompt-template-manager",
-      "homepage": "https://furkiozknn.github.io/#prompt-template-manager",
-      "releases": "https://github.com/Furkiozknn/prompt-template-manager/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "cli",
-        "library"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "Jinja2 SandboxedEnvironment",
-        "CLI: ptm"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "cli",
-        "developer-tools",
-        "gitops",
-        "jinja2",
-        "llm",
-        "llmops",
-        "prompt-engineering",
-        "prompt-templates",
-        "python",
-        "sandbox",
-        "version-control"
-      ],
-      "summary": "Prompt templates as plain YAML in git, rendered through a sandboxed, strict Jinja environment so a typo'd variable fails loudly instead of rendering blank. Python CLI and library: ptm.",
-      "key_features": [
-        "Templates as plain YAML, so a prompt change is a diff in a pull request rather than a database row",
-        "Rendered through Jinja's SandboxedEnvironment with StrictUndefined: a typo'd variable fails loudly instead of rendering blank",
-        "A ${var} form that keeps an integer an integer instead of stringifying it",
-        "Works as a CLI and as a library, with the security model documented"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/fails-loudly.svg"
-        ],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 156,
-        "source": "`156 passed`",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/prompt-template-manager/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Your prompts deserve git diff, not a database row.",
-        "hashtags": [
-          "llmops",
-          "promptengineering",
-          "python",
-          "gitops"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/prompt-template-manager"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "repo-ratchet",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/repo-ratchet",
-      "homepage": "https://furkiozknn.github.io/#repo-ratchet",
-      "releases": "https://github.com/Furkiozknn/repo-ratchet/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+ standard library only",
-        "no runtime dependencies",
-        "append-only JSON Lines work records",
-        "GitHub REST API"
-      ],
-      "version": "0.2.0",
-      "license": "MIT",
-      "topics": [
-        "continuous-improvement",
-        "developer-tools",
-        "github",
-        "repository-maintenance",
-        "zero-dependency"
-      ],
-      "summary": "The engine that keeps every repository on this account moving forward: it measures what each one can currently do, ranks where the headroom is, and refuses to record work that no check actually verified.",
-      "key_features": [
-        "Thirteen signals that measure a repository without executing anything inside it, each returning the evidence behind its number and null rather than a guess",
-        "Work records with three rules enforced in code: advanced needs the commit to have moved, advanced needs a check that had to succeed and did, no-change and blocked need a stated reason",
-        "A fenced check runner with allowlisted verbs, no shell (bash -c included), a scrubbed environment, closed stdin and a timeout, so a command cannot grow a second half it did not declare",
-        "Rounds that cover every repository once before anything is revisited, with unchanged repositories sinking to the back of the queue"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/queue.svg"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 177,
-        "source": "CI log: `177 passed`",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "tur.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/repo-ratchet/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
+        "security": null,
         "contributing": null,
         "license_file": "LICENSE"
       },
       "social": {
-        "headline": "A ratchet only turns one way: measure what a repository can do, rank the headroom, and refuse to record work nobody verified.",
+        "headline": "Lead camel caravans across Anatolia: buy low, sell high, build caravanserais · Deve kervanlarıyla Anadolu'da ucuza al, pahalıya sat, kervansaray kur",
         "hashtags": [
-          "opensource",
-          "devtools",
-          "python"
+          "claudecode",
+          "indiegame"
         ],
-        "primary_link": "https://github.com/Furkiozknn/repo-ratchet"
+        "primary_link": "https://furkiozknn.github.io/kervan/"
       },
       "provenance": {
-        "generated_at": "2026-09-25",
+        "generated_at": "2026-10-27",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; the test count is the number the runner printed"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
       }
     },
     {
       "schema_version": "1.0.0",
-      "id": "repo-vet",
+      "id": "lale-bahcesi",
       "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/repo-vet",
-      "homepage": "https://furkiozknn.github.io/#repo-vet",
-      "releases": "https://github.com/Furkiozknn/repo-vet/releases",
+      "repository": "https://github.com/Furkiozknn/lale-bahcesi",
+      "homepage": "https://furkiozknn.github.io/lale-bahcesi/",
+      "releases": null,
       "status": "active",
-      "category": "developer-tool",
+      "category": "game",
       "platform": [
-        "cli",
-        "github-actions"
+        "web"
       ],
-      "primary_language": "Python",
+      "primary_language": "JavaScript",
       "technologies": [
-        "Python 3.9+",
-        "GitHub REST API",
-        "standard library only",
-        "GitHub Actions (composite action)"
+        "Three.js r170",
+        "Web Audio API"
       ],
-      "version": "0.2.0",
+      "version": null,
       "license": "MIT",
       "topics": [
-        "ci",
-        "cli",
-        "developer-tools",
-        "documentation",
-        "github",
-        "github-actions",
-        "link-checker",
-        "linter",
-        "python",
-        "quality-assurance",
-        "readme",
-        "release-automation"
+        "browser-game",
+        "threejs",
+        "cozy-game",
+        "garden-builder",
+        "claude-code",
+        "claude-game-arena"
       ],
-      "summary": "Checks what a GitHub repository claims about itself - install commands, badges, links, releases, published sites - against what is actually there. Six checks over the GitHub API, no clone, zero dependencies.",
+      "summary": "Cosy 3D tulip garden builder in the Ottoman Tulip Era, built by Claude Haiku 5.5 · Lale Devri'nde sakin bir 3D lale bahçesi kurma oyunu, Claude Haiku 5.5 yaptı",
       "key_features": [
-        "Checks a README's install commands against PyPI, npm and crates.io, so the first command a visitor runs is one that still resolves",
-        "Only fenced code blocks count as instructions: a sentence mentioning a command is discussing it, not asking anyone to run it",
-        "Says nothing when it cannot see - an unreachable registry, a rate limit, an unreadable README or tag list, or a tree GitHub truncated is reported as not checked, never as clean (exit 3 when nothing could be read)",
-        "Checked against 29 public repositories that disagree with each other; every false positive it produced is now a named test",
-        "As a GitHub Action it vets the commit under test, so a pull request that breaks its own README fails that pull request"
+        "Plant, water and cut tulips on a walled palace terrace by the Bosphorus",
+        "Breed hybrids from neighbouring blooms: colour, petal shape and pattern mix the parents'",
+        "A bazaar where prices rise and crash, especially during a tulip mania",
+        "Build paths, beds, a turtle pool, cypress and plane trees, lanterns and benches; the garden grows each season",
+        "30-day seasons end in a festival; win the final one with three stars and at least 20 varieties"
       ],
       "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
+        "hero": "docs/gameplay.png",
+        "screenshots": [
+          "docs/title.png",
+          "docs/gameplay.png",
+          "docs/festival.png",
+          "docs/phone-gameplay.png"
+        ],
         "gifs": [
-          "docs/demo/demo.gif"
+          "docs/gameplay.gif"
         ],
         "videos": [
-          "docs/demo/demo.mp4"
+          "docs/gameplay.mp4"
         ]
       },
-      "tests": {
-        "count": 215,
-        "source": "unittest: `Ran 215 tests` (local run, 2026-10-19, with -Werror::ResourceWarning)",
-        "measured": "2026-10-19"
-      },
+      "tests": null,
       "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/repo-vet/actions/workflows/ci.yml/badge.svg"
+        "workflows": [],
+        "badge": null
       },
       "docs": {
         "readme": "README.md",
-        "changelog": "CHANGELOG.md",
+        "changelog": null,
         "version_history": null,
         "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
+        "security": null,
+        "contributing": null,
         "license_file": "LICENSE"
       },
       "social": {
-        "headline": "Your README is a promise. This checks whether you can still keep it.",
+        "headline": "Grow a tulip garden in the Ottoman Tulip Era: breed new varieties and win the Sultan's festival · Lale Devri'nde bahçe kur: yeni çeşitler melezle, Sultan'ın şenliğini kazan",
         "hashtags": [
-          "python",
-          "github",
-          "devtools",
-          "opensource"
+          "claudecode",
+          "indiegame"
         ],
-        "primary_link": "https://github.com/Furkiozknn/repo-vet"
+        "primary_link": "https://furkiozknn.github.io/lale-bahcesi/"
       },
       "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "mehter",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/mehter",
+      "homepage": "https://furkiozknn.github.io/mehter/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Web Audio API",
+        "Blender"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "rhythm-game",
+        "music-game",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D rhythm march with an Ottoman mehter band on a parade avenue, built by Claude Haiku 5.5 · Osmanlı alay caddesinde mehter takımıyla 3D ritim yürüyüşü, Claude Haiku 5.5 yaptı",
+      "key_features": [
+        "Four lanes for davul, kös, zurna and zil on D F J K or touch; long zurna notes are held to the end",
+        "Six songs from 96 to 176 BPM, each in Easy, Normal and Hard, generated from usul rhythm patterns",
+        "Music scheduled on the audio clock, hits judged against it, with an input-offset calibration screen",
+        "The ?auto bot hit all 907 notes of the last song perfectly for an S grade, with and without assets",
+        "61 fps (display cap) on an Intel UHD GPU at 1280x720 with 29 draw calls; one index.html, optional CC0 asset pass"
+      ],
+      "media": {
+        "hero": "docs/assets-after-gameplay-r2.png",
+        "screenshots": [
+          "docs/title.png",
+          "docs/song-select.png",
+          "docs/gameplay.png",
+          "docs/assets-after-gameplay-r2.png",
+          "docs/results.png",
+          "docs/settings.png",
+          "docs/phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-28-mehter-en.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-28-mehter-tr.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "March with the Ottoman mehter band: hit the davul, kös, zurna and zil on the beat · Mehter takımıyla yürü: davul, kös, zurna ve zili tam vuruşta çal",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/mehter/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "peri-golf",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/peri-golf",
+      "homepage": "https://furkiozknn.github.io/peri-golf/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Web Audio API",
+        "Blender"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "mini-golf",
+        "physics-game",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D physics mini-golf among the fairy chimneys of Cappadocia, built by Claude Fable 5.1 · Kapadokya peribacaları arasında gerçek fizikli 3D mini golf, Claude Fable 5.1 yaptı",
+      "key_features": [
+        "12 hand-designed holes, course par 40, from Pigeon Terrace to Sunrise Ridge",
+        "Real rolling physics: slopes, ramps, jumps, wall bounces and grass, sand and stone friction",
+        "Moving obstacles: a turning pottery wheel, a rolling stone door, swinging lanterns and a donkey",
+        "Three stars per hole (under par, a hidden grape, a trick shot); the ?auto bot finishes the course in 18 strokes",
+        "60 fps on Intel UHD 620 at 1280x720 with 16-22 draw calls; one index.html, optional CC0 asset pass"
+      ],
+      "media": {
+        "hero": "docs/assets-after-hole4-wheel.png",
+        "screenshots": [
+          "docs/assets-after-title.png",
+          "docs/assets-after-hole2.png",
+          "docs/assets-after-hole4-wheel.png",
+          "docs/assets-after-hole8-donkey.png",
+          "docs/assets-after-hole12-ridge.png",
+          "docs/05-hole-result.png",
+          "docs/assets-after-phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-27-peri-golf-en.mp4",
+          "https://github.com/Furkiozknn/social-videos/releases/download/promo-2026-10/2026-10-27-peri-golf-tr.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Mini-golf among the fairy chimneys of Cappadocia: 12 holes, real physics, a pottery wheel and a donkey · Kapadokya peribacaları arasında mini golf: 12 delik, gerçek fizik, çömlek tezgâhı ve eşek",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/peri-golf/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "simit-firini",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/simit-firini",
+      "homepage": "https://furkiozknn.github.io/simit-firini/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Three.js r170",
+        "Web Audio API"
+      ],
+      "version": null,
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "threejs",
+        "tycoon-game",
+        "management-game",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "3D simit bakery tycoon on an old Istanbul street, built by Claude Sonnet 5.5 · Eski bir İstanbul sokağında 3D simit fırını işletme oyunu, Claude Sonnet 5.5 yaptı",
+      "key_features": [
+        "Five stations from kneading to the oven; an unattended oven burns the bread",
+        "Simit sellers carry trays to the pier, school, park, office and tea houses; demand follows the hour and weather",
+        "Plan each day: production, prices, supply, staff, upgrades and contracts; poğaça, açma, çatal and pide unlock",
+        "Goal: 5,000 lira and 4 stars of reputation by day 20, then endless mode",
+        "A sensible bot wins in roughly 9 of 12 seeds (day 16-20); a careless one goes bankrupt around day 7"
+      ],
+      "media": {
+        "hero": "docs/gameplay.png",
+        "screenshots": [
+          "docs/title.png",
+          "docs/gameplay.png",
+          "docs/plan.png",
+          "docs/panels.png",
+          "docs/summary.png",
+          "docs/win.png",
+          "docs/phone.png"
+        ],
+        "gifs": [
+          "docs/gameplay.gif"
+        ],
+        "videos": [
+          "docs/gameplay.mp4"
+        ]
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": null,
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Run a simit bakery in Istanbul: bake, staff the oven and send simit sellers across town · İstanbul'da simit fırını işlet: fırınla, ustaları yerleştir, simitçileri sokağa gönder",
+        "hashtags": [
+          "claudecode",
+          "indiegame"
+        ],
+        "primary_link": "https://furkiozknn.github.io/simit-firini/"
+      },
+      "provenance": {
+        "generated_at": "2026-10-27",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, CREDITS.md and the video-studio analiz.md; no field is generated from a guess"
       }
     },
     {
@@ -2803,372 +957,6 @@
         "generated_at": "2026-10-19",
         "generator": "hand-written",
         "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written from the README; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "tek-tus-kosu",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/tek-tus-kosu",
-      "homepage": "https://furkiozknn.github.io/tek-tus-kosu/",
-      "releases": "https://github.com/Furkiozknn/tek-tus-kosu/releases",
-      "status": "active",
-      "category": "game",
-      "platform": [
-        "windows",
-        "web"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript",
-        "GL Compatibility renderer"
-      ],
-      "version": "1.7.3",
-      "license": "MIT",
-      "topics": [
-        "2d-game",
-        "endless-runner",
-        "game-development",
-        "gdscript",
-        "godot",
-        "godot4",
-        "indie-game",
-        "one-button",
-        "rhythm-game",
-        "turkce"
-      ],
-      "summary": "One-button endless rooftop runner in Godot 4 with a rhythm mode that lays obstacles on the music's beat grid and a post-run timing histogram. Turkish and English UI, playable in the browser.",
-      "key_features": [
-        "One-button endless rooftop runner: the only input is when to press",
-        "Rhythm mode lays every obstacle on the music's beat grid instead of a random spacer",
-        "Post-run timing histogram shows how early or late each press landed",
-        "Daily run seeded from the date, so every player gets the same rooftops",
-        "Every bar pattern is bot-cleared at every song's beat spacing: obstacle geometry is in absolute pixels while the beat grid is 120 / 140.6 / 128.6 px, so an unclearable bar could have hidden in a rare pattern-song pair"
-      ],
-      "media": {
-        "hero": "yayin/banner.svg",
-        "screenshots": [
-          "yayin/ekran-2.png"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": {
-        "count": 1189,
-        "source": "CI log: `=== SONUÇ: 1189 geçti, 0 hata ===`",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yapi.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/tek-tus-kosu/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": "SURUM-GECMISI.md",
-        "roadmap": "YOL-HARITASI.md",
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "One button. Every obstacle on the beat.",
-        "hashtags": [
-          "godot",
-          "godot4",
-          "indiedev",
-          "gamedev",
-          "rhythmgame"
-        ],
-        "primary_link": "https://furkiozknn.github.io/tek-tus-kosu/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "turkce-ajanlar",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/turkce-ajanlar",
-      "homepage": "https://furkiozknn.github.io/turkce-ajanlar/",
-      "releases": "https://github.com/Furkiozknn/turkce-ajanlar/releases",
-      "status": "active",
-      "category": "developer-tool",
-      "platform": [
-        "claude-code",
-        "cursor",
-        "opencode",
-        "github-copilot",
-        "codex"
-      ],
-      "primary_language": "HTML",
-      "technologies": [
-        "Claude Code plugin",
-        "Node.js",
-        "Markdown agent definitions"
-      ],
-      "version": "0.4.0",
-      "license": "MIT",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "claude",
-        "claude-code",
-        "codex",
-        "cursor",
-        "developer-tools",
-        "github-copilot",
-        "opencode",
-        "prompt-engineering",
-        "subagents",
-        "turkce",
-        "turkish",
-        "windows"
-      ],
-      "summary": "Claude Code sub-agents that write in Turkish and know the traps of Turkish Windows (PowerShell 5.1, cp1254), plus commands, skills and an eval suite. Exported to Cursor, OpenCode, Copilot and Codex.",
-      "key_features": [
-        "71 sub-agents that think in Turkish rather than translate into it",
-        "Encodes the traps that actually bite on Turkish Windows: no && in PowerShell 5.1, cp1254 killing a tool before its first line, heredocs eating backslashes",
-        "Four deterministic gates that cost nothing to run: field format, boundary contract, Turkish text, and trigger-phrase collisions across the whole roster",
-        "3 commands, 2 skills and an eval suite alongside the agents",
-        "One source of truth, exported to Cursor, OpenCode, Copilot and Codex; CI fails if the web UI drifts from the agent files"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [
-          "assets/ekran-goruntusu.png"
-        ],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 252,
-        "source": "27 validator + 33 format + 99 browser + 23 team-runner + 19 trigger-collision + 14 boundary + 4 module-type + 11 local-server + 22 banner, each from its own printed line",
-        "measured": "2026-09-29"
-      },
-      "ci": {
-        "workflows": [
-          "dogrula.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/turkce-ajanlar/actions/workflows/dogrula.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": "YOL-HARITASI.md",
-        "security": null,
-        "contributing": "KATKIDA-BULUNMA.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "71 Claude Code sub-agents that think in Turkish, not translate into it.",
-        "hashtags": [
-          "claudecode",
-          "aiagents",
-          "turkce",
-          "devtools"
-        ],
-        "primary_link": "https://furkiozknn.github.io/turkce-ajanlar/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "voice-io-mcp",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/voice-io-mcp",
-      "homepage": "https://furkiozknn.github.io/#voice-io-mcp",
-      "releases": "https://github.com/Furkiozknn/voice-io-mcp/releases",
-      "status": "active",
-      "category": "mcp-server",
-      "platform": [
-        "mcp"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "Python 3.11+",
-        "Kokoro-82M",
-        "faster-whisper",
-        "Groq"
-      ],
-      "version": "0.1.0",
-      "license": "MIT",
-      "topics": [
-        "claude-code",
-        "groq",
-        "kokoro",
-        "local-first",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol",
-        "offline-first",
-        "python",
-        "speech-to-text",
-        "stt",
-        "text-to-speech",
-        "tts",
-        "voice",
-        "whisper"
-      ],
-      "summary": "Text-to-speech and speech-to-text MCP server for Claude Code: Groq's free tier when a key is set, local Kokoro-82M and faster-whisper when not. Disallowed files are refused before any upload.",
-      "key_features": [
-        "Speech in and speech out, needing no API key at all",
-        "Groq's free hosted tier when a key is set; Kokoro-82M and faster-whisper locally when it is not",
-        "Transcription checks the extension (a symlink's target too), file type and size before a byte is uploaded, so 'transcribe the audio at .env' is refused locally instead of uploaded",
-        "4 tools, with known limitations and roadmap written down"
-      ],
-      "media": {
-        "hero": "assets/banner.svg",
-        "screenshots": [],
-        "gifs": [
-          "docs/demo/demo.gif"
-        ],
-        "videos": [
-          "docs/demo/demo.mp4"
-        ]
-      },
-      "tests": {
-        "count": 79,
-        "source": "`79 passed, 3 skipped` on Linux CI (the 3 real-model tests run in CI's `yerel` job)",
-        "measured": "2026-09-30"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yayinla.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/voice-io-mcp/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": null,
-        "security": "SECURITY.md",
-        "contributing": "CONTRIBUTING.md",
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "Speech in, speech out - no API key required, and .env is refused before it opens.",
-        "hashtags": [
-          "mcp",
-          "texttospeech",
-          "whisper",
-          "localfirst"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/voice-io-mcp"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "yercekimi-cevir",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/yercekimi-cevir",
-      "homepage": "https://furkiozknn.github.io/yercekimi-cevir/",
-      "releases": "https://github.com/Furkiozknn/yercekimi-cevir/releases",
-      "status": "active",
-      "category": "game",
-      "platform": [
-        "windows",
-        "web"
-      ],
-      "primary_language": "GDScript",
-      "technologies": [
-        "Godot 4.7",
-        "GDScript",
-        "GL Compatibility renderer"
-      ],
-      "version": "0.7.2",
-      "license": "MIT",
-      "topics": [
-        "2d-game",
-        "game-development",
-        "gdscript",
-        "godot",
-        "godot4",
-        "gravity",
-        "indie-game",
-        "precision-platformer",
-        "puzzle-platformer",
-        "turkce"
-      ],
-      "summary": "Precision platformer in Godot 4 with no jump button: one key flips gravity across 20 hand-built rooms with bot-measured medal times. Turkish and English UI, playable in the browser.",
-      "key_features": [
-        "No jump button: one key flips gravity and you fall onto the ceiling",
-        "20 hand-built precision rooms, each with its own medal times",
-        "Ghost race, level-of-the-day and streak tracking built on recorded runs",
-        "Left-handed layout, storm mode and readability options as first-class settings",
-        "Medal thresholds are measured by a bot that really plays the level, and CI re-runs that bot on every push: the published gold time has to still be reachable and every one of the 20 rooms has to still finish, so a map edit cannot leave a stale threshold or an unsolvable room behind a green suite"
-      ],
-      "media": {
-        "hero": "docs/banner.svg",
-        "screenshots": [
-          "docs/01-menu.png",
-          "yayin/ekran/07-cevirme.png",
-          "docs/02-bolum-sec.png",
-          "docs/03-ayarlar.png"
-        ],
-        "gifs": [
-          "yayin/tanitim/tanitim.gif"
-        ],
-        "videos": []
-      },
-      "tests": {
-        "count": 1010,
-        "source": "CI log: `1010 dogrulama, 0 hata` / `TESTLER GECTI`",
-        "measured": "2026-10-19"
-      },
-      "ci": {
-        "workflows": [
-          "ci.yml",
-          "yapi.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/yercekimi-cevir/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": "CHANGELOG.md",
-        "version_history": null,
-        "roadmap": "YOL-HARITASI.md",
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "There is no jump button. There is only which way is down.",
-        "hashtags": [
-          "godot",
-          "godot4",
-          "indiedev",
-          "gamedev",
-          "precisionplatformer"
-        ],
-        "primary_link": "https://furkiozknn.github.io/yercekimi-cevir/"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
       }
     }
   ]
