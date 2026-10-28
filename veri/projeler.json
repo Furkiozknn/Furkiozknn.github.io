@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27",
+  "generated": "2026-10-28",
   "missing": [],
   "releases": [
     {
@@ -46,7 +46,7 @@
     "carsi-kacisi": {
       "file": "assets/onizleme/carsi-kacisi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/carsi-kacisi/main/docs/card.jpg",
-      "bytes": 99114
+      "bytes": 74163
     },
     "cay-ocagi": {
       "file": "assets/onizleme/cay-ocagi.jpg",
@@ -66,7 +66,7 @@
     "ebru": {
       "file": "assets/onizleme/ebru.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/ebru/main/docs/card.jpg",
-      "bytes": 112643
+      "bytes": 103323
     },
     "hamsi": {
       "file": "assets/onizleme/hamsi.jpg",
@@ -81,7 +81,7 @@
     "kapadokya-balonu": {
       "file": "assets/onizleme/kapadokya-balonu.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kapadokya-balonu/main/docs/card.jpg",
-      "bytes": 87601
+      "bytes": 80058
     },
     "karagoz": {
       "file": "assets/onizleme/karagoz.jpg",
@@ -96,7 +96,7 @@
     "kirkpinar": {
       "file": "assets/onizleme/kirkpinar.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kirkpinar/main/docs/card.jpg",
-      "bytes": 103769
+      "bytes": 92325
     },
     "lale-bahcesi": {
       "file": "assets/onizleme/lale-bahcesi.jpg",
@@ -400,7 +400,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -411,13 +411,13 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D rooftop runner over an Istanbul covered bazaar, built by Claude Haiku 5.5 · İstanbul kapalı çarşısının kubbeleri üzerinde 3D çatı koşusu, Claude Haiku 5.5 yaptı",
+      "summary": "3D rooftop runner over an Istanbul covered bazaar, v2 with numbered gate splits, a reactive white Van cat and unique finales, built by Claude Haiku 5.5 · İstanbul kapalı çarşısının kubbeleri üzerinde 3D çatı koşusu, v2'de numaralı kapı ara zamanları, tepki veren beyaz Van kedisi ve her seviyeye özel final, Claude Haiku 5.5 yaptı",
       "key_features": [
-        "Rooftop parkour: double jump, slide down domes, ride laundry lines and step up low ledges",
+        "Rooftop parkour: double jump, slide down domes, ride laundry lines and step up low ledges; first-encounter hints appear at the spot",
         "Ten hand-built levels from layout strings: roofs, gaps, domes, sliding planks, breaking tiles, gusts and checkpoints",
-        "Chase the cat that stole the jeweller's ring and collect lokum on the way",
-        "Three stars per level: target time, 80 % of the lokum and no fall; night levels with pigeons",
-        "The ?auto bot cleared 10/10 levels with 0 falls; one index.html, everything generated in code"
+        "v2: numbered stone gate arches show a split against target, the result card lists them and the best split per gate is saved; a guild sign per level opens a notebook fact card",
+        "v2: the white Turkish Van cat that stole the ring reacts to your pace and hisses at gaps; every level ends with its own finale stretch",
+        "Three stars per level; the ?auto bot cleared 10/10 levels with 0 falls; 60 fps with 54-58 draw calls in headless Chromium"
       ],
       "media": {
         "hero": "docs/02-gameplay.png",
@@ -460,9 +460,10 @@
         "primary_link": "https://furkiozknn.github.io/carsi-kacisi/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -732,7 +733,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -743,13 +744,13 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D paper-marbling art puzzle: sprinkle, comb and shape paint on the water, then lay the paper, built by Claude Fable 5.1 · Kitreli suda boya serp, tara, lale aç ve kâğıdı yatır: 3D ebru bulmacası, Claude Fable 5.1 yaptı",
+      "summary": "3D paper-marbling art puzzle, v2 with the master's critique, seals and ranks, built by Claude Fable 5.1 · Kıvamlı suda boya serp, tara, şekil ver: v2'de ustanın eleştirisi, mühürler ve dereceler olan 3D ebru bulmacası, Claude Fable 5.1 yaptı",
       "key_features": [
         "Deterministic mathematical-marbling simulation: drops push older paint outward, the awl leaves a chevron wake, the comb pulls 25 tines; colours never mix",
-        "18 lessons in 3 chapters (basic, combed, flower ebru) with TR / EN notes from the master; every target is a replayed stroke recipe, so every lesson is solvable",
-        "Live match %, ghost hint of the next stroke, up to 3 stars per lesson (54 in all), free tray with a 12-sheet gallery",
-        "Paint rasterised on the GPU with a stencil pass into a multisampled render target; 60 fps on an Intel UHD 620",
-        "The ?auto bot solved 18/18 lessons with 48/54 stars through the same stroke API as a player; one index.html, everything generated in code"
+        "18 lessons in 3 chapters (basic, combed, flower ebru); every target is a replayed stroke recipe, so every lesson is solvable",
+        "v2: the master's critique names the two worst pigment deviations live and on the result card; master's seals and a cirak / kalfa / usta rank; water thickness in the free tray; Bind it book-cover composite",
+        "Live match %, ghost hint of the next stroke, up to 3 stars per lesson (54 in all); paint rasterised on the GPU with a stencil pass, 58-60 fps on an Intel UHD 620",
+        "The ?auto bot solved 18/18 lessons with 48/54 stars and 12/18 seals through the same stroke API as a player; one index.html, everything generated in code"
       ],
       "media": {
         "hero": "docs/02-gameplay.png",
@@ -792,9 +793,10 @@
         "primary_link": "https://furkiozknn.github.io/ebru/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -976,7 +978,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -987,23 +989,25 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D hot-air balloon wind puzzle over Cappadocia at sunrise, built by Claude Opus 5.5 · Gün doğumunda Kapadokya'da 3D sıcak hava balonu rüzgâr bulmacası, Claude Opus 5.5 yaptı",
+      "summary": "3D hot-air balloon wind puzzle over Cappadocia at sunrise, v2 with a pilot balloon, gust telegraph and dawn mass launch, built by Claude Opus 5.5 · Gün doğumunda Kapadokya'da 3D sıcak hava balonu rüzgâr bulmacası, v2'de pibal, ani esinti göstergesi ve toplu kalkış, Claude Opus 5.5 yaptı",
       "key_features": [
         "No rudder: burn to climb, vent to sink, and ride the wind layer that blows towards the goal",
-        "A balloon with lag: lift follows the envelope temperature seconds later; propane is limited and passengers add weight",
-        "12 flights in 3 regions (Göreme, Uçhisar, an Ihlara-like canyon) with gusts, morning fog and noon thermals",
-        "Five goal types: low pass, marker drop, photo from a given height, passenger pickup and a scored landing; 36 stars",
+        "v2: press B to send up a pilot balloon (pibal) that reveals the hidden upper wind layers; gust wedges, windsocks and a rumble warn of strong gusts",
+        "v2: a dawn mass launch of 12 balloons on the field, banded tuff strata on the valley walls, a Valley Notebook of six fact cards and a date-seeded Daily Flight",
+        "12 flights in 3 regions (Göreme, Uçhisar, an Ihlara-like canyon) with five goal types and 36 stars; the lagging balloon needs early burns and limited propane",
         "The ?auto bot flew 12/12 flights with 36/36 stars using only burner, vent, photo and drop; one index.html, everything generated in code"
       ],
       "media": {
-        "hero": "docs/02-flight.png",
+        "hero": "docs/08-pibal-gust.png",
         "screenshots": [
           "docs/card.jpg",
+          "docs/08-pibal-gust.png",
           "docs/02-flight.png",
           "docs/01-title.png",
           "docs/03-region-map.png",
           "docs/04-landing.png",
           "docs/05-group-photo.png",
+          "docs/07-notebook.png",
           "docs/06-phone.png"
         ],
         "gifs": [
@@ -1036,9 +1040,10 @@
         "primary_link": "https://furkiozknn.github.io/kapadokya-balonu/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -1224,7 +1229,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1235,13 +1240,13 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D physics oil-wrestling game inspired by Kırkpınar, built by Claude Sonnet 5.5 · Kırkpınar'dan esinlenen 3D fizikli yağlı güreş oyunu, Claude Sonnet 5.5 yaptı",
+      "summary": "3D physics oil-wrestling game inspired by Kırkpınar, v2 with a versus card, visible oil and a three-year golden belt, built by Claude Sonnet 5.5 · Kırkpınar'dan esinlenen 3D fizikli yağlı güreş, v2'de rakip kartı, görünen yağ ve üç yıllık altın kemer, Claude Sonnet 5.5 yaptı",
       "key_features": [
-        "Oiled grips slip: grip strength decays with hold time, oil and sweat, effort and stamina",
+        "Oiled grips slip: grip strength decays with hold time, oil and sweat, effort and stamina; v2 shows the oil as skin gloss, droplets, grass stains and a grip-bar tick",
         "Readable balance: a centre-of-mass lean over the feet decides steps and falls onto the back, side or front",
         "Classic finishing moves as context moves: paça kazık, çaprast, künde, lift and carry, yere çal and a leg hook",
-        "Career through five weight classes to the golden belt, quick match and 2 players on one keyboard; touch and gamepad",
-        "The AI uses the same inputs as a player; the ?auto bot played a 26-bout career with 18 wins to the golden belt"
+        "v2: one-click Play with a 2.5 s versus card and a first-bout coach, bouts of 60-120 s that grow with the class, a three-year golden belt and cazgır facts; five weight classes, quick match and 2 players",
+        "The AI uses the same inputs as a player; the ?auto bot played a career to the golden belt (v2: 23 bouts, 18 wins)"
       ],
       "media": {
         "hero": "docs/03-kunde.png",
@@ -1284,9 +1289,10 @@
         "primary_link": "https://furkiozknn.github.io/kirkpinar/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
