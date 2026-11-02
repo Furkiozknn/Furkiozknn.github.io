@@ -1,7 +1,15 @@
 {
-  "generated": "2026-10-28",
+  "generated": "2026-11-02",
   "missing": [],
   "releases": [
+    {
+      "repo": "social-videos",
+      "tag": "promo-2026-11",
+      "title": "Promo videos, November 2026",
+      "url": "https://github.com/Furkiozknn/social-videos/releases/tag/promo-2026-11",
+      "published": "2026-11-02T09:03:03Z",
+      "prerelease": false
+    },
     {
       "repo": "social-videos",
       "tag": "promo-2026-10",
@@ -41,7 +49,7 @@
     "bogaz-vapuru": {
       "file": "assets/onizleme/bogaz-vapuru.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/card.jpg",
-      "bytes": 62870
+      "bytes": 64828
     },
     "carsi-kacisi": {
       "file": "assets/onizleme/carsi-kacisi.jpg",
@@ -51,17 +59,17 @@
     "cay-ocagi": {
       "file": "assets/onizleme/cay-ocagi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/cay-ocagi/main/docs/card.jpg",
-      "bytes": 145477
+      "bytes": 114045
     },
     "cini-ustasi": {
       "file": "assets/onizleme/cini-ustasi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/cini-ustasi/main/docs/card.jpg",
-      "bytes": 146294
+      "bytes": 102745
     },
     "dolmus": {
       "file": "assets/onizleme/dolmus.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/dolmus/main/docs/card.jpg",
-      "bytes": 76248
+      "bytes": 78500
     },
     "ebru": {
       "file": "assets/onizleme/ebru.jpg",
@@ -71,7 +79,7 @@
     "hamsi": {
       "file": "assets/onizleme/hamsi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/hamsi/main/docs/card.jpg",
-      "bytes": 60085
+      "bytes": 61073
     },
     "kale-savunmasi": {
       "file": "assets/onizleme/kale-savunmasi.jpg",
@@ -86,12 +94,12 @@
     "karagoz": {
       "file": "assets/onizleme/karagoz.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/karagoz/main/docs/card.jpg",
-      "bytes": 59705
+      "bytes": 70873
     },
     "kervan": {
       "file": "assets/onizleme/kervan.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/kervan/main/docs/card.jpg",
-      "bytes": 83137
+      "bytes": 72434
     },
     "kirkpinar": {
       "file": "assets/onizleme/kirkpinar.jpg",
@@ -101,12 +109,12 @@
     "lale-bahcesi": {
       "file": "assets/onizleme/lale-bahcesi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/lale-bahcesi/main/docs/card.jpg",
-      "bytes": 67536
+      "bytes": 60595
     },
     "marti": {
       "file": "assets/onizleme/marti.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/marti/main/docs/card.jpg",
-      "bytes": 65300
+      "bytes": 51254
     },
     "mehter": {
       "file": "assets/onizleme/mehter.jpg",
@@ -126,12 +134,12 @@
     "peri-golf": {
       "file": "assets/onizleme/peri-golf.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/peri-golf/main/docs/card.jpg",
-      "bytes": 40928
+      "bytes": 51789
     },
     "simit-firini": {
       "file": "assets/onizleme/simit-firini.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/simit-firini/main/docs/card.jpg",
-      "bytes": 78944
+      "bytes": 105677
     },
     "topkapi-gecesi": {
       "file": "assets/onizleme/topkapi-gecesi.jpg",
@@ -318,7 +326,7 @@
         "Three.js r170",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -328,21 +336,22 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D ferry-captain game on a low-poly Bosphorus, built by Claude Fable 5.1 · Alçak poligon İstanbul Boğazı'nda 3D şehir hatları vapuru kaptanlığı, Claude Fable 5.1 yaptı",
+      "summary": "3D Bosphorus ferry-captain game, redesigned with golden-hour light, pastel yalıs and a navy-and-brass maritime chart UI, built by Claude Fable 5.1 · Boğaz'da 3D vapur kaptanlığı oyunu, altın saat ışığı, pastel yalılar ve lacivert-pirinç denizcilik haritası arayüzüyle yeniden tasarlandı, Claude Fable 5.1 yaptı",
       "key_features": [
-        "Six piers from Eminönü to Kanlıca with a timetable; late arrivals cost points and passengers",
-        "Docking guide for distance, speed and angle; dock slowly, parallel and close to throw the ropes",
-        "A current towards the Marmara and wind drift that grow over the campaign; tankers cannot stop quickly",
-        "Eight shifts (dusk, fog, night, strong current, storm, tanker convoy) and an endless mode",
-        "The ?auto captain finishes the campaign with 3 stars on every shift; 21-27 draw calls, 57 fps (vsync) on Intel UHD at 1280x720"
+        "Ferry handling with throttle, rudder, current and wind; slide in to the pier at a shallow angle with the distance, speed and angle readout",
+        "Redesign: golden-hour default light, sunset-to-violet dusk, pastel yalıs, the white ferry with its yellow-and-black funnel",
+        "Redesign: a maritime chart UI with navy instrument panels, brass edges and a parchment route card",
+        "Shifts with fog, night, storms, tanker convoys and heavy traffic; passengers rate comfort and punctuality",
+        "Measured after the redesign: 60 fps on an Intel UHD 620 at 1280x720, 25 to 32 draw calls, 0 JS errors"
       ],
       "media": {
-        "hero": "docs/03-dusk.png",
+        "hero": "docs/02-docking.png",
         "screenshots": [
           "docs/card.jpg",
-          "docs/03-dusk.png",
-          "docs/01-title.png",
           "docs/02-docking.png",
+          "docs/redesign-before-after.png",
+          "docs/01-title.png",
+          "docs/03-dusk.png",
           "docs/04-night.png",
           "docs/05-storm.png",
           "docs/06-phone-portrait.png"
@@ -377,9 +386,10 @@
         "primary_link": "https://furkiozknn.github.io/bogaz-vapuru/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -485,7 +495,7 @@
         "Higgsfield (Tripo text-to-3D, GPT Image)",
         "glTF-Transform"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -495,18 +505,26 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D tea house time-management game on an Istanbul quay, built by Claude Sonnet 5.5 · İstanbul rıhtımında 3D çay ocağı zaman yönetimi oyunu, Claude Sonnet 5.5 yaptı",
+      "summary": "3D tea house time-management game on an Istanbul quay, v2 with ferry rushes, tea freshness, tavla regulars and gull thieves, built by Claude Sonnet 5.5 · İstanbul rıhtımında 3D çay ocağı zaman yönetimi oyunu, v2'de vapur saati kalabalığı, taze çay, tavlacı müdavimler ve simit kapan martılar, Claude Sonnet 5.5 yaptı",
       "key_features": [
         "Four items on five stations: tea brews in the semaver, simit warms in the oven, coffee boils over if left, dirty glasses go to the sink",
-        "Seven 3-minute days with a coin target and 1-3 stars, new items and customer types each day, then an endless shift",
-        "A shop between days: second semaver, bigger tray (3 to 5 items), faster oven, extra tables, an apprentice, comfy stools",
-        "The ?auto bot plays with the same actions as a player and won 84 of 90 seeded games",
-        "60 fps on an Intel UHD GPU at 1280x720 on a busy day 6 with 31 draw calls; generated models with a procedural fallback"
+        "v2: ferry rushes from day 3 (a horn warns 8 s ahead, then 2-3 parties arrive at once), tea that goes stale, tavla regulars who ask for refills and gulls that steal simit unless shooed",
+        "v2: Play goes straight into day 1 with coach marks; fact cards, tea house ranks and the kitten on the shop and summary screens",
+        "Seven 3-minute days with a coin target and 1-3 stars, a shop between days, then an endless shift",
+        "The ?auto bot plays with the same actions as a player and finishes 7/7 days; 60 fps at 1280x720 with 27 draw calls"
       ],
       "media": {
-        "hero": "docs/card.jpg",
+        "hero": "docs/rush_en.png",
         "screenshots": [
-          "docs/card.jpg"
+          "docs/card.jpg",
+          "docs/rush_en.png",
+          "docs/gull_en.png",
+          "docs/briefing_en.png",
+          "docs/busy_d6_en.png",
+          "docs/shop_en.png",
+          "docs/summary_en.png",
+          "docs/pause_en.png",
+          "docs/mobile_final.png"
         ],
         "gifs": [
           "docs/gameplay.gif"
@@ -538,9 +556,10 @@
         "primary_link": "https://furkiozknn.github.io/cay-ocagi/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -564,7 +583,7 @@
         "Higgsfield (Tripo text-to-3D, GPT Image)",
         "glTF-Transform"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -574,22 +593,24 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "Calm 3D Iznik tile edge-matching puzzle, built by Claude Fable 5.1 · Sakin bir 3D İznik çinisi kenar eşleştirme bulmacası, Claude Fable 5.1 yaptı",
+      "summary": "Calm 3D Iznik tile edge-matching puzzle with a kiln firing step, built by Claude Fable 5.1 · Kiln adımlı sakin bir 3D İznik çinisi kenar eşleştirme bulmacası, Claude Fable 5.1 yaptı",
       "key_features": [
         "30 levels in 3 chapters: rotate tiles, then swap them, then fixed and double-sided tiles; boards grow from 3x3 to 6x6",
-        "Every level is generated solved and scrambled; the built-in solver solves all 30 levels and the daily boards",
-        "Moves against par for 1-3 stars, undo, three hints per level, a matched-edge counter and a daily board",
-        "A solved panel glazes, fires in the kiln and goes on the collection wall of the workshop",
-        "Puzzle-core tests under Node with no dependencies: node tests/core.test.mjs passes 345 of 345 checks"
+        "v2: coaching happens inside the board, with a one-line tip over the first wrong tile and no tutorial wall",
+        "v2: the kiln is a craft step; fire inside the heat gauge's glaze band for a matte, glossy or master finish kept on the panel",
+        "v2: the daily board is an excavation board on odd days, with weathered tiles that restore on their first matched edge",
+        "v2: live star meter, a master's gallery of all 30 panels with craft notes, and a built-in solver that solves every level",
+        "Puzzle-core tests under Node with no dependencies: node tests/core.test.mjs passes 358 of 358 checks"
       ],
       "media": {
         "hero": "docs/card.jpg",
         "screenshots": [
           "docs/card.jpg",
-          "docs/settings.png",
-          "docs/pause.png",
-          "docs/phone-390.png",
-          "docs/phone-kiln.png"
+          "docs/coach-level1.png",
+          "docs/kiln-firing.png",
+          "docs/excavation-board.png",
+          "docs/collection.png",
+          "docs/phone-390.png"
         ],
         "gifs": [
           "docs/gameplay.gif"
@@ -599,9 +620,9 @@
         ]
       },
       "tests": {
-        "count": 345,
-        "source": "`node tests/core.test.mjs`: `TESTS PASSED 345/345`",
-        "measured": "2026-10-27"
+        "count": 358,
+        "source": "`node tests/core.test.mjs`: `TESTS PASSED 358/358`",
+        "measured": "2026-10-28"
       },
       "ci": {
         "workflows": [],
@@ -625,9 +646,10 @@
         "primary_link": "https://furkiozknn.github.io/cini-ustasi/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, tests/ and docs/assets.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, tests/ and docs/assets.md; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -648,7 +670,7 @@
         "Web Audio API",
         "Blender"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -661,10 +683,11 @@
       "summary": "3D arcade driving game with a yellow shared minibus in a low-poly Istanbul neighbourhood, built by Claude Sonnet 5.5 · Alçak poligon bir İstanbul mahallesinde sarı dolmuşla 3D arcade sürüş, Claude Sonnet 5.5 yaptı",
       "key_features": [
         "Stop, open the door and pick up waving passengers; each one names their stop in a chat bubble, 12 seats",
-        "Tips for fast and smooth rides; red lights, crashes, hard braking and skipped passengers cost money",
-        "Eight shifts and an endless mode with a tram, rain, a VIP passenger, a traffic jam and a night shift",
-        "The ?auto bot finished all 8 levels with the same controls and rules as a player",
-        "About 60 fps (vsync cap) on an Intel UHD 630 laptop at 1280x720 with 42 draw calls; one index.html, optional CC0 asset pass"
+        "v2: a 3-2-1 start and a coached first stop with a pulsing ring and an arrow instead of a blocking intro screen",
+        "v2: from level 2 some riders just want to be dropped anywhere safe near their stop; the minimap marks them with a ? and crossings and junctions are refused",
+        "v2: fares hop forward along the occupied seats (the fare chain) and the shift summary names your two costliest mistakes with a tip",
+        "Eight shifts and an endless mode with a tram, rain, a VIP passenger, a traffic jam and a night shift, with district looks, rain umbrellas and lit windows at night",
+        "The ?auto bot finished all 8 levels with the same controls and rules as a player; one index.html, optional CC0 asset pass"
       ],
       "media": {
         "hero": "docs/02-gameplay-day.png",
@@ -709,9 +732,10 @@
         "primary_link": "https://furkiozknn.github.io/dolmus/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -817,7 +841,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -828,23 +852,24 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D Black Sea fishing and boat-management game, built by Claude Sonnet 5.5 · Karadeniz'de 3D balıkçılık ve tekne yönetimi oyunu, Claude Sonnet 5.5 yaptı",
+      "summary": "3D Black Sea fishing and boat-management game, redesigned with a dark-steel instrument UI, sonar-green accents and a misty harbour, built by Claude Sonnet 5.5 · Karadeniz'de 3D balıkçılık ve tekne yönetimi oyunu, koyu çelik gösterge arayüzü, sonar yeşili ve sisli limanla yeniden tasarlandı, Claude Sonnet 5.5 yaptı",
       "key_features": [
-        "A boat that handles like one: slow engine, a rudder that bites only when moving, waves and wind",
-        "Schools of boids on the sonar; circle a purse-seine net around them and haul",
-        "Four species with different speed, nerve and price; deeper fish escape under the net",
-        "Fog, forecast storms, a fish market with seasonal prices and upgrades for net, sonar, engine, hold, ice box and crew",
-        "The ?auto bot finished the 30-day season as reis with the loan paid on day 26-27; one index.html, everything generated in code"
+        "A boat that handles like a boat; sonar schools that swim as boids; set the purse-seine net around them and haul",
+        "Redesign: a dark-steel instrument UI with sonar-green accents, a sonar ping ring and rain droplets on the screen in storms",
+        "Redesign: a slate-tinted capped mist, harbour houses with windows and chimneys, sodium lamps, an A-frame and crew hats",
+        "A 30-day season: sell fresh at the market, refuel, add ice, pay the boat loan and buy upgrades",
+        "Measured after the redesign: 60 fps; the 30-day ?auto season finishes with 0 JS errors"
       ],
       "media": {
-        "hero": "docs/04-net.png",
+        "hero": "docs/03-sailing.png",
         "screenshots": [
           "docs/card.jpg",
-          "docs/04-net.png",
-          "docs/01-title.png",
-          "docs/02-harbour.png",
           "docs/03-sailing.png",
+          "docs/redesign-before-after.png",
+          "docs/02-harbour.png",
+          "docs/04-net.png",
           "docs/05-storm.png",
+          "docs/07-mist.png",
           "docs/06-phone.png"
         ],
         "gifs": [
@@ -877,9 +902,10 @@
         "primary_link": "https://furkiozknn.github.io/hamsi/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -1064,7 +1090,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1074,19 +1100,21 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D shadow-theatre light puzzle with Karagöz and Hacivat, built by Claude Opus 5.5 · Karagöz ve Hacivat'lı 3D gölge oyunu ışık bulmacası, Claude Opus 5.5 yaptı",
+      "summary": "3D shadow-theatre light puzzle with Karagöz and Hacivat, redesigned with a lamp-lit linen screen, maroon drapes and a walnut UI, built by Claude Opus 5.5 · Karagöz ve Hacivat'lı 3D gölge oyunu ışık bulmacası, lamba ışığında keten perde, bordo perdeler ve ceviz arayüzle yeniden tasarlandı, Claude Opus 5.5 yaptı",
       "key_features": [
-        "Point-light shadow optics: near the lamp a big soft shadow, near the cloth a small sharp one",
-        "Coloured leather mixes colours; red and blue glass lamps cast shadows in each other's colour",
-        "24 scenes in 4 acts; match the gold target to 90 % and the puppets act out a TR / EN dialogue",
-        "Up to 3 stars per scene (72 in all): solve, par moves, no hint; act IV adds timed moving pieces",
-        "The ?auto bot plays all 24 scenes reading the same match % a player sees; one index.html, everything generated in code"
+        "Point-light shadow optics: near the lamp a big soft shadow, near the cloth a small sharp one; coloured leather and glass lamps mix colours",
+        "Redesign: a lamp-lit linen screen, a stained-glass leather look on the puppets, maroon drapes with tassels and a carved arch",
+        "Redesign: a coffee-house room with İznik tiles, kilims, lanterns and nargile smoke, and a leather and walnut UI on every screen",
+        "24 scenes in 4 acts and 72 stars; the ?auto bot solves 24/24 with 64/72 stars and 0 JS errors",
+        "Measured after the redesign: static scenes 60 fps with 28-32 draw calls; timed act IV scenes 39 fps as before (60 with ?low)"
       ],
       "media": {
         "hero": "docs/02-backstage.png",
         "screenshots": [
           "docs/card.jpg",
           "docs/02-backstage.png",
+          "docs/redesign-before-after.png",
+          "docs/07-cafe.png",
           "docs/01-title.png",
           "docs/03-audience.png",
           "docs/04-colour-lamps.png",
@@ -1123,9 +1151,10 @@
         "primary_link": "https://furkiozknn.github.io/karagoz/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -1146,7 +1175,7 @@
         "Web Audio API",
         "Blender"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1156,22 +1185,23 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D Silk Road trade strategy on a low-poly map of Anatolia, built by Claude Opus 5.5 · Anadolu haritasında 3D İpek Yolu ticaret stratejisi, Claude Opus 5.5 yaptı",
+      "summary": "3D Silk Road trade strategy on a map of Anatolia, redesigned with a warm dune palette and a parchment travel-journal UI, built by Claude Opus 5.5 · Anadolu haritasında 3D İpek Yolu ticaret stratejisi, sıcak kum paleti ve parşömen seyir defteri arayüzüyle yeniden tasarlandı, Claude Opus 5.5 yaptı",
       "key_features": [
-        "Seven cities with their own supply and demand; prices react to your trades and to three rival merchants",
-        "Camel caravans follow the roads, stop at caravanserais at night, and need guards against bandits on neglected roads",
-        "Goal: 10,000 akçe and 3 caravanserais before the end of year 5; seasons, contracts, plague and festivals change the market",
-        "The ?auto bot won 12 of 12 seeded runs between day 158 and day 211; a careless bot went bankrupt in the first season every time",
-        "About 60 fps (vsync cap) on Intel UHD 620 at 1280x720 with 20-29 draw calls; one index.html, optional CC0 asset pass"
+        "Seven cities with a living market; prices drift and react to what you and three rival merchants sell",
+        "Redesign: the plateau rises from a dune sea with sandstone strata, palm oases, wind-blown sand and drifting cloud shadows",
+        "Redesign: pacing camels with saddle blankets, night camps with tents and embers, and a parchment and stitched-leather UI with the Marcellus display face",
+        "Goal: 10,000 akçe and 3 caravanserais before the end of year five; bandits, guards and caravanserais along the roads",
+        "Measured after the redesign: 60 fps, 25 -> 29 draw calls; the ?auto bot still wins (day 212 for seed 3, day 142 for seed 5) with 0 JS errors"
       ],
       "media": {
-        "hero": "docs/map.png",
+        "hero": "docs/redesign-desert.png",
         "screenshots": [
           "docs/card.jpg",
-          "docs/map.png",
+          "docs/redesign-desert.png",
+          "docs/redesign-before-after.png",
+          "docs/redesign-night.png",
           "docs/title.png",
           "docs/market.png",
-          "docs/caravan.png",
           "docs/phone.png"
         ],
         "gifs": [
@@ -1206,9 +1236,10 @@
         "primary_link": "https://furkiozknn.github.io/kervan/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -1312,7 +1343,7 @@
         "Three.js r170",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1322,19 +1353,20 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "Cosy 3D tulip garden builder in the Ottoman Tulip Era, built by Claude Haiku 5.5 · Lale Devri'nde sakin bir 3D lale bahçesi kurma oyunu, Claude Haiku 5.5 yaptı",
+      "summary": "Cosy 3D Tulip Era garden builder, redesigned as a sunlit sandstone diorama with a garden-scroll UI, built by Claude Haiku 5.5 · Lale Devri'nde 3D bahçe kurma oyunu, güneşli kumtaşı diorama ve bahçe parşömeni arayüzüyle yeniden tasarlandı, Claude Haiku 5.5 yaptı",
       "key_features": [
-        "Plant, water and cut tulips on a walled palace terrace by the Bosphorus",
-        "Breed hybrids from neighbouring blooms: colour, petal shape and pattern mix the parents'",
-        "A bazaar where prices rise and crash, especially during a tulip mania",
-        "Build paths, beds, a turtle pool, cypress and plane trees, lanterns and benches; the garden grows each season",
-        "30-day seasons end in a festival; win the final one with three stars and at least 20 varieties"
+        "Plant bulbs, water and cut the blooms; two tulips blooming side by side breed a new variety (colour, petal shape, pattern)",
+        "Redesign: a sandstone diorama plinth with raised beds, tiered cypresses and planes, a stepped fountain, bees and lantern glow",
+        "Redesign: parchment garden-scroll panels with tulip-flourish corners on every screen; the garden starts with four beds and a one-line coach",
+        "A bazaar with tulip-mania price swings and a festival every 30 days scoring variety, colour harmony, symmetry and decoration",
+        "Measured after the redesign: 60 fps at 1280x720, 57-61 draw calls in the ?auto run, zero JS errors across every season"
       ],
       "media": {
         "hero": "docs/gameplay.png",
         "screenshots": [
           "docs/card.jpg",
           "docs/gameplay.png",
+          "docs/redesign-before-after.png",
           "docs/title.png",
           "docs/festival.png",
           "docs/phone-gameplay.png"
@@ -1369,9 +1401,10 @@
         "primary_link": "https://furkiozknn.github.io/lale-bahcesi/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and the video-studio analiz.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -1393,7 +1426,7 @@
         "Higgsfield (Tripo text-to-3D, GPT Image)",
         "glTF-Transform"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1403,24 +1436,26 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "Endless 3D seagull run over the Istanbul strait, built by Claude Haiku 5.5 · İstanbul Boğazı üstünde sonsuz 3D martı uçuşu, Claude Haiku 5.5 yaptı",
+      "summary": "Endless 3D seagull run over the Istanbul strait, v2 with a chick to raise across runs, pier snacks and a late-game ramp, built by Claude Haiku 5.5 · İstanbul Boğazı üstünde sonsuz 3D martı uçuşu, v2'de koşudan koşuya büyüyen yavru, iskele atıştırmalıkları ve oyun sonu hızlanması, Claude Haiku 5.5 yaptı",
       "key_features": [
         "Endless run that speeds up after the first 30 seconds; stamina refilled only by simit and fish, three feathers per run",
-        "Bridge decks and cables, ships, kites, storm clouds and a rival gull flock that steals your simit",
-        "Tailwind (x1.5), golden simit (x2) and shield feather power-ups; combo multiplier up to x5",
-        "Afternoon to sunset to a night of fireworks past mosques, the Galata tower, the Maiden's tower and yalı mansions",
-        "Three daily missions and a local top-5 score table; generated models with a procedural fallback"
+        "v2: carry simit to rooftop nests to feed a chick that grows across runs, from egg to a young gull that flies beside you",
+        "v2: pier snacks, a late-game ramp, a near-miss counter, halos on pickups, fact cards and the kitten on the game-over card",
+        "Bridge decks and cables, ships, kites, storm clouds and a rival gull flock; tailwind, golden simit and shield feather power-ups",
+        "Afternoon to sunset to a night of fireworks past mosques, the Galata tower and the Maiden's tower; ?auto runs with 0 errors at 60 fps"
       ],
       "media": {
         "hero": "docs/card.jpg",
         "screenshots": [
           "docs/card.jpg",
+          "docs/title.png",
           "docs/bridge.png",
           "docs/day.png",
           "docs/sunset.png",
           "docs/night.png",
           "docs/close.png",
-          "docs/phone_run.png"
+          "docs/gameover.png",
+          "docs/phone_gameplay.png"
         ],
         "gifs": [
           "docs/gameplay.gif"
@@ -1452,9 +1487,10 @@
         "primary_link": "https://furkiozknn.github.io/marti/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html and docs/assets.md; no field is generated from a guess",
+        "note": "v2 upgrade 2026-10-28"
       }
     },
     {
@@ -1726,7 +1762,7 @@
         "Web Audio API",
         "Blender"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1736,25 +1772,25 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D physics mini-golf among the fairy chimneys of Cappadocia, built by Claude Fable 5.1 · Kapadokya peribacaları arasında gerçek fizikli 3D mini golf, Claude Fable 5.1 yaptı",
+      "summary": "3D physics mini-golf among the fairy chimneys of Cappadocia, redesigned as a fantasy miniature diorama with a wooden signpost UI, built by Claude Fable 5.1 · Kapadokya peribacaları arasında 3D fizikli mini golf, fantastik minyatür diorama ve ahşap tabela arayüzüyle yeniden tasarlandı, Claude Fable 5.1 yaptı",
       "key_features": [
-        "12 hand-designed holes, course par 40, from Pigeon Terrace to Sunrise Ridge",
-        "Real rolling physics: slopes, ramps, jumps, wall bounces and grass, sand and stone friction",
-        "Moving obstacles: a turning pottery wheel, a rolling stone door, swinging lanterns and a donkey",
-        "Three stars per hole (under par, a hidden grape, a trick shot); the ?auto bot finishes the course in 18 strokes",
-        "60 fps on Intel UHD 620 at 1280x720 with 16-22 draw calls; one index.html, optional CC0 asset pass"
+        "Twelve hand-designed holes, par 40: cave houses, a pottery wheel, a donkey crossing, a stone bridge and a sunrise ridge with balloons",
+        "Redesign: a moss and pebble diorama base around every hole, strata slabs, hero fairy chimneys, a warm peach haze and a numbered signpost at each tee",
+        "Redesign: wooden signpost boards with a cream face for every panel and the Fredoka font",
+        "Real rolling physics: slopes, ramps, wall bounces and moving obstacles; three challenge stars per hole and a ghost line of your best shot",
+        "Measured after the redesign: the bot finishes in 18 strokes with 23 stars and 0 JS errors, 60 fps and 25-27 draw calls"
       ],
       "media": {
-        "hero": "docs/assets-after-hole4-wheel.png",
+        "hero": "docs/02-pottery-wheel.png",
         "screenshots": [
           "docs/card.jpg",
-          "docs/assets-after-hole4-wheel.png",
-          "docs/assets-after-title.png",
-          "docs/assets-after-hole2.png",
-          "docs/assets-after-hole8-donkey.png",
-          "docs/assets-after-hole12-ridge.png",
+          "docs/02-pottery-wheel.png",
+          "docs/redesign-before-after.png",
+          "docs/01-title.png",
+          "docs/03-sunrise-ridge.png",
+          "docs/04-flyover-bridge.png",
           "docs/05-hole-result.png",
-          "docs/assets-after-phone.png"
+          "docs/07-phone.png"
         ],
         "gifs": [
           "docs/gameplay.gif"
@@ -1788,9 +1824,10 @@
         "primary_link": "https://furkiozknn.github.io/peri-golf/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -1810,7 +1847,7 @@
         "Three.js r170",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1820,24 +1857,23 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D simit bakery tycoon on an old Istanbul street, built by Claude Sonnet 5.5 · Eski bir İstanbul sokağında 3D simit fırını işletme oyunu, Claude Sonnet 5.5 yaptı",
+      "summary": "3D simit bakery tycoon on an old Istanbul street, redesigned as a hand-painted 2.5D bakery with a chalkboard UI, built by Claude Sonnet 5.5 · Eski bir İstanbul sokağında 3D simit fırını işletme oyunu, el boyaması 2.5D fırın ve kara tahta arayüzüyle yeniden tasarlandı, Claude Sonnet 5.5 yaptı",
       "key_features": [
-        "Five stations from kneading to the oven; an unattended oven burns the bread",
-        "Simit sellers carry trays to the pier, school, park, office and tea houses; demand follows the hour and weather",
-        "Plan each day: production, prices, supply, staff, upgrades and contracts; poğaça, açma, çatal and pide unlock",
-        "Goal: 5,000 lira and 4 stars of reputation by day 20, then endless mode",
-        "A sensible bot wins in roughly 9 of 12 seeds (day 16-20); a careless one goes bankrupt around day 7"
+        "A full production chain: knead, shape, dip in molasses, roll in sesame and bake; an unattended oven burns the bread",
+        "Redesign: painted textures, a wood-fired oven glow with flicker, steam and flour dust, cobblestones, blue-shutter houses and a simit cart",
+        "Redesign: chalkboard menus with a self-hosted chalk font, a wooden top bar and a baker-paper receipt for the day summary; phone portrait and landscape layouts",
+        "Simit sellers carry trays to the pier, the school, the park, the office and the tea houses; demand follows the hour and the weather",
+        "Measured after the redesign: 60 fps in play, 20 -> 28 draw calls; the ?auto bot wins on day 17 with 0 JS errors"
       ],
       "media": {
         "hero": "docs/gameplay.png",
         "screenshots": [
           "docs/card.jpg",
           "docs/gameplay.png",
+          "docs/redesign-before-after.png",
           "docs/title.png",
           "docs/plan.png",
-          "docs/panels.png",
           "docs/summary.png",
-          "docs/win.png",
           "docs/phone.png"
         ],
         "gifs": [
@@ -1870,9 +1906,10 @@
         "primary_link": "https://furkiozknn.github.io/simit-firini/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, CREDITS.md and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, CREDITS.md and the video-studio analiz.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
