@@ -1,7 +1,15 @@
 {
-  "generated": "2026-11-02",
+  "generated": "2026-11-09",
   "missing": [],
   "releases": [
+    {
+      "repo": "social-videos",
+      "tag": "devlog-2026-11",
+      "title": "Fay Hattı devlog 2026-11",
+      "url": "https://github.com/Furkiozknn/social-videos/releases/tag/devlog-2026-11",
+      "published": "2026-11-05T08:53:56Z",
+      "prerelease": false
+    },
     {
       "repo": "social-videos",
       "tag": "promo-2026-11",
@@ -76,6 +84,11 @@
       "source": "https://raw.githubusercontent.com/Furkiozknn/ebru/main/docs/card.jpg",
       "bytes": 103323
     },
+    "fay-hatti": {
+      "file": "assets/onizleme/fay-hatti.png",
+      "source": "https://raw.githubusercontent.com/Furkiozknn/fay-hatti/main/docs/screenshot.png",
+      "bytes": 356935
+    },
     "hamsi": {
       "file": "assets/onizleme/hamsi.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/hamsi/main/docs/card.jpg",
@@ -119,7 +132,7 @@
     "mehter": {
       "file": "assets/onizleme/mehter.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/mehter/main/docs/card.jpg",
-      "bytes": 86224
+      "bytes": 75294
     },
     "mimar-sinan": {
       "file": "assets/onizleme/mimar-sinan.jpg",
@@ -129,7 +142,7 @@
     "pamukkale": {
       "file": "assets/onizleme/pamukkale.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/pamukkale/main/docs/card.jpg",
-      "bytes": 48670
+      "bytes": 39011
     },
     "peri-golf": {
       "file": "assets/onizleme/peri-golf.jpg",
@@ -825,6 +838,80 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "fay-hatti",
+      "owner": "Furkiozknn",
+      "repository": "https://github.com/Furkiozknn/fay-hatti",
+      "homepage": "https://furkiozknn.github.io/fay-hatti/",
+      "releases": null,
+      "status": "active",
+      "category": "game",
+      "platform": [
+        "web"
+      ],
+      "primary_language": "JavaScript",
+      "technologies": [
+        "Canvas 2D",
+        "Web Audio API"
+      ],
+      "version": "0.1.0",
+      "license": "MIT",
+      "topics": [
+        "browser-game",
+        "puzzle-game",
+        "daily-puzzle",
+        "game-off-2026",
+        "anatolia",
+        "claude-code",
+        "claude-game-arena"
+      ],
+      "summary": "Daily sliding-tile puzzle on a map of Anatolia for GitHub Game Off 2026 (SHIFT): shift rows and columns to bring rivers and roads to villages while a quake moves one row after every move · Anadolu haritasında günlük kaydırma bulmacası: satır ve sütunları kaydırıp köylere nehir ve yol götür, her hamleden sonra bir deprem bir satırı kaydırır",
+      "key_features": [
+        "Rows and columns wrap around and slide past fixed villages, mountains, the spring and the caravanserai; after each move a seeded quake shifts one row, telegraphed one move ahead",
+        "Daily puzzle with the same map for everyone (date seed), endless levels, par and 3 stars, undo, restart, spoiler-free share text, English and Turkish",
+        "Generator scrambles a solved board with reverse moves and reverse quakes, so a short solution always exists; an optimal solver (bot A) sets par, a greedy beam search (bot B) plays by feel",
+        "Measured: both bots solved 12/12 seeds in Chrome (?auto) and 40/40 puzzles in Node; bot A averages 4.25 moves (= par), bot B 6.5; 60 fps desktop and phone in headless Chrome",
+        "One index.html, no assets or external requests; URL flags ?seed, ?demo=1|a|b, ?auto, ?debug for video capture"
+      ],
+      "media": {
+        "hero": "docs/screenshot.png",
+        "screenshots": [
+          "docs/screenshot.png"
+        ],
+        "gifs": [],
+        "videos": []
+      },
+      "tests": null,
+      "ci": {
+        "workflows": [],
+        "badge": null
+      },
+      "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "version_history": null,
+        "roadmap": null,
+        "security": null,
+        "contributing": null,
+        "license_file": "LICENSE"
+      },
+      "social": {
+        "headline": "Shift the land of Anatolia: bring water and roads to every village before the next quake · Anadolu toprağını kaydır: bir sonraki depremden önce her köye su ve yol götür",
+        "hashtags": [
+          "claudecode",
+          "indiegame",
+          "gameoff"
+        ],
+        "primary_link": "https://furkiozknn.github.io/fay-hatti/"
+      },
+      "provenance": {
+        "generated_at": "2026-11-03",
+        "generator": "hand-written",
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "v0.1 first playable 2026-11-03"
+      }
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "hamsi",
       "owner": "Furkiozknn",
       "repository": "https://github.com/Furkiozknn/hamsi",
@@ -1511,7 +1598,7 @@
         "Web Audio API",
         "Blender"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1521,25 +1608,25 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "3D rhythm march with an Ottoman mehter band on a parade avenue, built by Claude Haiku 5.5 · Osmanlı alay caddesinde mehter takımıyla 3D ritim yürüyüşü, Claude Haiku 5.5 yaptı",
+      "summary": "3D rhythm game with an Ottoman mehter band, redesigned as a dusk square in crimson, gold and deep green with arcaded houses, banners and a mosque, built by Claude Haiku 5.5 · Osmanlı mehter takımıyla 3D ritim oyunu, kızıl, altın ve koyu yeşil alacakaranlık meydanı, kemerli evler, sancaklar ve camiyle yeniden tasarlandı, Claude Haiku 5.5 yaptı",
       "key_features": [
-        "Four lanes for davul, kös, zurna and zil on D F J K or touch; long zurna notes are held to the end",
-        "Six songs from 96 to 176 BPM, each in Easy, Normal and Hard, generated from usul rhythm patterns",
-        "Music scheduled on the audio clock, hits judged against it, with an input-offset calibration screen",
-        "The ?auto bot hit all 907 notes of the last song perfectly for an S grade, with and without assets",
-        "61 fps (display cap) on an Intel UHD GPU at 1280x720 with 29 draw calls; one index.html, optional CC0 asset pass"
+        "Six marches on four lanes: press D F J K on the beat or tap the lanes; hold long zurna notes; combos raise the multiplier",
+        "Redesign: arcaded houses with gold cornices, canvas-painted banners, a mosque at the far end and torches that swell on every beat",
+        "Redesign: a gilded hit line, crimson-and-gold panels with tuğra-style dividers, drum sticks and zil that move with the notes",
+        "An input-lag calibration screen; the language follows the browser (Turkish or English)",
+        "Measured after the redesign: 60 fps, 31 draw calls; the ?auto bot hits all 907 notes of the last song perfectly with 0 JS errors"
       ],
       "media": {
-        "hero": "docs/assets-after-gameplay-r2.png",
+        "hero": "docs/gameplay.png",
         "screenshots": [
           "docs/card.jpg",
-          "docs/assets-after-gameplay-r2.png",
+          "docs/gameplay.png",
+          "docs/redesign-before-after.png",
           "docs/title.png",
           "docs/song-select.png",
-          "docs/gameplay.png",
           "docs/results.png",
-          "docs/settings.png",
-          "docs/phone.png"
+          "docs/phone.png",
+          "docs/settings.png"
         ],
         "gifs": [
           "docs/gameplay.gif"
@@ -1573,9 +1660,10 @@
         "primary_link": "https://furkiozknn.github.io/mehter/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README, index.html, docs/assets.md and the video-studio analiz.md; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
@@ -1680,7 +1768,7 @@
         "Canvas 2D",
         "Web Audio API"
       ],
-      "version": null,
+      "version": "2.0.0",
       "license": "MIT",
       "topics": [
         "browser-game",
@@ -1691,19 +1779,20 @@
         "claude-code",
         "claude-game-arena"
       ],
-      "summary": "Calm 3D water-flow puzzle on the travertine terraces of Pamukkale, built by Claude Haiku 5.5 · Pamukkale travertenlerinde sakin 3D su akışı bulmacası, Claude Haiku 5.5 yaptı",
+      "summary": "3D water-flow puzzle on the Pamukkale terraces, redesigned in pastel travertine, turquoise water with caustics and shore foam, and airy white cards, built by Claude Haiku 5.5 · Pamukkale travertenlerinde 3D su akışı bulmacası, pastel traverten, kostikli turkuaz su ve beyaz kartlarla yeniden tasarlandı, Claude Haiku 5.5 yaptı",
       "key_features": [
-        "Guide spring water into target pools with a limited set of stones, dams and splitters",
-        "Still water builds calcium, so the terraces rise and change while the water runs",
-        "20 levels in 4 areas with three stars each: all pools full, no water spilled, tool saving",
-        "Every level checked offline against the same simulation code (tools/solve-levels.mjs)",
-        "The ?auto bot cleared 20/20 levels with 46/60 stars; one index.html, everything generated in code"
+        "Water as a grid automaton: place stones, dams and splitters, start the spring and steer the flow into every pool",
+        "Still water slowly builds a white calcium rim, just like the real terraces",
+        "Redesign: pastel travertine with lit step edges, turquoise water with caustic light and shore foam, a sage meadow and ruin stones",
+        "Redesign: airy white cards with turquoise accents, floating HUD pills and a dark-mode theme; works on phones in both orientations",
+        "Measured after the redesign: 60 fps; the ?auto bot clears 20/20 levels with 46/60 stars and 0 JS errors"
       ],
       "media": {
         "hero": "docs/02-gameplay-level9.png",
         "screenshots": [
           "docs/card.jpg",
           "docs/02-gameplay-level9.png",
+          "docs/redesign-before-after.png",
           "docs/01-title.png",
           "docs/03-gameplay-level1.png",
           "docs/04-ending.png",
@@ -1739,9 +1828,10 @@
         "primary_link": "https://furkiozknn.github.io/pamukkale/"
       },
       "provenance": {
-        "generated_at": "2026-10-27",
+        "generated_at": "2026-10-28",
         "generator": "hand-written",
-        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess"
+        "rule": "mechanical fields read from the repository; editorial fields hand-written from the README and index.html; no field is generated from a guess",
+        "note": "visual redesign 2026-11-02"
       }
     },
     {
