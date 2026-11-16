@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09",
+  "generated": "2026-11-16",
   "missing": [],
   "releases": [
     {
@@ -209,6 +209,7 @@
           "guvenlik.yml",
           "haftalik.yml",
           "projeler.yml",
+          "skill-tarama.yml",
           "yenile.yml"
         ],
         "badge": "https://github.com/Furkiozknn/Furkiozknn/actions/workflows/ci.yml/badge.svg"
@@ -1699,7 +1700,7 @@
         "Still water slowly builds a white calcium rim, just like the real terraces",
         "Redesign: pastel travertine with lit step edges, turquoise water with caustic light and shore foam, a sage meadow and ruin stones",
         "Redesign: airy white cards with turquoise accents, floating HUD pills and a dark-mode theme; works on phones in both orientations",
-        "Measured after the redesign: 60 fps; the ?auto bot clears 20/20 levels with 46/60 stars and 0 JS errors"
+        "Measured after the redesign: 60 fps; the ?auto bot cleared 20/20 levels with 46/60 stars and 0 JS errors (before the 3 gate levels; the game now has 23 levels, 23/23 and 52/69 stars on 2026-11-09)"
       ],
       "media": {
         "hero": "docs/02-gameplay-level9.png",
@@ -1782,7 +1783,7 @@
         "Redesign: a moss and pebble diorama base around every hole, strata slabs, hero fairy chimneys, a warm peach haze and a numbered signpost at each tee",
         "Redesign: wooden signpost boards with a cream face for every panel and the Fredoka font",
         "Real rolling physics: slopes, ramps, wall bounces and moving obstacles; three challenge stars per hole and a ghost line of your best shot",
-        "Measured after the redesign: the bot finishes in 18 strokes with 23 stars and 0 JS errors, 60 fps and 25-27 draw calls"
+        "Measured after the redesign: 60 fps and 25-27 draw calls; the bot (which takes the hidden shortcut on 8 holes) finishes in 14 strokes with 20 stars and 0 JS errors (re-measured 2026-11-09)"
       ],
       "media": {
         "hero": "docs/02-pottery-wheel.png",
