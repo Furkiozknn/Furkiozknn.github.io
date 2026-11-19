@@ -1,0 +1,689 @@
+{
+ "_aciklama": "Oyun merkezi verisi (tek kaynak). sarki_youtube: oyunun şarkısının YouTube linki; boşsa kartta 'Şarkıyı dinle' görünmez. Değiştirince merkez/olustur.py çalışır (GitHub'da düzenlerseniz merkez.yml iş akışı sayfayı kendisi yeniler).",
+ "oyunlar": [
+  {
+   "id": "hamsi",
+   "ad": "Hamsi",
+   "renk": {
+    "zemin": "#0f2a33",
+    "metin": "#e8f4f2",
+    "vurgu": "#f4c430",
+    "dugme": "#f4c430",
+    "dugme_metin": "#10222a",
+    "bant": "#0a1f26"
+   },
+   "motif": "ag",
+   "gorsel": "w",
+   "tur": {
+    "tr": "BALIKÇILIK",
+    "en": "FISHING SIM"
+   },
+   "kanca": {
+    "tr": "Sonarda sürüyü bul, ağı daire çizerek at, fırtına gelmeden limana dön.",
+    "en": "Find the shoal on sonar, circle it with your net and beat the storm home."
+   },
+   "nasil": {
+    "tr": "W/S gaz · A/D dümen · Boşluk ağı at / topla",
+    "en": "W/S throttle · A/D rudder · Space cast / haul the net"
+   },
+   "alt": {
+    "tr": "Mavi-beyaz balıkçı teknesi limandan açılıyor, köşede sonar ekranı",
+    "en": "A blue-and-white fishing boat leaving the harbour, sonar in the corner"
+   },
+   "sarki": {
+    "tr": "Karadeniz horon-pop",
+    "en": "Black Sea horon pop"
+   },
+   "sarki_youtube": ""
+  },
+  {
+   "id": "kirkpinar",
+   "ad": "Kırkpınar",
+   "renk": {
+    "zemin": "#1d3b14",
+    "metin": "#f3efe0",
+    "vurgu": "#e8b923",
+    "dugme": "#b3261e",
+    "dugme_metin": "#ffffff",
+    "bant": "#e8b923"
+   },
+   "motif": "kemer",
+   "gorsel": "p",
+   "tur": {
+    "tr": "YAĞLI GÜREŞ",
+    "en": "OIL WRESTLING"
+   },
+   "kanca": {
+    "tr": "Yağlı pehlivanı kıspetinden yakala, rakibin sırtını çimene değdir.",
+    "en": "Grab the oiled wrestler by his kıspet and pin his back to the grass."
+   },
+   "nasil": {
+    "tr": "F tut · G çek · H it · R hamle (künde, çaprast)",
+    "en": "F grip · G pull · H push · R special move"
+   },
+   "alt": {
+    "tr": "Bıyıklı başpehlivan ve genç pehlivan, arkada davul-zurna ve tribün",
+    "en": "A moustached champion and a young wrestler, drums and a packed stand behind"
+   },
+   "sarki": {
+    "tr": "Davul-zurna peşrevi + stadyum hip-hop",
+    "en": "Drum-and-zurna peşrev + stadium hip-hop"
+   },
+   "sarki_youtube": ""
+  },
+  {
+   "id": "mehter",
+   "ad": "Mehter",
+   "renk": {
+    "zemin": "#5a0f16",
+    "metin": "#fbefd9",
+    "vurgu": "#e9b949",
+    "dugme": "#e9b949",
+    "dugme_metin": "#2a0a0d",
+    "bant": "#470b11"
+   },
+   "motif": "zikzak",
+   "gorsel": "p",
+   "tur": {
+    "tr": "RİTİM",
+    "en": "RHYTHM"
+   },
+   "kanca": {
+    "tr": "Mehter takımı sana doğru yürüyor: davul, kös, zurna, zil. Tek vuruşu kaçırma.",
+    "en": "The Ottoman military band marches at you: drum, kettledrum, zurna, cymbal. Miss nothing."
+   },
+   "nasil": {
+    "tr": "D F J K ya da ekrandaki dört şerit",
+    "en": "D F J K or the four on-screen lanes"
+   },
+   "alt": {
+    "tr": "Kırmızı halıda yürüyen mehter takımı, önde davullu çocuk",
+    "en": "The mehter band marching down a red carpet, a young drummer in front"
+   },
+   "sarki": {
+    "tr": "Mehter marşı + modern davul",
+    "en": "Mehter march + modern drums"
+   },
+   "sarki_youtube": ""
+  },
+  {
+   "id": "bogaz-vapuru",
+   "ad": "Boğaz Vapuru",
+   "renk": {
+    "zemin": "#e6f1f8",
+    "metin": "#0d2a40",
+    "vurgu": "#1e5f8c",
+    "dugme": "#0d2a40",
+    "dugme_metin": "#ffffff",
+    "bant": "#f2c230"
+   },
+   "motif": "dalga",
+   "gorsel": "w",
+   "tur": {
+    "tr": "VAPUR",
+    "en": "FERRY SIM"
+   },
+   "kanca": {
+    "tr": "Şehir hatları vapurunu akıntıya karşı iskeleye yanaştır: yavaş, paralel, tam kutunun içine.",
+    "en": "Dock a Bosphorus city ferry against the current: slow, straight, right inside the box."
+   },
+   "nasil": {
+    "tr": "W/S gaz · A/D dümen · Boşluk düdük",
+    "en": "W/S throttle · A/D rudder · Space horn"
+   },
+   "alt": {
+    "tr": "Beyaz vapur Boğaz'da iskeleye yaklaşıyor, arkada köprü",
+    "en": "A white ferry approaching the pier on the Bosphorus, the bridge behind"
+   },
+   "sarki": {
+    "tr": "70'ler İstanbul psych-rock",
+    "en": "70s Istanbul psych-rock"
+   },
+   "sarki_youtube": ""
+  },
+  {
+   "id": "marti",
+   "ad": "Martı",
+   "renk": {
+    "zemin": "#dff1fb",
+    "metin": "#0b2f4a",
+    "vurgu": "#c2410c",
+    "dugme": "#b43c0c",
+    "dugme_metin": "#ffffff",
+    "bant": "#bfe3f5"
+   },
+   "motif": "simit",
+   "gorsel": "w",
+   "tur": {
+    "tr": "SONSUZ UÇUŞ",
+    "en": "ENDLESS FLYER"
+   },
+   "kanca": {
+    "tr": "Boğaz'da martı ol: vapurdan simit kap, köprülerden sıyrıl, yavruyu besle.",
+    "en": "Be a Bosphorus seagull: snatch simit off ferries, dodge the bridges, feed your chick."
+   },
+   "nasil": {
+    "tr": "Fare, parmak ya da oklarla yön ver · Boşluk / basılı tut: dal",
+    "en": "Steer with mouse, finger or arrows · Space / hold to dive"
+   },
+   "alt": {
+    "tr": "Martı kırmızı köprünün altından süzülüyor, suda simitler",
+    "en": "A seagull gliding under a red bridge, simit floating on the water"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "dolmus",
+   "ad": "Dolmuş",
+   "renk": {
+    "zemin": "#ffcc1a",
+    "metin": "#1a1a1a",
+    "vurgu": "#1a1a1a",
+    "dugme": "#1a1a1a",
+    "dugme_metin": "#ffcc1a",
+    "bant": "#ffcc1a"
+   },
+   "motif": "dama",
+   "gorsel": "w",
+   "tur": {
+    "tr": "SÜRÜŞ",
+    "en": "DRIVING"
+   },
+   "kanca": {
+    "tr": "Sarı dolmuşla güzergâhı sür: “Müsait bir yerde!” diyeni indir, bahşişi topla.",
+    "en": "Drive the yellow dolmuş: drop off whoever shouts “Müsait bir yerde!” and pocket the tips."
+   },
+   "nasil": {
+    "tr": "W gaz · A/D direksiyon · Boşluk dur, kapıyı aç",
+    "en": "W gas · A/D steer · Space stop and open the door"
+   },
+   "alt": {
+    "tr": "Sarı minibüs İstanbul sokağında yolcu bekliyor",
+    "en": "A yellow minibus waiting for passengers on an Istanbul street"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "peri-golf",
+   "ad": "Peri Golf",
+   "renk": {
+    "zemin": "#f6e3c8",
+    "metin": "#3b2414",
+    "vurgu": "#c0392b",
+    "dugme": "#2f7a3a",
+    "dugme_metin": "#ffffff",
+    "bant": "#f6e3c8"
+   },
+   "motif": "sekme",
+   "gorsel": "w",
+   "tur": {
+    "tr": "MİNİ GOLF",
+    "en": "MINI GOLF"
+   },
+   "kanca": {
+    "tr": "Peri bacaları, mağara evler, çömlek çarkı: Kapadokya'da 12 delikli mini golf.",
+    "en": "Fairy chimneys, cave houses, a pottery wheel: twelve holes of mini golf in Cappadocia."
+   },
+   "nasil": {
+    "tr": "Topa bas, geri çek, bırak · beyaz çizgi yolu gösterir",
+    "en": "Press the ball, pull back, let go · the white line shows the path"
+   },
+   "alt": {
+    "tr": "Peri bacaları arasında kırmızı bayraklı golf deliği",
+    "en": "A red-flagged hole among Cappadocia's fairy chimneys"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "cay-ocagi",
+   "ad": "Çay Ocağı",
+   "renk": {
+    "zemin": "#3a1410",
+    "metin": "#fbe9d0",
+    "vurgu": "#e5893a",
+    "dugme": "#e5893a",
+    "dugme_metin": "#2a0f0b",
+    "bant": "#fbe9d0"
+   },
+   "motif": "tente",
+   "gorsel": "w",
+   "tur": {
+    "tr": "SERVİS TELAŞI",
+    "en": "SERVING RUSH"
+   },
+   "kanca": {
+    "tr": "Rıhtımda çay ocağı işlet: çay demle, simit ısıt, tepsiyle masalara yetiş.",
+    "en": "Run a waterfront tea stall: brew tea, warm the simit, race the tray to every table."
+   },
+   "nasil": {
+    "tr": "1–5 istasyonlar · tıkla: tepsiye al, masaya servis et",
+    "en": "1–5 stations · click to load the tray and serve"
+   },
+   "alt": {
+    "tr": "Çizgili tenteli çay ocağı, rıhtımda masalar ve müşteriler",
+    "en": "A striped-awning tea stall with tables and customers on the quay"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "kervan",
+   "ad": "Kervan",
+   "renk": {
+    "zemin": "#e9c27a",
+    "metin": "#3a220e",
+    "vurgu": "#9c3d12",
+    "dugme": "#3a220e",
+    "dugme_metin": "#f7e4b8",
+    "bant": "#e9c27a"
+   },
+   "motif": "yol",
+   "gorsel": "w",
+   "tur": {
+    "tr": "TİCARET",
+    "en": "TRADE STRATEGY"
+   },
+   "kanca": {
+    "tr": "İpek Yolu'nda ucuz al, pahalı sat; kervansarayları onar, eşkıyaya muhafız tut.",
+    "en": "Buy low, sell high on the Silk Road; rebuild caravanserais and hire guards against bandits."
+   },
+   "nasil": {
+    "tr": "Kervanı seç (C) · şehre tıkla, gönder · çarşıda kaydırıcıyla al-sat",
+    "en": "Pick a caravan (C) · click a city to send it · trade with the sliders"
+   },
+   "alt": {
+    "tr": "Altın saatte çölde deve kervanı ve vaha",
+    "en": "A camel caravan and an oasis in golden-hour desert"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "kale-savunmasi",
+   "ad": "Hisar",
+   "renk": {
+    "zemin": "#2e3b1f",
+    "metin": "#f0ead6",
+    "vurgu": "#d9c27a",
+    "dugme": "#a3162b",
+    "dugme_metin": "#f1efea",
+    "bant": "#2e3b1f"
+   },
+   "motif": "mazgal",
+   "gorsel": "w",
+   "tur": {
+    "tr": "KULE SAVUNMA",
+    "en": "TOWER DEFENCE"
+   },
+   "kanca": {
+    "tr": "Ordu iki yoldan kapına yürüyor: okçu kulesi, top tabyası, zift kazanı kur.",
+    "en": "An army marches on your gate down two roads: build archer towers, cannons and boiling pitch."
+   },
+   "nasil": {
+    "tr": "Yuvaya tıkla + 1/2/3 kur · U yükselt · Boşluk dalgayı başlat",
+    "en": "Click a slot + 1/2/3 to build · U upgrade · Space send the wave"
+   },
+   "alt": {
+    "tr": "Kırmızı çatılı kuleler vadideki yolu koruyor",
+    "en": "Red-roofed towers guarding the valley road"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "simit-firini",
+   "ad": "Simit Fırını",
+   "renk": {
+    "zemin": "#24392e",
+    "metin": "#f6ead2",
+    "vurgu": "#e8963a",
+    "dugme": "#e8963a",
+    "dugme_metin": "#1f150b",
+    "bant": "#24392e"
+   },
+   "motif": "susam",
+   "gorsel": "w",
+   "tur": {
+    "tr": "İŞLETME",
+    "en": "TYCOON"
+   },
+   "kanca": {
+    "tr": "Hamuru yoğur, pekmeze bandır, susama bula; simitçileri tablalarla iskeleye yolla.",
+    "en": "Knead, dip in molasses, roll in sesame, then send the sellers out with full trays."
+   },
+   "nasil": {
+    "tr": "İşçileri istasyonlara sürükle · 1 2 3 hız",
+    "en": "Drag workers onto stations · 1 2 3 speed"
+   },
+   "alt": {
+    "tr": "Yukarıdan simit fırını: yoğurma, fırın ve tezgâh istasyonları",
+    "en": "A simit bakery from above: kneading, oven and counter stations"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "kapadokya-balonu",
+   "ad": "Kapadokya Balonu",
+   "renk": {
+    "zemin": "#3d2a3f",
+    "metin": "#fde9d8",
+    "vurgu": "#ff7a2f",
+    "dugme": "#ff7a2f",
+    "dugme_metin": "#2a1520",
+    "bant": "#3d2a3f"
+   },
+   "motif": "balon",
+   "gorsel": "w",
+   "tur": {
+    "tr": "UÇUŞ",
+    "en": "FLIGHT"
+   },
+   "kanca": {
+    "tr": "Direksiyon yok: yükselip alçalarak doğru rüzgâr katmanını yakala, peri bacalarına süzül.",
+    "en": "No steering: climb or sink to catch the right wind layer over the fairy chimneys."
+   },
+   "nasil": {
+    "tr": "Boşluk brülör · V havayı sal · F fotoğraf",
+    "en": "Space burner · V vent · F photo"
+   },
+   "alt": {
+    "tr": "Gün doğumunda turuncu çizgili balon Kapadokya üzerinde",
+    "en": "An orange-striped balloon over Cappadocia at sunrise"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "karagoz",
+   "ad": "Karagöz",
+   "renk": {
+    "zemin": "#2a1208",
+    "metin": "#f8e2b6",
+    "vurgu": "#f2b33d",
+    "dugme": "#c62d1f",
+    "dugme_metin": "#ffffff",
+    "bant": "#2a1208"
+   },
+   "motif": "kafes",
+   "gorsel": "w",
+   "tur": {
+    "tr": "GÖLGE BULMACASI",
+    "en": "SHADOW PUZZLE"
+   },
+   "kanca": {
+    "tr": "Perdenin arkasındasın: tasvirleri ve kandilleri oynat, gölge resme uyana kadar.",
+    "en": "You're behind the shadow-play screen: move puppets and lamps until the shadows fit the scene."
+   },
+   "nasil": {
+    "tr": "Sürükle: kaydır · Q/E çevir · V perde arkası / seyirci",
+    "en": "Drag to slide · Q/E rotate · V backstage / audience view"
+   },
+   "alt": {
+    "tr": "Perde arkası: kandil ışığında renkli Karagöz tasviri",
+    "en": "Backstage: a coloured Karagöz puppet in lamplight"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "topkapi-gecesi",
+   "ad": "Topkapı Gecesi",
+   "renk": {
+    "zemin": "#0e1a3a",
+    "metin": "#e8ecf8",
+    "vurgu": "#e3c04d",
+    "dugme": "#e3c04d",
+    "dugme_metin": "#0e1a3a",
+    "bant": "#0e1a3a"
+   },
+   "motif": "yildiz",
+   "gorsel": "w",
+   "tur": {
+    "tr": "GİZLİLİK",
+    "en": "STEALTH"
+   },
+   "kanca": {
+    "tr": "Kaşıkçı Elması sahtesiyle değişmiş: muhafızlara görünmeden şafaktan önce yerine koy.",
+    "en": "The Spoonmaker's Diamond was swapped for a fake: put it back before dawn, unseen."
+   },
+   "nasil": {
+    "tr": "C çömel · Q çakıl at · E feneri söndür / saklan",
+    "en": "C crouch · Q throw a pebble · E snuff a lamp / hide"
+   },
+   "alt": {
+    "tr": "Ay ışığında Topkapı avlusu, fenerler ve havuz",
+    "en": "A moonlit Topkapı courtyard with lanterns and a pool"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "carsi-kacisi",
+   "ad": "Çarşı Kaçışı",
+   "renk": {
+    "zemin": "#f2d9b5",
+    "metin": "#3a2516",
+    "vurgu": "#b23a16",
+    "dugme": "#b23a16",
+    "dugme_metin": "#ffffff",
+    "bant": "#f2d9b5"
+   },
+   "motif": "kubbe",
+   "gorsel": "w",
+   "tur": {
+    "tr": "ÇATI KOŞUSU",
+    "en": "ROOFTOP RUNNER"
+   },
+   "kanca": {
+    "tr": "Yüzüğü kapan kedi Kapalıçarşı'nın kubbelerinde: koş, zıpla, kay, yakala!",
+    "en": "A cat stole the ring: chase it across the Grand Bazaar domes. Run, jump, slide!"
+   },
+   "nasil": {
+    "tr": "WASD koş · Boşluk zıpla (havada bir daha) · Shift kay",
+    "en": "WASD run · Space jump (double jump) · Shift slide"
+   },
+   "alt": {
+    "tr": "Gün batımında Kapalıçarşı kubbeleri üzerinde koşu",
+    "en": "Running across the Grand Bazaar domes at sunset"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "ebru",
+   "ad": "Ebru",
+   "renk": {
+    "zemin": "#f4ecdc",
+    "metin": "#2d2418",
+    "vurgu": "#b8342a",
+    "dugme": "#2a3f7a",
+    "dugme_metin": "#ffffff",
+    "bant": "#f4ecdc"
+   },
+   "motif": "ebru",
+   "gorsel": "w",
+   "tur": {
+    "tr": "SANAT",
+    "en": "ART"
+   },
+   "kanca": {
+    "tr": "Suya boya serp, bizle damar çek, tarakla tara; ustanın desenini yakala.",
+    "en": "Sprinkle paint on water, draw with the awl, comb the waves; match the master's marbling."
+   },
+   "nasil": {
+    "tr": "1 fırça · 2 biz · 3 tarak · 4 damla · sürükleyerek uygula",
+    "en": "1 brush · 2 awl · 3 comb · 4 drop · drag to apply"
+   },
+   "alt": {
+    "tr": "Ebru teknesinde kırmızı-yeşil dalgalı desen",
+    "en": "A red-and-green combed pattern in the marbling tray"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "cini-ustasi",
+   "ad": "Çini Ustası",
+   "renk": {
+    "zemin": "#f3ede1",
+    "metin": "#16307a",
+    "vurgu": "#1a8f8f",
+    "dugme": "#16307a",
+    "dugme_metin": "#ffffff",
+    "bant": "#1d3f9e"
+   },
+   "motif": "cini",
+   "gorsel": "w",
+   "tur": {
+    "tr": "KARO BULMACASI",
+    "en": "TILE PUZZLE"
+   },
+   "kanca": {
+    "tr": "İznik karolarını çevir, yer değiştir, motifler birleşsin; sonra fırını yak.",
+    "en": "Rotate and swap İznik tiles until every motif joins up, then fire the kiln."
+   },
+   "nasil": {
+    "tr": "Tıkla: çevir · sürükle: yer değiştir · F ters çevir",
+    "en": "Click to rotate · drag to swap · F to flip"
+   },
+   "alt": {
+    "tr": "Atölye masasında lale motifli İznik çini panosu",
+    "en": "An İznik tile panel with tulip motifs on the workshop table"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "mimar-sinan",
+   "ad": "Mimar Sinan",
+   "renk": {
+    "zemin": "#12284a",
+    "metin": "#eef2f8",
+    "vurgu": "#d9b25c",
+    "dugme": "#d9b25c",
+    "dugme_metin": "#12284a",
+    "bant": "#12284a"
+   },
+   "motif": "kemerli",
+   "gorsel": "w",
+   "tur": {
+    "tr": "YAPI BULMACASI",
+    "en": "BUILD PUZZLE"
+   },
+   "kanca": {
+    "tr": "Fil ayakları, yarım kubbeler, payandalar: iskele kalkınca kubben ayakta kalacak mı?",
+    "en": "Piers, half-domes, buttresses: will your dome still stand when the scaffold comes down?"
+   },
+   "nasil": {
+    "tr": "1–9 parça seç · hücreye tıkla · T gerilme · Boşluk iskeleyi kaldır",
+    "en": "1–9 pick a part · click a cell · T stress view · Space drop the scaffold"
+   },
+   "alt": {
+    "tr": "Tepede tamamlanmış kubbeli cami, çevresinde şehir",
+    "en": "A finished domed mosque on a hill above the city"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "pamukkale",
+   "ad": "Pamukkale",
+   "renk": {
+    "zemin": "#f4f6f4",
+    "metin": "#12403f",
+    "vurgu": "#1fa3a6",
+    "dugme": "#127377",
+    "dugme_metin": "#ffffff",
+    "bant": "#f4f6f4"
+   },
+   "motif": "teras",
+   "gorsel": "w",
+   "tur": {
+    "tr": "SU BULMACASI",
+    "en": "WATER PUZZLE"
+   },
+   "kanca": {
+    "tr": "Ilık kaynak suyunu beyaz travertenlerde yönlendir, her havuz turkuaza dönsün.",
+    "en": "Guide warm spring water across white travertine terraces until every pool turns turquoise."
+   },
+   "nasil": {
+    "tr": "1 taş · 2 set · 3 ayırıcı · Boşluk suyu başlat",
+    "en": "1 stone · 2 dam · 3 splitter · Space start the water"
+   },
+   "alt": {
+    "tr": "Beyaz traverten teraslarında turkuaz su havuzları",
+    "en": "Turquoise pools on white travertine terraces"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "lale-bahcesi",
+   "ad": "Lale Bahçesi",
+   "renk": {
+    "zemin": "#eef4e6",
+    "metin": "#24361d",
+    "vurgu": "#c2185b",
+    "dugme": "#c2185b",
+    "dugme_metin": "#ffffff",
+    "bant": "#eef4e6"
+   },
+   "motif": "lale",
+   "gorsel": "w",
+   "tur": {
+    "tr": "BAHÇE",
+    "en": "GARDEN"
+   },
+   "kanca": {
+    "tr": "Lale Devri'nde saray bahçesi: soğan dik, sula, yeni çeşitler üret, şenliği kazan.",
+    "en": "A palace garden in the Tulip Era: plant, water, breed new varieties, win the festival."
+   },
+   "nasil": {
+    "tr": "Tarha tıkla · dik / sula / kes / kaldır · B çarşı",
+    "en": "Click a bed · plant / water / cut / lift · B market"
+   },
+   "alt": {
+    "tr": "Fıskiyeli saray terası ve lale tarhları",
+    "en": "A palace terrace with a fountain and tulip beds"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  },
+  {
+   "id": "fay-hatti",
+   "ad": "Fay Hattı",
+   "renk": {
+    "zemin": "#1f2d2a",
+    "metin": "#eef1e4",
+    "vurgu": "#e2543c",
+    "dugme": "#e9dcb8",
+    "dugme_metin": "#1f2d2a",
+    "bant": "#1f2d2a"
+   },
+   "motif": "fay",
+   "gorsel": "s",
+   "tur": {
+    "tr": "KAYDIRMA BULMACASI",
+    "en": "SLIDE PUZZLE"
+   },
+   "kanca": {
+    "tr": "Anadolu haritasını kaydır, köylere su ve yol getir. Ama her hamleden sonra yer sarsılır.",
+    "en": "Slide the rows of an Anatolian map to bring water and roads to villages. The ground shifts after every move."
+   },
+   "nasil": {
+    "tr": "Sürükle ya da ok tuşları · Z geri al",
+    "en": "Drag or arrow keys · Z undo"
+   },
+   "alt": {
+    "tr": "5×5 harita bulmacası: pınardan köye mavi dere",
+    "en": "The 5×5 map puzzle: a blue stream from the spring to a village"
+   },
+   "sarki": null,
+   "sarki_youtube": ""
+  }
+ ]
+}

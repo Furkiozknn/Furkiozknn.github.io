@@ -27,6 +27,10 @@ RAW = "https://raw.githubusercontent.com/{owner}/{repo}/{branch}/project-meta.js
 API = "https://api.github.com/users/{owner}/repos?per_page=100&type=owner"
 RELEASES = "https://api.github.com/repos/{owner}/{repo}/releases?per_page=5"
 SITE = "https://furkiozknn.github.io/"
+# The site root is the games hub (index.html, hand-written); this directory lives
+# one level down so the weekly rebuild never overwrites the hub.
+PAGE_URL = SITE + "projeler/"
+PAGE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "projeler", "index.html")
 HERE = os.path.dirname(os.path.abspath(__file__))
 SNAPSHOT = os.path.join(HERE, "veri", "projeler.json")
 RAW_FILE = "https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}"
@@ -213,7 +217,8 @@ def preview_file(pid):
     """The local preview of a project, if one was copied; the page links nothing else."""
     for ext in PREVIEW_EXT:
         if os.path.isfile(os.path.join(PREVIEW_DIR, pid + ext)):
-            return PREVIEW_URL + pid + ext
+            # Root-absolute, because the page is served from /projeler/.
+            return "/" + PREVIEW_URL + pid + ext
     return None
 
 
@@ -247,11 +252,13 @@ def atom(releases, when):
 
 
 def sitemap(when):
-    """One URL, because the directory is one page. Valid is what matters here."""
+    """Two URLs: the games hub at the root and this directory. Valid is what matters here."""
     return ('<?xml version="1.0" encoding="utf-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             f'  <url><loc>{SITE}</loc><lastmod>{when}</lastmod>'
             '<changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
+            f'  <url><loc>{PAGE_URL}</loc><lastmod>{when}</lastmod>'
+            '<changefreq>weekly</changefreq><priority>0.8</priority></url>\n'
             '</urlset>\n')
 
 
@@ -289,7 +296,7 @@ def jsonld(rows, when):
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": f"{OWNER} - project directory",
-        "url": SITE,
+        "url": PAGE_URL,
         "dateModified": when,
         "numberOfItems": len(items),
         "itemListElement": items,
@@ -328,7 +335,7 @@ def points_here(url):
     Most repositories use their own card here (#repo-name) as their homepage;
     a "Live" link on that card would only link the card to itself.
     """
-    return url.split("#", 1)[0].rstrip("/") == SITE.rstrip("/")
+    return url.split("#", 1)[0].rstrip("/") in (SITE.rstrip("/"), PAGE_URL.rstrip("/"))
 
 
 STATED_TESTS = re.compile(r"\b(\d[\d,]*) (?:passing )?tests\b")
@@ -555,7 +562,7 @@ def main():
     ap.add_argument("--yerel", action="store_true", help="render from veri/projeler.json")
     ap.add_argument("--onizleme", action="store_true",
                     help="refresh only the card previews for the snapshot's projects, then render")
-    ap.add_argument("--cikti", default=os.path.join(HERE, "index.html"))
+    ap.add_argument("--cikti", default=PAGE_FILE)
     args = ap.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN")
@@ -575,10 +582,14 @@ def main():
                         "previews": collect_previews(rows, token), "projects": rows})
 
     page = render(rows, missing, when)
+    os.makedirs(os.path.dirname(os.path.abspath(args.cikti)), exist_ok=True)
     # newline="\n": the same bytes on every OS, so a Windows rebuild is not a diff.
     open(args.cikti, "w", encoding="utf-8", newline="\n").write(page)
 
-    out = os.path.dirname(os.path.abspath(args.cikti)) or HERE
+    # feed, sitemap and robots belong at the site root; a test render (--cikti
+    # elsewhere) keeps them next to its page as before.
+    same = os.path.abspath(args.cikti) == os.path.abspath(PAGE_FILE)
+    out = HERE if same else (os.path.dirname(os.path.abspath(args.cikti)) or HERE)
     open(os.path.join(out, "feed.xml"), "w", encoding="utf-8", newline="\n").write(atom(releases, when))
     open(os.path.join(out, "sitemap.xml"), "w", encoding="utf-8", newline="\n").write(sitemap(when))
     open(os.path.join(out, "robots.txt"), "w", encoding="utf-8", newline="\n").write(robots())

@@ -1,21 +1,58 @@
 # furkiozknn.github.io
 
+**→ [furkiozknn.github.io](https://furkiozknn.github.io/)** is the games hub: all 21 browser games on one
+mobile-first page, the link that goes in a profile bio. **→ [furkiozknn.github.io/projeler/](https://furkiozknn.github.io/projeler/)**
+is the searchable project directory described further down.
+
+## Oyun merkezi (games hub)
+
+`index.html` at the root is rendered by [`merkez/olustur.py`](merkez/olustur.py) from one data file,
+[`merkez/oyunlar.json`](merkez/oyunlar.json). Every game has its own card: its own colours and motif strip,
+a real screenshot (or a song-reel still), a one-line hook, how to play, a big "▶ Oyna" button to the
+live game, and an anchor `#<repo-name>` (`https://furkiozknn.github.io/#hamsi`). Turkish by default,
+English with the TR/EN switch or `?lang=en`. No trackers, no scripts from other hosts; only the fonts
+come from Google Fonts. Images are WebP in `merkez/img/` (480 px and 960 px), lazy-loaded.
+
+An old link to the directory (`https://furkiozknn.github.io/#mcp-vet`) still works: an anchor that is
+not a game on the hub is forwarded to `/projeler/#mcp-vet`.
+
+### Şarkı linki ekleme (adding a song link)
+
+Each card has a hidden "🎵 Şarkıyı dinle" button. To show it, open
+[`merkez/oyunlar.json`](merkez/oyunlar.json) on GitHub (pencil icon), find the game by its `"id"` and
+fill its `"sarki_youtube"` with the YouTube link, for example:
+
+```json
+"id": "hamsi",
+...
+"sarki_youtube": "https://www.youtube.com/watch?v=XXXXXXXXXXX"
+```
+
+Commit. The `Merkez` workflow re-renders `index.html` and the button appears within a minute or two.
+An empty string hides it again. Only `youtube.com` / `youtu.be` links are accepted; anything else
+fails the run instead of publishing a wrong link. Locally: `python3 merkez/olustur.py`.
+
+The "Canlı yayın" box (TikTok LIVE rope game) says "Yayın saatleri yakında" until real times exist;
+change that text in `merkez/olustur.py`.
+
+## Proje dizini (project directory, `/projeler/`)
+
 <p align="center"><img src="docs/demo/demo.gif" alt="A screen recording of the directory: scrolling the hero, searching for godot, filtering to games, switching the interface to Turkish" width="720"></p>
 <p align="center"><sub>A real screen recording of the page in a browser: search, category filter, language switch.</sub></p>
 
 The project directory for [this account](https://github.com/Furkiozknn): every public
 repository, in one searchable page.
 
-**→ [furkiozknn.github.io](https://furkiozknn.github.io/)**
+**→ [furkiozknn.github.io/projeler/](https://furkiozknn.github.io/projeler/)**
 
-<a href="https://furkiozknn.github.io/"><img src="assets/screenshot.png" alt="The directory at 1012 px in the dark theme: the FRK-OS headline in League Gothic, the totals, the search box and the category and language filters" width="100%"></a>
+<a href="https://furkiozknn.github.io/projeler/"><img src="assets/screenshot.png" alt="The directory at 1012 px in the dark theme: the FRK-OS headline in League Gothic, the totals, the search box and the category and language filters" width="100%"></a>
 
 <sub>A real render of <code>index.html</code> from the snapshot in <code>veri/</code>, taken with headless Chromium. The page also follows a light system theme, and the interface reads in Turkish or English.</sub>
 
 Nothing on the page is written here. `uret.py` reads the `project-meta.json` that every
 repository carries — identity, version, status, platform, key features, and the test count
 together with the runner line it came from — writes the snapshot to
-[`veri/projeler.json`](veri/projeler.json) and renders `index.html` from it. A field that is
+[`veri/projeler.json`](veri/projeler.json) and renders `projeler/index.html` from it. A field that is
 `null` in the metadata is left off the page rather than filled in with a plausible-looking
 string, which is the same rule the
 [schema](https://github.com/Furkiozknn/Furkiozknn/blob/main/schema/README.md) follows.

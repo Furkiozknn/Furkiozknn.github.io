@@ -482,7 +482,7 @@ def test_the_committed_page_feed_and_sitemap_are_what_the_snapshot_renders():
     """A hand edit to index.html would be overwritten by the next rebuild, and
     a template change committed without re-rendering would ship the old page."""
     d = snapshot()
-    assert (ROOT / "index.html").read_text(encoding="utf-8") == uret.render(
+    assert (ROOT / "projeler" / "index.html").read_text(encoding="utf-8") == uret.render(
         d["projects"], d.get("missing", []), d["generated"])
     assert (ROOT / "feed.xml").read_text(encoding="utf-8") == uret.atom(d.get("releases", []), d["generated"])
     assert (ROOT / "sitemap.xml").read_text(encoding="utf-8") == uret.sitemap(d["generated"])
@@ -710,7 +710,7 @@ def test_a_card_shows_a_preview_only_when_a_local_copy_exists(tmp_path, monkeypa
 
     (tmp_path / "thing.png").write_bytes(PNG)
     shown = uret.card(meta())
-    assert '<img src="assets/onizleme/thing.png" alt="" width="640" height="360" loading="lazy" decoding="async">' in shown
+    assert '<img src="/assets/onizleme/thing.png" alt="" width="640" height="360" loading="lazy" decoding="async">' in shown
     # decorative: the card's own text says it all, so readers and the tab order skip it
     assert 'tabindex="-1" aria-hidden="true"' in shown
     assert shown.index('class="thumb') < shown.index("<header>")

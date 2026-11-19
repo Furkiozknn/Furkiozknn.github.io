@@ -1,0 +1,38 @@
+name: Merkez
+
+# The games hub (index.html at the root) is rendered from merkez/oyunlar.json.
+# Editing that file on GitHub (for example filling a game's sarki_youtube) is
+# enough: this run re-renders the page and commits it only if it changed.
+on:
+  push:
+    branches: [main]
+    paths: ["merkez/oyunlar.json", "merkez/olustur.py", ".github/workflows/merkez.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: merkez
+  cancel-in-progress: false
+
+jobs:
+  merkez:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Render index.html from merkez/oyunlar.json
+        run: python3 merkez/olustur.py
+      - name: Commit only if something actually changed
+        run: |
+          set -eu
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "chore: re-render the games hub from merkez/oyunlar.json"
+          git push
