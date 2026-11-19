@@ -65,8 +65,9 @@ def yukle():
 
 OYUNLAR = yukle()
 
-# TikTok LIVE oyunu (yayın saatleri henüz yok: uydurma saat yazılmaz).
-TIKTOK = "https://www.tiktok.com/@furkiozkan"
+# Canlı oyun şimdilik yalnızca YouTube'da (TikTok LIVE şartları sağlanınca eklenecek).
+# Yayın saatleri henüz yok: uydurma saat yazılmaz.
+YOUTUBE = "https://www.youtube.com/channel/UCoMTPUVFzVZLUltVWAGRDQA"
 
 e = html.escape
 
@@ -315,11 +316,11 @@ def page():
 <h1>{n} {tt("oyun", "games")}<small>{tt("TARAYICIDA · ÜCRETSİZ · ÜYELİK YOK", "IN THE BROWSER · FREE · NO SIGN‑UP")}</small></h1>
 <p class="lead">{tt("Türk kültüründen oyunlar: Karadeniz'de hamsi avı, Kırkpınar'da yağlı güreş, Boğaz'da vapur. Birini seç, dokun, oyna.", "Games from Turkish culture: anchovy fishing on the Black Sea, oil wrestling at Kırkpınar, a ferry on the Bosphorus. Pick one, tap, play.")}</p>
 <section class="live" aria-labelledby="live-h">
-<p class="kick"><span class="dot" aria-hidden="true"></span>{tt("Canlı yayın · TikTok LIVE", "Live stream · TikTok LIVE")}</p>
+<p class="kick"><span class="dot" aria-hidden="true"></span>{tt("Canlı yayın · YouTube", "Live stream · YouTube")}</p>
 <h2 id="live-h" lang="tr">Lav Üstünde Halat Savaşı</h2>
 <p>{tt("İki takım lavın üstünde halat çekiyor; yorum yazan izleyici takımına katılıp çekişe giriyor.", "Two teams pull a rope over lava; viewers join a team just by commenting.")}</p>
 <p class="when">{tt("Yayın saatleri yakında.", "Stream times coming soon.")}</p>
-<div class="btns"><a class="go" href="{TIKTOK}/live">{tt("Canlı yayına git", "Go to the live")}</a><a class="prof" href="{TIKTOK}">{tt("TikTok profili", "TikTok profile")}</a></div>
+<div class="btns"><a class="go" href="{YOUTUBE}/live">{tt("Canlı yayına git", "Go to the live")}</a><a class="prof" href="{YOUTUBE}">{tt("YouTube kanalı", "YouTube channel")}</a></div>
 </section>
 <nav class="jump" aria-labelledby="j-h"><h2 id="j-h">{tt("Hepsi bir bakışta", "All at a glance")}</h2>
 <ol>
