@@ -1,6 +1,8 @@
 {
-  "generated": "2026-11-16",
-  "missing": [],
+  "generated": "2026-11-19",
+  "missing": [
+    "arena-core"
+  ],
   "releases": [
     {
       "repo": "social-videos",
