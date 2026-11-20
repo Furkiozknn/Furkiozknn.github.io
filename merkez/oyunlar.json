@@ -1,5 +1,5 @@
 {
- "_aciklama": "Oyun merkezi verisi (tek kaynak). sarki_youtube: oyunun şarkısının YouTube linki; boşsa kartta 'Şarkıyı dinle' görünmez. Değiştirince merkez/olustur.py çalışır (GitHub'da düzenlerseniz merkez.yml iş akışı sayfayı kendisi yeniler).",
+ "_aciklama": "Oyun merkezi verisi (tek kaynak). sarki_youtube: oyunun şarkısının YouTube linki; boşsa kartta 'Şarkıyı dinle' görünmez. Değiştirince merkez/olustur.py çalışır (GitHub'da düzenlerseniz merkez.yml iş akışı sayfayı kendisi yeniler). surum/guncelleme/yenilik: kartta 'Güncellendi · Kasım 2026' rozeti ve tek satır yenilik özeti; yeni güncellemede üçünü de elle değiştirin.",
  "oyunlar": [
   {
    "id": "hamsi",
@@ -34,7 +34,13 @@
     "tr": "Karadeniz horon-pop",
     "en": "Black Sea horon pop"
    },
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Yenilikler penceresi, son 8 sezon kaydı ve iki yeni rozet.",
+    "en": "What's-new window, last 8 seasons log and two new badges."
+   }
   },
   {
    "id": "kirkpinar",
@@ -69,7 +75,13 @@
     "tr": "Davul-zurna peşrevi + stadyum hip-hop",
     "en": "Drum-and-zurna peşrev + stadium hip-hop"
    },
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "9 rozet, yerel rekorlar ve Yenilikler penceresi.",
+    "en": "9 badges, local records and a what's-new window."
+   }
   },
   {
    "id": "mehter",
@@ -104,7 +116,13 @@
     "tr": "Mehter marşı + modern davul",
     "en": "Mehter march + modern drums"
    },
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Son marşlar listesi, Tam Kombo mührü ve Yenilikler penceresi.",
+    "en": "Recent marches list, Full Combo seal and a what's-new window."
+   }
   },
   {
    "id": "bogaz-vapuru",
@@ -139,7 +157,13 @@
     "tr": "70'ler İstanbul psych-rock",
     "en": "70s Istanbul psych-rock"
    },
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Kaptan defteri, 3 yıldızda konfeti ve Yenilikler penceresi.",
+    "en": "Captain's log, confetti on 3 stars and a what's-new window."
+   }
   },
   {
    "id": "marti",
@@ -171,7 +195,13 @@
     "en": "A seagull gliding under a red bridge, simit floating on the water"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "11 başarım, rekor bildirimi ve Yenilikler penceresi.",
+    "en": "11 achievements, record alerts and a what's-new window."
+   }
   },
   {
    "id": "dolmus",
@@ -203,7 +233,13 @@
     "en": "A yellow minibus waiting for passengers on an Istanbul street"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Vardiya rekor tablosu, rozetler ve Yenilikler penceresi.",
+    "en": "Shift leaderboard, badges and a what's-new window."
+   }
   },
   {
    "id": "peri-golf",
@@ -235,7 +271,13 @@
     "en": "A red-flagged hole among Cappadocia's fairy chimneys"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "9 başarım ve Yenilikler penceresi.",
+    "en": "9 achievements and a what's-new window."
+   }
   },
   {
    "id": "cay-ocagi",
@@ -267,7 +309,13 @@
     "en": "A striped-awning tea stall with tables and customers on the quay"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Defter ekranı: 8 başarım ve en iyi 5 vardiya.",
+    "en": "Ledger screen: 8 achievements and your best 5 shifts."
+   }
   },
   {
    "id": "kervan",
@@ -299,7 +347,13 @@
     "en": "A camel caravan and an oasis in golden-hour desert"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Son seferler kaydı, 4 rozet ve Yenilikler penceresi.",
+    "en": "Recent trips log, 4 badges and a what's-new window."
+   }
   },
   {
    "id": "kale-savunmasi",
@@ -331,7 +385,13 @@
     "en": "Red-roofed towers guarding the valley road"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "9 başarım ve Neler yeni? kartı.",
+    "en": "9 achievements and a what's-new card."
+   }
   },
   {
    "id": "simit-firini",
@@ -363,7 +423,13 @@
     "en": "A simit bakery from above: kneading, oven and counter stations"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Son 10 koşu listesi ve Yenilikler penceresi.",
+    "en": "Last 10 runs list and a what's-new window."
+   }
   },
   {
    "id": "kapadokya-balonu",
@@ -395,7 +461,13 @@
     "en": "An orange-striped balloon over Cappadocia at sunrise"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Pilot Karnesi, 10 başarım ve Yenilikler penceresi.",
+    "en": "Pilot report card, 10 achievements and a what's-new window."
+   }
   },
   {
    "id": "karagoz",
@@ -427,7 +499,13 @@
     "en": "Backstage: a coloured Karagöz puppet in lamplight"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.2",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Sahne rekorları, çözüm titreşimi ve Yenilikler penceresi.",
+    "en": "Per-scene move records, solve vibration and a what's-new window."
+   }
   },
   {
    "id": "topkapi-gecesi",
@@ -459,7 +537,13 @@
     "en": "A moonlit Topkapı courtyard with lanterns and a pool"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "1.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Gece Defteri, kamera sarsıntısı ve Yenilikler penceresi.",
+    "en": "Night Ledger, camera shake and a what's-new window."
+   }
   },
   {
    "id": "carsi-kacisi",
@@ -491,7 +575,13 @@
     "en": "Running across the Grand Bazaar domes at sunset"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "9 başarım ve Yenilikler penceresi.",
+    "en": "9 achievements and a what's-new window."
+   }
   },
   {
    "id": "ebru",
@@ -523,7 +613,13 @@
     "en": "A red-and-green combed pattern in the marbling tray"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "9 rozetlik koleksiyon ve Yenilikler penceresi.",
+    "en": "A 9-badge collection and a what's-new window."
+   }
   },
   {
    "id": "cini-ustasi",
@@ -555,7 +651,13 @@
     "en": "An İznik tile panel with tulip motifs on the workshop table"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Atölye defteri, iki yeni rozet ve Yenilikler penceresi.",
+    "en": "Workshop ledger, two new badges and a what's-new window."
+   }
   },
   {
    "id": "mimar-sinan",
@@ -587,7 +689,13 @@
     "en": "A finished domed mosque on a hill above the city"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "1.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Usta defteri (son 8 deneme) ve Yenilikler penceresi.",
+    "en": "Master's ledger (last 8 attempts) and a what's-new window."
+   }
   },
   {
    "id": "pamukkale",
@@ -619,7 +727,13 @@
     "en": "Turquoise pools on white travertine terraces"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Seviye rekorları, zafer efekti ve Yenilikler penceresi.",
+    "en": "Per-level records, a victory splash and a what's-new window."
+   }
   },
   {
    "id": "lale-bahcesi",
@@ -651,7 +765,13 @@
     "en": "A palace terrace with a fountain and tulip beds"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "2.1",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Şenlik defteri (en iyi 5) ve Yenilikler penceresi.",
+    "en": "Festival ledger (best 5) and a what's-new window."
+   }
   },
   {
    "id": "fay-hatti",
@@ -683,7 +803,14 @@
     "en": "The 5×5 map puzzle: a blue stream from the spring to a village"
    },
    "sarki": null,
-   "sarki_youtube": ""
+   "sarki_youtube": "",
+   "surum": "1.4",
+   "guncelleme": "2026-11",
+   "yenilik": {
+    "tr": "Defterim: son 28 günün sonuçları ve Yenilikler penceresi.",
+    "en": "My Notebook: results of the last 28 days and a what's-new window."
+   }
   }
- ]
+ ],
+ "son_guncelleme": "2026-11-20"
 }

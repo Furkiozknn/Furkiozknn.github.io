@@ -59,11 +59,20 @@ def yukle():
             c=(r["zemin"], r["metin"], r["vurgu"], r["dugme"], r["dugme_metin"], r["bant"]),
             tur=(g["tur"]["tr"], g["tur"]["en"]), kanca=(g["kanca"]["tr"], g["kanca"]["en"]),
             nasil=(g["nasil"]["tr"], g["nasil"]["en"]), alt=(g["alt"]["tr"], g["alt"]["en"]),
-            sarki=(g["sarki"]["tr"], g["sarki"]["en"]) if g.get("sarki") else None, yt=yt))
+            sarki=(g["sarki"]["tr"], g["sarki"]["en"]) if g.get("sarki") else None, yt=yt,
+            surum=g.get("surum", ""), yenilik=(g["yenilik"]["tr"], g["yenilik"]["en"]) if g.get("yenilik") else None))
     return oyunlar
 
 
 OYUNLAR = yukle()
+SON_GUNCELLEME = json.load(open(VERI, encoding="utf-8")).get("son_guncelleme", "")
+AYLAR_TR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
+AYLAR_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+def tarih(iso):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return f"{d} {AYLAR_TR[m - 1]} {y}", f"{AYLAR_EN[m - 1]} {d}, {y}"
 
 # Canlı oyun şimdilik yalnızca YouTube'da (TikTok LIVE şartları sağlanınca eklenecek).
 # Yayın saatleri henüz yok: uydurma saat yazılmaz.
@@ -122,6 +131,11 @@ def card(i, o):
         song += (f'<p class="listen"><a href="{e(o["yt"])}"><span aria-hidden="true">🎵</span> '
                  + tt("Şarkıyı dinle", "Listen to the song") + f'<span class="vh"> ({e(o["ad"])})</span></a></p>')
     url = f"{SITE}{o['id']}/"
+    news = ""
+    if o["yenilik"]:
+        v = f" v{o['surum']}" if o["surum"] else ""
+        news = (f'<p class="news"><span class="badge">{tt("Güncellendi · Kasım 2026", "Updated · Nov 2026")}</span> '
+                f'<span class="ver">{e(v.strip())}</span> ' + tt(*o["yenilik"]) + "</p>")
     return f'''<article class="g g-{shape} m-{o["m"]}" id="{o["id"]}" style="--bg:{bg};--ink:{ink};--acc:{acc};--btn:{btn};--bink:{bink};--bandbg:{bandbg};--nofg:{nofg}" aria-labelledby="h-{o["id"]}">
 {band(o)}
 <div class="g-in">
@@ -130,6 +144,7 @@ def card(i, o):
 <p class="kick"><span class="no">{n}</span> {tt(*o["tur"])}</p>
 <h2 id="h-{o["id"]}" lang="tr">{e(o["ad"])}</h2>
 <p class="hook">{tt(*o["kanca"])}</p>
+{news}
 <p class="how"><span class="lbl">{tt("Nasıl oynanır", "How to play")}</span> {tt(*o["nasil"])}</p>
 <a class="play" href="{url}" data-ad="{e(o["ad"])}"><span aria-hidden="true">▶</span> {tt("Oyna", "Play")}<span class="vh"> {e(o["ad"])}</span></a>
 {song}
@@ -220,6 +235,9 @@ main{padding-bottom:24px}
 .play:hover{transform:translateY(-2px)}
 .play:active{transform:translateY(2px);box-shadow:0 1px 0 0 #00000040}
 .play:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.news{font:600 14px/1.45 var(--sans);margin:0 0 14px}
+.news .badge{display:inline-block;background:var(--acc);color:var(--nofg);font:600 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:999px;margin-right:6px}
+.news .ver{font:600 12px/1 var(--mono);opacity:.85;margin-right:4px}
 .song{font:700 14.5px/1.4 var(--sans);margin:14px 0 0}
 .src{margin:6px 0 0}
 .src a{display:inline-flex;align-items:center;min-height:44px;font:600 13px/1 var(--mono);letter-spacing:.06em;opacity:.9}
@@ -341,6 +359,7 @@ def page():
 </nav>
 <p>{tt("Hepsi ücretsiz, reklamsız; sayfa sizi izlemez.", "All free, no ads; this page doesn't track you.")}</p>
 <p class="fine">{tt("Müzik ve görseller yapay zekâ ile üretildi.", "Music and artwork generated with AI.")}</p>
+<p class="fine">{tt("Son güncelleme: " + tarih(SON_GUNCELLEME)[0], "Last updated: " + tarih(SON_GUNCELLEME)[1]) if SON_GUNCELLEME else ""}</p>
 </div>
 </footer>
 <script>{JS}</script>
