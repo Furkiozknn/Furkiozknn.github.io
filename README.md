@@ -54,8 +54,7 @@ repository carries — identity, version, status, platform, key features, and th
 together with the runner line it came from — writes the snapshot to
 [`veri/projeler.json`](veri/projeler.json) and renders `projeler/index.html` from it. A field that is
 `null` in the metadata is left off the page rather than filled in with a plausible-looking
-string, which is the same rule the
-[schema](https://github.com/Furkiozknn/Furkiozknn/blob/main/schema/README.md) follows.
+string.
 
 A scheduled workflow rebuilds it every Monday and commits only when the output actually
 changes, so the page cannot quietly fall behind the repositories it describes.

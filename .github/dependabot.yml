@@ -1,7 +1,7 @@
 # Ayda bir, ekosistem basina TEK PR (groups). Her paket icin ayri PR,
 # 25 Eylul 2026'da hesapta 36 acik Dependabot PR'i demekti; upload/download-
 # artifact gibi birlikte yukselmesi gereken ciftler de ayni PR'da kalir.
-# Kural: github.com/Furkiozknn/Furkiozknn schema/politika.py
+# Kural: schema/politika.py (profile repository, private)
 version: 2
 updates:
   - package-ecosystem: "github-actions"

@@ -1,8 +1,6 @@
 {
   "generated": "2026-11-19",
-  "missing": [
-    "arena-core"
-  ],
+  "missing": [],
   "releases": [
     {
       "repo": "social-videos",
@@ -46,11 +44,6 @@
     }
   ],
   "previews": {
-    "Furkiozknn": {
-      "file": "assets/onizleme/Furkiozknn.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn/main/assets/hero.svg",
-      "bytes": 4091
-    },
     "bogaz-vapuru": {
       "file": "assets/onizleme/bogaz-vapuru.jpg",
       "source": "https://raw.githubusercontent.com/Furkiozknn/bogaz-vapuru/main/docs/card.jpg",
@@ -158,87 +151,6 @@
     }
   },
   "projects": [
-    {
-      "schema_version": "1.0.0",
-      "id": "Furkiozknn",
-      "owner": "Furkiozknn",
-      "repository": "https://github.com/Furkiozknn/Furkiozknn",
-      "homepage": "https://furkiozknn.github.io/",
-      "releases": "https://github.com/Furkiozknn/Furkiozknn/releases",
-      "status": "active",
-      "category": "profile",
-      "platform": [
-        "github"
-      ],
-      "primary_language": "Python",
-      "technologies": [
-        "hand-written SVG",
-        "Markdown"
-      ],
-      "version": null,
-      "license": "MIT",
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "developer-tools",
-        "github-profile",
-        "mcp",
-        "portfolio",
-        "profile-readme",
-        "readme",
-        "svg"
-      ],
-      "summary": "Source of the profile README - agent infrastructure, developer tooling and the MCP servers underneath. Every number on the page is traced to the suite run that printed it (see TESTLER.md). Hand-written SVG, no generated stat cards.",
-      "key_features": [
-        "Source of the GitHub profile README",
-        "Every number on the page is traced to the suite run that printed it (TESTLER.md)",
-        "Hand-written SVG hero, no generated stat cards"
-      ],
-      "media": {
-        "hero": "assets/hero.svg",
-        "screenshots": [
-          "assets/ecosystem.svg"
-        ],
-        "gifs": [],
-        "videos": []
-      },
-      "tests": null,
-      "ci": {
-        "workflows": [
-          "baglanti.yml",
-          "ci.yml",
-          "denetim.yml",
-          "guvenlik.yml",
-          "haftalik.yml",
-          "projeler.yml",
-          "skill-tarama.yml",
-          "yenile.yml"
-        ],
-        "badge": "https://github.com/Furkiozknn/Furkiozknn/actions/workflows/ci.yml/badge.svg"
-      },
-      "docs": {
-        "readme": "README.md",
-        "changelog": null,
-        "version_history": null,
-        "roadmap": null,
-        "security": null,
-        "contributing": null,
-        "license_file": "LICENSE"
-      },
-      "social": {
-        "headline": "A profile page where every number is checkable.",
-        "hashtags": [
-          "github",
-          "opensource"
-        ],
-        "primary_link": "https://github.com/Furkiozknn/Furkiozknn"
-      },
-      "provenance": {
-        "generated_at": "2026-09-22",
-        "generator": "schema/uret.py",
-        "rule": "mechanical fields read from the repository and the GitHub API; editorial fields hand-written and reviewed; no field is generated from a guess"
-      }
-    },
     {
       "schema_version": "1.0.0",
       "id": "bogaz-vapuru",
