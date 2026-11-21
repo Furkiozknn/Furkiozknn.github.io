@@ -32,9 +32,6 @@ Commit. The `Merkez` workflow re-renders `index.html` and the button appears wit
 An empty string hides it again. Only `youtube.com` / `youtu.be` links are accepted; anything else
 fails the run instead of publishing a wrong link. Locally: `python3 merkez/olustur.py`.
 
-The "Canlı yayın" box (TikTok LIVE rope game) says "Yayın saatleri yakında" until real times exist;
-change that text in `merkez/olustur.py`.
-
 ## Proje dizini (project directory, `/projeler/`)
 
 <p align="center"><img src="docs/demo/demo.gif" alt="A screen recording of the directory: scrolling the hero, searching for godot, filtering to games, switching the interface to Turkish" width="720"></p>
