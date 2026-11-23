@@ -44,11 +44,6 @@
     }
   ],
   "previews": {
-    "Furkiozknn": {
-      "file": "assets/onizleme/Furkiozknn.svg",
-      "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn/main/assets/hero.svg",
-      "bytes": 4091
-    },
     "Furkiozknn.github.io": {
       "file": "assets/onizleme/Furkiozknn.github.io.png",
       "source": "https://raw.githubusercontent.com/Furkiozknn/Furkiozknn.github.io/main/assets/screenshot.png",
@@ -295,6 +290,7 @@
       "ci": {
         "workflows": [
           "ci.yml",
+          "merkez.yml",
           "yenile.yml"
         ],
         "badge": "https://github.com/Furkiozknn/Furkiozknn.github.io/actions/workflows/ci.yml/badge.svg"
@@ -383,7 +379,9 @@
         "tools/gate.mjs"
       ],
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -467,7 +465,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -553,7 +553,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -643,7 +645,9 @@
         "measured": "2026-10-28"
       },
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -729,7 +733,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -814,7 +820,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -887,7 +895,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "gate.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -977,7 +987,9 @@
         "test/duman.mjs"
       ],
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1056,7 +1068,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1141,7 +1155,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1226,7 +1242,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1311,7 +1329,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1395,7 +1415,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1476,7 +1498,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1562,7 +1586,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1648,7 +1674,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1733,7 +1761,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1816,7 +1846,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1902,7 +1934,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -1984,7 +2018,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
@@ -2133,7 +2169,9 @@
       },
       "tests": null,
       "ci": {
-        "workflows": [],
+        "workflows": [
+          "smoke.yml"
+        ],
         "badge": null
       },
       "docs": {
