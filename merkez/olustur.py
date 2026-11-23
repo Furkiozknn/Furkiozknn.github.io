@@ -88,7 +88,8 @@ def band(o):
     w, h, inner = MOTIF[o["m"]]
     pid = "p-" + o["id"]
     return (f'<svg class="band" aria-hidden="true" focusable="false" width="100%" height="{h}">'
-            f'<defs><pattern id="{pid}" width="{w}" height="{h}" patternUnits="userSpaceOnUse">{inner}</pattern></defs>'
+            f'<defs><pattern id="{pid}" width="{w}" height="{h}" patternUnits="userSpaceOnUse">{inner}'
+            f'<animateTransform attributeName="patternTransform" type="translate" from="0 0" to="{w} 0" dur="{max(3, w // 6)}s" repeatCount="indefinite"/></pattern></defs>'
             f'<rect width="100%" height="{h}" fill="url(#{pid})"/></svg>')
 
 
@@ -151,15 +152,23 @@ def card(i, o):
 
 
 def jump():
+    """Each game's own animated banner (the docs/banner.svg the profile README shows)."""
     items = []
     for i, o in enumerate(OYUNLAR, 1):
-        items.append(f'<li><a href="#{o["id"]}" style="--sw:{o["c"][0]};--sw2:{o["c"][2]}"><i aria-hidden="true"></i><span lang="tr">{e(o["ad"])}</span></a></li>')
+        bg, ink, acc = o["c"][0], o["c"][1], o["c"][2]
+        nofg = max((bg, ink, "#ffffff", "#15120f"), key=lambda x: kontrast(x, acc))
+        items.append(
+            f'<li style="--bg:{bg};--ink:{ink};--acc:{acc};--nofg:{nofg};--d:{(i - 1) * 45}ms"><a href="#{o["id"]}">'
+            f'<img src="/{o["id"]}/docs/banner.svg" width="1280" height="320" loading="{"eager" if i <= 6 else "lazy"}" decoding="async" alt="">'
+            f'<span class="cap"><b class="no">{i:02d}</b><span class="nm" lang="tr">{e(o["ad"])}</span>'
+            f'<span class="tu">{tt(*o["tur"])}</span><span class="go" aria-hidden="true">→</span></span></a></li>')
     return "\n".join(items)
 
 
 TILE = ("<svg class=\"tiles\" aria-hidden=\"true\" focusable=\"false\" width=\"100%\" height=\"48\"><defs><pattern id=\"{id}\" width=\"48\" height=\"48\" patternUnits=\"userSpaceOnUse\">"
         "<rect width=\"48\" height=\"48\" fill=\"#1d3f9e\"/><rect x=\"15\" y=\"15\" width=\"18\" height=\"18\" fill=\"#1aa3a3\"/>"
-        "<rect x=\"15\" y=\"15\" width=\"18\" height=\"18\" fill=\"#1aa3a3\" transform=\"rotate(45 24 24)\"/></pattern></defs>"
+        "<rect x=\"15\" y=\"15\" width=\"18\" height=\"18\" fill=\"#1aa3a3\" transform=\"rotate(45 24 24)\"/>"
+        "<animateTransform attributeName=\"patternTransform\" type=\"translate\" from=\"0 0\" to=\"{dx} 0\" dur=\"4s\" repeatCount=\"indefinite\"/></pattern></defs>"
         "<rect width=\"100%\" height=\"48\" fill=\"url(#{id})\"/></svg>")
 
 CSS = r"""
@@ -190,13 +199,32 @@ header.top{padding:20px 0 8px}
 h1{font:400 clamp(64px,22vw,148px)/.92 var(--poster);color:var(--tugra);margin:28px 0 10px;letter-spacing:-.01em;text-transform:uppercase}
 h1 small{display:block;font:600 clamp(14px,3.6vw,18px)/1.3 var(--mono);letter-spacing:.14em;color:var(--kurk);margin-top:10px}
 .lead{font:600 clamp(18px,4.6vw,22px)/1.45 var(--sans);max-width:36em;margin:14px 0 22px;color:var(--kurk)}
-.jump h2{font:600 13px/1 var(--mono);letter-spacing:.14em;color:var(--gumus);margin:0 0 10px;text-transform:uppercase}
-.jump ol{list-style:none;margin:0 0 36px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-.jump a{display:flex;align-items:center;gap:10px;min-height:48px;padding:6px 12px;border-radius:8px;background:var(--siyah2);text-decoration:none;font:800 15px/1.2 var(--sans)}
-.jump a:hover{background:#2b261f}
-.jump i{flex:none;width:22px;height:22px;border-radius:5px;background:var(--sw);box-shadow:inset 0 -7px 0 var(--sw2),0 0 0 1px #ffffff2e}
-@media (min-width:620px){.jump ol{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:900px){.jump ol{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.jump h2{font:600 13px/1 var(--mono);letter-spacing:.14em;color:var(--gumus);margin:0 0 12px;text-transform:uppercase}
+.jump ol{list-style:none;margin:0 0 40px;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.jump li{animation:in .6s cubic-bezier(.2,.8,.2,1) var(--d) both}
+.jump a{display:block;border-radius:12px;overflow:hidden;background:var(--bg);color:var(--ink);text-decoration:none;
+ box-shadow:0 0 0 1px #ffffff1a;transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s}
+.jump a:hover,.jump a:focus-visible{transform:translateY(-4px);box-shadow:0 0 0 2px var(--acc),0 12px 28px -10px var(--acc)}
+.jump img{width:100%;height:auto;aspect-ratio:4/1;background:var(--bg)}
+.jump .cap{display:flex;align-items:center;gap:10px;min-height:44px;padding:6px 12px;border-top:3px solid var(--acc)}
+.jump .no{font:600 12px/1 var(--mono);background:var(--acc);color:var(--nofg);padding:4px 6px;border-radius:4px}
+.jump .nm{font:800 16px/1.2 var(--sans)}
+.jump .tu{font:600 11.5px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-left:auto;text-align:right}
+.jump .go{font:800 18px/1 var(--sans);color:var(--acc);transition:transform .2s}
+.jump a:hover .go{transform:translateX(4px)}
+@media (min-width:600px){.jump ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:960px){.jump ol{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1>.tr,h1>.en{background:linear-gradient(90deg,#c9a227,#e0a01c,#d94f30,#b8342a,#1aa3a3,#2f6fd6,#c9a227) 0 0/300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 9s linear infinite}
+@keyframes sheen{to{background-position:300% 0}}
+.g.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.g.rv.on{opacity:1;transform:none}
+.shot{overflow:hidden}
+.shot img{transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.g:hover .shot img{transform:scale(1.04)}
+.play{position:relative;overflow:hidden}
+.play::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,transparent 30%,#ffffff55 50%,transparent 70%);transform:translateX(-120%);animation:glint 4.5s ease-in-out infinite}
+@keyframes glint{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 main{padding-bottom:24px}
 .listen{margin:10px 0 0}
 .listen a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid currentColor;font:800 15px/1 var(--sans);text-decoration:none}
@@ -251,7 +279,7 @@ footer{padding:8px 0 40px;color:var(--gumus)}
 footer nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 8px}
 footer nav a{display:inline-flex;align-items:center;min-height:44px;font:700 16px/1 var(--sans);color:var(--kurk)}
 .fine{font-size:12.5px;color:var(--dim);margin:12px 0 0}
-@media (prefers-reduced-motion:reduce){.play{transition:none}.play:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.g.rv{opacity:1;transform:none}.g:hover .shot img,.jump a:hover{transform:none}}
 """
 
 JS = r"""
@@ -270,6 +298,11 @@ d.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click
 function hop(){var id=decodeURIComponent(location.hash.slice(1));
  if(id&&!d.getElementById(id))location.replace('/projeler/'+location.hash)}
 hop();addEventListener('hashchange',hop);
+var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(calm){d.querySelectorAll('svg').forEach(function(s){s.pauseAnimations&&s.pauseAnimations()})}
+else if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+ d.querySelectorAll('.g').forEach(function(g){if(g.getBoundingClientRect().top>innerHeight){g.classList.add('rv');io.observe(g)}})}
 })();
 """
 
@@ -311,12 +344,12 @@ def page():
 </head>
 <body>
 <a class="skip" href="#oyunlar">{tt("Oyunlara geç", "Skip to the games")}</a>
-{TILE.format(id="t1")}
+{TILE.format(id="t1", dx=48)}
 <div class="wrap">
 <header class="top">
 <div class="bar"><p class="brand">Furki Ozkan</p>
 <div class="lang" role="group" aria-label="Dil / Language"><button type="button" data-l="tr" aria-pressed="true" lang="tr">TR</button><button type="button" data-l="en" aria-pressed="false" lang="en">EN</button></div></div>
-<h1>{n} {tt("oyun", "games")}<small>{tt("TARAYICIDA · ÜCRETSİZ · ÜYELİK YOK", "IN THE BROWSER · FREE · NO SIGN‑UP")}</small></h1>
+<h1><span class="tr" lang="tr">{n} oyun</span><span class="en" lang="en">{n} games</span><small>{tt("TARAYICIDA · ÜCRETSİZ · ÜYELİK YOK", "IN THE BROWSER · FREE · NO SIGN‑UP")}</small></h1>
 <p class="lead">{tt("Türk kültüründen oyunlar: Karadeniz'de hamsi avı, Kırkpınar'da yağlı güreş, Boğaz'da vapur. Birini seç, dokun, oyna.", "Games from Turkish culture: anchovy fishing on the Black Sea, oil wrestling at Kırkpınar, a ferry on the Bosphorus. Pick one, tap, play.")}</p>
 <nav class="jump" aria-labelledby="j-h"><h2 id="j-h">{tt("Hepsi bir bakışta", "All at a glance")}</h2>
 <ol>
@@ -328,7 +361,7 @@ def page():
 {cards}
 </main>
 </div>
-{TILE.format(id="t2")}
+{TILE.format(id="t2", dx=-48)}
 <footer>
 <div class="wrap">
 <nav aria-label="Bağlantılar / Links">
