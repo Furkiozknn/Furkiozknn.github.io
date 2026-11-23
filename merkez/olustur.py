@@ -3,7 +3,6 @@
 
 Tek kaynak bu dosyadaki OYUNLAR listesidir. Görseller merkez/img/<slug>-s.webp
 (480 px) ve -l.webp (960/760 px). Çalıştır:  python merkez/olustur.py
-Proje dizini (uret.py) /projeler/ altında ayrı yaşar; bu betik ona dokunmaz.
 """
 import html
 import json
@@ -294,10 +293,6 @@ var q=new URLSearchParams(location.search).get('lang'),s=null;
 try{s=localStorage.getItem(K)}catch(e){}
 set(q==='en'||q==='tr'?q:(s||'tr'),false);
 d.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l,true)})});
-// Old links to the project directory used #repo-name on this root; send those on.
-function hop(){var id=decodeURIComponent(location.hash.slice(1));
- if(id&&!d.getElementById(id))location.replace('/projeler/'+location.hash)}
-hop();addEventListener('hashchange',hop);
 var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(calm){d.querySelectorAll('svg').forEach(function(s){s.pauseAnimations&&s.pauseAnimations()})}
 else if('IntersectionObserver' in window){
@@ -366,7 +361,6 @@ def page():
 <div class="wrap">
 <nav aria-label="Bağlantılar / Links">
 <a href="https://github.com/Furkiozknn">GitHub</a>
-<a href="/projeler/">{tt("Bütün projeler", "All projects")}</a>
 </nav>
 <p>{tt("Hepsi ücretsiz, reklamsız; sayfa sizi izlemez.", "All free, no ads; this page doesn't track you.")}</p>
 <p class="fine">{tt("Müzik ve görseller yapay zekâ ile üretildi.", "Music and artwork generated with AI.")}</p>

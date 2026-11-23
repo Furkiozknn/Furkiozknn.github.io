@@ -517,7 +517,6 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px;font:700 16p
 <div class="wrap">
 <nav aria-label="Bağlantılar / Links">
 <a href="https://github.com/Furkiozknn">GitHub</a>
-<a href="/projeler/"><span class="tr" lang="tr">Bütün projeler</span><span class="en" lang="en">All projects</span></a>
 </nav>
 <p><span class="tr" lang="tr">Hepsi ücretsiz, reklamsız; sayfa sizi izlemez.</span><span class="en" lang="en">All free, no ads; this page doesn&#x27;t track you.</span></p>
 <p class="fine"><span class="tr" lang="tr">Müzik ve görseller yapay zekâ ile üretildi.</span><span class="en" lang="en">Music and artwork generated with AI.</span></p>
@@ -536,10 +535,6 @@ var q=new URLSearchParams(location.search).get('lang'),s=null;
 try{s=localStorage.getItem(K)}catch(e){}
 set(q==='en'||q==='tr'?q:(s||'tr'),false);
 d.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l,true)})});
-// Old links to the project directory used #repo-name on this root; send those on.
-function hop(){var id=decodeURIComponent(location.hash.slice(1));
- if(id&&!d.getElementById(id))location.replace('/projeler/'+location.hash)}
-hop();addEventListener('hashchange',hop);
 var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(calm){d.querySelectorAll('svg').forEach(function(s){s.pauseAnimations&&s.pauseAnimations()})}
 else if('IntersectionObserver' in window){
