@@ -338,6 +338,12 @@ def points_here(url):
     return url.split("#", 1)[0].rstrip("/") in (SITE.rstrip("/"), PAGE_URL.rstrip("/"))
 
 
+def test_count(m):
+    """tests.count, or None when the tests block is missing or not an object."""
+    t = m.get("tests")
+    return t.get("count") if isinstance(t, dict) else None
+
+
 STATED_TESTS = re.compile(r"\b(\d[\d,]*) (?:passing )?tests\b")
 
 
@@ -350,7 +356,7 @@ def stale_counts(rows):
     """
     out = []
     for m in rows:
-        count = (m.get("tests") or {}).get("count")
+        count = test_count(m)
         if not count:
             continue
         texts = [m.get("summary") or ""] + list(m.get("key_features") or [])
@@ -369,7 +375,7 @@ def card(m):
     fact about the project.
     """
     pid = m["id"]
-    tests = (m.get("tests") or {}).get("count")
+    tests = test_count(m)
     links = [(m["repository"], "Repository", "l_repo")]
     if m.get("homepage") and not points_here(m["homepage"]):
         # A game's homepage is the game itself, so the link says so.
@@ -464,13 +470,13 @@ def render(rows, missing, when):
     # visitor should meet what is maintained first, whatever its test count.
     for v in by_cat.values():
         v.sort(key=lambda m: (m.get("status") == "archived",
-                              -((m.get("tests") or {}).get("count") or 0), m["id"]))
+                              -(test_count(m) or 0), m["id"]))
 
     # Archived projects keep their own card and their own count, but they are
     # left out of the headline so this page and TESTLER.md say the same number.
     live = [m for m in rows if m.get("status") != "archived"]
-    total_tests = sum((m.get("tests") or {}).get("count") or 0 for m in live)
-    suites = sum(1 for m in live if (m.get("tests") or {}).get("count"))
+    total_tests = sum(test_count(m) or 0 for m in live)
+    suites = sum(1 for m in live if test_count(m))
     langs = sorted({m.get("primary_language") for m in rows if m.get("primary_language")})
 
     sections = []
