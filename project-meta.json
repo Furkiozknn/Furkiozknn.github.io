@@ -49,10 +49,7 @@
     "measured": "2026-10-15"
   },
   "ci": {
-    "workflows": [
-      "ci.yml",
-      "yenile.yml"
-    ],
+    "workflows": ["ci.yml", "merkez.yml", "yenile.yml"],
     "badge": "https://github.com/Furkiozknn/Furkiozknn.github.io/actions/workflows/ci.yml/badge.svg"
   },
   "docs": {
