@@ -19,11 +19,11 @@
   "version": null,
   "license": "MIT",
   "topics": [
-    "developer-portfolio",
+    "browser-games",
+    "claude-game-arena",
     "github-pages",
-    "project-directory",
     "static-site",
-    "zero-dependency"
+    "threejs"
   ],
   "summary": "The games hub: all 21 browser games on one mobile-first page, Turkish and English, each with its animated banner, its own card and a Play button. Rendered from merkez/oyunlar.json by merkez/olustur.py.",
   "key_features": [
